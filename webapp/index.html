@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutMaster — L'outil audio qui donne du souffle à vos mots</title>
+    <meta name="description" content="Découpez, espacez et maîtrisez vos fichiers audio. Découpage intelligent et Shadowing Pro, directement dans votre navigateur.">
+    <meta name="theme-color" content="#2E3440">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Floating Nav -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-logo">CutMaster</a>
+        <div class="nav-links">
+            <a href="#features">Outils</a>
+            <a href="#how-it-works">Process</a>
+            <a href="#demo">Démo</a>
+            <a href="app.html" class="nav-cta">Lancer →</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========== HERO (tall for scroll-driven animation) ========== -->
+        <section id="hero" class="hero-section">
+            <!-- Aurora bg -->
+            <div class="hero-aurora"></div>
+
+            <!-- Particles -->
+            <canvas id="particle-canvas" class="particle-canvas"></canvas>
+
+            <!-- Sticky inner container for scroll-driven anim -->
+            <div class="hero-sticky">
+                <h1 id="kinetic-text" class="kinetic-text" aria-label="CutMaster"></h1>
+
+                <div class="hero-revealed" id="hero-revealed">
+                    <p class="hero-tagline">L'outil audio qui donne du souffle à vos mots</p>
+                    <canvas id="hero-waveform" class="hero-waveform"></canvas>
+                    <a href="#features" class="btn btn-primary">Découvrir</a>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator" id="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FEATURES ========== -->
+        <section id="features" class="features-section">
+            <div class="section-header reveal">
+                <span class="section-label">Fonctionnalités</span>
+                <h2 class="section-title">Deux outils.<br>Un seul but.</h2>
+                <p class="section-subtitle">Maîtrisez chaque souffle de vos fichiers audio.</p>
+            </div>
+
+            <div class="cards-container">
+                <article class="feature-card reveal">
+                    <div class="icon-ring">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+                            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Découpage Intelligent</h3>
+                    <p>Analysez et espacez automatiquement les silences de vos fichiers audio. Ajustez le seuil, la durée de pause, et exportez en WAV ou MP3.</p>
+                    <div class="tags">
+                        <span>Analyse audio</span>
+                        <span>Export multi-format</span>
+                        <span>Temps réel</span>
+                    </div>
+                    <a href="app.html" class="btn btn-flat">Ouvrir l'outil</a>
+                </article>
+
+                <article class="feature-card reveal" style="transition-delay: 0.12s;">
+                    <div class="icon-ring icon-ring--purple">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Shadowing Pro</h3>
+                    <p>Entraînez votre prononciation anglaise avec un alignement texte-audio parfait. Trois niveaux de granularité : phrases, virgules, mots.</p>
+                    <div class="tags">
+                        <span>Prononciation</span>
+                        <span>Alignement mot à mot</span>
+                        <span>Auto-pause</span>
+                    </div>
+                    <a href="app.html#shadowing" class="btn btn-flat">Shadowing</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== HOW IT WORKS ========== -->
+        <section id="how-it-works" class="steps-section">
+            <div class="section-header reveal">
+                <span class="section-label">Process</span>
+                <h2 class="section-title">Trois étapes.<br>Zéro friction.</h2>
+            </div>
+
+            <div class="steps-container">
+                <div class="step reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Importez</h3>
+                    <p>Glissez votre fichier audio</p>
+                </div>
+
+                <div class="step-line reveal" style="transition-delay: 0.05s;"></div>
+
+                <div class="step reveal" style="transition-delay: 0.1s;">
+                    <div class="step-number">02</div>
+                    <div class="step-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/>
+                            <line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/>
+                            <line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/>
+                            <line x1="17" y1="16" x2="23" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Configurez</h3>
+                    <p>Ajustez les paramètres en un clic</p>
+                </div>
+
+                <div class="step-line reveal" style="transition-delay: 0.15s;"></div>
+
+                <div class="step reveal" style="transition-delay: 0.2s;">
+                    <div class="step-number">03</div>
+                    <div class="step-icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </div>
+                    <h3>Exportez</h3>
+                    <p>Téléchargez votre audio optimisé</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== DEMO ========== -->
+        <section id="demo" class="demo-section">
+            <div class="section-header reveal">
+                <span class="section-label">Aperçu</span>
+                <h2 class="section-title">Voyez la différence.</h2>
+            </div>
+
+            <div class="demo-container reveal">
+                <div class="demo-box">
+                    <div class="demo-label">Avant</div>
+                    <canvas id="demo-canvas-before" class="demo-canvas"></canvas>
+                </div>
+
+                <div class="demo-arrow-container">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+
+                <div class="demo-box demo-box--after">
+                    <div class="demo-label">Après CutMaster</div>
+                    <canvas id="demo-canvas-after" class="demo-canvas"></canvas>
+                </div>
+            </div>
+
+            <div class="demo-cta reveal" style="transition-delay: 0.1s;">
+                <a href="app.html" class="btn btn-primary btn-lg">Lancer l'outil</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">CutMaster</span>
+                <p class="footer-tagline">Fait avec passion — 2026</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="app.html">Découpage</a>
+                <a href="app.html#shadowing">Shadowing</a>
+                <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

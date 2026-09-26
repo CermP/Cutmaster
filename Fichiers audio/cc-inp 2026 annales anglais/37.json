@@ -1,0 +1,2332 @@
+[
+  {
+    "start": 0.0,
+    "end": 1.8,
+    "text": "GEN"
+  },
+  {
+    "start": 1.8,
+    "end": 3.6,
+    "text": "Z-ERS"
+  },
+  {
+    "start": 3.6,
+    "end": 3.94,
+    "text": "DON'T"
+  },
+  {
+    "start": 3.94,
+    "end": 4.14,
+    "text": "LOVE"
+  },
+  {
+    "start": 4.14,
+    "end": 4.6,
+    "text": "EMAIL."
+  },
+  {
+    "start": 5.24,
+    "end": 5.46,
+    "text": "IT'S"
+  },
+  {
+    "start": 5.46,
+    "end": 5.74,
+    "text": "DRIVING"
+  },
+  {
+    "start": 5.74,
+    "end": 5.96,
+    "text": "THEIR"
+  },
+  {
+    "start": 5.96,
+    "end": 6.54,
+    "text": "COWORKERS"
+  },
+  {
+    "start": 6.54,
+    "end": 7.12,
+    "text": "CRAZY."
+  },
+  {
+    "start": 8.28,
+    "end": 8.42,
+    "text": "Tech"
+  },
+  {
+    "start": 8.42,
+    "end": 8.9,
+    "text": "worker"
+  },
+  {
+    "start": 8.9,
+    "end": 9.2,
+    "text": "Sam,"
+  },
+  {
+    "start": 9.2,
+    "end": 10.1,
+    "text": "26,"
+  },
+  {
+    "start": 10.1,
+    "end": 10.96,
+    "text": "checks"
+  },
+  {
+    "start": 10.96,
+    "end": 11.24,
+    "text": "his"
+  },
+  {
+    "start": 11.24,
+    "end": 11.44,
+    "text": "work"
+  },
+  {
+    "start": 11.44,
+    "end": 11.9,
+    "text": "email"
+  },
+  {
+    "start": 11.9,
+    "end": 12.36,
+    "text": "once"
+  },
+  {
+    "start": 12.36,
+    "end": 12.6,
+    "text": "per"
+  },
+  {
+    "start": 12.6,
+    "end": 12.82,
+    "text": "day"
+  },
+  {
+    "start": 12.82,
+    "end": 13.16,
+    "text": "at"
+  },
+  {
+    "start": 13.16,
+    "end": 13.64,
+    "text": "most."
+  },
+  {
+    "start": 14.26,
+    "end": 14.38,
+    "text": "“I"
+  },
+  {
+    "start": 14.38,
+    "end": 14.56,
+    "text": "think"
+  },
+  {
+    "start": 14.56,
+    "end": 14.65,
+    "text": "you"
+  },
+  {
+    "start": 14.65,
+    "end": 14.74,
+    "text": "are"
+  },
+  {
+    "start": 14.74,
+    "end": 15.06,
+    "text": "supposed"
+  },
+  {
+    "start": 15.06,
+    "end": 15.3,
+    "text": "to"
+  },
+  {
+    "start": 15.3,
+    "end": 15.44,
+    "text": "check"
+  },
+  {
+    "start": 15.44,
+    "end": 15.64,
+    "text": "your"
+  },
+  {
+    "start": 15.64,
+    "end": 15.96,
+    "text": "email"
+  },
+  {
+    "start": 15.96,
+    "end": 16.28,
+    "text": "three"
+  },
+  {
+    "start": 16.28,
+    "end": 16.6,
+    "text": "times"
+  },
+  {
+    "start": 16.6,
+    "end": 16.76,
+    "text": "a"
+  },
+  {
+    "start": 16.76,
+    "end": 16.96,
+    "text": "day,"
+  },
+  {
+    "start": 17.28,
+    "end": 17.56,
+    "text": "like"
+  },
+  {
+    "start": 17.56,
+    "end": 17.86,
+    "text": "once"
+  },
+  {
+    "start": 17.86,
+    "end": 18.04,
+    "text": "in"
+  },
+  {
+    "start": 18.04,
+    "end": 18.12,
+    "text": "the"
+  },
+  {
+    "start": 18.12,
+    "end": 18.44,
+    "text": "morning,"
+  },
+  {
+    "start": 18.66,
+    "end": 19.08,
+    "text": "mid-day"
+  },
+  {
+    "start": 19.08,
+    "end": 19.3,
+    "text": "and"
+  },
+  {
+    "start": 19.3,
+    "end": 19.6,
+    "text": "before"
+  },
+  {
+    "start": 19.6,
+    "end": 19.78,
+    "text": "you"
+  },
+  {
+    "start": 19.78,
+    "end": 19.92,
+    "text": "log"
+  },
+  {
+    "start": 19.92,
+    "end": 20.3,
+    "text": "off,”"
+  },
+  {
+    "start": 20.66,
+    "end": 20.76,
+    "text": "he"
+  },
+  {
+    "start": 20.76,
+    "end": 21.0,
+    "text": "tells"
+  },
+  {
+    "start": 21.0,
+    "end": 21.28,
+    "text": "Yahoo."
+  },
+  {
+    "start": 22.16,
+    "end": 22.36,
+    "text": "But"
+  },
+  {
+    "start": 22.36,
+    "end": 22.6,
+    "text": "that’s"
+  },
+  {
+    "start": 22.6,
+    "end": 22.7,
+    "text": "not"
+  },
+  {
+    "start": 22.7,
+    "end": 23.0,
+    "text": "always"
+  },
+  {
+    "start": 23.0,
+    "end": 23.28,
+    "text": "true"
+  },
+  {
+    "start": 23.28,
+    "end": 23.48,
+    "text": "for"
+  },
+  {
+    "start": 23.48,
+    "end": 23.64,
+    "text": "him"
+  },
+  {
+    "start": 23.64,
+    "end": 24.02,
+    "text": "—"
+  },
+  {
+    "start": 24.02,
+    "end": 24.2,
+    "text": "and"
+  },
+  {
+    "start": 24.2,
+    "end": 24.38,
+    "text": "yes,"
+  },
+  {
+    "start": 24.72,
+    "end": 24.82,
+    "text": "it"
+  },
+  {
+    "start": 24.82,
+    "end": 25.0,
+    "text": "has"
+  },
+  {
+    "start": 25.0,
+    "end": 25.28,
+    "text": "landed"
+  },
+  {
+    "start": 25.28,
+    "end": 25.52,
+    "text": "him"
+  },
+  {
+    "start": 25.52,
+    "end": 25.62,
+    "text": "in"
+  },
+  {
+    "start": 25.62,
+    "end": 25.72,
+    "text": "a"
+  },
+  {
+    "start": 25.72,
+    "end": 25.9,
+    "text": "few"
+  },
+  {
+    "start": 25.9,
+    "end": 26.3,
+    "text": "sticky"
+  },
+  {
+    "start": 26.3,
+    "end": 27.0,
+    "text": "situations."
+  },
+  {
+    "start": 27.0,
+    "end": 27.82,
+    "text": "()"
+  },
+  {
+    "start": 27.82,
+    "end": 28.42,
+    "text": "There"
+  },
+  {
+    "start": 28.42,
+    "end": 28.54,
+    "text": "has"
+  },
+  {
+    "start": 28.54,
+    "end": 28.66,
+    "text": "been"
+  },
+  {
+    "start": 28.66,
+    "end": 28.8,
+    "text": "a"
+  },
+  {
+    "start": 28.8,
+    "end": 28.92,
+    "text": "lot"
+  },
+  {
+    "start": 28.92,
+    "end": 29.08,
+    "text": "of"
+  },
+  {
+    "start": 29.08,
+    "end": 29.74,
+    "text": "conversation"
+  },
+  {
+    "start": 29.74,
+    "end": 30.22,
+    "text": "around"
+  },
+  {
+    "start": 30.22,
+    "end": 30.46,
+    "text": "Gen"
+  },
+  {
+    "start": 30.46,
+    "end": 30.7,
+    "text": "Z"
+  },
+  {
+    "start": 30.7,
+    "end": 30.84,
+    "text": "in"
+  },
+  {
+    "start": 30.84,
+    "end": 30.92,
+    "text": "the"
+  },
+  {
+    "start": 30.92,
+    "end": 31.24,
+    "text": "workplace"
+  },
+  {
+    "start": 31.24,
+    "end": 31.78,
+    "text": "over"
+  },
+  {
+    "start": 31.78,
+    "end": 31.9,
+    "text": "the"
+  },
+  {
+    "start": 31.9,
+    "end": 32.14,
+    "text": "past"
+  },
+  {
+    "start": 32.14,
+    "end": 32.42,
+    "text": "few"
+  },
+  {
+    "start": 32.42,
+    "end": 32.94,
+    "text": "years,"
+  },
+  {
+    "start": 33.46,
+    "end": 34.0,
+    "text": "particularly"
+  },
+  {
+    "start": 34.0,
+    "end": 34.62,
+    "text": "regarding"
+  },
+  {
+    "start": 34.62,
+    "end": 34.82,
+    "text": "what"
+  },
+  {
+    "start": 34.82,
+    "end": 35.04,
+    "text": "seems"
+  },
+  {
+    "start": 35.04,
+    "end": 35.26,
+    "text": "to"
+  },
+  {
+    "start": 35.26,
+    "end": 35.38,
+    "text": "be"
+  },
+  {
+    "start": 35.38,
+    "end": 35.46,
+    "text": "a"
+  },
+  {
+    "start": 35.46,
+    "end": 35.78,
+    "text": "vast"
+  },
+  {
+    "start": 35.78,
+    "end": 36.48,
+    "text": "dissonance"
+  },
+  {
+    "start": 36.48,
+    "end": 37.06,
+    "text": "between"
+  },
+  {
+    "start": 37.06,
+    "end": 37.7,
+    "text": "traditional"
+  },
+  {
+    "start": 37.7,
+    "end": 38.42,
+    "text": "expectations"
+  },
+  {
+    "start": 38.42,
+    "end": 38.8,
+    "text": "of"
+  },
+  {
+    "start": 38.8,
+    "end": 39.1,
+    "text": "office"
+  },
+  {
+    "start": 39.1,
+    "end": 39.68,
+    "text": "etiquette"
+  },
+  {
+    "start": 39.68,
+    "end": 40.14,
+    "text": "and"
+  },
+  {
+    "start": 40.14,
+    "end": 40.36,
+    "text": "how"
+  },
+  {
+    "start": 40.36,
+    "end": 40.7,
+    "text": "younger"
+  },
+  {
+    "start": 40.7,
+    "end": 41.06,
+    "text": "workers"
+  },
+  {
+    "start": 41.06,
+    "end": 41.48,
+    "text": "approach"
+  },
+  {
+    "start": 41.48,
+    "end": 41.72,
+    "text": "their"
+  },
+  {
+    "start": 41.72,
+    "end": 42.18,
+    "text": "jobs."
+  },
+  {
+    "start": 42.66,
+    "end": 43.14,
+    "text": "From"
+  },
+  {
+    "start": 43.14,
+    "end": 43.3,
+    "text": "the"
+  },
+  {
+    "start": 43.3,
+    "end": 43.62,
+    "text": "discourse"
+  },
+  {
+    "start": 43.62,
+    "end": 44.16,
+    "text": "around"
+  },
+  {
+    "start": 44.16,
+    "end": 44.16,
+    "text": "(…)"
+  },
+  {
+    "start": 44.16,
+    "end": 44.86,
+    "text": "what’s"
+  },
+  {
+    "start": 44.86,
+    "end": 45.12,
+    "text": "really"
+  },
+  {
+    "start": 45.12,
+    "end": 45.66,
+    "text": "appropriate"
+  },
+  {
+    "start": 45.66,
+    "end": 45.92,
+    "text": "to"
+  },
+  {
+    "start": 45.92,
+    "end": 46.06,
+    "text": "wear"
+  },
+  {
+    "start": 46.06,
+    "end": 46.24,
+    "text": "to"
+  },
+  {
+    "start": 46.24,
+    "end": 46.62,
+    "text": "work,"
+  },
+  {
+    "start": 47.04,
+    "end": 47.16,
+    "text": "new"
+  },
+  {
+    "start": 47.16,
+    "end": 47.5,
+    "text": "terms"
+  },
+  {
+    "start": 47.5,
+    "end": 47.78,
+    "text": "like"
+  },
+  {
+    "start": 47.78,
+    "end": 48.12,
+    "text": "“quiet"
+  },
+  {
+    "start": 48.12,
+    "end": 48.56,
+    "text": "quitting’’"
+  },
+  {
+    "start": 48.56,
+    "end": 49.0,
+    "text": "and"
+  },
+  {
+    "start": 49.0,
+    "end": 49.3,
+    "text": "“soft"
+  },
+  {
+    "start": 49.3,
+    "end": 49.7,
+    "text": "life’’"
+  },
+  {
+    "start": 49.7,
+    "end": 50.02,
+    "text": "that"
+  },
+  {
+    "start": 50.02,
+    "end": 50.14,
+    "text": "have"
+  },
+  {
+    "start": 50.14,
+    "end": 50.3,
+    "text": "gone"
+  },
+  {
+    "start": 50.3,
+    "end": 50.68,
+    "text": "viral"
+  },
+  {
+    "start": 50.68,
+    "end": 51.24,
+    "text": "online"
+  },
+  {
+    "start": 51.24,
+    "end": 51.86,
+    "text": "and"
+  },
+  {
+    "start": 51.86,
+    "end": 52.34,
+    "text": "statistical"
+  },
+  {
+    "start": 52.34,
+    "end": 53.08,
+    "text": "generational"
+  },
+  {
+    "start": 53.08,
+    "end": 53.68,
+    "text": "trends"
+  },
+  {
+    "start": 53.68,
+    "end": 54.14,
+    "text": "like"
+  },
+  {
+    "start": 54.14,
+    "end": 54.38,
+    "text": "their"
+  },
+  {
+    "start": 54.38,
+    "end": 54.82,
+    "text": "preference"
+  },
+  {
+    "start": 54.82,
+    "end": 55.08,
+    "text": "for"
+  },
+  {
+    "start": 55.08,
+    "end": 55.4,
+    "text": "working"
+  },
+  {
+    "start": 55.4,
+    "end": 55.8,
+    "text": "alone,"
+  },
+  {
+    "start": 56.3,
+    "end": 56.64,
+    "text": "it’s"
+  },
+  {
+    "start": 56.64,
+    "end": 56.88,
+    "text": "clear"
+  },
+  {
+    "start": 56.88,
+    "end": 57.14,
+    "text": "that"
+  },
+  {
+    "start": 57.14,
+    "end": 57.35,
+    "text": "Gen"
+  },
+  {
+    "start": 57.35,
+    "end": 57.56,
+    "text": "Z"
+  },
+  {
+    "start": 57.56,
+    "end": 58.06,
+    "text": "is"
+  },
+  {
+    "start": 58.06,
+    "end": 58.54,
+    "text": "ushering"
+  },
+  {
+    "start": 58.54,
+    "end": 58.74,
+    "text": "in"
+  },
+  {
+    "start": 58.74,
+    "end": 59.1,
+    "text": "a"
+  },
+  {
+    "start": 59.1,
+    "end": 59.34,
+    "text": "new"
+  },
+  {
+    "start": 59.34,
+    "end": 59.74,
+    "text": "era"
+  },
+  {
+    "start": 59.74,
+    "end": 60.0,
+    "text": "of"
+  },
+  {
+    "start": 60.0,
+    "end": 60.36,
+    "text": "workplace"
+  },
+  {
+    "start": 60.36,
+    "end": 60.88,
+    "text": "manners"
+  },
+  {
+    "start": 60.88,
+    "end": 61.56,
+    "text": "that’s"
+  },
+  {
+    "start": 61.56,
+    "end": 61.88,
+    "text": "distinct"
+  },
+  {
+    "start": 61.88,
+    "end": 62.2,
+    "text": "from"
+  },
+  {
+    "start": 62.2,
+    "end": 62.32,
+    "text": "the"
+  },
+  {
+    "start": 62.32,
+    "end": 62.82,
+    "text": "generations"
+  },
+  {
+    "start": 62.82,
+    "end": 63.36,
+    "text": "before"
+  },
+  {
+    "start": 63.36,
+    "end": 63.68,
+    "text": "them."
+  },
+  {
+    "start": 64.96,
+    "end": 65.12,
+    "text": "One"
+  },
+  {
+    "start": 65.12,
+    "end": 65.24,
+    "text": "of"
+  },
+  {
+    "start": 65.24,
+    "end": 65.4,
+    "text": "those"
+  },
+  {
+    "start": 65.4,
+    "end": 65.78,
+    "text": "things"
+  },
+  {
+    "start": 65.78,
+    "end": 65.98,
+    "text": "is"
+  },
+  {
+    "start": 65.98,
+    "end": 66.12,
+    "text": "the"
+  },
+  {
+    "start": 66.12,
+    "end": 66.44,
+    "text": "difference"
+  },
+  {
+    "start": 66.44,
+    "end": 66.76,
+    "text": "in"
+  },
+  {
+    "start": 66.76,
+    "end": 67.18,
+    "text": "email"
+  },
+  {
+    "start": 67.18,
+    "end": 67.9,
+    "text": "etiquette."
+  },
+  {
+    "start": 67.9,
+    "end": 68.54,
+    "text": "(…)"
+  },
+  {
+    "start": 68.54,
+    "end": 68.72,
+    "text": "“I"
+  },
+  {
+    "start": 68.72,
+    "end": 68.98,
+    "text": "think"
+  },
+  {
+    "start": 68.98,
+    "end": 69.52,
+    "text": "Boomers"
+  },
+  {
+    "start": 69.52,
+    "end": 69.76,
+    "text": "and"
+  },
+  {
+    "start": 69.76,
+    "end": 69.96,
+    "text": "Gen"
+  },
+  {
+    "start": 69.96,
+    "end": 70.42,
+    "text": "X"
+  },
+  {
+    "start": 70.42,
+    "end": 71.12,
+    "text": "definitely"
+  },
+  {
+    "start": 71.12,
+    "end": 71.56,
+    "text": "rely"
+  },
+  {
+    "start": 71.56,
+    "end": 71.92,
+    "text": "on"
+  },
+  {
+    "start": 71.92,
+    "end": 72.32,
+    "text": "emails"
+  },
+  {
+    "start": 72.32,
+    "end": 72.6,
+    "text": "a"
+  },
+  {
+    "start": 72.6,
+    "end": 72.74,
+    "text": "lot"
+  },
+  {
+    "start": 72.74,
+    "end": 73.12,
+    "text": "more,”"
+  },
+  {
+    "start": 73.52,
+    "end": 73.68,
+    "text": "Sam"
+  },
+  {
+    "start": 73.68,
+    "end": 74.04,
+    "text": "says."
+  },
+  {
+    "start": 74.88,
+    "end": 75.14,
+    "text": "“I"
+  },
+  {
+    "start": 75.14,
+    "end": 75.44,
+    "text": "noticed"
+  },
+  {
+    "start": 75.44,
+    "end": 75.74,
+    "text": "that"
+  },
+  {
+    "start": 75.74,
+    "end": 75.94,
+    "text": "when"
+  },
+  {
+    "start": 75.94,
+    "end": 76.06,
+    "text": "I"
+  },
+  {
+    "start": 76.06,
+    "end": 76.18,
+    "text": "was"
+  },
+  {
+    "start": 76.18,
+    "end": 76.48,
+    "text": "previously"
+  },
+  {
+    "start": 76.48,
+    "end": 77.06,
+    "text": "working"
+  },
+  {
+    "start": 77.06,
+    "end": 77.3,
+    "text": "in"
+  },
+  {
+    "start": 77.3,
+    "end": 77.4,
+    "text": "a"
+  },
+  {
+    "start": 77.4,
+    "end": 77.56,
+    "text": "team"
+  },
+  {
+    "start": 77.56,
+    "end": 77.8,
+    "text": "with"
+  },
+  {
+    "start": 77.8,
+    "end": 78.02,
+    "text": "older"
+  },
+  {
+    "start": 78.02,
+    "end": 78.56,
+    "text": "people,"
+  },
+  {
+    "start": 78.56,
+    "end": 79.22,
+    "text": "they"
+  },
+  {
+    "start": 79.22,
+    "end": 79.48,
+    "text": "like"
+  },
+  {
+    "start": 79.48,
+    "end": 79.64,
+    "text": "to"
+  },
+  {
+    "start": 79.64,
+    "end": 79.74,
+    "text": "have"
+  },
+  {
+    "start": 79.74,
+    "end": 80.18,
+    "text": "full-on"
+  },
+  {
+    "start": 80.18,
+    "end": 80.68,
+    "text": "conversations"
+  },
+  {
+    "start": 80.68,
+    "end": 81.22,
+    "text": "on"
+  },
+  {
+    "start": 81.22,
+    "end": 81.56,
+    "text": "email"
+  },
+  {
+    "start": 82.0,
+    "end": 82.68,
+    "text": "sometimes"
+  },
+  {
+    "start": 82.68,
+    "end": 83.08,
+    "text": "for"
+  },
+  {
+    "start": 83.08,
+    "end": 83.24,
+    "text": "more"
+  },
+  {
+    "start": 83.24,
+    "end": 83.68,
+    "text": "important"
+  },
+  {
+    "start": 83.68,
+    "end": 84.44,
+    "text": "communication,"
+  },
+  {
+    "start": 84.9,
+    "end": 85.14,
+    "text": "whether"
+  },
+  {
+    "start": 85.14,
+    "end": 85.26,
+    "text": "it"
+  },
+  {
+    "start": 85.26,
+    "end": 85.38,
+    "text": "is"
+  },
+  {
+    "start": 85.38,
+    "end": 85.68,
+    "text": "formal"
+  },
+  {
+    "start": 85.68,
+    "end": 86.02,
+    "text": "or"
+  },
+  {
+    "start": 86.02,
+    "end": 86.62,
+    "text": "informal."
+  },
+  {
+    "start": 87.54,
+    "end": 87.86,
+    "text": "Whereas"
+  },
+  {
+    "start": 87.86,
+    "end": 88.02,
+    "text": "my"
+  },
+  {
+    "start": 88.02,
+    "end": 88.34,
+    "text": "current"
+  },
+  {
+    "start": 88.34,
+    "end": 88.64,
+    "text": "team"
+  },
+  {
+    "start": 88.64,
+    "end": 88.9,
+    "text": "is"
+  },
+  {
+    "start": 88.9,
+    "end": 88.98,
+    "text": "a"
+  },
+  {
+    "start": 88.98,
+    "end": 89.1,
+    "text": "lot"
+  },
+  {
+    "start": 89.1,
+    "end": 89.54,
+    "text": "younger,"
+  },
+  {
+    "start": 90.02,
+    "end": 90.18,
+    "text": "most"
+  },
+  {
+    "start": 90.18,
+    "end": 90.32,
+    "text": "of"
+  },
+  {
+    "start": 90.32,
+    "end": 90.4,
+    "text": "the"
+  },
+  {
+    "start": 90.4,
+    "end": 91.04,
+    "text": "communication,"
+  },
+  {
+    "start": 91.04,
+    "end": 91.5,
+    "text": "regardless"
+  },
+  {
+    "start": 91.5,
+    "end": 91.9,
+    "text": "of"
+  },
+  {
+    "start": 91.9,
+    "end": 92.42,
+    "text": "urgency,"
+  },
+  {
+    "start": 92.42,
+    "end": 93.04,
+    "text": "happens"
+  },
+  {
+    "start": 93.04,
+    "end": 93.34,
+    "text": "on"
+  },
+  {
+    "start": 93.34,
+    "end": 93.72,
+    "text": "Slack"
+  },
+  {
+    "start": 94.28,
+    "end": 94.4,
+    "text": "(a"
+  },
+  {
+    "start": 94.4,
+    "end": 94.98,
+    "text": "cloud-based"
+  },
+  {
+    "start": 94.98,
+    "end": 95.28,
+    "text": "team"
+  },
+  {
+    "start": 95.28,
+    "end": 96.02,
+    "text": "communication"
+  },
+  {
+    "start": 96.02,
+    "end": 96.66,
+    "text": "platform),"
+  },
+  {
+    "start": 97.14,
+    "end": 97.36,
+    "text": "with"
+  },
+  {
+    "start": 97.36,
+    "end": 97.78,
+    "text": "emails"
+  },
+  {
+    "start": 97.78,
+    "end": 98.3,
+    "text": "being"
+  },
+  {
+    "start": 98.3,
+    "end": 98.46,
+    "text": "a"
+  },
+  {
+    "start": 98.46,
+    "end": 98.94,
+    "text": "secondary"
+  },
+  {
+    "start": 98.94,
+    "end": 99.7,
+    "text": "communication"
+  },
+  {
+    "start": 99.7,
+    "end": 100.12,
+    "text": "tool.”"
+  },
+  {
+    "start": 101.26,
+    "end": 101.88,
+    "text": "Sam"
+  },
+  {
+    "start": 101.88,
+    "end": 102.28,
+    "text": "thinks"
+  },
+  {
+    "start": 102.28,
+    "end": 102.48,
+    "text": "that"
+  },
+  {
+    "start": 102.48,
+    "end": 102.6,
+    "text": "the"
+  },
+  {
+    "start": 102.6,
+    "end": 102.96,
+    "text": "preference"
+  },
+  {
+    "start": 102.96,
+    "end": 103.3,
+    "text": "of"
+  },
+  {
+    "start": 103.3,
+    "end": 104.18,
+    "text": "prioritizing"
+  },
+  {
+    "start": 104.18,
+    "end": 104.44,
+    "text": "work"
+  },
+  {
+    "start": 104.44,
+    "end": 104.94,
+    "text": "messaging"
+  },
+  {
+    "start": 104.94,
+    "end": 105.54,
+    "text": "platforms"
+  },
+  {
+    "start": 105.54,
+    "end": 105.98,
+    "text": "is"
+  },
+  {
+    "start": 105.98,
+    "end": 106.14,
+    "text": "in"
+  },
+  {
+    "start": 106.14,
+    "end": 106.4,
+    "text": "part"
+  },
+  {
+    "start": 106.4,
+    "end": 106.76,
+    "text": "due"
+  },
+  {
+    "start": 106.76,
+    "end": 106.9,
+    "text": "to"
+  },
+  {
+    "start": 106.9,
+    "end": 107.04,
+    "text": "the"
+  },
+  {
+    "start": 107.04,
+    "end": 107.34,
+    "text": "shifting"
+  },
+  {
+    "start": 107.34,
+    "end": 107.94,
+    "text": "landscape"
+  },
+  {
+    "start": 107.94,
+    "end": 108.28,
+    "text": "of"
+  },
+  {
+    "start": 108.28,
+    "end": 108.92,
+    "text": "emailing"
+  },
+  {
+    "start": 108.92,
+    "end": 109.12,
+    "text": "as"
+  },
+  {
+    "start": 109.12,
+    "end": 109.24,
+    "text": "a"
+  },
+  {
+    "start": 109.24,
+    "end": 109.46,
+    "text": "whole."
+  },
+  {
+    "start": 110.18,
+    "end": 110.52,
+    "text": "He"
+  },
+  {
+    "start": 110.52,
+    "end": 110.96,
+    "text": "currently"
+  },
+  {
+    "start": 110.96,
+    "end": 111.38,
+    "text": "has"
+  },
+  {
+    "start": 111.38,
+    "end": 111.72,
+    "text": "over"
+  },
+  {
+    "start": 111.72,
+    "end": 112.7,
+    "text": "10,000"
+  },
+  {
+    "start": 112.7,
+    "end": 113.1,
+    "text": "unread"
+  },
+  {
+    "start": 113.1,
+    "end": 113.58,
+    "text": "emails"
+  },
+  {
+    "start": 113.58,
+    "end": 113.94,
+    "text": "in"
+  },
+  {
+    "start": 113.94,
+    "end": 114.1,
+    "text": "his"
+  },
+  {
+    "start": 114.1,
+    "end": 114.38,
+    "text": "work"
+  },
+  {
+    "start": 114.38,
+    "end": 114.86,
+    "text": "inbox,"
+  },
+  {
+    "start": 115.48,
+    "end": 115.74,
+    "text": "which"
+  },
+  {
+    "start": 115.74,
+    "end": 115.88,
+    "text": "he"
+  },
+  {
+    "start": 115.88,
+    "end": 116.12,
+    "text": "says"
+  },
+  {
+    "start": 116.12,
+    "end": 116.3,
+    "text": "are"
+  },
+  {
+    "start": 116.3,
+    "end": 116.64,
+    "text": "mostly"
+  },
+  {
+    "start": 116.64,
+    "end": 117.24,
+    "text": "automated"
+  },
+  {
+    "start": 117.24,
+    "end": 117.84,
+    "text": "notifications"
+  },
+  {
+    "start": 117.84,
+    "end": 118.4,
+    "text": "and"
+  },
+  {
+    "start": 118.4,
+    "end": 118.76,
+    "text": "random"
+  },
+  {
+    "start": 118.76,
+    "end": 119.26,
+    "text": "reports."
+  },
+  {
+    "start": 120.32,
+    "end": 120.5,
+    "text": "“At"
+  },
+  {
+    "start": 120.5,
+    "end": 120.66,
+    "text": "least"
+  },
+  {
+    "start": 120.66,
+    "end": 120.92,
+    "text": "in"
+  },
+  {
+    "start": 120.92,
+    "end": 121.08,
+    "text": "my"
+  },
+  {
+    "start": 121.08,
+    "end": 121.48,
+    "text": "office,"
+  },
+  {
+    "start": 122.04,
+    "end": 122.14,
+    "text": "Slack"
+  },
+  {
+    "start": 122.14,
+    "end": 122.9,
+    "text": "communication"
+  },
+  {
+    "start": 122.9,
+    "end": 123.4,
+    "text": "replaces"
+  },
+  {
+    "start": 123.4,
+    "end": 123.76,
+    "text": "a"
+  },
+  {
+    "start": 123.76,
+    "end": 123.92,
+    "text": "lot"
+  },
+  {
+    "start": 123.92,
+    "end": 124.18,
+    "text": "of"
+  },
+  {
+    "start": 124.18,
+    "end": 124.52,
+    "text": "office"
+  },
+  {
+    "start": 124.52,
+    "end": 125.12,
+    "text": "day-to-day"
+  },
+  {
+    "start": 125.12,
+    "end": 125.9,
+    "text": "communication,"
+  },
+  {
+    "start": 126.3,
+    "end": 126.56,
+    "text": "so"
+  },
+  {
+    "start": 126.56,
+    "end": 126.72,
+    "text": "that"
+  },
+  {
+    "start": 126.72,
+    "end": 127.06,
+    "text": "email"
+  },
+  {
+    "start": 127.06,
+    "end": 127.8,
+    "text": "becomes"
+  },
+  {
+    "start": 127.8,
+    "end": 128.26,
+    "text": "almost"
+  },
+  {
+    "start": 128.26,
+    "end": 128.52,
+    "text": "like"
+  },
+  {
+    "start": 128.52,
+    "end": 128.64,
+    "text": "a"
+  },
+  {
+    "start": 128.64,
+    "end": 128.96,
+    "text": "tool"
+  },
+  {
+    "start": 128.96,
+    "end": 129.42,
+    "text": "only"
+  },
+  {
+    "start": 129.42,
+    "end": 129.6,
+    "text": "for"
+  },
+  {
+    "start": 129.6,
+    "end": 130.04,
+    "text": "important"
+  },
+  {
+    "start": 130.04,
+    "end": 130.58,
+    "text": "memos,”"
+  },
+  {
+    "start": 130.88,
+    "end": 131.08,
+    "text": "he"
+  },
+  {
+    "start": 131.08,
+    "end": 131.4,
+    "text": "says."
+  },
+  {
+    "start": 131.4,
+    "end": 132.3,
+    "text": "(…)"
+  },
+  {
+    "start": 132.3,
+    "end": 132.72,
+    "text": "“Otherwise"
+  },
+  {
+    "start": 133.04,
+    "end": 133.4,
+    "text": "important"
+  },
+  {
+    "start": 133.4,
+    "end": 133.96,
+    "text": "memos"
+  },
+  {
+    "start": 133.96,
+    "end": 134.14,
+    "text": "get"
+  },
+  {
+    "start": 134.14,
+    "end": 134.52,
+    "text": "buried"
+  },
+  {
+    "start": 134.52,
+    "end": 134.8,
+    "text": "in"
+  },
+  {
+    "start": 134.8,
+    "end": 134.92,
+    "text": "an"
+  },
+  {
+    "start": 134.92,
+    "end": 135.32,
+    "text": "inbox"
+  },
+  {
+    "start": 135.32,
+    "end": 135.76,
+    "text": "full"
+  },
+  {
+    "start": 135.76,
+    "end": 135.88,
+    "text": "of"
+  },
+  {
+    "start": 135.88,
+    "end": 136.3,
+    "text": "fairly"
+  },
+  {
+    "start": 136.3,
+    "end": 136.94,
+    "text": "unimportant"
+  },
+  {
+    "start": 136.94,
+    "end": 137.68,
+    "text": "information.”"
+  },
+  {
+    "start": 137.68,
+    "end": 138.8,
+    "text": "(…)"
+  },
+  {
+    "start": 138.8,
+    "end": 139.12,
+    "text": "At"
+  },
+  {
+    "start": 139.12,
+    "end": 139.7,
+    "text": "29,"
+  },
+  {
+    "start": 140.26,
+    "end": 140.4,
+    "text": "Anna"
+  },
+  {
+    "start": 140.4,
+    "end": 140.66,
+    "text": "is"
+  },
+  {
+    "start": 140.66,
+    "end": 141.3,
+    "text": "technically"
+  },
+  {
+    "start": 141.3,
+    "end": 141.8,
+    "text": "a"
+  },
+  {
+    "start": 141.8,
+    "end": 142.34,
+    "text": "zillennial"
+  },
+  {
+    "start": 142.74,
+    "end": 142.84,
+    "text": "but"
+  },
+  {
+    "start": 142.84,
+    "end": 143.1,
+    "text": "says"
+  },
+  {
+    "start": 143.1,
+    "end": 143.38,
+    "text": "she"
+  },
+  {
+    "start": 143.38,
+    "end": 143.5,
+    "text": "has"
+  },
+  {
+    "start": 143.5,
+    "end": 143.98,
+    "text": "experienced"
+  },
+  {
+    "start": 143.98,
+    "end": 144.22,
+    "text": "the"
+  },
+  {
+    "start": 144.22,
+    "end": 144.42,
+    "text": "shift"
+  },
+  {
+    "start": 144.42,
+    "end": 144.64,
+    "text": "in"
+  },
+  {
+    "start": 144.64,
+    "end": 144.96,
+    "text": "email"
+  },
+  {
+    "start": 144.96,
+    "end": 145.54,
+    "text": "culture"
+  },
+  {
+    "start": 145.54,
+    "end": 146.28,
+    "text": "between"
+  },
+  {
+    "start": 146.28,
+    "end": 146.46,
+    "text": "a"
+  },
+  {
+    "start": 146.46,
+    "end": 147.4,
+    "text": "millennial-dominated"
+  },
+  {
+    "start": 147.4,
+    "end": 148.02,
+    "text": "workplace"
+  },
+  {
+    "start": 148.02,
+    "end": 148.6,
+    "text": "and"
+  },
+  {
+    "start": 148.6,
+    "end": 148.72,
+    "text": "a"
+  },
+  {
+    "start": 148.72,
+    "end": 148.92,
+    "text": "Gen"
+  },
+  {
+    "start": 148.92,
+    "end": 149.14,
+    "text": "Z"
+  },
+  {
+    "start": 149.14,
+    "end": 149.62,
+    "text": "prevalent"
+  },
+  {
+    "start": 149.62,
+    "end": 150.0,
+    "text": "one."
+  },
+  {
+    "start": 150.0,
+    "end": 150.76,
+    "text": "(…)"
+  },
+  {
+    "start": 150.76,
+    "end": 151.04,
+    "text": "She"
+  },
+  {
+    "start": 151.04,
+    "end": 151.4,
+    "text": "believes"
+  },
+  {
+    "start": 151.4,
+    "end": 151.96,
+    "text": "that"
+  },
+  {
+    "start": 151.96,
+    "end": 152.48,
+    "text": "factors"
+  },
+  {
+    "start": 152.48,
+    "end": 152.76,
+    "text": "like"
+  },
+  {
+    "start": 152.76,
+    "end": 153.02,
+    "text": "more"
+  },
+  {
+    "start": 153.02,
+    "end": 153.46,
+    "text": "frequent"
+  },
+  {
+    "start": 153.46,
+    "end": 154.14,
+    "text": "automated"
+  },
+  {
+    "start": 154.14,
+    "end": 155.06,
+    "text": "newsletters,"
+  },
+  {
+    "start": 155.06,
+    "end": 155.62,
+    "text": "a"
+  },
+  {
+    "start": 155.62,
+    "end": 155.92,
+    "text": "strong"
+  },
+  {
+    "start": 155.92,
+    "end": 156.6,
+    "text": "anti-work"
+  },
+  {
+    "start": 156.6,
+    "end": 157.12,
+    "text": "culture"
+  },
+  {
+    "start": 157.12,
+    "end": 157.44,
+    "text": "among"
+  },
+  {
+    "start": 157.44,
+    "end": 157.7,
+    "text": "young"
+  },
+  {
+    "start": 157.7,
+    "end": 158.18,
+    "text": "people"
+  },
+  {
+    "start": 158.66,
+    "end": 158.86,
+    "text": "and"
+  },
+  {
+    "start": 158.86,
+    "end": 158.98,
+    "text": "the"
+  },
+  {
+    "start": 158.98,
+    "end": 159.24,
+    "text": "rise"
+  },
+  {
+    "start": 159.24,
+    "end": 159.46,
+    "text": "in"
+  },
+  {
+    "start": 159.46,
+    "end": 159.7,
+    "text": "remote"
+  },
+  {
+    "start": 159.7,
+    "end": 160.28,
+    "text": "work"
+  },
+  {
+    "start": 160.28,
+    "end": 160.64,
+    "text": "have"
+  },
+  {
+    "start": 160.64,
+    "end": 160.9,
+    "text": "all"
+  },
+  {
+    "start": 160.9,
+    "end": 161.14,
+    "text": "played"
+  },
+  {
+    "start": 161.14,
+    "end": 161.3,
+    "text": "a"
+  },
+  {
+    "start": 161.3,
+    "end": 161.52,
+    "text": "part"
+  },
+  {
+    "start": 161.52,
+    "end": 161.72,
+    "text": "in"
+  },
+  {
+    "start": 161.72,
+    "end": 161.86,
+    "text": "this"
+  },
+  {
+    "start": 161.86,
+    "end": 162.36,
+    "text": "change."
+  },
+  {
+    "start": 162.36,
+    "end": 163.16,
+    "text": "(…)"
+  },
+  {
+    "start": 163.16,
+    "end": 163.4,
+    "text": "“I"
+  },
+  {
+    "start": 163.4,
+    "end": 163.6,
+    "text": "grew"
+  },
+  {
+    "start": 163.6,
+    "end": 163.88,
+    "text": "up"
+  },
+  {
+    "start": 163.88,
+    "end": 164.2,
+    "text": "job"
+  },
+  {
+    "start": 164.2,
+    "end": 164.56,
+    "text": "hunting"
+  },
+  {
+    "start": 164.56,
+    "end": 164.98,
+    "text": "and"
+  },
+  {
+    "start": 164.98,
+    "end": 165.58,
+    "text": "corresponding"
+  },
+  {
+    "start": 165.58,
+    "end": 165.82,
+    "text": "with"
+  },
+  {
+    "start": 165.82,
+    "end": 166.1,
+    "text": "people"
+  },
+  {
+    "start": 166.1,
+    "end": 166.72,
+    "text": "professionally."
+  },
+  {
+    "start": 166.72,
+    "end": 167.38,
+    "text": "(…)"
+  },
+  {
+    "start": 167.38,
+    "end": 167.58,
+    "text": "It"
+  },
+  {
+    "start": 167.58,
+    "end": 167.76,
+    "text": "might"
+  },
+  {
+    "start": 167.76,
+    "end": 168.02,
+    "text": "feel"
+  },
+  {
+    "start": 168.02,
+    "end": 168.46,
+    "text": "different"
+  },
+  {
+    "start": 168.46,
+    "end": 168.94,
+    "text": "for"
+  },
+  {
+    "start": 168.94,
+    "end": 169.24,
+    "text": "people"
+  },
+  {
+    "start": 169.24,
+    "end": 169.46,
+    "text": "who"
+  },
+  {
+    "start": 169.46,
+    "end": 169.72,
+    "text": "feel"
+  },
+  {
+    "start": 169.72,
+    "end": 169.92,
+    "text": "as"
+  },
+  {
+    "start": 169.92,
+    "end": 170.1,
+    "text": "though"
+  },
+  {
+    "start": 170.1,
+    "end": 170.28,
+    "text": "they"
+  },
+  {
+    "start": 170.28,
+    "end": 170.4,
+    "text": "are"
+  },
+  {
+    "start": 170.4,
+    "end": 170.76,
+    "text": "always,"
+  },
+  {
+    "start": 170.76,
+    "end": 171.1,
+    "text": "to"
+  },
+  {
+    "start": 171.1,
+    "end": 171.28,
+    "text": "some"
+  },
+  {
+    "start": 171.28,
+    "end": 171.58,
+    "text": "degree,"
+  },
+  {
+    "start": 171.58,
+    "end": 172.2,
+    "text": "online."
+  },
+  {
+    "start": 172.88,
+    "end": 173.12,
+    "text": "But"
+  },
+  {
+    "start": 173.12,
+    "end": 173.24,
+    "text": "I"
+  },
+  {
+    "start": 173.24,
+    "end": 173.42,
+    "text": "do"
+  },
+  {
+    "start": 173.42,
+    "end": 173.7,
+    "text": "think"
+  },
+  {
+    "start": 173.7,
+    "end": 173.86,
+    "text": "that"
+  },
+  {
+    "start": 173.86,
+    "end": 173.98,
+    "text": "the"
+  },
+  {
+    "start": 173.98,
+    "end": 174.24,
+    "text": "shift"
+  },
+  {
+    "start": 174.24,
+    "end": 174.44,
+    "text": "in"
+  },
+  {
+    "start": 174.44,
+    "end": 174.86,
+    "text": "email"
+  },
+  {
+    "start": 174.86,
+    "end": 175.58,
+    "text": "etiquette"
+  },
+  {
+    "start": 175.58,
+    "end": 176.0,
+    "text": "is"
+  },
+  {
+    "start": 176.0,
+    "end": 176.1,
+    "text": "a"
+  },
+  {
+    "start": 176.1,
+    "end": 176.34,
+    "text": "part"
+  },
+  {
+    "start": 176.34,
+    "end": 176.54,
+    "text": "of"
+  },
+  {
+    "start": 176.54,
+    "end": 176.74,
+    "text": "Gen"
+  },
+  {
+    "start": 176.74,
+    "end": 177.26,
+    "text": "Z’s"
+  },
+  {
+    "start": 177.26,
+    "end": 177.68,
+    "text": "larger"
+  },
+  {
+    "start": 177.68,
+    "end": 178.42,
+    "text": "mentality"
+  },
+  {
+    "start": 178.42,
+    "end": 178.8,
+    "text": "of,"
+  },
+  {
+    "start": 179.3,
+    "end": 179.44,
+    "text": "‘I’m"
+  },
+  {
+    "start": 179.44,
+    "end": 179.56,
+    "text": "not"
+  },
+  {
+    "start": 179.56,
+    "end": 179.84,
+    "text": "doing"
+  },
+  {
+    "start": 179.84,
+    "end": 180.08,
+    "text": "more"
+  },
+  {
+    "start": 180.08,
+    "end": 180.28,
+    "text": "than"
+  },
+  {
+    "start": 180.28,
+    "end": 180.4,
+    "text": "I"
+  },
+  {
+    "start": 180.4,
+    "end": 180.68,
+    "text": "asked"
+  },
+  {
+    "start": 180.68,
+    "end": 181.0,
+    "text": "for.’"
+  },
+  {
+    "start": 181.62,
+    "end": 181.98,
+    "text": "Honestly,"
+  },
+  {
+    "start": 182.5,
+    "end": 182.58,
+    "text": "I"
+  },
+  {
+    "start": 182.58,
+    "end": 182.76,
+    "text": "think"
+  },
+  {
+    "start": 182.76,
+    "end": 183.16,
+    "text": "that’s"
+  },
+  {
+    "start": 183.16,
+    "end": 183.26,
+    "text": "the"
+  },
+  {
+    "start": 183.26,
+    "end": 183.38,
+    "text": "right"
+  },
+  {
+    "start": 183.38,
+    "end": 183.78,
+    "text": "thing.”"
+  },
+  {
+    "start": 183.78,
+    "end": 183.78,
+    "text": "November"
+  },
+  {
+    "start": 183.78,
+    "end": 183.78,
+    "text": "2025"
+  },
+  {
+    "start": 183.78,
+    "end": 183.78,
+    "text": "44/140"
+  }
+]

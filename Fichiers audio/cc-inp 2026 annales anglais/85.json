@@ -1,0 +1,2277 @@
+[
+  {
+    "start": 3.0,
+    "end": 3.3,
+    "text": "PAUL"
+  },
+  {
+    "start": 3.3,
+    "end": 3.92,
+    "text": "MCCARTNEY"
+  },
+  {
+    "start": 3.92,
+    "end": 4.5,
+    "text": "JOINS"
+  },
+  {
+    "start": 4.5,
+    "end": 5.0,
+    "text": "MUSIC"
+  },
+  {
+    "start": 5.0,
+    "end": 5.54,
+    "text": "INDUSTRY"
+  },
+  {
+    "start": 5.54,
+    "end": 6.04,
+    "text": "PROTEST"
+  },
+  {
+    "start": 6.04,
+    "end": 6.76,
+    "text": "AGAINST"
+  },
+  {
+    "start": 6.76,
+    "end": 7.3,
+    "text": "AI"
+  },
+  {
+    "start": 8.68,
+    "end": 8.94,
+    "text": "Former"
+  },
+  {
+    "start": 8.94,
+    "end": 9.3,
+    "text": "Beatle"
+  },
+  {
+    "start": 9.3,
+    "end": 9.84,
+    "text": "and"
+  },
+  {
+    "start": 9.84,
+    "end": 10.18,
+    "text": "artists"
+  },
+  {
+    "start": 10.18,
+    "end": 10.78,
+    "text": "including"
+  },
+  {
+    "start": 10.78,
+    "end": 11.18,
+    "text": "Sam"
+  },
+  {
+    "start": 11.18,
+    "end": 11.58,
+    "text": "Fender,"
+  },
+  {
+    "start": 12.16,
+    "end": 12.26,
+    "text": "Kate"
+  },
+  {
+    "start": 12.26,
+    "end": 12.54,
+    "text": "Bush"
+  },
+  {
+    "start": 12.54,
+    "end": 13.02,
+    "text": "and"
+  },
+  {
+    "start": 13.02,
+    "end": 13.26,
+    "text": "Hans"
+  },
+  {
+    "start": 13.26,
+    "end": 13.6,
+    "text": "Zimmer"
+  },
+  {
+    "start": 13.6,
+    "end": 14.32,
+    "text": "have"
+  },
+  {
+    "start": 14.32,
+    "end": 14.8,
+    "text": "recorded"
+  },
+  {
+    "start": 14.8,
+    "end": 15.02,
+    "text": "a"
+  },
+  {
+    "start": 15.02,
+    "end": 15.36,
+    "text": "silent"
+  },
+  {
+    "start": 15.36,
+    "end": 15.88,
+    "text": "album"
+  },
+  {
+    "start": 16.3,
+    "end": 16.54,
+    "text": "“Is"
+  },
+  {
+    "start": 16.54,
+    "end": 16.68,
+    "text": "This"
+  },
+  {
+    "start": 16.68,
+    "end": 16.9,
+    "text": "What"
+  },
+  {
+    "start": 16.9,
+    "end": 17.04,
+    "text": "We"
+  },
+  {
+    "start": 17.04,
+    "end": 17.28,
+    "text": "Want?”"
+  },
+  {
+    "start": 18.14,
+    "end": 18.4,
+    "text": "At"
+  },
+  {
+    "start": 18.4,
+    "end": 18.64,
+    "text": "two"
+  },
+  {
+    "start": 18.64,
+    "end": 18.94,
+    "text": "minutes"
+  },
+  {
+    "start": 18.94,
+    "end": 19.5,
+    "text": "45"
+  },
+  {
+    "start": 19.5,
+    "end": 20.22,
+    "text": "seconds"
+  },
+  {
+    "start": 20.22,
+    "end": 20.58,
+    "text": "it’s"
+  },
+  {
+    "start": 20.58,
+    "end": 20.78,
+    "text": "about"
+  },
+  {
+    "start": 20.78,
+    "end": 20.94,
+    "text": "the"
+  },
+  {
+    "start": 20.94,
+    "end": 21.18,
+    "text": "same"
+  },
+  {
+    "start": 21.18,
+    "end": 21.6,
+    "text": "length"
+  },
+  {
+    "start": 21.6,
+    "end": 21.82,
+    "text": "as"
+  },
+  {
+    "start": 21.82,
+    "end": 21.96,
+    "text": "“With"
+  },
+  {
+    "start": 21.96,
+    "end": 22.02,
+    "text": "a"
+  },
+  {
+    "start": 22.02,
+    "end": 22.2,
+    "text": "Little"
+  },
+  {
+    "start": 22.2,
+    "end": 22.42,
+    "text": "Help"
+  },
+  {
+    "start": 22.42,
+    "end": 22.62,
+    "text": "From"
+  },
+  {
+    "start": 22.62,
+    "end": 22.74,
+    "text": "My"
+  },
+  {
+    "start": 22.74,
+    "end": 23.18,
+    "text": "Friends”."
+  },
+  {
+    "start": 23.88,
+    "end": 24.14,
+    "text": "But"
+  },
+  {
+    "start": 24.14,
+    "end": 24.38,
+    "text": "Paul"
+  },
+  {
+    "start": 24.38,
+    "end": 24.98,
+    "text": "McCartney’s"
+  },
+  {
+    "start": 24.98,
+    "end": 25.12,
+    "text": "new"
+  },
+  {
+    "start": 25.12,
+    "end": 25.6,
+    "text": "recording"
+  },
+  {
+    "start": 25.6,
+    "end": 26.26,
+    "text": "lacks"
+  },
+  {
+    "start": 26.26,
+    "end": 26.58,
+    "text": "the"
+  },
+  {
+    "start": 26.58,
+    "end": 27.14,
+    "text": "sing-along"
+  },
+  {
+    "start": 27.14,
+    "end": 27.44,
+    "text": "tune"
+  },
+  {
+    "start": 27.44,
+    "end": 27.96,
+    "text": "and"
+  },
+  {
+    "start": 27.96,
+    "end": 28.42,
+    "text": "jaunty"
+  },
+  {
+    "start": 28.42,
+    "end": 28.78,
+    "text": "guitar"
+  },
+  {
+    "start": 28.78,
+    "end": 29.32,
+    "text": "chops"
+  },
+  {
+    "start": 29.32,
+    "end": 29.86,
+    "text": "because"
+  },
+  {
+    "start": 29.86,
+    "end": 30.16,
+    "text": "there’s"
+  },
+  {
+    "start": 30.16,
+    "end": 30.48,
+    "text": "barely"
+  },
+  {
+    "start": 30.48,
+    "end": 30.98,
+    "text": "anything"
+  },
+  {
+    "start": 30.98,
+    "end": 31.36,
+    "text": "there."
+  },
+  {
+    "start": 32.42,
+    "end": 32.82,
+    "text": "The"
+  },
+  {
+    "start": 32.82,
+    "end": 33.16,
+    "text": "former"
+  },
+  {
+    "start": 33.16,
+    "end": 33.56,
+    "text": "Beatle,"
+  },
+  {
+    "start": 34.04,
+    "end": 34.44,
+    "text": "arguably"
+  },
+  {
+    "start": 34.44,
+    "end": 35.14,
+    "text": "Britain’s"
+  },
+  {
+    "start": 35.14,
+    "end": 35.44,
+    "text": "greatest"
+  },
+  {
+    "start": 35.44,
+    "end": 35.8,
+    "text": "living"
+  },
+  {
+    "start": 35.8,
+    "end": 36.5,
+    "text": "songwriter,"
+  },
+  {
+    "start": 37.16,
+    "end": 37.24,
+    "text": "is"
+  },
+  {
+    "start": 37.24,
+    "end": 37.58,
+    "text": "releasing"
+  },
+  {
+    "start": 37.58,
+    "end": 37.8,
+    "text": "a"
+  },
+  {
+    "start": 37.8,
+    "end": 38.06,
+    "text": "track"
+  },
+  {
+    "start": 38.06,
+    "end": 38.46,
+    "text": "of"
+  },
+  {
+    "start": 38.46,
+    "end": 38.56,
+    "text": "an"
+  },
+  {
+    "start": 38.56,
+    "end": 38.69,
+    "text": "al-"
+  },
+  {
+    "start": 38.69,
+    "end": 38.82,
+    "text": "most"
+  },
+  {
+    "start": 38.82,
+    "end": 39.48,
+    "text": "completely"
+  },
+  {
+    "start": 39.48,
+    "end": 39.86,
+    "text": "silent"
+  },
+  {
+    "start": 39.86,
+    "end": 40.32,
+    "text": "recording"
+  },
+  {
+    "start": 40.32,
+    "end": 41.12,
+    "text": "studio"
+  },
+  {
+    "start": 41.12,
+    "end": 41.66,
+    "text": "as"
+  },
+  {
+    "start": 41.66,
+    "end": 41.84,
+    "text": "part"
+  },
+  {
+    "start": 41.84,
+    "end": 42.06,
+    "text": "of"
+  },
+  {
+    "start": 42.06,
+    "end": 42.12,
+    "text": "a"
+  },
+  {
+    "start": 42.12,
+    "end": 42.38,
+    "text": "music"
+  },
+  {
+    "start": 42.38,
+    "end": 42.9,
+    "text": "industry"
+  },
+  {
+    "start": 42.9,
+    "end": 43.38,
+    "text": "protest"
+  },
+  {
+    "start": 43.38,
+    "end": 44.04,
+    "text": "against"
+  },
+  {
+    "start": 44.04,
+    "end": 44.48,
+    "text": "copyright"
+  },
+  {
+    "start": 44.48,
+    "end": 44.96,
+    "text": "theft"
+  },
+  {
+    "start": 45.34,
+    "end": 45.74,
+    "text": "by"
+  },
+  {
+    "start": 45.74,
+    "end": 46.2,
+    "text": "artificial"
+  },
+  {
+    "start": 46.2,
+    "end": 46.9,
+    "text": "intelligence"
+  },
+  {
+    "start": 46.9,
+    "end": 47.46,
+    "text": "companies."
+  },
+  {
+    "start": 48.4,
+    "end": 49.12,
+    "text": "In"
+  },
+  {
+    "start": 49.12,
+    "end": 49.42,
+    "text": "place"
+  },
+  {
+    "start": 49.42,
+    "end": 49.66,
+    "text": "of"
+  },
+  {
+    "start": 49.66,
+    "end": 50.0,
+    "text": "catchy"
+  },
+  {
+    "start": 50.0,
+    "end": 50.42,
+    "text": "melodies"
+  },
+  {
+    "start": 50.42,
+    "end": 51.1,
+    "text": "and"
+  },
+  {
+    "start": 51.1,
+    "end": 51.52,
+    "text": "evocative"
+  },
+  {
+    "start": 51.52,
+    "end": 51.88,
+    "text": "lyrics"
+  },
+  {
+    "start": 52.48,
+    "end": 52.68,
+    "text": "there"
+  },
+  {
+    "start": 52.68,
+    "end": 52.82,
+    "text": "is"
+  },
+  {
+    "start": 52.82,
+    "end": 53.06,
+    "text": "only"
+  },
+  {
+    "start": 53.06,
+    "end": 53.52,
+    "text": "quiet"
+  },
+  {
+    "start": 53.52,
+    "end": 54.04,
+    "text": "hiss"
+  },
+  {
+    "start": 54.04,
+    "end": 54.38,
+    "text": "and"
+  },
+  {
+    "start": 54.38,
+    "end": 54.52,
+    "text": "the"
+  },
+  {
+    "start": 54.52,
+    "end": 54.74,
+    "text": "odd"
+  },
+  {
+    "start": 54.74,
+    "end": 55.22,
+    "text": "clatter."
+  },
+  {
+    "start": 55.72,
+    "end": 56.2,
+    "text": "It"
+  },
+  {
+    "start": 56.2,
+    "end": 56.5,
+    "text": "suggests"
+  },
+  {
+    "start": 56.5,
+    "end": 57.28,
+    "text": "that"
+  },
+  {
+    "start": 57.28,
+    "end": 57.5,
+    "text": "if"
+  },
+  {
+    "start": 57.5,
+    "end": 57.72,
+    "text": "AI"
+  },
+  {
+    "start": 57.72,
+    "end": 58.28,
+    "text": "companies"
+  },
+  {
+    "start": 58.28,
+    "end": 59.18,
+    "text": "unfairly"
+  },
+  {
+    "start": 59.18,
+    "end": 59.66,
+    "text": "exploit"
+  },
+  {
+    "start": 59.66,
+    "end": 60.18,
+    "text": "musicians’"
+  },
+  {
+    "start": 60.54,
+    "end": 60.78,
+    "text": "intellectual"
+  },
+  {
+    "start": 60.78,
+    "end": 61.16,
+    "text": "prop-"
+  },
+  {
+    "start": 61.16,
+    "end": 61.54,
+    "text": "erty"
+  },
+  {
+    "start": 61.54,
+    "end": 62.18,
+    "text": "to"
+  },
+  {
+    "start": 62.18,
+    "end": 62.56,
+    "text": "train"
+  },
+  {
+    "start": 62.56,
+    "end": 62.78,
+    "text": "their"
+  },
+  {
+    "start": 62.78,
+    "end": 63.34,
+    "text": "generative"
+  },
+  {
+    "start": 63.34,
+    "end": 63.66,
+    "text": "AI"
+  },
+  {
+    "start": 63.66,
+    "end": 64.18,
+    "text": "models,"
+  },
+  {
+    "start": 64.76,
+    "end": 64.98,
+    "text": "the"
+  },
+  {
+    "start": 64.98,
+    "end": 65.4,
+    "text": "creative"
+  },
+  {
+    "start": 65.4,
+    "end": 66.02,
+    "text": "ecosystem"
+  },
+  {
+    "start": 66.02,
+    "end": 66.62,
+    "text": "will"
+  },
+  {
+    "start": 66.62,
+    "end": 66.76,
+    "text": "be"
+  },
+  {
+    "start": 66.76,
+    "end": 67.3,
+    "text": "wrecked"
+  },
+  {
+    "start": 67.3,
+    "end": 67.64,
+    "text": "and"
+  },
+  {
+    "start": 67.64,
+    "end": 68.06,
+    "text": "original"
+  },
+  {
+    "start": 68.06,
+    "end": 68.54,
+    "text": "music"
+  },
+  {
+    "start": 68.54,
+    "end": 69.44,
+    "text": "silenced."
+  },
+  {
+    "start": 70.44,
+    "end": 71.14,
+    "text": "McCartney’s"
+  },
+  {
+    "start": 71.14,
+    "end": 71.8,
+    "text": "contribution"
+  },
+  {
+    "start": 71.8,
+    "end": 72.32,
+    "text": "comes"
+  },
+  {
+    "start": 72.32,
+    "end": 72.74,
+    "text": "as"
+  },
+  {
+    "start": 72.74,
+    "end": 73.1,
+    "text": "musicians"
+  },
+  {
+    "start": 73.1,
+    "end": 73.6,
+    "text": "and"
+  },
+  {
+    "start": 73.6,
+    "end": 74.18,
+    "text": "artists"
+  },
+  {
+    "start": 74.18,
+    "end": 75.06,
+    "text": "step"
+  },
+  {
+    "start": 75.06,
+    "end": 75.32,
+    "text": "up"
+  },
+  {
+    "start": 75.32,
+    "end": 75.52,
+    "text": "their"
+  },
+  {
+    "start": 75.52,
+    "end": 75.9,
+    "text": "campaign"
+  },
+  {
+    "start": 75.9,
+    "end": 76.3,
+    "text": "to"
+  },
+  {
+    "start": 76.3,
+    "end": 76.66,
+    "text": "persuade"
+  },
+  {
+    "start": 76.66,
+    "end": 76.94,
+    "text": "the"
+  },
+  {
+    "start": 76.94,
+    "end": 77.18,
+    "text": "UK"
+  },
+  {
+    "start": 77.18,
+    "end": 77.76,
+    "text": "government"
+  },
+  {
+    "start": 77.76,
+    "end": 78.42,
+    "text": "to"
+  },
+  {
+    "start": 78.42,
+    "end": 78.7,
+    "text": "stop"
+  },
+  {
+    "start": 78.7,
+    "end": 79.38,
+    "text": "technology"
+  },
+  {
+    "start": 79.38,
+    "end": 80.02,
+    "text": "companies"
+  },
+  {
+    "start": 80.02,
+    "end": 80.24,
+    "text": "from"
+  },
+  {
+    "start": 80.24,
+    "end": 80.7,
+    "text": "training"
+  },
+  {
+    "start": 80.7,
+    "end": 81.1,
+    "text": "AI"
+  },
+  {
+    "start": 81.1,
+    "end": 81.72,
+    "text": "models"
+  },
+  {
+    "start": 81.72,
+    "end": 82.24,
+    "text": "on"
+  },
+  {
+    "start": 82.24,
+    "end": 82.42,
+    "text": "their"
+  },
+  {
+    "start": 82.42,
+    "end": 82.9,
+    "text": "creative"
+  },
+  {
+    "start": 82.9,
+    "end": 83.46,
+    "text": "output"
+  },
+  {
+    "start": 83.46,
+    "end": 84.26,
+    "text": "without"
+  },
+  {
+    "start": 84.26,
+    "end": 84.9,
+    "text": "approval"
+  },
+  {
+    "start": 84.9,
+    "end": 85.22,
+    "text": "or"
+  },
+  {
+    "start": 85.22,
+    "end": 85.54,
+    "text": "paying"
+  },
+  {
+    "start": 85.54,
+    "end": 86.42,
+    "text": "royalties."
+  },
+  {
+    "start": 86.96,
+    "end": 87.52,
+    "text": "Meanwhile,"
+  },
+  {
+    "start": 87.52,
+    "end": 88.2,
+    "text": "Britain"
+  },
+  {
+    "start": 88.2,
+    "end": 88.64,
+    "text": "faces"
+  },
+  {
+    "start": 88.64,
+    "end": 89.66,
+    "text": "anti-regulation"
+  },
+  {
+    "start": 89.66,
+    "end": 90.12,
+    "text": "pressure"
+  },
+  {
+    "start": 90.12,
+    "end": 90.48,
+    "text": "from"
+  },
+  {
+    "start": 90.48,
+    "end": 90.76,
+    "text": "Donald"
+  },
+  {
+    "start": 90.76,
+    "end": 91.26,
+    "text": "Trump’s"
+  },
+  {
+    "start": 91.26,
+    "end": 91.44,
+    "text": "White"
+  },
+  {
+    "start": 91.44,
+    "end": 91.9,
+    "text": "House."
+  },
+  {
+    "start": 92.54,
+    "end": 93.08,
+    "text": "Trump"
+  },
+  {
+    "start": 93.08,
+    "end": 93.32,
+    "text": "has"
+  },
+  {
+    "start": 93.32,
+    "end": 93.62,
+    "text": "said:"
+  },
+  {
+    "start": 93.62,
+    "end": 94.18,
+    "text": "“We"
+  },
+  {
+    "start": 94.18,
+    "end": 94.36,
+    "text": "have"
+  },
+  {
+    "start": 94.36,
+    "end": 94.56,
+    "text": "to"
+  },
+  {
+    "start": 94.56,
+    "end": 94.78,
+    "text": "allow"
+  },
+  {
+    "start": 94.78,
+    "end": 95.16,
+    "text": "AI"
+  },
+  {
+    "start": 95.16,
+    "end": 95.48,
+    "text": "to"
+  },
+  {
+    "start": 95.48,
+    "end": 95.74,
+    "text": "use"
+  },
+  {
+    "start": 95.74,
+    "end": 95.92,
+    "text": "that"
+  },
+  {
+    "start": 95.92,
+    "end": 96.7,
+    "text": "copyrighted"
+  },
+  {
+    "start": 96.7,
+    "end": 96.86,
+    "text": "pool"
+  },
+  {
+    "start": 96.86,
+    "end": 97.08,
+    "text": "of"
+  },
+  {
+    "start": 97.08,
+    "end": 97.42,
+    "text": "knowledge"
+  },
+  {
+    "start": 97.42,
+    "end": 98.16,
+    "text": "without"
+  },
+  {
+    "start": 98.16,
+    "end": 98.52,
+    "text": "going"
+  },
+  {
+    "start": 98.52,
+    "end": 98.74,
+    "text": "through"
+  },
+  {
+    "start": 98.74,
+    "end": 98.86,
+    "text": "the"
+  },
+  {
+    "start": 98.86,
+    "end": 99.36,
+    "text": "complexity"
+  },
+  {
+    "start": 99.36,
+    "end": 99.62,
+    "text": "of"
+  },
+  {
+    "start": 99.62,
+    "end": 100.02,
+    "text": "contract"
+  },
+  {
+    "start": 100.02,
+    "end": 100.92,
+    "text": "negotiations”"
+  },
+  {
+    "start": 101.55,
+    "end": 101.94,
+    "text": "and"
+  },
+  {
+    "start": 101.94,
+    "end": 102.22,
+    "text": "warned"
+  },
+  {
+    "start": 102.22,
+    "end": 102.84,
+    "text": "international"
+  },
+  {
+    "start": 102.84,
+    "end": 103.64,
+    "text": "governments"
+  },
+  {
+    "start": 103.64,
+    "end": 104.22,
+    "text": "not"
+  },
+  {
+    "start": 104.22,
+    "end": 104.5,
+    "text": "to"
+  },
+  {
+    "start": 104.5,
+    "end": 104.7,
+    "text": "“make"
+  },
+  {
+    "start": 104.7,
+    "end": 104.98,
+    "text": "rules"
+  },
+  {
+    "start": 104.98,
+    "end": 105.3,
+    "text": "and"
+  },
+  {
+    "start": 105.3,
+    "end": 105.92,
+    "text": "regulations"
+  },
+  {
+    "start": 105.92,
+    "end": 106.6,
+    "text": "that"
+  },
+  {
+    "start": 106.6,
+    "end": 106.78,
+    "text": "make"
+  },
+  {
+    "start": 106.78,
+    "end": 106.96,
+    "text": "it"
+  },
+  {
+    "start": 106.96,
+    "end": 107.42,
+    "text": "impossible”"
+  },
+  {
+    "start": 107.42,
+    "end": 107.68,
+    "text": "for"
+  },
+  {
+    "start": 107.68,
+    "end": 107.88,
+    "text": "AI"
+  },
+  {
+    "start": 107.88,
+    "end": 108.42,
+    "text": "companies"
+  },
+  {
+    "start": 108.42,
+    "end": 108.72,
+    "text": "to"
+  },
+  {
+    "start": 108.72,
+    "end": 108.88,
+    "text": "do"
+  },
+  {
+    "start": 108.88,
+    "end": 109.32,
+    "text": "business."
+  },
+  {
+    "start": 110.08,
+    "end": 110.76,
+    "text": "The"
+  },
+  {
+    "start": 110.76,
+    "end": 111.12,
+    "text": "album"
+  },
+  {
+    "start": 111.12,
+    "end": 111.42,
+    "text": "track"
+  },
+  {
+    "start": 111.42,
+    "end": 111.98,
+    "text": "listing"
+  },
+  {
+    "start": 111.98,
+    "end": 112.8,
+    "text": "spells"
+  },
+  {
+    "start": 112.8,
+    "end": 113.24,
+    "text": "out"
+  },
+  {
+    "start": 113.24,
+    "end": 113.5,
+    "text": "“the"
+  },
+  {
+    "start": 113.5,
+    "end": 113.74,
+    "text": "British"
+  },
+  {
+    "start": 113.74,
+    "end": 114.22,
+    "text": "government"
+  },
+  {
+    "start": 114.22,
+    "end": 114.52,
+    "text": "must"
+  },
+  {
+    "start": 114.52,
+    "end": 114.74,
+    "text": "not"
+  },
+  {
+    "start": 114.74,
+    "end": 115.4,
+    "text": "legalise"
+  },
+  {
+    "start": 115.4,
+    "end": 115.74,
+    "text": "music"
+  },
+  {
+    "start": 115.74,
+    "end": 116.08,
+    "text": "theft"
+  },
+  {
+    "start": 116.08,
+    "end": 116.36,
+    "text": "to"
+  },
+  {
+    "start": 116.36,
+    "end": 116.6,
+    "text": "ben-"
+  },
+  {
+    "start": 116.6,
+    "end": 116.84,
+    "text": "efit"
+  },
+  {
+    "start": 116.84,
+    "end": 117.12,
+    "text": "AI"
+  },
+  {
+    "start": 117.12,
+    "end": 117.96,
+    "text": "companies”."
+  },
+  {
+    "start": 119.0,
+    "end": 119.22,
+    "text": "Ed"
+  },
+  {
+    "start": 119.22,
+    "end": 120.02,
+    "text": "Newton-Rex,"
+  },
+  {
+    "start": 120.36,
+    "end": 120.42,
+    "text": "a"
+  },
+  {
+    "start": 120.42,
+    "end": 120.74,
+    "text": "composer"
+  },
+  {
+    "start": 120.74,
+    "end": 121.26,
+    "text": "and"
+  },
+  {
+    "start": 121.26,
+    "end": 121.92,
+    "text": "campaigner"
+  },
+  {
+    "start": 121.92,
+    "end": 122.14,
+    "text": "for"
+  },
+  {
+    "start": 122.14,
+    "end": 122.52,
+    "text": "copyright"
+  },
+  {
+    "start": 122.52,
+    "end": 123.1,
+    "text": "fairness"
+  },
+  {
+    "start": 123.1,
+    "end": 123.58,
+    "text": "behind"
+  },
+  {
+    "start": 123.58,
+    "end": 123.82,
+    "text": "the"
+  },
+  {
+    "start": 123.82,
+    "end": 124.18,
+    "text": "protest"
+  },
+  {
+    "start": 124.18,
+    "end": 124.66,
+    "text": "album,"
+  },
+  {
+    "start": 124.88,
+    "end": 125.08,
+    "text": "said:"
+  },
+  {
+    "start": 125.94,
+    "end": 126.1,
+    "text": "“I"
+  },
+  {
+    "start": 126.1,
+    "end": 126.22,
+    "text": "am"
+  },
+  {
+    "start": 126.22,
+    "end": 126.38,
+    "text": "very"
+  },
+  {
+    "start": 126.38,
+    "end": 126.96,
+    "text": "concerned"
+  },
+  {
+    "start": 126.96,
+    "end": 127.2,
+    "text": "the"
+  },
+  {
+    "start": 127.2,
+    "end": 127.5,
+    "text": "government"
+  },
+  {
+    "start": 127.5,
+    "end": 127.84,
+    "text": "is"
+  },
+  {
+    "start": 127.84,
+    "end": 128.1,
+    "text": "paying"
+  },
+  {
+    "start": 128.1,
+    "end": 128.4,
+    "text": "more"
+  },
+  {
+    "start": 128.4,
+    "end": 128.82,
+    "text": "attention"
+  },
+  {
+    "start": 128.82,
+    "end": 129.12,
+    "text": "to"
+  },
+  {
+    "start": 129.12,
+    "end": 129.38,
+    "text": "US"
+  },
+  {
+    "start": 129.38,
+    "end": 129.64,
+    "text": "tech"
+  },
+  {
+    "start": 129.64,
+    "end": 130.08,
+    "text": "companies’"
+  },
+  {
+    "start": 130.28,
+    "end": 130.66,
+    "text": "interests"
+  },
+  {
+    "start": 130.66,
+    "end": 131.64,
+    "text": "rather"
+  },
+  {
+    "start": 131.64,
+    "end": 131.92,
+    "text": "than"
+  },
+  {
+    "start": 131.92,
+    "end": 132.24,
+    "text": "British"
+  },
+  {
+    "start": 132.24,
+    "end": 132.9,
+    "text": "creatives’"
+  },
+  {
+    "start": 133.1,
+    "end": 133.58,
+    "text": "interests.”"
+  },
+  {
+    "start": 134.22,
+    "end": 134.68,
+    "text": "The"
+  },
+  {
+    "start": 134.68,
+    "end": 135.2,
+    "text": "composer"
+  },
+  {
+    "start": 135.2,
+    "end": 135.66,
+    "text": "Max"
+  },
+  {
+    "start": 135.66,
+    "end": 136.28,
+    "text": "Richter"
+  },
+  {
+    "start": 136.28,
+    "end": 136.72,
+    "text": "added:"
+  },
+  {
+    "start": 137.14,
+    "end": 137.34,
+    "text": "“The"
+  },
+  {
+    "start": 137.34,
+    "end": 137.84,
+    "text": "government’s"
+  },
+  {
+    "start": 137.84,
+    "end": 138.34,
+    "text": "proposals"
+  },
+  {
+    "start": 138.34,
+    "end": 139.06,
+    "text": "would"
+  },
+  {
+    "start": 139.06,
+    "end": 139.78,
+    "text": "impoverish"
+  },
+  {
+    "start": 139.78,
+    "end": 140.34,
+    "text": "creators,"
+  },
+  {
+    "start": 140.98,
+    "end": 141.54,
+    "text": "favouring"
+  },
+  {
+    "start": 141.54,
+    "end": 141.76,
+    "text": "those"
+  },
+  {
+    "start": 141.76,
+    "end": 142.52,
+    "text": "automating"
+  },
+  {
+    "start": 142.52,
+    "end": 143.18,
+    "text": "creativity"
+  },
+  {
+    "start": 143.18,
+    "end": 143.72,
+    "text": "over"
+  },
+  {
+    "start": 143.72,
+    "end": 143.84,
+    "text": "the"
+  },
+  {
+    "start": 143.84,
+    "end": 144.22,
+    "text": "people"
+  },
+  {
+    "start": 144.22,
+    "end": 144.48,
+    "text": "who"
+  },
+  {
+    "start": 144.48,
+    "end": 144.92,
+    "text": "compose"
+  },
+  {
+    "start": 144.92,
+    "end": 145.22,
+    "text": "our"
+  },
+  {
+    "start": 145.22,
+    "end": 145.64,
+    "text": "music,"
+  },
+  {
+    "start": 146.24,
+    "end": 146.38,
+    "text": "write"
+  },
+  {
+    "start": 146.38,
+    "end": 146.68,
+    "text": "our"
+  },
+  {
+    "start": 146.68,
+    "end": 147.14,
+    "text": "literature,"
+  },
+  {
+    "start": 147.68,
+    "end": 147.8,
+    "text": "paint"
+  },
+  {
+    "start": 147.8,
+    "end": 148.2,
+    "text": "our"
+  },
+  {
+    "start": 148.2,
+    "end": 148.68,
+    "text": "art.”"
+  },
+  {
+    "start": 148.68,
+    "end": 149.76,
+    "text": "[…]"
+  },
+  {
+    "start": 149.76,
+    "end": 150.5,
+    "text": "McCartney"
+  },
+  {
+    "start": 150.5,
+    "end": 150.98,
+    "text": "has"
+  },
+  {
+    "start": 150.98,
+    "end": 151.18,
+    "text": "been"
+  },
+  {
+    "start": 151.18,
+    "end": 151.5,
+    "text": "among"
+  },
+  {
+    "start": 151.5,
+    "end": 151.88,
+    "text": "leading"
+  },
+  {
+    "start": 151.88,
+    "end": 152.42,
+    "text": "voices"
+  },
+  {
+    "start": 152.42,
+    "end": 152.68,
+    "text": "in"
+  },
+  {
+    "start": 152.68,
+    "end": 152.92,
+    "text": "British"
+  },
+  {
+    "start": 152.92,
+    "end": 153.52,
+    "text": "music"
+  },
+  {
+    "start": 154.0,
+    "end": 154.34,
+    "text": "voicing"
+  },
+  {
+    "start": 154.34,
+    "end": 154.96,
+    "text": "concern"
+  },
+  {
+    "start": 154.96,
+    "end": 155.4,
+    "text": "as"
+  },
+  {
+    "start": 155.4,
+    "end": 155.5,
+    "text": "the"
+  },
+  {
+    "start": 155.5,
+    "end": 156.0,
+    "text": "ministers’"
+  },
+  {
+    "start": 156.0,
+    "end": 156.36,
+    "text": "plans"
+  },
+  {
+    "start": 156.36,
+    "end": 157.06,
+    "text": "forge"
+  },
+  {
+    "start": 157.06,
+    "end": 157.3,
+    "text": "a"
+  },
+  {
+    "start": 157.3,
+    "end": 157.52,
+    "text": "new"
+  },
+  {
+    "start": 157.52,
+    "end": 157.86,
+    "text": "deal"
+  },
+  {
+    "start": 157.86,
+    "end": 158.42,
+    "text": "between"
+  },
+  {
+    "start": 158.42,
+    "end": 159.2,
+    "text": "creatives"
+  },
+  {
+    "start": 159.2,
+    "end": 159.5,
+    "text": "and"
+  },
+  {
+    "start": 159.5,
+    "end": 159.7,
+    "text": "AI"
+  },
+  {
+    "start": 159.7,
+    "end": 160.2,
+    "text": "companies"
+  },
+  {
+    "start": 160.2,
+    "end": 160.6,
+    "text": "such"
+  },
+  {
+    "start": 160.6,
+    "end": 160.82,
+    "text": "as"
+  },
+  {
+    "start": 160.82,
+    "end": 161.12,
+    "text": "Open"
+  },
+  {
+    "start": 161.12,
+    "end": 161.42,
+    "text": "AI,"
+  },
+  {
+    "start": 161.98,
+    "end": 162.24,
+    "text": "Google,"
+  },
+  {
+    "start": 162.24,
+    "end": 163.06,
+    "text": "Anthropic"
+  },
+  {
+    "start": 163.06,
+    "end": 163.66,
+    "text": "and"
+  },
+  {
+    "start": 163.66,
+    "end": 163.88,
+    "text": "Elon"
+  },
+  {
+    "start": 163.88,
+    "end": 164.56,
+    "text": "Musk’s"
+  },
+  {
+    "start": 164.56,
+    "end": 165.06,
+    "text": "X-AI,"
+  },
+  {
+    "start": 165.62,
+    "end": 165.94,
+    "text": "which"
+  },
+  {
+    "start": 165.94,
+    "end": 166.24,
+    "text": "demand"
+  },
+  {
+    "start": 166.24,
+    "end": 166.8,
+    "text": "access"
+  },
+  {
+    "start": 166.8,
+    "end": 167.12,
+    "text": "to"
+  },
+  {
+    "start": 167.12,
+    "end": 167.52,
+    "text": "huge"
+  },
+  {
+    "start": 167.52,
+    "end": 167.88,
+    "text": "volumes"
+  },
+  {
+    "start": 167.88,
+    "end": 168.18,
+    "text": "of"
+  },
+  {
+    "start": 168.18,
+    "end": 168.5,
+    "text": "training"
+  },
+  {
+    "start": 168.5,
+    "end": 169.22,
+    "text": "information"
+  },
+  {
+    "start": 169.7,
+    "end": 170.34,
+    "text": "including"
+  },
+  {
+    "start": 170.34,
+    "end": 170.7,
+    "text": "text,"
+  },
+  {
+    "start": 171.12,
+    "end": 171.4,
+    "text": "images"
+  },
+  {
+    "start": 171.4,
+    "end": 171.72,
+    "text": "and"
+  },
+  {
+    "start": 171.72,
+    "end": 172.14,
+    "text": "music."
+  },
+  {
+    "start": 172.64,
+    "end": 173.26,
+    "text": "“We’ve"
+  },
+  {
+    "start": 173.26,
+    "end": 173.4,
+    "text": "got"
+  },
+  {
+    "start": 173.4,
+    "end": 173.6,
+    "text": "to"
+  },
+  {
+    "start": 173.6,
+    "end": 173.7,
+    "text": "be"
+  },
+  {
+    "start": 173.7,
+    "end": 174.06,
+    "text": "careful"
+  },
+  {
+    "start": 174.06,
+    "end": 174.32,
+    "text": "about"
+  },
+  {
+    "start": 174.32,
+    "end": 174.76,
+    "text": "it"
+  },
+  {
+    "start": 175.1,
+    "end": 175.4,
+    "text": "because"
+  },
+  {
+    "start": 175.4,
+    "end": 175.58,
+    "text": "it"
+  },
+  {
+    "start": 175.58,
+    "end": 175.78,
+    "text": "could"
+  },
+  {
+    "start": 175.78,
+    "end": 176.1,
+    "text": "just"
+  },
+  {
+    "start": 176.1,
+    "end": 176.4,
+    "text": "take"
+  },
+  {
+    "start": 176.4,
+    "end": 176.84,
+    "text": "over"
+  },
+  {
+    "start": 176.84,
+    "end": 177.3,
+    "text": "and"
+  },
+  {
+    "start": 177.3,
+    "end": 177.44,
+    "text": "we"
+  },
+  {
+    "start": 177.44,
+    "end": 177.64,
+    "text": "don’t"
+  },
+  {
+    "start": 177.64,
+    "end": 177.86,
+    "text": "want"
+  },
+  {
+    "start": 177.86,
+    "end": 178.06,
+    "text": "that"
+  },
+  {
+    "start": 178.06,
+    "end": 178.26,
+    "text": "to"
+  },
+  {
+    "start": 178.26,
+    "end": 178.58,
+    "text": "happen,"
+  },
+  {
+    "start": 178.96,
+    "end": 179.58,
+    "text": "particularly"
+  },
+  {
+    "start": 179.58,
+    "end": 179.9,
+    "text": "for"
+  },
+  {
+    "start": 179.9,
+    "end": 180.02,
+    "text": "the"
+  },
+  {
+    "start": 180.02,
+    "end": 180.24,
+    "text": "young"
+  },
+  {
+    "start": 180.24,
+    "end": 180.82,
+    "text": "composers"
+  },
+  {
+    "start": 180.82,
+    "end": 181.06,
+    "text": "and"
+  },
+  {
+    "start": 181.06,
+    "end": 181.44,
+    "text": "writers"
+  },
+  {
+    "start": 182.04,
+    "end": 182.26,
+    "text": "for"
+  },
+  {
+    "start": 182.26,
+    "end": 182.4,
+    "text": "who"
+  },
+  {
+    "start": 182.4,
+    "end": 182.54,
+    "text": "it"
+  },
+  {
+    "start": 182.54,
+    "end": 182.66,
+    "text": "may"
+  },
+  {
+    "start": 182.66,
+    "end": 182.9,
+    "text": "be"
+  },
+  {
+    "start": 182.9,
+    "end": 183.1,
+    "text": "the"
+  },
+  {
+    "start": 183.1,
+    "end": 183.4,
+    "text": "only"
+  },
+  {
+    "start": 183.4,
+    "end": 183.68,
+    "text": "way"
+  },
+  {
+    "start": 183.68,
+    "end": 183.94,
+    "text": "they’re"
+  },
+  {
+    "start": 183.94,
+    "end": 184.12,
+    "text": "gonna"
+  },
+  {
+    "start": 184.12,
+    "end": 184.26,
+    "text": "make"
+  },
+  {
+    "start": 184.26,
+    "end": 184.4,
+    "text": "a"
+  },
+  {
+    "start": 184.4,
+    "end": 184.76,
+    "text": "career,”"
+  },
+  {
+    "start": 185.3,
+    "end": 185.78,
+    "text": "McCartney"
+  },
+  {
+    "start": 185.78,
+    "end": 185.9,
+    "text": "has"
+  },
+  {
+    "start": 185.9,
+    "end": 186.1,
+    "text": "said"
+  },
+  {
+    "start": 186.1,
+    "end": 186.22,
+    "text": "of"
+  },
+  {
+    "start": 186.22,
+    "end": 186.48,
+    "text": "AI."
+  },
+  {
+    "start": 187.28,
+    "end": 187.64,
+    "text": "A"
+  },
+  {
+    "start": 187.64,
+    "end": 187.84,
+    "text": "new"
+  },
+  {
+    "start": 187.84,
+    "end": 188.14,
+    "text": "legal"
+  },
+  {
+    "start": 188.14,
+    "end": 188.58,
+    "text": "system"
+  },
+  {
+    "start": 188.58,
+    "end": 188.82,
+    "text": "for"
+  },
+  {
+    "start": 188.82,
+    "end": 189.08,
+    "text": "AI"
+  },
+  {
+    "start": 189.08,
+    "end": 189.46,
+    "text": "and"
+  },
+  {
+    "start": 189.46,
+    "end": 189.88,
+    "text": "copyright"
+  },
+  {
+    "start": 189.88,
+    "end": 190.56,
+    "text": "is"
+  },
+  {
+    "start": 190.56,
+    "end": 190.74,
+    "text": "not"
+  },
+  {
+    "start": 190.74,
+    "end": 191.32,
+    "text": "expected"
+  },
+  {
+    "start": 191.32,
+    "end": 191.48,
+    "text": "to"
+  },
+  {
+    "start": 191.48,
+    "end": 191.62,
+    "text": "be"
+  },
+  {
+    "start": 191.62,
+    "end": 192.04,
+    "text": "debated"
+  },
+  {
+    "start": 192.04,
+    "end": 192.24,
+    "text": "in"
+  },
+  {
+    "start": 192.24,
+    "end": 192.58,
+    "text": "parliament"
+  },
+  {
+    "start": 192.58,
+    "end": 192.94,
+    "text": "before"
+  },
+  {
+    "start": 192.94,
+    "end": 193.92,
+    "text": "2026."
+  },
+  {
+    "start": 194.82,
+    "end": 194.94,
+    "text": "In"
+  },
+  {
+    "start": 194.94,
+    "end": 195.06,
+    "text": "the"
+  },
+  {
+    "start": 195.06,
+    "end": 195.44,
+    "text": "meantime,"
+  },
+  {
+    "start": 195.92,
+    "end": 196.0,
+    "text": "the"
+  },
+  {
+    "start": 196.0,
+    "end": 196.26,
+    "text": "government"
+  },
+  {
+    "start": 196.26,
+    "end": 196.56,
+    "text": "has"
+  },
+  {
+    "start": 196.56,
+    "end": 196.86,
+    "text": "signed"
+  },
+  {
+    "start": 196.86,
+    "end": 197.22,
+    "text": "deals"
+  },
+  {
+    "start": 197.22,
+    "end": 197.48,
+    "text": "with"
+  },
+  {
+    "start": 197.48,
+    "end": 197.76,
+    "text": "AI"
+  },
+  {
+    "start": 197.76,
+    "end": 198.3,
+    "text": "companies"
+  },
+  {
+    "start": 198.56,
+    "end": 199.0,
+    "text": "including"
+  },
+  {
+    "start": 199.0,
+    "end": 199.32,
+    "text": "Open"
+  },
+  {
+    "start": 199.32,
+    "end": 199.64,
+    "text": "AI,"
+  },
+  {
+    "start": 200.18,
+    "end": 200.42,
+    "text": "Google"
+  },
+  {
+    "start": 200.42,
+    "end": 200.86,
+    "text": "and"
+  },
+  {
+    "start": 200.86,
+    "end": 201.4,
+    "text": "Anthropic"
+  },
+  {
+    "start": 202.0,
+    "end": 202.12,
+    "text": "to"
+  },
+  {
+    "start": 202.12,
+    "end": 202.46,
+    "text": "boost"
+  },
+  {
+    "start": 202.46,
+    "end": 202.82,
+    "text": "AI"
+  },
+  {
+    "start": 202.82,
+    "end": 203.46,
+    "text": "adoption"
+  },
+  {
+    "start": 203.46,
+    "end": 203.92,
+    "text": "across"
+  },
+  {
+    "start": 203.92,
+    "end": 204.48,
+    "text": "government"
+  },
+  {
+    "start": 204.48,
+    "end": 204.8,
+    "text": "and"
+  },
+  {
+    "start": 204.8,
+    "end": 204.92,
+    "text": "the"
+  },
+  {
+    "start": 204.92,
+    "end": 205.2,
+    "text": "wider"
+  },
+  {
+    "start": 205.2,
+    "end": 205.84,
+    "text": "economy"
+  },
+  {
+    "start": 207.14,
+    "end": 208.3,
+    "text": "[…]."
+  },
+  {
+    "start": 208.66,
+    "end": 208.88,
+    "text": "November"
+  },
+  {
+    "start": 208.88,
+    "end": 210.08,
+    "text": "2025"
+  },
+  {
+    "start": 210.08,
+    "end": 210.08,
+    "text": "92/140"
+  }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadowing Master</title>
+    <link rel="stylesheet" href="shadowing.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🗣️ Shadowing Master</h1>
+        <p class="subtitle">Entraînez-vous à prononcer l'anglais avec un alignement parfait !</p>
+        
+        <div class="card setup-card" id="setupCard">
+            <h3>1. Chargez votre leçon</h3>
+            <div class="form-group">
+                <label>Fichier Audio (.mp3)</label>
+                <input type="file" id="audioInput" accept="audio/*">
+            </div>
+            <div class="form-group">
+                <label>Fichier de Synchronisation (.json)</label>
+                <input type="file" id="jsonInput" accept="application/json">
+            </div>
+            <button id="loadBtn" class="primary-btn">Commencer l'entraînement</button>
+        </div>
+
+        <div class="card player-card hidden" id="playerCard">
+            <div class="controls-bar">
+                <button id="playPauseBtn" class="play-btn">▶️ Lancer</button>
+                
+                <div class="settings-bar">
+                    <div class="granularity-controls">
+                        <button class="gran-btn active" data-val="sentence">Phrases</button>
+                        <button class="gran-btn" data-val="comma">Virgules</button>
+                        <button class="gran-btn" data-val="word">Mots</button>
+                    </div>
+                    
+                    <div class="pause-settings">
+                        <label for="pauseMult">Pause: x<span id="pauseVal">1.5</span></label>
+                        <input type="range" id="pauseMult" min="0.5" max="4.0" step="0.1" value="1.5">
+                    </div>
+                    
+                    <div class="mode-toggle">
+                        <label for="autoPauseToggle">Auto-Pause</label>
+                        <input type="checkbox" id="autoPauseToggle" checked>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="status-indicator" id="statusIndicator">
+                <div id="statusText">En attente...</div>
+                <div class="progress-bar-container hidden" id="progressBarContainer">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+            </div>
+
+            <div class="text-container" id="textContainer">
+                <!-- Les phrases seront injectées ici -->
+            </div>
+            
+            <audio id="audioPlayer" class="hidden"></audio>
+        </div>
+    </div>
+    
+    <script src="shadowing.js"></script>
+</body>
+</html>

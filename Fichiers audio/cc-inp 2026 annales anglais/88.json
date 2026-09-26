@@ -1,0 +1,2342 @@
+[
+  {
+    "start": 2.56,
+    "end": 3.08,
+    "text": "RIDE"
+  },
+  {
+    "start": 3.08,
+    "end": 3.3,
+    "text": "IN"
+  },
+  {
+    "start": 3.3,
+    "end": 3.36,
+    "text": "A"
+  },
+  {
+    "start": 3.36,
+    "end": 3.98,
+    "text": "ROBOTAXI?"
+  },
+  {
+    "start": 4.84,
+    "end": 4.98,
+    "text": "WHO"
+  },
+  {
+    "start": 4.98,
+    "end": 5.08,
+    "text": "DO"
+  },
+  {
+    "start": 5.08,
+    "end": 5.18,
+    "text": "YOU"
+  },
+  {
+    "start": 5.18,
+    "end": 5.38,
+    "text": "BLAME"
+  },
+  {
+    "start": 5.38,
+    "end": 5.6,
+    "text": "IF"
+  },
+  {
+    "start": 5.6,
+    "end": 5.72,
+    "text": "IT"
+  },
+  {
+    "start": 5.72,
+    "end": 5.86,
+    "text": "GOES"
+  },
+  {
+    "start": 5.86,
+    "end": 6.14,
+    "text": "WRONG?"
+  },
+  {
+    "start": 7.64,
+    "end": 7.88,
+    "text": "Why"
+  },
+  {
+    "start": 7.88,
+    "end": 8.08,
+    "text": "would"
+  },
+  {
+    "start": 8.08,
+    "end": 8.36,
+    "text": "anyone"
+  },
+  {
+    "start": 8.36,
+    "end": 8.86,
+    "text": "ever"
+  },
+  {
+    "start": 8.86,
+    "end": 9.1,
+    "text": "get"
+  },
+  {
+    "start": 9.1,
+    "end": 9.44,
+    "text": "into"
+  },
+  {
+    "start": 9.44,
+    "end": 9.58,
+    "text": "a"
+  },
+  {
+    "start": 9.58,
+    "end": 10.34,
+    "text": "“robotaxi”?"
+  },
+  {
+    "start": 11.06,
+    "end": 11.22,
+    "text": "In"
+  },
+  {
+    "start": 11.22,
+    "end": 11.52,
+    "text": "London,"
+  },
+  {
+    "start": 12.12,
+    "end": 12.3,
+    "text": "it’s"
+  },
+  {
+    "start": 12.3,
+    "end": 12.44,
+    "text": "soon"
+  },
+  {
+    "start": 12.44,
+    "end": 12.6,
+    "text": "going"
+  },
+  {
+    "start": 12.6,
+    "end": 12.78,
+    "text": "to"
+  },
+  {
+    "start": 12.78,
+    "end": 12.9,
+    "text": "be"
+  },
+  {
+    "start": 12.9,
+    "end": 13.08,
+    "text": "a"
+  },
+  {
+    "start": 13.08,
+    "end": 13.34,
+    "text": "live"
+  },
+  {
+    "start": 13.34,
+    "end": 13.88,
+    "text": "question,"
+  },
+  {
+    "start": 14.22,
+    "end": 14.42,
+    "text": "because"
+  },
+  {
+    "start": 14.42,
+    "end": 14.88,
+    "text": "Waymo,"
+  },
+  {
+    "start": 15.32,
+    "end": 15.48,
+    "text": "owned"
+  },
+  {
+    "start": 15.48,
+    "end": 15.66,
+    "text": "by"
+  },
+  {
+    "start": 15.66,
+    "end": 16.22,
+    "text": "Alphabet,"
+  },
+  {
+    "start": 16.56,
+    "end": 16.7,
+    "text": "parent"
+  },
+  {
+    "start": 16.7,
+    "end": 16.86,
+    "text": "of"
+  },
+  {
+    "start": 16.86,
+    "end": 17.18,
+    "text": "Google,"
+  },
+  {
+    "start": 17.72,
+    "end": 17.94,
+    "text": "has"
+  },
+  {
+    "start": 17.94,
+    "end": 18.1,
+    "text": "been"
+  },
+  {
+    "start": 18.1,
+    "end": 18.36,
+    "text": "allowed"
+  },
+  {
+    "start": 18.36,
+    "end": 18.62,
+    "text": "to"
+  },
+  {
+    "start": 18.62,
+    "end": 18.98,
+    "text": "trial"
+  },
+  {
+    "start": 18.98,
+    "end": 19.62,
+    "text": "driverless"
+  },
+  {
+    "start": 19.62,
+    "end": 20.12,
+    "text": "taxis"
+  },
+  {
+    "start": 20.12,
+    "end": 20.36,
+    "text": "in"
+  },
+  {
+    "start": 20.36,
+    "end": 20.48,
+    "text": "the"
+  },
+  {
+    "start": 20.48,
+    "end": 20.94,
+    "text": "capital."
+  },
+  {
+    "start": 21.92,
+    "end": 22.18,
+    "text": "If"
+  },
+  {
+    "start": 22.18,
+    "end": 22.44,
+    "text": "things"
+  },
+  {
+    "start": 22.44,
+    "end": 22.68,
+    "text": "go"
+  },
+  {
+    "start": 22.68,
+    "end": 23.16,
+    "text": "smoothly,"
+  },
+  {
+    "start": 23.7,
+    "end": 23.78,
+    "text": "the"
+  },
+  {
+    "start": 23.78,
+    "end": 24.32,
+    "text": "experiment"
+  },
+  {
+    "start": 24.32,
+    "end": 24.56,
+    "text": "will"
+  },
+  {
+    "start": 24.56,
+    "end": 24.84,
+    "text": "spread"
+  },
+  {
+    "start": 24.84,
+    "end": 25.58,
+    "text": "nationwide"
+  },
+  {
+    "start": 26.14,
+    "end": 26.26,
+    "text": "and"
+  },
+  {
+    "start": 26.26,
+    "end": 26.36,
+    "text": "the"
+  },
+  {
+    "start": 26.36,
+    "end": 26.74,
+    "text": "profession"
+  },
+  {
+    "start": 26.74,
+    "end": 26.94,
+    "text": "of"
+  },
+  {
+    "start": 26.94,
+    "end": 27.2,
+    "text": "taxi"
+  },
+  {
+    "start": 27.2,
+    "end": 27.64,
+    "text": "driving"
+  },
+  {
+    "start": 27.64,
+    "end": 28.1,
+    "text": "may"
+  },
+  {
+    "start": 28.1,
+    "end": 28.34,
+    "text": "become"
+  },
+  {
+    "start": 28.34,
+    "end": 28.48,
+    "text": "a"
+  },
+  {
+    "start": 28.48,
+    "end": 28.58,
+    "text": "thing"
+  },
+  {
+    "start": 28.58,
+    "end": 28.74,
+    "text": "of"
+  },
+  {
+    "start": 28.74,
+    "end": 28.82,
+    "text": "the"
+  },
+  {
+    "start": 28.82,
+    "end": 29.32,
+    "text": "past."
+  },
+  {
+    "start": 30.0,
+    "end": 30.22,
+    "text": "The"
+  },
+  {
+    "start": 30.22,
+    "end": 30.52,
+    "text": "change"
+  },
+  {
+    "start": 30.52,
+    "end": 30.8,
+    "text": "might"
+  },
+  {
+    "start": 30.8,
+    "end": 31.12,
+    "text": "seem"
+  },
+  {
+    "start": 31.12,
+    "end": 31.5,
+    "text": "gradual"
+  },
+  {
+    "start": 31.5,
+    "end": 31.72,
+    "text": "at"
+  },
+  {
+    "start": 31.72,
+    "end": 31.98,
+    "text": "first,"
+  },
+  {
+    "start": 32.5,
+    "end": 32.62,
+    "text": "but"
+  },
+  {
+    "start": 32.62,
+    "end": 32.78,
+    "text": "once"
+  },
+  {
+    "start": 32.78,
+    "end": 33.04,
+    "text": "it"
+  },
+  {
+    "start": 33.04,
+    "end": 33.36,
+    "text": "starts,"
+  },
+  {
+    "start": 33.76,
+    "end": 33.92,
+    "text": "it"
+  },
+  {
+    "start": 33.92,
+    "end": 34.04,
+    "text": "will"
+  },
+  {
+    "start": 34.04,
+    "end": 34.16,
+    "text": "be"
+  },
+  {
+    "start": 34.16,
+    "end": 34.66,
+    "text": "impossible"
+  },
+  {
+    "start": 34.66,
+    "end": 34.88,
+    "text": "to"
+  },
+  {
+    "start": 34.88,
+    "end": 35.2,
+    "text": "reverse."
+  },
+  {
+    "start": 36.36,
+    "end": 36.68,
+    "text": "I"
+  },
+  {
+    "start": 36.68,
+    "end": 36.96,
+    "text": "have"
+  },
+  {
+    "start": 36.96,
+    "end": 37.52,
+    "text": "qualms"
+  },
+  {
+    "start": 37.52,
+    "end": 37.8,
+    "text": "about"
+  },
+  {
+    "start": 37.8,
+    "end": 38.14,
+    "text": "being"
+  },
+  {
+    "start": 38.14,
+    "end": 38.76,
+    "text": "propelled"
+  },
+  {
+    "start": 38.76,
+    "end": 38.94,
+    "text": "in"
+  },
+  {
+    "start": 38.94,
+    "end": 39.02,
+    "text": "a"
+  },
+  {
+    "start": 39.02,
+    "end": 39.24,
+    "text": "metal"
+  },
+  {
+    "start": 39.24,
+    "end": 39.5,
+    "text": "box"
+  },
+  {
+    "start": 39.5,
+    "end": 39.84,
+    "text": "with"
+  },
+  {
+    "start": 39.84,
+    "end": 40.02,
+    "text": "no"
+  },
+  {
+    "start": 40.02,
+    "end": 40.4,
+    "text": "human"
+  },
+  {
+    "start": 40.4,
+    "end": 40.68,
+    "text": "in"
+  },
+  {
+    "start": 40.68,
+    "end": 41.06,
+    "text": "charge."
+  },
+  {
+    "start": 41.06,
+    "end": 41.74,
+    "text": "[…]"
+  },
+  {
+    "start": 41.74,
+    "end": 41.92,
+    "text": "Who"
+  },
+  {
+    "start": 41.92,
+    "end": 42.04,
+    "text": "do"
+  },
+  {
+    "start": 42.04,
+    "end": 42.12,
+    "text": "you"
+  },
+  {
+    "start": 42.12,
+    "end": 42.36,
+    "text": "blame"
+  },
+  {
+    "start": 42.36,
+    "end": 42.6,
+    "text": "if"
+  },
+  {
+    "start": 42.6,
+    "end": 42.7,
+    "text": "it"
+  },
+  {
+    "start": 42.7,
+    "end": 42.84,
+    "text": "goes"
+  },
+  {
+    "start": 42.84,
+    "end": 43.22,
+    "text": "wrong,"
+  },
+  {
+    "start": 43.66,
+    "end": 44.02,
+    "text": "assuming"
+  },
+  {
+    "start": 44.02,
+    "end": 44.3,
+    "text": "you’re"
+  },
+  {
+    "start": 44.3,
+    "end": 44.44,
+    "text": "still"
+  },
+  {
+    "start": 44.44,
+    "end": 44.74,
+    "text": "around"
+  },
+  {
+    "start": 44.74,
+    "end": 44.96,
+    "text": "to"
+  },
+  {
+    "start": 44.96,
+    "end": 45.08,
+    "text": "ask"
+  },
+  {
+    "start": 45.08,
+    "end": 45.56,
+    "text": "questions?"
+  },
+  {
+    "start": 46.64,
+    "end": 46.96,
+    "text": "Even"
+  },
+  {
+    "start": 46.96,
+    "end": 47.1,
+    "text": "if"
+  },
+  {
+    "start": 47.1,
+    "end": 47.54,
+    "text": "statistics"
+  },
+  {
+    "start": 47.54,
+    "end": 48.04,
+    "text": "show"
+  },
+  {
+    "start": 48.04,
+    "end": 48.24,
+    "text": "the"
+  },
+  {
+    "start": 48.24,
+    "end": 48.86,
+    "text": "robotaxi"
+  },
+  {
+    "start": 48.86,
+    "end": 49.36,
+    "text": "has"
+  },
+  {
+    "start": 49.36,
+    "end": 49.66,
+    "text": "fewer"
+  },
+  {
+    "start": 49.66,
+    "end": 50.08,
+    "text": "accidents"
+  },
+  {
+    "start": 50.08,
+    "end": 50.38,
+    "text": "than"
+  },
+  {
+    "start": 50.38,
+    "end": 50.78,
+    "text": "humans,"
+  },
+  {
+    "start": 51.4,
+    "end": 51.64,
+    "text": "it’s"
+  },
+  {
+    "start": 51.64,
+    "end": 51.88,
+    "text": "still"
+  },
+  {
+    "start": 51.88,
+    "end": 52.1,
+    "text": "a"
+  },
+  {
+    "start": 52.1,
+    "end": 52.64,
+    "text": "considerable"
+  },
+  {
+    "start": 52.64,
+    "end": 52.98,
+    "text": "act"
+  },
+  {
+    "start": 52.98,
+    "end": 53.2,
+    "text": "of"
+  },
+  {
+    "start": 53.2,
+    "end": 53.54,
+    "text": "faith"
+  },
+  {
+    "start": 53.54,
+    "end": 54.12,
+    "text": "[…]"
+  },
+  {
+    "start": 54.12,
+    "end": 54.68,
+    "text": "Have"
+  },
+  {
+    "start": 54.68,
+    "end": 54.84,
+    "text": "you"
+  },
+  {
+    "start": 54.84,
+    "end": 55.02,
+    "text": "ever"
+  },
+  {
+    "start": 55.02,
+    "end": 55.2,
+    "text": "been"
+  },
+  {
+    "start": 55.2,
+    "end": 55.34,
+    "text": "in"
+  },
+  {
+    "start": 55.34,
+    "end": 55.46,
+    "text": "a"
+  },
+  {
+    "start": 55.46,
+    "end": 55.66,
+    "text": "car"
+  },
+  {
+    "start": 55.66,
+    "end": 55.94,
+    "text": "that"
+  },
+  {
+    "start": 55.94,
+    "end": 56.26,
+    "text": "thinks"
+  },
+  {
+    "start": 56.26,
+    "end": 56.42,
+    "text": "for"
+  },
+  {
+    "start": 56.42,
+    "end": 56.82,
+    "text": "itself?"
+  },
+  {
+    "start": 57.48,
+    "end": 57.72,
+    "text": "I’m"
+  },
+  {
+    "start": 57.72,
+    "end": 57.94,
+    "text": "still"
+  },
+  {
+    "start": 57.94,
+    "end": 58.42,
+    "text": "recovering"
+  },
+  {
+    "start": 58.42,
+    "end": 58.9,
+    "text": "from"
+  },
+  {
+    "start": 58.9,
+    "end": 59.26,
+    "text": "driving"
+  },
+  {
+    "start": 59.26,
+    "end": 59.4,
+    "text": "a"
+  },
+  {
+    "start": 59.4,
+    "end": 59.68,
+    "text": "“smart”"
+  },
+  {
+    "start": 59.68,
+    "end": 60.26,
+    "text": "Chinese"
+  },
+  {
+    "start": 60.26,
+    "end": 60.88,
+    "text": "SUV"
+  },
+  {
+    "start": 60.88,
+    "end": 61.7,
+    "text": "that"
+  },
+  {
+    "start": 61.7,
+    "end": 61.98,
+    "text": "slammed"
+  },
+  {
+    "start": 61.98,
+    "end": 62.22,
+    "text": "on"
+  },
+  {
+    "start": 62.22,
+    "end": 62.34,
+    "text": "the"
+  },
+  {
+    "start": 62.34,
+    "end": 62.68,
+    "text": "brakes"
+  },
+  {
+    "start": 62.68,
+    "end": 62.9,
+    "text": "whenever"
+  },
+  {
+    "start": 62.9,
+    "end": 63.18,
+    "text": "I"
+  },
+  {
+    "start": 63.18,
+    "end": 63.48,
+    "text": "passed"
+  },
+  {
+    "start": 63.48,
+    "end": 63.64,
+    "text": "an"
+  },
+  {
+    "start": 63.64,
+    "end": 64.28,
+    "text": "articulated"
+  },
+  {
+    "start": 64.28,
+    "end": 64.68,
+    "text": "lorry"
+  },
+  {
+    "start": 64.68,
+    "end": 65.2,
+    "text": "because"
+  },
+  {
+    "start": 65.2,
+    "end": 65.36,
+    "text": "it"
+  },
+  {
+    "start": 65.36,
+    "end": 65.54,
+    "text": "thought"
+  },
+  {
+    "start": 65.54,
+    "end": 65.7,
+    "text": "I"
+  },
+  {
+    "start": 65.7,
+    "end": 65.82,
+    "text": "was"
+  },
+  {
+    "start": 65.82,
+    "end": 66.02,
+    "text": "about"
+  },
+  {
+    "start": 66.02,
+    "end": 66.26,
+    "text": "to"
+  },
+  {
+    "start": 66.26,
+    "end": 66.44,
+    "text": "hit"
+  },
+  {
+    "start": 66.44,
+    "end": 66.8,
+    "text": "it."
+  },
+  {
+    "start": 66.8,
+    "end": 67.28,
+    "text": "[…]"
+  },
+  {
+    "start": 67.28,
+    "end": 67.54,
+    "text": "I"
+  },
+  {
+    "start": 67.54,
+    "end": 67.78,
+    "text": "might"
+  },
+  {
+    "start": 67.78,
+    "end": 68.0,
+    "text": "well"
+  },
+  {
+    "start": 68.0,
+    "end": 68.12,
+    "text": "have"
+  },
+  {
+    "start": 68.12,
+    "end": 68.32,
+    "text": "ended"
+  },
+  {
+    "start": 68.32,
+    "end": 68.58,
+    "text": "up"
+  },
+  {
+    "start": 68.58,
+    "end": 68.78,
+    "text": "under"
+  },
+  {
+    "start": 68.78,
+    "end": 68.92,
+    "text": "the"
+  },
+  {
+    "start": 68.92,
+    "end": 69.12,
+    "text": "wheels"
+  },
+  {
+    "start": 69.12,
+    "end": 69.4,
+    "text": "of"
+  },
+  {
+    "start": 69.4,
+    "end": 69.48,
+    "text": "a"
+  },
+  {
+    "start": 69.48,
+    "end": 69.72,
+    "text": "Royal"
+  },
+  {
+    "start": 69.72,
+    "end": 69.92,
+    "text": "Mail"
+  },
+  {
+    "start": 69.92,
+    "end": 70.26,
+    "text": "truck."
+  },
+  {
+    "start": 71.28,
+    "end": 71.84,
+    "text": "Positively"
+  },
+  {
+    "start": 71.84,
+    "end": 72.28,
+    "text": "dangerous,"
+  },
+  {
+    "start": 72.28,
+    "end": 72.62,
+    "text": "and"
+  },
+  {
+    "start": 72.62,
+    "end": 73.06,
+    "text": "deeply"
+  },
+  {
+    "start": 73.06,
+    "end": 73.76,
+    "text": "unsettling"
+  },
+  {
+    "start": 73.76,
+    "end": 73.96,
+    "text": "for"
+  },
+  {
+    "start": 73.96,
+    "end": 74.06,
+    "text": "the"
+  },
+  {
+    "start": 74.06,
+    "end": 74.36,
+    "text": "person"
+  },
+  {
+    "start": 74.36,
+    "end": 74.7,
+    "text": "behind"
+  },
+  {
+    "start": 74.7,
+    "end": 74.9,
+    "text": "the"
+  },
+  {
+    "start": 74.9,
+    "end": 75.1,
+    "text": "wheel."
+  },
+  {
+    "start": 76.0,
+    "end": 76.32,
+    "text": "They"
+  },
+  {
+    "start": 76.32,
+    "end": 76.8,
+    "text": "also"
+  },
+  {
+    "start": 76.8,
+    "end": 77.42,
+    "text": "misread"
+  },
+  {
+    "start": 77.42,
+    "end": 77.84,
+    "text": "speed"
+  },
+  {
+    "start": 77.84,
+    "end": 78.3,
+    "text": "limits,"
+  },
+  {
+    "start": 78.7,
+    "end": 78.94,
+    "text": "thinking"
+  },
+  {
+    "start": 78.94,
+    "end": 79.14,
+    "text": "a"
+  },
+  {
+    "start": 79.14,
+    "end": 79.44,
+    "text": "fast"
+  },
+  {
+    "start": 79.44,
+    "end": 79.72,
+    "text": "road"
+  },
+  {
+    "start": 79.72,
+    "end": 80.16,
+    "text": "beside"
+  },
+  {
+    "start": 80.16,
+    "end": 80.38,
+    "text": "a"
+  },
+  {
+    "start": 80.38,
+    "end": 80.7,
+    "text": "suburban"
+  },
+  {
+    "start": 80.7,
+    "end": 81.2,
+    "text": "street"
+  },
+  {
+    "start": 81.2,
+    "end": 81.84,
+    "text": "should"
+  },
+  {
+    "start": 81.84,
+    "end": 81.96,
+    "text": "be"
+  },
+  {
+    "start": 81.96,
+    "end": 82.24,
+    "text": "twenty"
+  },
+  {
+    "start": 82.24,
+    "end": 82.48,
+    "text": "miles"
+  },
+  {
+    "start": 82.48,
+    "end": 82.7,
+    "text": "per"
+  },
+  {
+    "start": 82.7,
+    "end": 82.94,
+    "text": "hour"
+  },
+  {
+    "start": 82.94,
+    "end": 83.28,
+    "text": "instead"
+  },
+  {
+    "start": 83.28,
+    "end": 83.48,
+    "text": "of"
+  },
+  {
+    "start": 83.48,
+    "end": 83.69,
+    "text": "seventy."
+  },
+  {
+    "start": 83.69,
+    "end": 83.9,
+    "text": "[…]"
+  },
+  {
+    "start": 84.6,
+    "end": 84.78,
+    "text": "The"
+  },
+  {
+    "start": 84.78,
+    "end": 85.22,
+    "text": "technology"
+  },
+  {
+    "start": 85.22,
+    "end": 85.46,
+    "text": "is"
+  },
+  {
+    "start": 85.46,
+    "end": 85.94,
+    "text": "impressive"
+  },
+  {
+    "start": 85.94,
+    "end": 86.16,
+    "text": "but"
+  },
+  {
+    "start": 86.16,
+    "end": 86.48,
+    "text": "far"
+  },
+  {
+    "start": 86.48,
+    "end": 86.74,
+    "text": "from"
+  },
+  {
+    "start": 86.74,
+    "end": 87.2,
+    "text": "flawless,"
+  },
+  {
+    "start": 87.72,
+    "end": 87.98,
+    "text": "and"
+  },
+  {
+    "start": 87.98,
+    "end": 88.1,
+    "text": "the"
+  },
+  {
+    "start": 88.1,
+    "end": 88.44,
+    "text": "smallest"
+  },
+  {
+    "start": 88.44,
+    "end": 88.86,
+    "text": "error"
+  },
+  {
+    "start": 88.86,
+    "end": 89.32,
+    "text": "could"
+  },
+  {
+    "start": 89.32,
+    "end": 89.56,
+    "text": "have"
+  },
+  {
+    "start": 89.56,
+    "end": 89.92,
+    "text": "serious"
+  },
+  {
+    "start": 89.92,
+    "end": 90.68,
+    "text": "consequences"
+  },
+  {
+    "start": 90.68,
+    "end": 91.58,
+    "text": "[…]"
+  },
+  {
+    "start": 91.58,
+    "end": 92.26,
+    "text": "You"
+  },
+  {
+    "start": 92.26,
+    "end": 92.62,
+    "text": "probably"
+  },
+  {
+    "start": 92.62,
+    "end": 93.12,
+    "text": "already"
+  },
+  {
+    "start": 93.12,
+    "end": 93.56,
+    "text": "use"
+  },
+  {
+    "start": 93.56,
+    "end": 93.9,
+    "text": "bits"
+  },
+  {
+    "start": 93.9,
+    "end": 94.04,
+    "text": "of"
+  },
+  {
+    "start": 94.04,
+    "end": 94.32,
+    "text": "it:"
+  },
+  {
+    "start": 94.7,
+    "end": 95.08,
+    "text": "advanced"
+  },
+  {
+    "start": 95.08,
+    "end": 95.44,
+    "text": "driver"
+  },
+  {
+    "start": 95.44,
+    "end": 95.9,
+    "text": "assistance"
+  },
+  {
+    "start": 95.9,
+    "end": 96.5,
+    "text": "systems"
+  },
+  {
+    "start": 96.5,
+    "end": 96.86,
+    "text": "and"
+  },
+  {
+    "start": 96.86,
+    "end": 97.2,
+    "text": "sat"
+  },
+  {
+    "start": 97.2,
+    "end": 97.54,
+    "text": "navs."
+  },
+  {
+    "start": 98.12,
+    "end": 98.34,
+    "text": "Link"
+  },
+  {
+    "start": 98.34,
+    "end": 98.52,
+    "text": "them"
+  },
+  {
+    "start": 98.52,
+    "end": 98.66,
+    "text": "all"
+  },
+  {
+    "start": 98.66,
+    "end": 99.0,
+    "text": "up"
+  },
+  {
+    "start": 99.34,
+    "end": 99.42,
+    "text": "and"
+  },
+  {
+    "start": 99.42,
+    "end": 99.6,
+    "text": "your"
+  },
+  {
+    "start": 99.6,
+    "end": 99.98,
+    "text": "vehicle"
+  },
+  {
+    "start": 99.98,
+    "end": 100.36,
+    "text": "can"
+  },
+  {
+    "start": 100.36,
+    "end": 100.54,
+    "text": "take"
+  },
+  {
+    "start": 100.54,
+    "end": 100.72,
+    "text": "you"
+  },
+  {
+    "start": 100.72,
+    "end": 100.88,
+    "text": "where"
+  },
+  {
+    "start": 100.88,
+    "end": 101.04,
+    "text": "you"
+  },
+  {
+    "start": 101.04,
+    "end": 101.2,
+    "text": "need"
+  },
+  {
+    "start": 101.2,
+    "end": 101.4,
+    "text": "to"
+  },
+  {
+    "start": 101.4,
+    "end": 101.62,
+    "text": "go,"
+  },
+  {
+    "start": 101.98,
+    "end": 102.18,
+    "text": "fairly"
+  },
+  {
+    "start": 102.18,
+    "end": 102.62,
+    "text": "safely"
+  },
+  {
+    "start": 102.96,
+    "end": 103.02,
+    "text": "on"
+  },
+  {
+    "start": 103.02,
+    "end": 103.34,
+    "text": "current"
+  },
+  {
+    "start": 103.34,
+    "end": 103.8,
+    "text": "evidence."
+  },
+  {
+    "start": 104.56,
+    "end": 104.94,
+    "text": "(Probably"
+  },
+  {
+    "start": 104.94,
+    "end": 105.34,
+    "text": "the"
+  },
+  {
+    "start": 105.34,
+    "end": 105.54,
+    "text": "only"
+  },
+  {
+    "start": 105.54,
+    "end": 105.78,
+    "text": "thing"
+  },
+  {
+    "start": 105.78,
+    "end": 106.08,
+    "text": "not"
+  },
+  {
+    "start": 106.08,
+    "end": 106.28,
+    "text": "yet"
+  },
+  {
+    "start": 106.28,
+    "end": 106.7,
+    "text": "solved"
+  },
+  {
+    "start": 106.7,
+    "end": 106.92,
+    "text": "is"
+  },
+  {
+    "start": 106.92,
+    "end": 107.62,
+    "text": "refuelling"
+  },
+  {
+    "start": 107.62,
+    "end": 107.84,
+    "text": "or"
+  },
+  {
+    "start": 107.84,
+    "end": 108.58,
+    "text": "recharging.)"
+  },
+  {
+    "start": 109.42,
+    "end": 110.08,
+    "text": "Even"
+  },
+  {
+    "start": 110.08,
+    "end": 110.46,
+    "text": "now,"
+  },
+  {
+    "start": 110.78,
+    "end": 110.92,
+    "text": "if"
+  },
+  {
+    "start": 110.92,
+    "end": 111.0,
+    "text": "you"
+  },
+  {
+    "start": 111.0,
+    "end": 111.22,
+    "text": "own"
+  },
+  {
+    "start": 111.22,
+    "end": 111.4,
+    "text": "a"
+  },
+  {
+    "start": 111.4,
+    "end": 111.54,
+    "text": "smart"
+  },
+  {
+    "start": 111.54,
+    "end": 111.94,
+    "text": "model,"
+  },
+  {
+    "start": 112.44,
+    "end": 112.5,
+    "text": "the"
+  },
+  {
+    "start": 112.5,
+    "end": 112.66,
+    "text": "car"
+  },
+  {
+    "start": 112.66,
+    "end": 112.84,
+    "text": "can"
+  },
+  {
+    "start": 112.84,
+    "end": 113.34,
+    "text": "accelerate,"
+  },
+  {
+    "start": 113.7,
+    "end": 113.88,
+    "text": "brake,"
+  },
+  {
+    "start": 114.24,
+    "end": 114.34,
+    "text": "stay"
+  },
+  {
+    "start": 114.34,
+    "end": 114.5,
+    "text": "in"
+  },
+  {
+    "start": 114.5,
+    "end": 114.7,
+    "text": "lane,"
+  },
+  {
+    "start": 114.7,
+    "end": 115.18,
+    "text": "and"
+  },
+  {
+    "start": 115.18,
+    "end": 115.4,
+    "text": "obey"
+  },
+  {
+    "start": 115.4,
+    "end": 115.8,
+    "text": "limits"
+  },
+  {
+    "start": 115.8,
+    "end": 116.72,
+    "text": "automatically."
+  },
+  {
+    "start": 117.46,
+    "end": 117.9,
+    "text": "A"
+  },
+  {
+    "start": 117.9,
+    "end": 118.26,
+    "text": "Chinese"
+  },
+  {
+    "start": 118.26,
+    "end": 118.78,
+    "text": "vehicle"
+  },
+  {
+    "start": 118.78,
+    "end": 119.2,
+    "text": "with"
+  },
+  {
+    "start": 119.2,
+    "end": 119.68,
+    "text": "LiDAR"
+  },
+  {
+    "start": 119.68,
+    "end": 120.02,
+    "text": "–"
+  },
+  {
+    "start": 120.02,
+    "end": 120.14,
+    "text": "“light"
+  },
+  {
+    "start": 120.14,
+    "end": 120.66,
+    "text": "detection"
+  },
+  {
+    "start": 120.66,
+    "end": 120.98,
+    "text": "and"
+  },
+  {
+    "start": 120.98,
+    "end": 121.44,
+    "text": "ranging”"
+  },
+  {
+    "start": 121.44,
+    "end": 122.14,
+    "text": "–"
+  },
+  {
+    "start": 122.14,
+    "end": 122.26,
+    "text": "learns"
+  },
+  {
+    "start": 122.26,
+    "end": 122.48,
+    "text": "to"
+  },
+  {
+    "start": 122.48,
+    "end": 122.74,
+    "text": "drive"
+  },
+  {
+    "start": 122.74,
+    "end": 122.96,
+    "text": "rather"
+  },
+  {
+    "start": 122.96,
+    "end": 123.32,
+    "text": "like"
+  },
+  {
+    "start": 123.32,
+    "end": 123.5,
+    "text": "a"
+  },
+  {
+    "start": 123.5,
+    "end": 123.72,
+    "text": "toddler"
+  },
+  {
+    "start": 123.72,
+    "end": 124.08,
+    "text": "learns"
+  },
+  {
+    "start": 124.08,
+    "end": 124.34,
+    "text": "to"
+  },
+  {
+    "start": 124.34,
+    "end": 124.52,
+    "text": "move"
+  },
+  {
+    "start": 124.52,
+    "end": 124.8,
+    "text": "around"
+  },
+  {
+    "start": 124.8,
+    "end": 124.98,
+    "text": "a"
+  },
+  {
+    "start": 124.98,
+    "end": 125.28,
+    "text": "room."
+  },
+  {
+    "start": 125.98,
+    "end": 126.18,
+    "text": "On"
+  },
+  {
+    "start": 126.18,
+    "end": 126.34,
+    "text": "the"
+  },
+  {
+    "start": 126.34,
+    "end": 126.74,
+    "text": "dashboard"
+  },
+  {
+    "start": 126.74,
+    "end": 127.4,
+    "text": "you"
+  },
+  {
+    "start": 127.4,
+    "end": 127.56,
+    "text": "can"
+  },
+  {
+    "start": 127.56,
+    "end": 127.82,
+    "text": "see"
+  },
+  {
+    "start": 127.82,
+    "end": 128.08,
+    "text": "how"
+  },
+  {
+    "start": 128.08,
+    "end": 128.32,
+    "text": "it"
+  },
+  {
+    "start": 128.32,
+    "end": 128.62,
+    "text": "“sees”"
+  },
+  {
+    "start": 128.62,
+    "end": 128.9,
+    "text": "the"
+  },
+  {
+    "start": 128.9,
+    "end": 129.34,
+    "text": "world,"
+  },
+  {
+    "start": 129.76,
+    "end": 129.96,
+    "text": "trying"
+  },
+  {
+    "start": 129.96,
+    "end": 130.12,
+    "text": "to"
+  },
+  {
+    "start": 130.12,
+    "end": 130.34,
+    "text": "tell"
+  },
+  {
+    "start": 130.34,
+    "end": 130.74,
+    "text": "parked"
+  },
+  {
+    "start": 130.74,
+    "end": 131.1,
+    "text": "cars"
+  },
+  {
+    "start": 131.1,
+    "end": 131.36,
+    "text": "from"
+  },
+  {
+    "start": 131.36,
+    "end": 131.76,
+    "text": "moving"
+  },
+  {
+    "start": 131.76,
+    "end": 132.1,
+    "text": "ones"
+  },
+  {
+    "start": 132.1,
+    "end": 132.72,
+    "text": "or"
+  },
+  {
+    "start": 132.72,
+    "end": 133.14,
+    "text": "pedestrians"
+  },
+  {
+    "start": 133.14,
+    "end": 133.72,
+    "text": "from"
+  },
+  {
+    "start": 133.72,
+    "end": 134.06,
+    "text": "trees."
+  },
+  {
+    "start": 134.7,
+    "end": 134.98,
+    "text": "Fascinating"
+  },
+  {
+    "start": 134.98,
+    "end": 135.52,
+    "text": "stuff,"
+  },
+  {
+    "start": 135.96,
+    "end": 136.02,
+    "text": "and"
+  },
+  {
+    "start": 136.02,
+    "end": 136.44,
+    "text": "slightly"
+  },
+  {
+    "start": 136.44,
+    "end": 136.88,
+    "text": "eerie"
+  },
+  {
+    "start": 136.88,
+    "end": 137.3,
+    "text": "when"
+  },
+  {
+    "start": 137.3,
+    "end": 137.44,
+    "text": "you"
+  },
+  {
+    "start": 137.44,
+    "end": 137.8,
+    "text": "realise"
+  },
+  {
+    "start": 137.8,
+    "end": 138.16,
+    "text": "how"
+  },
+  {
+    "start": 138.16,
+    "end": 138.38,
+    "text": "much"
+  },
+  {
+    "start": 138.38,
+    "end": 138.56,
+    "text": "the"
+  },
+  {
+    "start": 138.56,
+    "end": 138.88,
+    "text": "machine"
+  },
+  {
+    "start": 138.88,
+    "end": 139.4,
+    "text": "already"
+  },
+  {
+    "start": 139.4,
+    "end": 140.28,
+    "text": "understands."
+  },
+  {
+    "start": 141.18,
+    "end": 141.44,
+    "text": "But"
+  },
+  {
+    "start": 141.44,
+    "end": 141.68,
+    "text": "trust"
+  },
+  {
+    "start": 141.68,
+    "end": 141.94,
+    "text": "one"
+  },
+  {
+    "start": 141.94,
+    "end": 142.12,
+    "text": "to"
+  },
+  {
+    "start": 142.12,
+    "end": 142.32,
+    "text": "drive"
+  },
+  {
+    "start": 142.32,
+    "end": 142.52,
+    "text": "me"
+  },
+  {
+    "start": 142.52,
+    "end": 142.86,
+    "text": "around?"
+  },
+  {
+    "start": 143.24,
+    "end": 143.44,
+    "text": "Not"
+  },
+  {
+    "start": 143.44,
+    "end": 143.86,
+    "text": "likely."
+  },
+  {
+    "start": 144.52,
+    "end": 144.78,
+    "text": "Then"
+  },
+  {
+    "start": 144.78,
+    "end": 145.06,
+    "text": "again,"
+  },
+  {
+    "start": 145.5,
+    "end": 145.72,
+    "text": "humans"
+  },
+  {
+    "start": 145.72,
+    "end": 146.08,
+    "text": "aren’t"
+  },
+  {
+    "start": 146.08,
+    "end": 146.4,
+    "text": "flawless"
+  },
+  {
+    "start": 146.4,
+    "end": 146.94,
+    "text": "either,"
+  },
+  {
+    "start": 147.36,
+    "end": 147.46,
+    "text": "and"
+  },
+  {
+    "start": 147.46,
+    "end": 147.68,
+    "text": "I’ve"
+  },
+  {
+    "start": 147.68,
+    "end": 147.74,
+    "text": "had"
+  },
+  {
+    "start": 147.74,
+    "end": 147.94,
+    "text": "enough"
+  },
+  {
+    "start": 147.94,
+    "end": 148.16,
+    "text": "points"
+  },
+  {
+    "start": 148.16,
+    "end": 148.36,
+    "text": "on"
+  },
+  {
+    "start": 148.36,
+    "end": 148.5,
+    "text": "my"
+  },
+  {
+    "start": 148.5,
+    "end": 148.82,
+    "text": "licence"
+  },
+  {
+    "start": 148.82,
+    "end": 149.18,
+    "text": "to"
+  },
+  {
+    "start": 149.18,
+    "end": 149.34,
+    "text": "know"
+  },
+  {
+    "start": 149.34,
+    "end": 149.84,
+    "text": "humility."
+  },
+  {
+    "start": 150.62,
+    "end": 150.84,
+    "text": "The"
+  },
+  {
+    "start": 150.84,
+    "end": 151.58,
+    "text": "robotaxi"
+  },
+  {
+    "start": 151.58,
+    "end": 151.92,
+    "text": "feels"
+  },
+  {
+    "start": 151.92,
+    "end": 152.54,
+    "text": "inevitable,"
+  },
+  {
+    "start": 153.04,
+    "end": 153.18,
+    "text": "and"
+  },
+  {
+    "start": 153.18,
+    "end": 153.3,
+    "text": "the"
+  },
+  {
+    "start": 153.3,
+    "end": 153.64,
+    "text": "autonomous"
+  },
+  {
+    "start": 153.64,
+    "end": 154.18,
+    "text": "vehicle"
+  },
+  {
+    "start": 154.18,
+    "end": 154.66,
+    "text": "will"
+  },
+  {
+    "start": 154.66,
+    "end": 155.06,
+    "text": "likely"
+  },
+  {
+    "start": 155.06,
+    "end": 155.38,
+    "text": "make"
+  },
+  {
+    "start": 155.38,
+    "end": 155.92,
+    "text": "professional"
+  },
+  {
+    "start": 155.92,
+    "end": 156.46,
+    "text": "driving"
+  },
+  {
+    "start": 156.46,
+    "end": 156.78,
+    "text": "–"
+  },
+  {
+    "start": 156.78,
+    "end": 157.02,
+    "text": "and"
+  },
+  {
+    "start": 157.02,
+    "end": 157.26,
+    "text": "perhaps"
+  },
+  {
+    "start": 157.26,
+    "end": 157.9,
+    "text": "personal"
+  },
+  {
+    "start": 157.9,
+    "end": 158.44,
+    "text": "motoring"
+  },
+  {
+    "start": 158.44,
+    "end": 158.44,
+    "text": "–"
+  },
+  {
+    "start": 158.44,
+    "end": 158.92,
+    "text": "a"
+  },
+  {
+    "start": 158.92,
+    "end": 159.08,
+    "text": "thing"
+  },
+  {
+    "start": 159.08,
+    "end": 159.26,
+    "text": "of"
+  },
+  {
+    "start": 159.26,
+    "end": 159.36,
+    "text": "the"
+  },
+  {
+    "start": 159.36,
+    "end": 159.9,
+    "text": "past."
+  },
+  {
+    "start": 160.6,
+    "end": 160.96,
+    "text": "For"
+  },
+  {
+    "start": 160.96,
+    "end": 161.16,
+    "text": "me,"
+  },
+  {
+    "start": 161.6,
+    "end": 161.82,
+    "text": "someone"
+  },
+  {
+    "start": 161.82,
+    "end": 161.98,
+    "text": "who"
+  },
+  {
+    "start": 161.98,
+    "end": 162.08,
+    "text": "has"
+  },
+  {
+    "start": 162.08,
+    "end": 162.22,
+    "text": "just"
+  },
+  {
+    "start": 162.22,
+    "end": 162.46,
+    "text": "spent"
+  },
+  {
+    "start": 162.46,
+    "end": 162.64,
+    "text": "a"
+  },
+  {
+    "start": 162.64,
+    "end": 162.86,
+    "text": "day"
+  },
+  {
+    "start": 162.86,
+    "end": 163.26,
+    "text": "driving"
+  },
+  {
+    "start": 163.26,
+    "end": 163.58,
+    "text": "new"
+  },
+  {
+    "start": 163.58,
+    "end": 163.82,
+    "text": "and"
+  },
+  {
+    "start": 163.82,
+    "end": 164.18,
+    "text": "classic"
+  },
+  {
+    "start": 164.18,
+    "end": 164.96,
+    "text": "Bentleys"
+  },
+  {
+    "start": 164.96,
+    "end": 165.26,
+    "text": "around"
+  },
+  {
+    "start": 165.26,
+    "end": 165.84,
+    "text": "Cheshire,"
+  },
+  {
+    "start": 166.15,
+    "end": 166.44,
+    "text": "that"
+  },
+  {
+    "start": 166.44,
+    "end": 166.66,
+    "text": "would"
+  },
+  {
+    "start": 166.66,
+    "end": 166.78,
+    "text": "be"
+  },
+  {
+    "start": 166.78,
+    "end": 166.9,
+    "text": "the"
+  },
+  {
+    "start": 166.9,
+    "end": 167.16,
+    "text": "real"
+  },
+  {
+    "start": 167.16,
+    "end": 167.48,
+    "text": "loss."
+  },
+  {
+    "start": 167.98,
+    "end": 168.44,
+    "text": "Even"
+  },
+  {
+    "start": 168.44,
+    "end": 168.6,
+    "text": "if"
+  },
+  {
+    "start": 168.6,
+    "end": 168.7,
+    "text": "the"
+  },
+  {
+    "start": 168.7,
+    "end": 168.98,
+    "text": "latest"
+  },
+  {
+    "start": 168.98,
+    "end": 169.4,
+    "text": "models"
+  },
+  {
+    "start": 169.4,
+    "end": 169.92,
+    "text": "almost"
+  },
+  {
+    "start": 169.92,
+    "end": 170.24,
+    "text": "drive"
+  },
+  {
+    "start": 170.24,
+    "end": 170.82,
+    "text": "themselves,"
+  },
+  {
+    "start": 171.38,
+    "end": 171.52,
+    "text": "who"
+  },
+  {
+    "start": 171.52,
+    "end": 172.0,
+    "text": "truly"
+  },
+  {
+    "start": 172.0,
+    "end": 172.26,
+    "text": "wants"
+  },
+  {
+    "start": 172.26,
+    "end": 172.52,
+    "text": "to"
+  },
+  {
+    "start": 172.52,
+    "end": 172.64,
+    "text": "give"
+  },
+  {
+    "start": 172.64,
+    "end": 172.8,
+    "text": "up"
+  },
+  {
+    "start": 172.8,
+    "end": 173.24,
+    "text": "control,"
+  },
+  {
+    "start": 173.82,
+    "end": 173.9,
+    "text": "or"
+  },
+  {
+    "start": 173.9,
+    "end": 174.0,
+    "text": "the"
+  },
+  {
+    "start": 174.0,
+    "end": 174.3,
+    "text": "pure"
+  },
+  {
+    "start": 174.3,
+    "end": 174.72,
+    "text": "joy"
+  },
+  {
+    "start": 174.72,
+    "end": 174.98,
+    "text": "of"
+  },
+  {
+    "start": 174.98,
+    "end": 175.2,
+    "text": "being"
+  },
+  {
+    "start": 175.2,
+    "end": 175.38,
+    "text": "at"
+  },
+  {
+    "start": 175.38,
+    "end": 175.5,
+    "text": "the"
+  },
+  {
+    "start": 175.5,
+    "end": 175.76,
+    "text": "wheel?"
+  },
+  {
+    "start": 178.76,
+    "end": 179.16,
+    "text": "October"
+  },
+  {
+    "start": 179.16,
+    "end": 180.2,
+    "text": "2025"
+  },
+  {
+    "start": 180.2,
+    "end": 180.2,
+    "text": "95/140"
+  }
+]

@@ -1,0 +1,2302 @@
+[
+  {
+    "start": 2.24,
+    "end": 2.82,
+    "text": "THE"
+  },
+  {
+    "start": 2.82,
+    "end": 3.06,
+    "text": "GAME"
+  },
+  {
+    "start": 3.06,
+    "end": 3.52,
+    "text": "THEORY"
+  },
+  {
+    "start": 3.52,
+    "end": 3.96,
+    "text": "OF"
+  },
+  {
+    "start": 3.96,
+    "end": 4.18,
+    "text": "HOW"
+  },
+  {
+    "start": 4.18,
+    "end": 4.68,
+    "text": "ALGORITHMS"
+  },
+  {
+    "start": 4.68,
+    "end": 5.08,
+    "text": "CAN"
+  },
+  {
+    "start": 5.08,
+    "end": 5.34,
+    "text": "DRIVE"
+  },
+  {
+    "start": 5.34,
+    "end": 5.58,
+    "text": "UP"
+  },
+  {
+    "start": 5.58,
+    "end": 6.06,
+    "text": "PRICES"
+  },
+  {
+    "start": 7.28,
+    "end": 7.7,
+    "text": "Imagine"
+  },
+  {
+    "start": 7.7,
+    "end": 8.04,
+    "text": "a"
+  },
+  {
+    "start": 8.04,
+    "end": 8.22,
+    "text": "town"
+  },
+  {
+    "start": 8.22,
+    "end": 8.48,
+    "text": "with"
+  },
+  {
+    "start": 8.48,
+    "end": 8.76,
+    "text": "two"
+  },
+  {
+    "start": 8.76,
+    "end": 9.16,
+    "text": "widget"
+  },
+  {
+    "start": 9.16,
+    "end": 9.66,
+    "text": "merchants."
+  },
+  {
+    "start": 10.62,
+    "end": 11.06,
+    "text": "Customers"
+  },
+  {
+    "start": 11.06,
+    "end": 11.42,
+    "text": "prefer"
+  },
+  {
+    "start": 11.42,
+    "end": 11.82,
+    "text": "cheaper"
+  },
+  {
+    "start": 11.82,
+    "end": 12.24,
+    "text": "widgets,"
+  },
+  {
+    "start": 12.8,
+    "end": 13.0,
+    "text": "so"
+  },
+  {
+    "start": 13.0,
+    "end": 13.14,
+    "text": "the"
+  },
+  {
+    "start": 13.14,
+    "end": 13.48,
+    "text": "merchants"
+  },
+  {
+    "start": 13.48,
+    "end": 13.84,
+    "text": "must"
+  },
+  {
+    "start": 13.84,
+    "end": 14.24,
+    "text": "compete"
+  },
+  {
+    "start": 14.24,
+    "end": 14.72,
+    "text": "to"
+  },
+  {
+    "start": 14.72,
+    "end": 14.94,
+    "text": "set"
+  },
+  {
+    "start": 14.94,
+    "end": 15.14,
+    "text": "the"
+  },
+  {
+    "start": 15.14,
+    "end": 15.34,
+    "text": "lowest"
+  },
+  {
+    "start": 15.34,
+    "end": 15.78,
+    "text": "price."
+  },
+  {
+    "start": 16.78,
+    "end": 17.34,
+    "text": "Unhappy"
+  },
+  {
+    "start": 17.34,
+    "end": 17.58,
+    "text": "with"
+  },
+  {
+    "start": 17.58,
+    "end": 17.76,
+    "text": "their"
+  },
+  {
+    "start": 17.76,
+    "end": 18.06,
+    "text": "meager"
+  },
+  {
+    "start": 18.06,
+    "end": 18.46,
+    "text": "profits,"
+  },
+  {
+    "start": 19.12,
+    "end": 19.24,
+    "text": "they"
+  },
+  {
+    "start": 19.24,
+    "end": 19.46,
+    "text": "meet"
+  },
+  {
+    "start": 19.46,
+    "end": 19.68,
+    "text": "one"
+  },
+  {
+    "start": 19.68,
+    "end": 19.98,
+    "text": "night"
+  },
+  {
+    "start": 19.98,
+    "end": 20.4,
+    "text": "in"
+  },
+  {
+    "start": 20.4,
+    "end": 20.5,
+    "text": "a"
+  },
+  {
+    "start": 20.5,
+    "end": 21.1,
+    "text": "smoke-filled"
+  },
+  {
+    "start": 21.1,
+    "end": 21.6,
+    "text": "tavern"
+  },
+  {
+    "start": 21.6,
+    "end": 22.12,
+    "text": "to"
+  },
+  {
+    "start": 22.12,
+    "end": 22.48,
+    "text": "discuss"
+  },
+  {
+    "start": 22.48,
+    "end": 22.94,
+    "text": "a"
+  },
+  {
+    "start": 22.94,
+    "end": 23.36,
+    "text": "secret"
+  },
+  {
+    "start": 23.36,
+    "end": 23.84,
+    "text": "plan:"
+  },
+  {
+    "start": 23.84,
+    "end": 24.74,
+    "text": "If"
+  },
+  {
+    "start": 24.74,
+    "end": 24.92,
+    "text": "they"
+  },
+  {
+    "start": 24.92,
+    "end": 25.18,
+    "text": "raise"
+  },
+  {
+    "start": 25.18,
+    "end": 25.58,
+    "text": "prices"
+  },
+  {
+    "start": 25.58,
+    "end": 26.12,
+    "text": "together"
+  },
+  {
+    "start": 26.52,
+    "end": 26.76,
+    "text": "instead"
+  },
+  {
+    "start": 26.76,
+    "end": 26.96,
+    "text": "of"
+  },
+  {
+    "start": 26.96,
+    "end": 27.46,
+    "text": "competing,"
+  },
+  {
+    "start": 27.94,
+    "end": 28.04,
+    "text": "they"
+  },
+  {
+    "start": 28.04,
+    "end": 28.18,
+    "text": "can"
+  },
+  {
+    "start": 28.18,
+    "end": 28.46,
+    "text": "both"
+  },
+  {
+    "start": 28.46,
+    "end": 28.68,
+    "text": "make"
+  },
+  {
+    "start": 28.68,
+    "end": 28.94,
+    "text": "more"
+  },
+  {
+    "start": 28.94,
+    "end": 29.28,
+    "text": "money."
+  },
+  {
+    "start": 29.82,
+    "end": 30.32,
+    "text": "But"
+  },
+  {
+    "start": 30.32,
+    "end": 30.5,
+    "text": "that"
+  },
+  {
+    "start": 30.5,
+    "end": 30.92,
+    "text": "kind"
+  },
+  {
+    "start": 30.92,
+    "end": 31.2,
+    "text": "of"
+  },
+  {
+    "start": 31.2,
+    "end": 31.7,
+    "text": "intentional"
+  },
+  {
+    "start": 31.7,
+    "end": 32.86,
+    "text": "price-fixing,"
+  },
+  {
+    "start": 33.02,
+    "end": 33.44,
+    "text": "called"
+  },
+  {
+    "start": 33.44,
+    "end": 34.02,
+    "text": "collusion,"
+  },
+  {
+    "start": 34.48,
+    "end": 34.62,
+    "text": "has"
+  },
+  {
+    "start": 34.62,
+    "end": 34.84,
+    "text": "long"
+  },
+  {
+    "start": 34.84,
+    "end": 35.1,
+    "text": "been"
+  },
+  {
+    "start": 35.1,
+    "end": 35.66,
+    "text": "illegal."
+  },
+  {
+    "start": 36.38,
+    "end": 36.56,
+    "text": "The"
+  },
+  {
+    "start": 36.56,
+    "end": 36.82,
+    "text": "widget"
+  },
+  {
+    "start": 36.82,
+    "end": 37.32,
+    "text": "merchants"
+  },
+  {
+    "start": 37.32,
+    "end": 37.92,
+    "text": "decide"
+  },
+  {
+    "start": 37.92,
+    "end": 38.18,
+    "text": "not"
+  },
+  {
+    "start": 38.18,
+    "end": 38.38,
+    "text": "to"
+  },
+  {
+    "start": 38.38,
+    "end": 38.6,
+    "text": "risk"
+  },
+  {
+    "start": 38.6,
+    "end": 38.86,
+    "text": "it,"
+  },
+  {
+    "start": 39.22,
+    "end": 39.32,
+    "text": "and"
+  },
+  {
+    "start": 39.32,
+    "end": 39.64,
+    "text": "everyone"
+  },
+  {
+    "start": 39.64,
+    "end": 39.9,
+    "text": "else"
+  },
+  {
+    "start": 39.9,
+    "end": 40.08,
+    "text": "gets"
+  },
+  {
+    "start": 40.08,
+    "end": 40.3,
+    "text": "to"
+  },
+  {
+    "start": 40.3,
+    "end": 40.62,
+    "text": "enjoy"
+  },
+  {
+    "start": 40.62,
+    "end": 41.08,
+    "text": "cheap"
+  },
+  {
+    "start": 41.08,
+    "end": 41.44,
+    "text": "widgets."
+  },
+  {
+    "start": 42.52,
+    "end": 42.82,
+    "text": "For"
+  },
+  {
+    "start": 42.82,
+    "end": 42.94,
+    "text": "well"
+  },
+  {
+    "start": 42.94,
+    "end": 43.22,
+    "text": "over"
+  },
+  {
+    "start": 43.22,
+    "end": 43.34,
+    "text": "a"
+  },
+  {
+    "start": 43.34,
+    "end": 43.78,
+    "text": "century,"
+  },
+  {
+    "start": 44.3,
+    "end": 44.46,
+    "text": "U.S."
+  },
+  {
+    "start": 44.46,
+    "end": 44.84,
+    "text": "law"
+  },
+  {
+    "start": 44.84,
+    "end": 45.18,
+    "text": "has"
+  },
+  {
+    "start": 45.18,
+    "end": 45.5,
+    "text": "followed"
+  },
+  {
+    "start": 45.5,
+    "end": 45.8,
+    "text": "this"
+  },
+  {
+    "start": 45.8,
+    "end": 46.26,
+    "text": "basic"
+  },
+  {
+    "start": 46.26,
+    "end": 46.74,
+    "text": "template:"
+  },
+  {
+    "start": 46.74,
+    "end": 47.66,
+    "text": "Ban"
+  },
+  {
+    "start": 47.96,
+    "end": 48.14,
+    "text": "those"
+  },
+  {
+    "start": 48.14,
+    "end": 48.64,
+    "text": "backroom"
+  },
+  {
+    "start": 48.64,
+    "end": 49.06,
+    "text": "deals,"
+  },
+  {
+    "start": 49.62,
+    "end": 49.72,
+    "text": "and"
+  },
+  {
+    "start": 49.72,
+    "end": 49.96,
+    "text": "fair"
+  },
+  {
+    "start": 49.96,
+    "end": 50.44,
+    "text": "prices"
+  },
+  {
+    "start": 50.44,
+    "end": 50.82,
+    "text": "should"
+  },
+  {
+    "start": 50.82,
+    "end": 51.02,
+    "text": "be"
+  },
+  {
+    "start": 51.02,
+    "end": 51.7,
+    "text": "maintained."
+  },
+  {
+    "start": 52.2,
+    "end": 52.5,
+    "text": "These"
+  },
+  {
+    "start": 52.5,
+    "end": 52.78,
+    "text": "days,"
+  },
+  {
+    "start": 53.16,
+    "end": 53.34,
+    "text": "it’s"
+  },
+  {
+    "start": 53.34,
+    "end": 53.48,
+    "text": "not"
+  },
+  {
+    "start": 53.48,
+    "end": 53.7,
+    "text": "so"
+  },
+  {
+    "start": 53.7,
+    "end": 54.2,
+    "text": "simple."
+  },
+  {
+    "start": 54.96,
+    "end": 55.24,
+    "text": "Across"
+  },
+  {
+    "start": 55.24,
+    "end": 55.66,
+    "text": "broad"
+  },
+  {
+    "start": 55.66,
+    "end": 56.14,
+    "text": "swaths"
+  },
+  {
+    "start": 56.14,
+    "end": 56.3,
+    "text": "of"
+  },
+  {
+    "start": 56.3,
+    "end": 56.38,
+    "text": "the"
+  },
+  {
+    "start": 56.38,
+    "end": 56.92,
+    "text": "economy,"
+  },
+  {
+    "start": 57.48,
+    "end": 57.7,
+    "text": "sellers"
+  },
+  {
+    "start": 57.7,
+    "end": 58.46,
+    "text": "increasingly"
+  },
+  {
+    "start": 58.46,
+    "end": 58.9,
+    "text": "rely"
+  },
+  {
+    "start": 58.9,
+    "end": 59.26,
+    "text": "on"
+  },
+  {
+    "start": 59.26,
+    "end": 59.66,
+    "text": "computer"
+  },
+  {
+    "start": 59.66,
+    "end": 60.4,
+    "text": "programs"
+  },
+  {
+    "start": 60.4,
+    "end": 61.0,
+    "text": "called"
+  },
+  {
+    "start": 61.0,
+    "end": 61.46,
+    "text": "learning"
+  },
+  {
+    "start": 61.46,
+    "end": 62.2,
+    "text": "algorithms,"
+  },
+  {
+    "start": 62.76,
+    "end": 63.16,
+    "text": "which"
+  },
+  {
+    "start": 63.16,
+    "end": 63.84,
+    "text": "repeatedly"
+  },
+  {
+    "start": 63.84,
+    "end": 64.2,
+    "text": "adjust"
+  },
+  {
+    "start": 64.2,
+    "end": 64.96,
+    "text": "prices"
+  },
+  {
+    "start": 64.96,
+    "end": 65.6,
+    "text": "in"
+  },
+  {
+    "start": 65.6,
+    "end": 65.94,
+    "text": "response"
+  },
+  {
+    "start": 65.94,
+    "end": 66.28,
+    "text": "to"
+  },
+  {
+    "start": 66.28,
+    "end": 66.48,
+    "text": "new"
+  },
+  {
+    "start": 66.48,
+    "end": 66.84,
+    "text": "data"
+  },
+  {
+    "start": 66.84,
+    "end": 67.14,
+    "text": "about"
+  },
+  {
+    "start": 67.14,
+    "end": 67.3,
+    "text": "the"
+  },
+  {
+    "start": 67.3,
+    "end": 67.52,
+    "text": "state"
+  },
+  {
+    "start": 67.52,
+    "end": 67.68,
+    "text": "of"
+  },
+  {
+    "start": 67.68,
+    "end": 67.78,
+    "text": "the"
+  },
+  {
+    "start": 67.78,
+    "end": 68.16,
+    "text": "market."
+  },
+  {
+    "start": 68.16,
+    "end": 69.28,
+    "text": "These"
+  },
+  {
+    "start": 69.28,
+    "end": 69.6,
+    "text": "are"
+  },
+  {
+    "start": 69.6,
+    "end": 69.94,
+    "text": "often"
+  },
+  {
+    "start": 69.94,
+    "end": 70.2,
+    "text": "much"
+  },
+  {
+    "start": 70.2,
+    "end": 70.66,
+    "text": "simpler"
+  },
+  {
+    "start": 70.66,
+    "end": 71.08,
+    "text": "than"
+  },
+  {
+    "start": 71.08,
+    "end": 71.2,
+    "text": "the"
+  },
+  {
+    "start": 71.2,
+    "end": 71.48,
+    "text": "“deep"
+  },
+  {
+    "start": 71.48,
+    "end": 71.8,
+    "text": "learning”"
+  },
+  {
+    "start": 71.8,
+    "end": 72.4,
+    "text": "algorithms"
+  },
+  {
+    "start": 72.4,
+    "end": 72.82,
+    "text": "that"
+  },
+  {
+    "start": 72.82,
+    "end": 73.1,
+    "text": "power"
+  },
+  {
+    "start": 73.1,
+    "end": 73.44,
+    "text": "modern"
+  },
+  {
+    "start": 73.44,
+    "end": 73.92,
+    "text": "artificial"
+  },
+  {
+    "start": 73.92,
+    "end": 74.64,
+    "text": "intelligence,"
+  },
+  {
+    "start": 75.3,
+    "end": 75.52,
+    "text": "but"
+  },
+  {
+    "start": 75.52,
+    "end": 75.64,
+    "text": "they"
+  },
+  {
+    "start": 75.64,
+    "end": 75.8,
+    "text": "can"
+  },
+  {
+    "start": 75.8,
+    "end": 76.04,
+    "text": "still"
+  },
+  {
+    "start": 76.04,
+    "end": 76.22,
+    "text": "be"
+  },
+  {
+    "start": 76.22,
+    "end": 76.54,
+    "text": "prone"
+  },
+  {
+    "start": 76.54,
+    "end": 76.76,
+    "text": "to"
+  },
+  {
+    "start": 76.76,
+    "end": 77.08,
+    "text": "unexpected"
+  },
+  {
+    "start": 77.08,
+    "end": 77.98,
+    "text": "behavior."
+  },
+  {
+    "start": 79.18,
+    "end": 79.56,
+    "text": "So"
+  },
+  {
+    "start": 79.56,
+    "end": 79.76,
+    "text": "how"
+  },
+  {
+    "start": 79.76,
+    "end": 80.14,
+    "text": "can"
+  },
+  {
+    "start": 80.14,
+    "end": 80.86,
+    "text": "regulators"
+  },
+  {
+    "start": 80.86,
+    "end": 81.46,
+    "text": "ensure"
+  },
+  {
+    "start": 81.46,
+    "end": 81.74,
+    "text": "that"
+  },
+  {
+    "start": 81.74,
+    "end": 82.32,
+    "text": "algorithms"
+  },
+  {
+    "start": 82.32,
+    "end": 82.68,
+    "text": "set"
+  },
+  {
+    "start": 82.68,
+    "end": 83.0,
+    "text": "fair"
+  },
+  {
+    "start": 83.0,
+    "end": 83.52,
+    "text": "prices?"
+  },
+  {
+    "start": 84.32,
+    "end": 84.56,
+    "text": "Their"
+  },
+  {
+    "start": 84.56,
+    "end": 85.04,
+    "text": "traditional"
+  },
+  {
+    "start": 85.04,
+    "end": 85.52,
+    "text": "approach"
+  },
+  {
+    "start": 85.52,
+    "end": 85.96,
+    "text": "won’t"
+  },
+  {
+    "start": 85.96,
+    "end": 86.38,
+    "text": "work,"
+  },
+  {
+    "start": 86.68,
+    "end": 86.82,
+    "text": "as"
+  },
+  {
+    "start": 86.82,
+    "end": 86.94,
+    "text": "it"
+  },
+  {
+    "start": 86.94,
+    "end": 87.18,
+    "text": "relies"
+  },
+  {
+    "start": 87.18,
+    "end": 87.5,
+    "text": "on"
+  },
+  {
+    "start": 87.5,
+    "end": 87.9,
+    "text": "finding"
+  },
+  {
+    "start": 87.9,
+    "end": 88.52,
+    "text": "explicit"
+  },
+  {
+    "start": 88.52,
+    "end": 89.16,
+    "text": "collusion."
+  },
+  {
+    "start": 90.1,
+    "end": 90.44,
+    "text": "“The"
+  },
+  {
+    "start": 90.44,
+    "end": 90.92,
+    "text": "algorithms"
+  },
+  {
+    "start": 90.92,
+    "end": 91.62,
+    "text": "definitely"
+  },
+  {
+    "start": 91.62,
+    "end": 91.9,
+    "text": "are"
+  },
+  {
+    "start": 91.9,
+    "end": 92.1,
+    "text": "not"
+  },
+  {
+    "start": 92.1,
+    "end": 92.46,
+    "text": "having"
+  },
+  {
+    "start": 92.46,
+    "end": 92.72,
+    "text": "drinks"
+  },
+  {
+    "start": 92.72,
+    "end": 93.0,
+    "text": "with"
+  },
+  {
+    "start": 93.0,
+    "end": 93.26,
+    "text": "each"
+  },
+  {
+    "start": 93.26,
+    "end": 93.56,
+    "text": "other,”"
+  },
+  {
+    "start": 93.88,
+    "end": 94.06,
+    "text": "said"
+  },
+  {
+    "start": 94.06,
+    "end": 94.4,
+    "text": "Aaron"
+  },
+  {
+    "start": 94.4,
+    "end": 94.7,
+    "text": "Roth,"
+  },
+  {
+    "start": 95.14,
+    "end": 95.18,
+    "text": "a"
+  },
+  {
+    "start": 95.18,
+    "end": 95.48,
+    "text": "computer"
+  },
+  {
+    "start": 95.48,
+    "end": 96.08,
+    "text": "scientist"
+  },
+  {
+    "start": 96.08,
+    "end": 96.4,
+    "text": "at"
+  },
+  {
+    "start": 96.4,
+    "end": 96.48,
+    "text": "the"
+  },
+  {
+    "start": 96.48,
+    "end": 97.0,
+    "text": "University"
+  },
+  {
+    "start": 97.0,
+    "end": 97.2,
+    "text": "of"
+  },
+  {
+    "start": 97.2,
+    "end": 97.9,
+    "text": "Pennsylvania."
+  },
+  {
+    "start": 98.58,
+    "end": 99.26,
+    "text": "Yet"
+  },
+  {
+    "start": 99.26,
+    "end": 99.38,
+    "text": "a"
+  },
+  {
+    "start": 99.38,
+    "end": 99.7,
+    "text": "widely"
+  },
+  {
+    "start": 99.7,
+    "end": 100.16,
+    "text": "cited"
+  },
+  {
+    "start": 100.16,
+    "end": 100.8,
+    "text": "2019"
+  },
+  {
+    "start": 100.8,
+    "end": 101.66,
+    "text": "paper"
+  },
+  {
+    "start": 101.66,
+    "end": 102.42,
+    "text": "showed"
+  },
+  {
+    "start": 102.42,
+    "end": 102.72,
+    "text": "that"
+  },
+  {
+    "start": 102.72,
+    "end": 103.3,
+    "text": "algorithms"
+  },
+  {
+    "start": 103.3,
+    "end": 103.68,
+    "text": "could"
+  },
+  {
+    "start": 103.68,
+    "end": 104.0,
+    "text": "learn"
+  },
+  {
+    "start": 104.0,
+    "end": 104.26,
+    "text": "to"
+  },
+  {
+    "start": 104.26,
+    "end": 104.7,
+    "text": "collude"
+  },
+  {
+    "start": 104.7,
+    "end": 105.32,
+    "text": "tacitly,"
+  },
+  {
+    "start": 105.88,
+    "end": 106.16,
+    "text": "even"
+  },
+  {
+    "start": 106.16,
+    "end": 106.34,
+    "text": "when"
+  },
+  {
+    "start": 106.34,
+    "end": 106.46,
+    "text": "they"
+  },
+  {
+    "start": 106.46,
+    "end": 106.76,
+    "text": "weren’t"
+  },
+  {
+    "start": 106.76,
+    "end": 107.16,
+    "text": "programmed"
+  },
+  {
+    "start": 107.16,
+    "end": 107.4,
+    "text": "to"
+  },
+  {
+    "start": 107.4,
+    "end": 107.54,
+    "text": "do"
+  },
+  {
+    "start": 107.54,
+    "end": 107.9,
+    "text": "so."
+  },
+  {
+    "start": 108.7,
+    "end": 109.02,
+    "text": "A"
+  },
+  {
+    "start": 109.02,
+    "end": 109.22,
+    "text": "team"
+  },
+  {
+    "start": 109.22,
+    "end": 109.36,
+    "text": "of"
+  },
+  {
+    "start": 109.36,
+    "end": 109.92,
+    "text": "researchers"
+  },
+  {
+    "start": 109.92,
+    "end": 110.46,
+    "text": "pitted"
+  },
+  {
+    "start": 110.46,
+    "end": 110.82,
+    "text": "two"
+  },
+  {
+    "start": 110.82,
+    "end": 111.2,
+    "text": "copies"
+  },
+  {
+    "start": 111.2,
+    "end": 111.54,
+    "text": "of"
+  },
+  {
+    "start": 111.54,
+    "end": 111.62,
+    "text": "a"
+  },
+  {
+    "start": 111.62,
+    "end": 111.94,
+    "text": "simple"
+  },
+  {
+    "start": 111.94,
+    "end": 112.48,
+    "text": "learning"
+  },
+  {
+    "start": 112.48,
+    "end": 113.12,
+    "text": "algorithm"
+  },
+  {
+    "start": 113.12,
+    "end": 113.6,
+    "text": "against"
+  },
+  {
+    "start": 113.6,
+    "end": 113.9,
+    "text": "each"
+  },
+  {
+    "start": 113.9,
+    "end": 114.18,
+    "text": "other"
+  },
+  {
+    "start": 114.18,
+    "end": 114.6,
+    "text": "in"
+  },
+  {
+    "start": 114.6,
+    "end": 114.7,
+    "text": "a"
+  },
+  {
+    "start": 114.7,
+    "end": 115.12,
+    "text": "simulated"
+  },
+  {
+    "start": 115.12,
+    "end": 115.78,
+    "text": "market,"
+  },
+  {
+    "start": 116.56,
+    "end": 116.92,
+    "text": "then"
+  },
+  {
+    "start": 116.92,
+    "end": 117.24,
+    "text": "let"
+  },
+  {
+    "start": 117.24,
+    "end": 117.42,
+    "text": "them"
+  },
+  {
+    "start": 117.42,
+    "end": 117.88,
+    "text": "explore"
+  },
+  {
+    "start": 117.88,
+    "end": 118.3,
+    "text": "different"
+  },
+  {
+    "start": 118.3,
+    "end": 118.96,
+    "text": "strategies"
+  },
+  {
+    "start": 118.96,
+    "end": 119.24,
+    "text": "for"
+  },
+  {
+    "start": 119.24,
+    "end": 119.68,
+    "text": "increasing"
+  },
+  {
+    "start": 119.68,
+    "end": 119.88,
+    "text": "their"
+  },
+  {
+    "start": 119.88,
+    "end": 120.46,
+    "text": "profits."
+  },
+  {
+    "start": 121.28,
+    "end": 121.62,
+    "text": "Over"
+  },
+  {
+    "start": 121.62,
+    "end": 122.02,
+    "text": "time,"
+  },
+  {
+    "start": 122.42,
+    "end": 122.64,
+    "text": "each"
+  },
+  {
+    "start": 122.64,
+    "end": 123.1,
+    "text": "algorithm"
+  },
+  {
+    "start": 123.1,
+    "end": 123.86,
+    "text": "learned"
+  },
+  {
+    "start": 123.86,
+    "end": 124.32,
+    "text": "through"
+  },
+  {
+    "start": 124.32,
+    "end": 124.72,
+    "text": "trial"
+  },
+  {
+    "start": 124.72,
+    "end": 124.84,
+    "text": "and"
+  },
+  {
+    "start": 124.84,
+    "end": 125.16,
+    "text": "error"
+  },
+  {
+    "start": 125.16,
+    "end": 125.68,
+    "text": "to"
+  },
+  {
+    "start": 125.68,
+    "end": 126.48,
+    "text": "retaliate"
+  },
+  {
+    "start": 126.48,
+    "end": 126.66,
+    "text": "when"
+  },
+  {
+    "start": 126.66,
+    "end": 126.8,
+    "text": "the"
+  },
+  {
+    "start": 126.8,
+    "end": 127.08,
+    "text": "other"
+  },
+  {
+    "start": 127.08,
+    "end": 127.34,
+    "text": "cut"
+  },
+  {
+    "start": 127.34,
+    "end": 127.88,
+    "text": "prices"
+  },
+  {
+    "start": 127.88,
+    "end": 128.56,
+    "text": "—"
+  },
+  {
+    "start": 128.56,
+    "end": 128.86,
+    "text": "dropping"
+  },
+  {
+    "start": 128.86,
+    "end": 129.08,
+    "text": "its"
+  },
+  {
+    "start": 129.08,
+    "end": 129.28,
+    "text": "own"
+  },
+  {
+    "start": 129.28,
+    "end": 129.6,
+    "text": "price"
+  },
+  {
+    "start": 129.6,
+    "end": 129.8,
+    "text": "by"
+  },
+  {
+    "start": 129.8,
+    "end": 130.02,
+    "text": "some"
+  },
+  {
+    "start": 130.02,
+    "end": 130.42,
+    "text": "huge,"
+  },
+  {
+    "start": 130.42,
+    "end": 131.42,
+    "text": "disproportionate"
+  },
+  {
+    "start": 131.42,
+    "end": 131.76,
+    "text": "amount."
+  },
+  {
+    "start": 132.58,
+    "end": 132.78,
+    "text": "The"
+  },
+  {
+    "start": 132.78,
+    "end": 132.94,
+    "text": "end"
+  },
+  {
+    "start": 132.94,
+    "end": 133.3,
+    "text": "result"
+  },
+  {
+    "start": 133.3,
+    "end": 133.84,
+    "text": "was"
+  },
+  {
+    "start": 133.84,
+    "end": 134.04,
+    "text": "high"
+  },
+  {
+    "start": 134.04,
+    "end": 134.58,
+    "text": "prices,"
+  },
+  {
+    "start": 134.58,
+    "end": 135.24,
+    "text": "backed"
+  },
+  {
+    "start": 135.24,
+    "end": 135.5,
+    "text": "up"
+  },
+  {
+    "start": 135.5,
+    "end": 135.74,
+    "text": "by"
+  },
+  {
+    "start": 135.74,
+    "end": 136.1,
+    "text": "mutual"
+  },
+  {
+    "start": 136.1,
+    "end": 136.58,
+    "text": "threat"
+  },
+  {
+    "start": 136.58,
+    "end": 136.94,
+    "text": "of"
+  },
+  {
+    "start": 136.94,
+    "end": 137.0,
+    "text": "a"
+  },
+  {
+    "start": 137.0,
+    "end": 137.28,
+    "text": "price"
+  },
+  {
+    "start": 137.28,
+    "end": 137.74,
+    "text": "war."
+  },
+  {
+    "start": 137.74,
+    "end": 138.6,
+    "text": "[…]"
+  },
+  {
+    "start": 138.6,
+    "end": 139.42,
+    "text": "A"
+  },
+  {
+    "start": 139.42,
+    "end": 139.78,
+    "text": "recent"
+  },
+  {
+    "start": 139.78,
+    "end": 140.24,
+    "text": "paper"
+  },
+  {
+    "start": 140.24,
+    "end": 140.72,
+    "text": "studies"
+  },
+  {
+    "start": 140.72,
+    "end": 141.46,
+    "text": "algorithmic"
+  },
+  {
+    "start": 141.46,
+    "end": 141.88,
+    "text": "pricing"
+  },
+  {
+    "start": 141.88,
+    "end": 142.5,
+    "text": "through"
+  },
+  {
+    "start": 142.5,
+    "end": 142.66,
+    "text": "the"
+  },
+  {
+    "start": 142.66,
+    "end": 142.86,
+    "text": "lens"
+  },
+  {
+    "start": 142.86,
+    "end": 143.16,
+    "text": "of"
+  },
+  {
+    "start": 143.16,
+    "end": 143.36,
+    "text": "game"
+  },
+  {
+    "start": 143.36,
+    "end": 143.98,
+    "text": "theory,"
+  },
+  {
+    "start": 144.42,
+    "end": 144.68,
+    "text": "an"
+  },
+  {
+    "start": 144.68,
+    "end": 145.34,
+    "text": "interdisciplinary"
+  },
+  {
+    "start": 145.34,
+    "end": 146.02,
+    "text": "field"
+  },
+  {
+    "start": 146.02,
+    "end": 146.28,
+    "text": "at"
+  },
+  {
+    "start": 146.28,
+    "end": 146.36,
+    "text": "the"
+  },
+  {
+    "start": 146.36,
+    "end": 146.62,
+    "text": "border"
+  },
+  {
+    "start": 146.62,
+    "end": 146.98,
+    "text": "of"
+  },
+  {
+    "start": 146.98,
+    "end": 147.44,
+    "text": "economics"
+  },
+  {
+    "start": 147.44,
+    "end": 147.68,
+    "text": "and"
+  },
+  {
+    "start": 147.68,
+    "end": 147.94,
+    "text": "computer"
+  },
+  {
+    "start": 147.94,
+    "end": 148.6,
+    "text": "science"
+  },
+  {
+    "start": 149.06,
+    "end": 149.32,
+    "text": "that"
+  },
+  {
+    "start": 149.32,
+    "end": 150.02,
+    "text": "analyzes"
+  },
+  {
+    "start": 150.02,
+    "end": 150.2,
+    "text": "the"
+  },
+  {
+    "start": 150.2,
+    "end": 150.74,
+    "text": "mathematics"
+  },
+  {
+    "start": 150.74,
+    "end": 151.08,
+    "text": "of"
+  },
+  {
+    "start": 151.08,
+    "end": 151.68,
+    "text": "strategic"
+  },
+  {
+    "start": 151.68,
+    "end": 152.44,
+    "text": "competitions."
+  },
+  {
+    "start": 153.22,
+    "end": 153.66,
+    "text": "It’s"
+  },
+  {
+    "start": 153.66,
+    "end": 153.8,
+    "text": "one"
+  },
+  {
+    "start": 153.8,
+    "end": 154.02,
+    "text": "way"
+  },
+  {
+    "start": 154.02,
+    "end": 154.22,
+    "text": "to"
+  },
+  {
+    "start": 154.22,
+    "end": 154.66,
+    "text": "explore"
+  },
+  {
+    "start": 154.66,
+    "end": 154.86,
+    "text": "the"
+  },
+  {
+    "start": 154.86,
+    "end": 155.26,
+    "text": "failures"
+  },
+  {
+    "start": 155.26,
+    "end": 155.44,
+    "text": "of"
+  },
+  {
+    "start": 155.44,
+    "end": 155.8,
+    "text": "pricing"
+  },
+  {
+    "start": 155.8,
+    "end": 156.48,
+    "text": "algorithms"
+  },
+  {
+    "start": 156.48,
+    "end": 156.88,
+    "text": "in"
+  },
+  {
+    "start": 156.88,
+    "end": 156.96,
+    "text": "a"
+  },
+  {
+    "start": 156.96,
+    "end": 157.38,
+    "text": "controlled"
+  },
+  {
+    "start": 157.38,
+    "end": 158.08,
+    "text": "setting."
+  },
+  {
+    "start": 159.08,
+    "end": 159.46,
+    "text": "“What"
+  },
+  {
+    "start": 159.46,
+    "end": 159.7,
+    "text": "we’re"
+  },
+  {
+    "start": 159.7,
+    "end": 159.96,
+    "text": "trying"
+  },
+  {
+    "start": 159.96,
+    "end": 160.14,
+    "text": "to"
+  },
+  {
+    "start": 160.14,
+    "end": 160.34,
+    "text": "do"
+  },
+  {
+    "start": 160.34,
+    "end": 160.62,
+    "text": "is"
+  },
+  {
+    "start": 160.62,
+    "end": 161.08,
+    "text": "create"
+  },
+  {
+    "start": 161.08,
+    "end": 161.56,
+    "text": "collusion"
+  },
+  {
+    "start": 161.56,
+    "end": 161.86,
+    "text": "in"
+  },
+  {
+    "start": 161.86,
+    "end": 161.98,
+    "text": "the"
+  },
+  {
+    "start": 161.98,
+    "end": 162.32,
+    "text": "lab,”"
+  },
+  {
+    "start": 162.6,
+    "end": 162.84,
+    "text": "said"
+  },
+  {
+    "start": 162.84,
+    "end": 163.16,
+    "text": "Joseph"
+  },
+  {
+    "start": 163.16,
+    "end": 163.68,
+    "text": "Harrington,"
+  },
+  {
+    "start": 164.18,
+    "end": 164.26,
+    "text": "a"
+  },
+  {
+    "start": 164.26,
+    "end": 164.84,
+    "text": "University"
+  },
+  {
+    "start": 164.84,
+    "end": 165.0,
+    "text": "of"
+  },
+  {
+    "start": 165.0,
+    "end": 165.56,
+    "text": "Pennsylvania"
+  },
+  {
+    "start": 165.56,
+    "end": 166.34,
+    "text": "economist"
+  },
+  {
+    "start": 166.88,
+    "end": 167.08,
+    "text": "who"
+  },
+  {
+    "start": 167.08,
+    "end": 167.26,
+    "text": "wrote"
+  },
+  {
+    "start": 167.26,
+    "end": 167.5,
+    "text": "an"
+  },
+  {
+    "start": 167.5,
+    "end": 168.04,
+    "text": "influential"
+  },
+  {
+    "start": 168.04,
+    "end": 168.44,
+    "text": "review"
+  },
+  {
+    "start": 168.44,
+    "end": 168.96,
+    "text": "paper"
+  },
+  {
+    "start": 168.96,
+    "end": 169.46,
+    "text": "on"
+  },
+  {
+    "start": 169.46,
+    "end": 169.94,
+    "text": "regulating"
+  },
+  {
+    "start": 169.94,
+    "end": 170.92,
+    "text": "algorithmic"
+  },
+  {
+    "start": 170.92,
+    "end": 171.4,
+    "text": "collusion"
+  },
+  {
+    "start": 172.0,
+    "end": 172.14,
+    "text": "and"
+  },
+  {
+    "start": 172.14,
+    "end": 172.28,
+    "text": "was"
+  },
+  {
+    "start": 172.28,
+    "end": 172.44,
+    "text": "not"
+  },
+  {
+    "start": 172.44,
+    "end": 172.84,
+    "text": "involved"
+  },
+  {
+    "start": 172.84,
+    "end": 173.04,
+    "text": "in"
+  },
+  {
+    "start": 173.04,
+    "end": 173.1,
+    "text": "the"
+  },
+  {
+    "start": 173.1,
+    "end": 173.26,
+    "text": "new"
+  },
+  {
+    "start": 173.26,
+    "end": 173.8,
+    "text": "research."
+  },
+  {
+    "start": 174.56,
+    "end": 175.14,
+    "text": "“Once"
+  },
+  {
+    "start": 175.14,
+    "end": 175.36,
+    "text": "we"
+  },
+  {
+    "start": 175.36,
+    "end": 175.52,
+    "text": "do"
+  },
+  {
+    "start": 175.52,
+    "end": 175.84,
+    "text": "so,"
+  },
+  {
+    "start": 176.24,
+    "end": 176.36,
+    "text": "we"
+  },
+  {
+    "start": 176.36,
+    "end": 176.54,
+    "text": "want"
+  },
+  {
+    "start": 176.54,
+    "end": 176.72,
+    "text": "to"
+  },
+  {
+    "start": 176.72,
+    "end": 176.94,
+    "text": "figure"
+  },
+  {
+    "start": 176.94,
+    "end": 177.24,
+    "text": "out"
+  },
+  {
+    "start": 177.24,
+    "end": 177.48,
+    "text": "how"
+  },
+  {
+    "start": 177.48,
+    "end": 177.66,
+    "text": "to"
+  },
+  {
+    "start": 177.66,
+    "end": 178.08,
+    "text": "destroy"
+  },
+  {
+    "start": 178.08,
+    "end": 178.68,
+    "text": "collusion.”"
+  },
+  {
+    "start": 178.68,
+    "end": 179.76,
+    "text": "[…]"
+  },
+  {
+    "start": 179.76,
+    "end": 180.24,
+    "text": "Researchers"
+  },
+  {
+    "start": 180.24,
+    "end": 180.64,
+    "text": "have"
+  },
+  {
+    "start": 180.64,
+    "end": 181.18,
+    "text": "devised"
+  },
+  {
+    "start": 181.18,
+    "end": 181.54,
+    "text": "learning"
+  },
+  {
+    "start": 181.54,
+    "end": 182.42,
+    "text": "algorithms"
+  },
+  {
+    "start": 182.42,
+    "end": 183.06,
+    "text": "called"
+  },
+  {
+    "start": 183.06,
+    "end": 184.25,
+    "text": "“no-swap-regret”"
+  },
+  {
+    "start": 184.25,
+    "end": 185.43,
+    "text": "algorithms."
+  },
+  {
+    "start": 185.43,
+    "end": 186.62,
+    "text": "These"
+  },
+  {
+    "start": 186.62,
+    "end": 187.04,
+    "text": "guarantee"
+  },
+  {
+    "start": 187.04,
+    "end": 187.66,
+    "text": "that"
+  },
+  {
+    "start": 187.66,
+    "end": 187.98,
+    "text": "whatever"
+  },
+  {
+    "start": 187.98,
+    "end": 188.2,
+    "text": "your"
+  },
+  {
+    "start": 188.2,
+    "end": 188.62,
+    "text": "opponent"
+  },
+  {
+    "start": 188.62,
+    "end": 189.08,
+    "text": "did,"
+  },
+  {
+    "start": 189.44,
+    "end": 189.52,
+    "text": "you"
+  },
+  {
+    "start": 189.52,
+    "end": 189.8,
+    "text": "couldn’t"
+  },
+  {
+    "start": 189.8,
+    "end": 189.96,
+    "text": "have"
+  },
+  {
+    "start": 189.96,
+    "end": 190.12,
+    "text": "done"
+  },
+  {
+    "start": 190.12,
+    "end": 190.46,
+    "text": "better"
+  },
+  {
+    "start": 190.46,
+    "end": 190.66,
+    "text": "by"
+  },
+  {
+    "start": 190.66,
+    "end": 191.06,
+    "text": "swapping"
+  },
+  {
+    "start": 191.06,
+    "end": 191.38,
+    "text": "all"
+  },
+  {
+    "start": 191.38,
+    "end": 192.06,
+    "text": "instances"
+  },
+  {
+    "start": 192.06,
+    "end": 192.38,
+    "text": "of"
+  },
+  {
+    "start": 192.38,
+    "end": 192.54,
+    "text": "any"
+  },
+  {
+    "start": 192.54,
+    "end": 192.84,
+    "text": "move"
+  },
+  {
+    "start": 192.84,
+    "end": 193.24,
+    "text": "with"
+  },
+  {
+    "start": 193.24,
+    "end": 193.48,
+    "text": "any"
+  },
+  {
+    "start": 193.48,
+    "end": 193.68,
+    "text": "other"
+  },
+  {
+    "start": 193.68,
+    "end": 194.1,
+    "text": "move"
+  },
+  {
+    "start": 194.1,
+    "end": 194.64,
+    "text": "[…]"
+  },
+  {
+    "start": 194.64,
+    "end": 195.22,
+    "text": "The"
+  },
+  {
+    "start": 195.22,
+    "end": 195.52,
+    "text": "results"
+  },
+  {
+    "start": 195.52,
+    "end": 196.2,
+    "text": "implied"
+  },
+  {
+    "start": 196.2,
+    "end": 196.82,
+    "text": "that"
+  },
+  {
+    "start": 196.82,
+    "end": 197.26,
+    "text": "dueling"
+  },
+  {
+    "start": 197.26,
+    "end": 198.24,
+    "text": "no-swap-regret"
+  },
+  {
+    "start": 198.24,
+    "end": 199.06,
+    "text": "algorithms"
+  },
+  {
+    "start": 199.06,
+    "end": 199.76,
+    "text": "would"
+  },
+  {
+    "start": 199.76,
+    "end": 200.16,
+    "text": "always"
+  },
+  {
+    "start": 200.16,
+    "end": 200.58,
+    "text": "end"
+  },
+  {
+    "start": 200.58,
+    "end": 200.74,
+    "text": "up"
+  },
+  {
+    "start": 200.74,
+    "end": 200.94,
+    "text": "with"
+  },
+  {
+    "start": 200.94,
+    "end": 201.46,
+    "text": "competitive"
+  },
+  {
+    "start": 201.46,
+    "end": 202.02,
+    "text": "prices"
+  },
+  {
+    "start": 202.02,
+    "end": 202.66,
+    "text": "when"
+  },
+  {
+    "start": 202.66,
+    "end": 202.82,
+    "text": "they"
+  },
+  {
+    "start": 202.82,
+    "end": 203.16,
+    "text": "reached"
+  },
+  {
+    "start": 203.16,
+    "end": 203.72,
+    "text": "equilibrium."
+  },
+  {
+    "start": 204.5,
+    "end": 204.9,
+    "text": "Collusion"
+  },
+  {
+    "start": 204.9,
+    "end": 205.36,
+    "text": "was"
+  },
+  {
+    "start": 205.36,
+    "end": 205.94,
+    "text": "impossible."
+  },
+  {
+    "start": 209.5,
+    "end": 209.82,
+    "text": "October"
+  },
+  {
+    "start": 209.82,
+    "end": 210.98,
+    "text": "2025"
+  },
+  {
+    "start": 210.98,
+    "end": 210.98,
+    "text": "112/140"
+  }
+]

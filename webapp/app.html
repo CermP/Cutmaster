@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutMaster - Éditeur Audio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">CutMaster</div>
+            
+            <div class="mode-toggle">
+                <button class="mode-btn active" data-target="panel-decoupage">Découpage</button>
+                <button class="mode-btn" data-target="panel-shadowing">Shadowing</button>
+            </div>
+            
+            <a href="index.html" class="back-link">← Accueil</a>
+        </header>
+
+        <main>
+            <!-- PANEL: DECOUPAGE -->
+            <section id="panel-decoupage" class="panel active">
+                <div class="drop-zone" id="decoupage-drop-zone">
+                    <input type="file" id="decoupage-file" accept="audio/*,video/mp4" hidden>
+                    <p>Glissez un fichier audio ici</p>
+                    <button type="button" class="btn-secondary btn-small" id="decoupage-browse">Parcourir</button>
+                    <p class="file-name" id="decoupage-file-name"></p>
+                </div>
+
+                <div class="parameters-row">
+                    <div class="param-group">
+                        <label for="min-silence">Silence minimum (ms)</label>
+                        <input type="number" id="min-silence" value="700">
+                    </div>
+                    <div class="param-group">
+                        <label for="thresh-db">Seuil relatif (dB)</label>
+                        <input type="number" id="thresh-db" value="-16">
+                    </div>
+                    <div class="param-group">
+                        <label for="pause-mult">Multiplicateur de pause</label>
+                        <input type="number" id="pause-mult" value="1.0" step="0.1">
+                    </div>
+                    <div class="param-group">
+                        <label for="export-format">Format d'export</label>
+                        <select id="export-format">
+                            <option value="wav">.WAV</option>
+                            <option value="mp3">.MP3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-primary full-width" id="decoupage-process">Lancer le traitement</button>
+                
+                <div class="status-area" id="decoupage-status"></div>
+
+                <div class="result-area hidden" id="decoupage-result">
+                    <div class="waveform-card">
+                        <div id="waveform"></div>
+                    </div>
+                    <div class="result-controls">
+                        <button class="btn-secondary" id="decoupage-play">Play / Pause</button>
+                        <button class="btn-success full-width" id="decoupage-download">Télécharger</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PANEL: SHADOWING -->
+            <section id="panel-shadowing" class="panel">
+                <div class="upload-row">
+                    <div class="upload-group">
+                        <label for="shadowing-audio">Fichier Audio (.mp3)</label>
+                        <input type="file" id="shadowing-audio" accept="audio/*">
+                    </div>
+                    <div class="upload-group">
+                        <label for="shadowing-json">Fichier de Synchro (.json)</label>
+                        <input type="file" id="shadowing-json" accept=".json,application/json">
+                    </div>
+                    <button class="btn-secondary align-bottom" id="shadowing-load">Charger</button>
+                </div>
+
+                <div class="shadowing-controls hidden" id="shadowing-controls-bar">
+                    <button class="btn-primary" id="shadowing-play">Play</button>
+                    
+                    <div class="segment-control">
+                        <button class="seg-btn active" data-granularity="sentence">Phrases</button>
+                        <button class="seg-btn" data-granularity="comma">Virgules</button>
+                        <button class="seg-btn" data-granularity="word">Mots</button>
+                    </div>
+                    
+                    <div class="pause-control">
+                        <label for="shadowing-pause-mult">Pause (x)</label>
+                        <input type="range" id="shadowing-pause-mult" min="1" max="4" step="0.1" value="2">
+                        <span id="shadowing-pause-val">2.0</span>
+                    </div>
+
+                    <div class="toggle-group">
+                        <label for="auto-pause-toggle">Auto-pause</label>
+                        <label class="switch">
+                            <input type="checkbox" id="auto-pause-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="shadowing-status hidden" id="shadowing-status">
+                    <span class="status-text" id="shadowing-status-text">Prêt</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="shadowing-progress"></div>
+                    </div>
+                </div>
+
+                <div class="text-display" id="shadowing-text"></div>
+
+                <audio id="shadowing-audio-player" preload="auto" style="display:none;"></audio>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

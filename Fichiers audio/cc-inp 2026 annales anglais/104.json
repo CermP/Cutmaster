@@ -1,0 +1,2282 @@
+[
+  {
+    "start": 2.8,
+    "end": 2.86,
+    "text": "THE"
+  },
+  {
+    "start": 2.86,
+    "end": 3.24,
+    "text": "FUTURE"
+  },
+  {
+    "start": 3.24,
+    "end": 3.48,
+    "text": "OF"
+  },
+  {
+    "start": 3.48,
+    "end": 3.74,
+    "text": "WORK"
+  },
+  {
+    "start": 3.74,
+    "end": 4.2,
+    "text": "ISN’T"
+  },
+  {
+    "start": 4.2,
+    "end": 4.56,
+    "text": "REMOTE"
+  },
+  {
+    "start": 4.56,
+    "end": 5.0,
+    "text": "OR"
+  },
+  {
+    "start": 5.0,
+    "end": 5.48,
+    "text": "HYBRID"
+  },
+  {
+    "start": 5.48,
+    "end": 5.98,
+    "text": "-"
+  },
+  {
+    "start": 5.98,
+    "end": 6.22,
+    "text": "IT’S"
+  },
+  {
+    "start": 6.22,
+    "end": 6.95,
+    "text": "MICROSHIFTING"
+  },
+  {
+    "start": 6.95,
+    "end": 7.68,
+    "text": "[…]"
+  },
+  {
+    "start": 7.68,
+    "end": 8.41,
+    "text": "The"
+  },
+  {
+    "start": 8.41,
+    "end": 9.14,
+    "text": "9-to-5"
+  },
+  {
+    "start": 9.14,
+    "end": 9.72,
+    "text": "workday"
+  },
+  {
+    "start": 9.72,
+    "end": 10.26,
+    "text": "is"
+  },
+  {
+    "start": 10.26,
+    "end": 10.36,
+    "text": "a"
+  },
+  {
+    "start": 10.36,
+    "end": 10.78,
+    "text": "relic"
+  },
+  {
+    "start": 10.78,
+    "end": 11.0,
+    "text": "of"
+  },
+  {
+    "start": 11.0,
+    "end": 11.08,
+    "text": "the"
+  },
+  {
+    "start": 11.08,
+    "end": 11.52,
+    "text": "Industrial"
+  },
+  {
+    "start": 11.52,
+    "end": 12.12,
+    "text": "Revolution,"
+  },
+  {
+    "start": 12.82,
+    "end": 13.12,
+    "text": "designed"
+  },
+  {
+    "start": 13.12,
+    "end": 13.38,
+    "text": "for"
+  },
+  {
+    "start": 13.38,
+    "end": 13.76,
+    "text": "factory"
+  },
+  {
+    "start": 13.76,
+    "end": 14.22,
+    "text": "floors"
+  },
+  {
+    "start": 14.76,
+    "end": 14.88,
+    "text": "whose"
+  },
+  {
+    "start": 14.88,
+    "end": 15.44,
+    "text": "productivity"
+  },
+  {
+    "start": 15.44,
+    "end": 16.14,
+    "text": "was"
+  },
+  {
+    "start": 16.14,
+    "end": 16.56,
+    "text": "measured"
+  },
+  {
+    "start": 16.56,
+    "end": 16.88,
+    "text": "by"
+  },
+  {
+    "start": 16.88,
+    "end": 17.22,
+    "text": "hours"
+  },
+  {
+    "start": 17.22,
+    "end": 17.84,
+    "text": "clocked"
+  },
+  {
+    "start": 17.84,
+    "end": 18.04,
+    "text": "and"
+  },
+  {
+    "start": 18.04,
+    "end": 18.38,
+    "text": "widgets"
+  },
+  {
+    "start": 18.38,
+    "end": 18.94,
+    "text": "produced."
+  },
+  {
+    "start": 20.04,
+    "end": 20.26,
+    "text": "But"
+  },
+  {
+    "start": 20.26,
+    "end": 20.56,
+    "text": "knowledge"
+  },
+  {
+    "start": 20.56,
+    "end": 20.94,
+    "text": "work"
+  },
+  {
+    "start": 20.94,
+    "end": 21.38,
+    "text": "doesn’t"
+  },
+  {
+    "start": 21.38,
+    "end": 21.8,
+    "text": "operate"
+  },
+  {
+    "start": 21.8,
+    "end": 22.06,
+    "text": "on"
+  },
+  {
+    "start": 22.06,
+    "end": 22.22,
+    "text": "an"
+  },
+  {
+    "start": 22.22,
+    "end": 22.56,
+    "text": "assembly"
+  },
+  {
+    "start": 22.56,
+    "end": 23.08,
+    "text": "line."
+  },
+  {
+    "start": 23.9,
+    "end": 24.22,
+    "text": "Despite"
+  },
+  {
+    "start": 24.22,
+    "end": 24.6,
+    "text": "this,"
+  },
+  {
+    "start": 24.82,
+    "end": 24.94,
+    "text": "many"
+  },
+  {
+    "start": 24.94,
+    "end": 25.38,
+    "text": "companies"
+  },
+  {
+    "start": 25.38,
+    "end": 25.7,
+    "text": "are"
+  },
+  {
+    "start": 25.7,
+    "end": 26.02,
+    "text": "doubling"
+  },
+  {
+    "start": 26.02,
+    "end": 26.44,
+    "text": "down"
+  },
+  {
+    "start": 26.44,
+    "end": 26.68,
+    "text": "on"
+  },
+  {
+    "start": 26.68,
+    "end": 27.52,
+    "text": "return-to-office"
+  },
+  {
+    "start": 27.52,
+    "end": 28.06,
+    "text": "mandates."
+  },
+  {
+    "start": 29.12,
+    "end": 29.32,
+    "text": "Owl"
+  },
+  {
+    "start": 29.32,
+    "end": 29.66,
+    "text": "Labs"
+  },
+  {
+    "start": 29.66,
+    "end": 30.32,
+    "text": "reports"
+  },
+  {
+    "start": 30.32,
+    "end": 30.7,
+    "text": "that"
+  },
+  {
+    "start": 30.7,
+    "end": 31.14,
+    "text": "63"
+  },
+  {
+    "start": 31.14,
+    "end": 31.37,
+    "text": "per"
+  },
+  {
+    "start": 31.37,
+    "end": 31.6,
+    "text": "cent"
+  },
+  {
+    "start": 31.6,
+    "end": 31.82,
+    "text": "of"
+  },
+  {
+    "start": 31.82,
+    "end": 32.26,
+    "text": "employees"
+  },
+  {
+    "start": 32.26,
+    "end": 33.06,
+    "text": "are"
+  },
+  {
+    "start": 33.06,
+    "end": 33.24,
+    "text": "now"
+  },
+  {
+    "start": 33.24,
+    "end": 33.38,
+    "text": "in"
+  },
+  {
+    "start": 33.38,
+    "end": 33.48,
+    "text": "the"
+  },
+  {
+    "start": 33.48,
+    "end": 33.72,
+    "text": "office"
+  },
+  {
+    "start": 33.72,
+    "end": 34.46,
+    "text": "full-time,"
+  },
+  {
+    "start": 34.46,
+    "end": 35.1,
+    "text": "and"
+  },
+  {
+    "start": 35.1,
+    "end": 35.32,
+    "text": "among"
+  },
+  {
+    "start": 35.32,
+    "end": 35.8,
+    "text": "hybrid"
+  },
+  {
+    "start": 35.8,
+    "end": 36.34,
+    "text": "workers,"
+  },
+  {
+    "start": 36.34,
+    "end": 37.26,
+    "text": "in-office"
+  },
+  {
+    "start": 37.26,
+    "end": 37.58,
+    "text": "days"
+  },
+  {
+    "start": 37.58,
+    "end": 37.86,
+    "text": "are"
+  },
+  {
+    "start": 37.86,
+    "end": 38.3,
+    "text": "climbing."
+  },
+  {
+    "start": 39.16,
+    "end": 39.52,
+    "text": "A"
+  },
+  {
+    "start": 39.52,
+    "end": 39.86,
+    "text": "phenomenon"
+  },
+  {
+    "start": 39.86,
+    "end": 40.46,
+    "text": "called"
+  },
+  {
+    "start": 40.46,
+    "end": 41.04,
+    "text": "“hybrid"
+  },
+  {
+    "start": 41.04,
+    "end": 41.42,
+    "text": "creep”"
+  },
+  {
+    "start": 41.42,
+    "end": 42.18,
+    "text": "shows"
+  },
+  {
+    "start": 42.18,
+    "end": 42.48,
+    "text": "that"
+  },
+  {
+    "start": 42.48,
+    "end": 43.02,
+    "text": "34"
+  },
+  {
+    "start": 43.02,
+    "end": 43.19,
+    "text": "per"
+  },
+  {
+    "start": 43.19,
+    "end": 43.36,
+    "text": "cent"
+  },
+  {
+    "start": 43.36,
+    "end": 43.58,
+    "text": "of"
+  },
+  {
+    "start": 43.58,
+    "end": 43.96,
+    "text": "hybrid"
+  },
+  {
+    "start": 43.96,
+    "end": 44.6,
+    "text": "workers"
+  },
+  {
+    "start": 44.6,
+    "end": 45.14,
+    "text": "now"
+  },
+  {
+    "start": 45.14,
+    "end": 45.32,
+    "text": "go"
+  },
+  {
+    "start": 45.32,
+    "end": 45.52,
+    "text": "into"
+  },
+  {
+    "start": 45.52,
+    "end": 45.66,
+    "text": "the"
+  },
+  {
+    "start": 45.66,
+    "end": 45.9,
+    "text": "office"
+  },
+  {
+    "start": 45.9,
+    "end": 46.3,
+    "text": "four"
+  },
+  {
+    "start": 46.3,
+    "end": 46.54,
+    "text": "days"
+  },
+  {
+    "start": 46.54,
+    "end": 46.74,
+    "text": "a"
+  },
+  {
+    "start": 46.74,
+    "end": 47.08,
+    "text": "week,"
+  },
+  {
+    "start": 47.46,
+    "end": 47.74,
+    "text": "up"
+  },
+  {
+    "start": 47.74,
+    "end": 48.06,
+    "text": "from"
+  },
+  {
+    "start": 48.06,
+    "end": 48.58,
+    "text": "23"
+  },
+  {
+    "start": 48.58,
+    "end": 48.77,
+    "text": "per"
+  },
+  {
+    "start": 48.77,
+    "end": 48.96,
+    "text": "cent"
+  },
+  {
+    "start": 48.96,
+    "end": 49.28,
+    "text": "in"
+  },
+  {
+    "start": 49.28,
+    "end": 50.08,
+    "text": "2023."
+  },
+  {
+    "start": 50.88,
+    "end": 51.26,
+    "text": "While"
+  },
+  {
+    "start": 51.26,
+    "end": 51.82,
+    "text": "companies"
+  },
+  {
+    "start": 51.82,
+    "end": 52.16,
+    "text": "are"
+  },
+  {
+    "start": 52.16,
+    "end": 52.48,
+    "text": "pulling"
+  },
+  {
+    "start": 52.48,
+    "end": 52.92,
+    "text": "workers"
+  },
+  {
+    "start": 52.92,
+    "end": 53.12,
+    "text": "back"
+  },
+  {
+    "start": 53.12,
+    "end": 53.38,
+    "text": "into"
+  },
+  {
+    "start": 53.38,
+    "end": 53.52,
+    "text": "the"
+  },
+  {
+    "start": 53.52,
+    "end": 53.96,
+    "text": "office,"
+  },
+  {
+    "start": 54.56,
+    "end": 55.02,
+    "text": "employees"
+  },
+  {
+    "start": 55.02,
+    "end": 55.38,
+    "text": "are"
+  },
+  {
+    "start": 55.38,
+    "end": 55.74,
+    "text": "pushing"
+  },
+  {
+    "start": 55.74,
+    "end": 56.1,
+    "text": "back"
+  },
+  {
+    "start": 56.1,
+    "end": 56.38,
+    "text": "by"
+  },
+  {
+    "start": 56.38,
+    "end": 56.84,
+    "text": "refusing"
+  },
+  {
+    "start": 56.84,
+    "end": 57.2,
+    "text": "to"
+  },
+  {
+    "start": 57.2,
+    "end": 57.34,
+    "text": "let"
+  },
+  {
+    "start": 57.34,
+    "end": 57.52,
+    "text": "the"
+  },
+  {
+    "start": 57.52,
+    "end": 57.76,
+    "text": "clock"
+  },
+  {
+    "start": 57.76,
+    "end": 58.4,
+    "text": "dictate"
+  },
+  {
+    "start": 58.4,
+    "end": 58.82,
+    "text": "their"
+  },
+  {
+    "start": 58.82,
+    "end": 59.54,
+    "text": "productivity."
+  },
+  {
+    "start": 61.08,
+    "end": 61.54,
+    "text": "[…]"
+  },
+  {
+    "start": 61.54,
+    "end": 62.0,
+    "text": "Microshifting"
+  },
+  {
+    "start": 62.0,
+    "end": 62.56,
+    "text": "is"
+  },
+  {
+    "start": 62.56,
+    "end": 62.74,
+    "text": "the"
+  },
+  {
+    "start": 62.74,
+    "end": 63.16,
+    "text": "practice"
+  },
+  {
+    "start": 63.16,
+    "end": 63.5,
+    "text": "of"
+  },
+  {
+    "start": 63.5,
+    "end": 63.84,
+    "text": "breaking"
+  },
+  {
+    "start": 63.84,
+    "end": 64.06,
+    "text": "up"
+  },
+  {
+    "start": 64.06,
+    "end": 64.22,
+    "text": "the"
+  },
+  {
+    "start": 64.22,
+    "end": 64.76,
+    "text": "workday"
+  },
+  {
+    "start": 64.76,
+    "end": 65.14,
+    "text": "into"
+  },
+  {
+    "start": 65.14,
+    "end": 65.54,
+    "text": "short,"
+  },
+  {
+    "start": 65.86,
+    "end": 66.26,
+    "text": "flexible"
+  },
+  {
+    "start": 66.26,
+    "end": 66.78,
+    "text": "blocks"
+  },
+  {
+    "start": 67.52,
+    "end": 67.84,
+    "text": "rather"
+  },
+  {
+    "start": 67.84,
+    "end": 68.08,
+    "text": "than"
+  },
+  {
+    "start": 68.08,
+    "end": 68.9,
+    "text": "adhering"
+  },
+  {
+    "start": 68.9,
+    "end": 69.28,
+    "text": "to"
+  },
+  {
+    "start": 69.28,
+    "end": 69.38,
+    "text": "a"
+  },
+  {
+    "start": 69.38,
+    "end": 69.92,
+    "text": "continuous"
+  },
+  {
+    "start": 69.92,
+    "end": 70.5,
+    "text": "eight-hour"
+  },
+  {
+    "start": 70.5,
+    "end": 70.9,
+    "text": "stretch."
+  },
+  {
+    "start": 71.92,
+    "end": 72.38,
+    "text": "Unlike"
+  },
+  {
+    "start": 72.38,
+    "end": 73.0,
+    "text": "traditional"
+  },
+  {
+    "start": 73.0,
+    "end": 73.48,
+    "text": "flexible"
+  },
+  {
+    "start": 73.48,
+    "end": 73.98,
+    "text": "hours,"
+  },
+  {
+    "start": 74.46,
+    "end": 74.58,
+    "text": "which"
+  },
+  {
+    "start": 74.58,
+    "end": 74.76,
+    "text": "might"
+  },
+  {
+    "start": 74.76,
+    "end": 75.08,
+    "text": "allow"
+  },
+  {
+    "start": 75.08,
+    "end": 75.32,
+    "text": "you"
+  },
+  {
+    "start": 75.32,
+    "end": 75.46,
+    "text": "to"
+  },
+  {
+    "start": 75.46,
+    "end": 75.68,
+    "text": "start"
+  },
+  {
+    "start": 75.68,
+    "end": 75.88,
+    "text": "at"
+  },
+  {
+    "start": 75.88,
+    "end": 76.1,
+    "text": "10"
+  },
+  {
+    "start": 76.1,
+    "end": 76.32,
+    "text": "a.m."
+  },
+  {
+    "start": 76.32,
+    "end": 76.72,
+    "text": "instead"
+  },
+  {
+    "start": 76.72,
+    "end": 76.88,
+    "text": "of"
+  },
+  {
+    "start": 76.88,
+    "end": 77.5,
+    "text": "9"
+  },
+  {
+    "start": 77.5,
+    "end": 78.12,
+    "text": "a.m.,"
+  },
+  {
+    "start": 78.12,
+    "end": 78.74,
+    "text": "microshifting"
+  },
+  {
+    "start": 78.74,
+    "end": 79.04,
+    "text": "gives"
+  },
+  {
+    "start": 79.04,
+    "end": 79.52,
+    "text": "employees"
+  },
+  {
+    "start": 79.52,
+    "end": 79.82,
+    "text": "the"
+  },
+  {
+    "start": 79.82,
+    "end": 80.2,
+    "text": "freedom"
+  },
+  {
+    "start": 80.2,
+    "end": 80.76,
+    "text": "to"
+  },
+  {
+    "start": 80.76,
+    "end": 81.02,
+    "text": "work"
+  },
+  {
+    "start": 81.02,
+    "end": 81.26,
+    "text": "in"
+  },
+  {
+    "start": 81.26,
+    "end": 81.7,
+    "text": "bursts"
+  },
+  {
+    "start": 81.7,
+    "end": 82.48,
+    "text": "throughout"
+  },
+  {
+    "start": 82.48,
+    "end": 82.74,
+    "text": "the"
+  },
+  {
+    "start": 82.74,
+    "end": 82.96,
+    "text": "day"
+  },
+  {
+    "start": 82.96,
+    "end": 83.72,
+    "text": "based"
+  },
+  {
+    "start": 83.72,
+    "end": 83.84,
+    "text": "on"
+  },
+  {
+    "start": 83.84,
+    "end": 84.04,
+    "text": "when"
+  },
+  {
+    "start": 84.04,
+    "end": 84.3,
+    "text": "they’re"
+  },
+  {
+    "start": 84.3,
+    "end": 84.5,
+    "text": "most"
+  },
+  {
+    "start": 84.5,
+    "end": 85.04,
+    "text": "productive"
+  },
+  {
+    "start": 85.04,
+    "end": 85.68,
+    "text": "or"
+  },
+  {
+    "start": 85.68,
+    "end": 85.92,
+    "text": "when"
+  },
+  {
+    "start": 85.92,
+    "end": 86.22,
+    "text": "life"
+  },
+  {
+    "start": 86.22,
+    "end": 86.6,
+    "text": "demands"
+  },
+  {
+    "start": 86.6,
+    "end": 86.9,
+    "text": "their"
+  },
+  {
+    "start": 86.9,
+    "end": 87.44,
+    "text": "attention."
+  },
+  {
+    "start": 88.2,
+    "end": 88.46,
+    "text": "A"
+  },
+  {
+    "start": 88.46,
+    "end": 88.82,
+    "text": "parent"
+  },
+  {
+    "start": 88.82,
+    "end": 89.34,
+    "text": "might"
+  },
+  {
+    "start": 89.34,
+    "end": 89.68,
+    "text": "work"
+  },
+  {
+    "start": 89.68,
+    "end": 89.94,
+    "text": "from"
+  },
+  {
+    "start": 89.94,
+    "end": 90.2,
+    "text": "7"
+  },
+  {
+    "start": 90.2,
+    "end": 90.38,
+    "text": "to"
+  },
+  {
+    "start": 90.38,
+    "end": 90.66,
+    "text": "9"
+  },
+  {
+    "start": 90.66,
+    "end": 90.94,
+    "text": "a.m.,"
+  },
+  {
+    "start": 91.42,
+    "end": 91.56,
+    "text": "take"
+  },
+  {
+    "start": 91.56,
+    "end": 91.72,
+    "text": "a"
+  },
+  {
+    "start": 91.72,
+    "end": 91.96,
+    "text": "break"
+  },
+  {
+    "start": 91.96,
+    "end": 92.24,
+    "text": "for"
+  },
+  {
+    "start": 92.24,
+    "end": 92.5,
+    "text": "school"
+  },
+  {
+    "start": 92.5,
+    "end": 93.06,
+    "text": "drop-off"
+  },
+  {
+    "start": 93.06,
+    "end": 93.34,
+    "text": "and"
+  },
+  {
+    "start": 93.34,
+    "end": 93.92,
+    "text": "errands,"
+  },
+  {
+    "start": 94.2,
+    "end": 94.46,
+    "text": "return"
+  },
+  {
+    "start": 94.46,
+    "end": 94.74,
+    "text": "for"
+  },
+  {
+    "start": 94.74,
+    "end": 94.86,
+    "text": "a"
+  },
+  {
+    "start": 94.86,
+    "end": 95.02,
+    "text": "few"
+  },
+  {
+    "start": 95.02,
+    "end": 95.26,
+    "text": "hours"
+  },
+  {
+    "start": 95.26,
+    "end": 95.4,
+    "text": "in"
+  },
+  {
+    "start": 95.4,
+    "end": 95.5,
+    "text": "the"
+  },
+  {
+    "start": 95.5,
+    "end": 96.04,
+    "text": "afternoon,"
+  },
+  {
+    "start": 96.48,
+    "end": 96.62,
+    "text": "then"
+  },
+  {
+    "start": 96.62,
+    "end": 96.84,
+    "text": "log"
+  },
+  {
+    "start": 96.84,
+    "end": 97.08,
+    "text": "back"
+  },
+  {
+    "start": 97.08,
+    "end": 97.34,
+    "text": "on"
+  },
+  {
+    "start": 97.34,
+    "end": 97.76,
+    "text": "after"
+  },
+  {
+    "start": 97.76,
+    "end": 98.08,
+    "text": "bedtime"
+  },
+  {
+    "start": 98.08,
+    "end": 98.56,
+    "text": "to"
+  },
+  {
+    "start": 98.56,
+    "end": 98.7,
+    "text": "wrap"
+  },
+  {
+    "start": 98.7,
+    "end": 99.1,
+    "text": "up."
+  },
+  {
+    "start": 99.62,
+    "end": 99.96,
+    "text": "In"
+  },
+  {
+    "start": 99.96,
+    "end": 100.4,
+    "text": "industries"
+  },
+  {
+    "start": 100.4,
+    "end": 100.8,
+    "text": "like"
+  },
+  {
+    "start": 100.8,
+    "end": 101.6,
+    "text": "hospitality"
+  },
+  {
+    "start": 101.6,
+    "end": 101.96,
+    "text": "and"
+  },
+  {
+    "start": 101.96,
+    "end": 102.22,
+    "text": "food"
+  },
+  {
+    "start": 102.22,
+    "end": 102.86,
+    "text": "service,"
+  },
+  {
+    "start": 103.42,
+    "end": 103.52,
+    "text": "this"
+  },
+  {
+    "start": 103.52,
+    "end": 103.88,
+    "text": "often"
+  },
+  {
+    "start": 103.88,
+    "end": 104.1,
+    "text": "means"
+  },
+  {
+    "start": 104.1,
+    "end": 104.64,
+    "text": "shifts"
+  },
+  {
+    "start": 104.64,
+    "end": 105.06,
+    "text": "of"
+  },
+  {
+    "start": 105.06,
+    "end": 105.36,
+    "text": "six"
+  },
+  {
+    "start": 105.36,
+    "end": 105.76,
+    "text": "hours"
+  },
+  {
+    "start": 105.76,
+    "end": 106.02,
+    "text": "or"
+  },
+  {
+    "start": 106.02,
+    "end": 106.32,
+    "text": "less."
+  },
+  {
+    "start": 107.2,
+    "end": 107.4,
+    "text": "For"
+  },
+  {
+    "start": 107.4,
+    "end": 107.66,
+    "text": "knowledge"
+  },
+  {
+    "start": 107.66,
+    "end": 108.2,
+    "text": "workers,"
+  },
+  {
+    "start": 108.78,
+    "end": 108.96,
+    "text": "it’s"
+  },
+  {
+    "start": 108.96,
+    "end": 109.2,
+    "text": "about"
+  },
+  {
+    "start": 109.2,
+    "end": 109.82,
+    "text": "autonomy"
+  },
+  {
+    "start": 109.82,
+    "end": 110.26,
+    "text": "over"
+  },
+  {
+    "start": 110.26,
+    "end": 110.42,
+    "text": "their"
+  },
+  {
+    "start": 110.42,
+    "end": 110.92,
+    "text": "schedule"
+  },
+  {
+    "start": 110.92,
+    "end": 111.68,
+    "text": "rather"
+  },
+  {
+    "start": 111.68,
+    "end": 111.88,
+    "text": "than"
+  },
+  {
+    "start": 111.88,
+    "end": 112.28,
+    "text": "simply"
+  },
+  {
+    "start": 112.28,
+    "end": 112.54,
+    "text": "where"
+  },
+  {
+    "start": 112.54,
+    "end": 112.74,
+    "text": "they"
+  },
+  {
+    "start": 112.74,
+    "end": 113.16,
+    "text": "sit."
+  },
+  {
+    "start": 113.16,
+    "end": 114.7,
+    "text": "[…]"
+  },
+  {
+    "start": 114.7,
+    "end": 115.06,
+    "text": "Employees"
+  },
+  {
+    "start": 115.06,
+    "end": 115.32,
+    "text": "aren’t"
+  },
+  {
+    "start": 115.32,
+    "end": 115.54,
+    "text": "just"
+  },
+  {
+    "start": 115.54,
+    "end": 116.04,
+    "text": "asking"
+  },
+  {
+    "start": 116.04,
+    "end": 116.24,
+    "text": "for"
+  },
+  {
+    "start": 116.24,
+    "end": 117.08,
+    "text": "microshifting."
+  },
+  {
+    "start": 117.54,
+    "end": 117.8,
+    "text": "They’re"
+  },
+  {
+    "start": 117.8,
+    "end": 117.96,
+    "text": "willing"
+  },
+  {
+    "start": 117.96,
+    "end": 118.18,
+    "text": "to"
+  },
+  {
+    "start": 118.18,
+    "end": 118.4,
+    "text": "pay"
+  },
+  {
+    "start": 118.4,
+    "end": 118.6,
+    "text": "for"
+  },
+  {
+    "start": 118.6,
+    "end": 118.88,
+    "text": "it."
+  },
+  {
+    "start": 119.62,
+    "end": 119.96,
+    "text": "Owl"
+  },
+  {
+    "start": 119.96,
+    "end": 120.32,
+    "text": "Labs"
+  },
+  {
+    "start": 120.32,
+    "end": 120.72,
+    "text": "found"
+  },
+  {
+    "start": 120.72,
+    "end": 120.98,
+    "text": "that"
+  },
+  {
+    "start": 120.98,
+    "end": 121.48,
+    "text": "employees"
+  },
+  {
+    "start": 121.48,
+    "end": 122.06,
+    "text": "would"
+  },
+  {
+    "start": 122.06,
+    "end": 122.5,
+    "text": "sacrifice"
+  },
+  {
+    "start": 122.5,
+    "end": 123.0,
+    "text": "9"
+  },
+  {
+    "start": 123.0,
+    "end": 123.18,
+    "text": "per"
+  },
+  {
+    "start": 123.18,
+    "end": 123.36,
+    "text": "cent"
+  },
+  {
+    "start": 123.36,
+    "end": 123.58,
+    "text": "of"
+  },
+  {
+    "start": 123.58,
+    "end": 123.72,
+    "text": "their"
+  },
+  {
+    "start": 123.72,
+    "end": 124.06,
+    "text": "annual"
+  },
+  {
+    "start": 124.06,
+    "end": 124.54,
+    "text": "salary"
+  },
+  {
+    "start": 124.54,
+    "end": 125.08,
+    "text": "for"
+  },
+  {
+    "start": 125.08,
+    "end": 125.44,
+    "text": "flexible"
+  },
+  {
+    "start": 125.44,
+    "end": 126.0,
+    "text": "working"
+  },
+  {
+    "start": 126.0,
+    "end": 126.52,
+    "text": "hours"
+  },
+  {
+    "start": 126.52,
+    "end": 127.26,
+    "text": "and"
+  },
+  {
+    "start": 127.26,
+    "end": 127.54,
+    "text": "8"
+  },
+  {
+    "start": 127.54,
+    "end": 127.84,
+    "text": "per"
+  },
+  {
+    "start": 127.84,
+    "end": 128.15,
+    "text": "cent"
+  },
+  {
+    "start": 128.15,
+    "end": 128.45,
+    "text": "for"
+  },
+  {
+    "start": 128.45,
+    "end": 128.76,
+    "text": "a"
+  },
+  {
+    "start": 128.76,
+    "end": 129.06,
+    "text": "4-day"
+  },
+  {
+    "start": 129.06,
+    "end": 129.4,
+    "text": "work"
+  },
+  {
+    "start": 129.4,
+    "end": 129.92,
+    "text": "week."
+  },
+  {
+    "start": 130.58,
+    "end": 131.3,
+    "text": "Flexibility"
+  },
+  {
+    "start": 131.3,
+    "end": 131.82,
+    "text": "has"
+  },
+  {
+    "start": 131.82,
+    "end": 132.12,
+    "text": "become"
+  },
+  {
+    "start": 132.12,
+    "end": 132.32,
+    "text": "as"
+  },
+  {
+    "start": 132.32,
+    "end": 132.7,
+    "text": "valuable"
+  },
+  {
+    "start": 132.7,
+    "end": 133.32,
+    "text": "as"
+  },
+  {
+    "start": 133.32,
+    "end": 134.14,
+    "text": "compensation,"
+  },
+  {
+    "start": 134.14,
+    "end": 134.8,
+    "text": "and"
+  },
+  {
+    "start": 134.8,
+    "end": 134.94,
+    "text": "for"
+  },
+  {
+    "start": 134.94,
+    "end": 135.1,
+    "text": "good"
+  },
+  {
+    "start": 135.1,
+    "end": 135.52,
+    "text": "reason."
+  },
+  {
+    "start": 135.52,
+    "end": 136.58,
+    "text": "[…]"
+  },
+  {
+    "start": 136.58,
+    "end": 136.78,
+    "text": "With"
+  },
+  {
+    "start": 136.78,
+    "end": 137.22,
+    "text": "62"
+  },
+  {
+    "start": 137.22,
+    "end": 137.48,
+    "text": "per"
+  },
+  {
+    "start": 137.48,
+    "end": 137.74,
+    "text": "cent"
+  },
+  {
+    "start": 137.74,
+    "end": 138.02,
+    "text": "of"
+  },
+  {
+    "start": 138.02,
+    "end": 138.52,
+    "text": "surveyed"
+  },
+  {
+    "start": 138.52,
+    "end": 139.0,
+    "text": "employees"
+  },
+  {
+    "start": 139.0,
+    "end": 139.46,
+    "text": "caring"
+  },
+  {
+    "start": 139.46,
+    "end": 139.66,
+    "text": "for"
+  },
+  {
+    "start": 139.66,
+    "end": 139.98,
+    "text": "children"
+  },
+  {
+    "start": 139.98,
+    "end": 140.2,
+    "text": "at"
+  },
+  {
+    "start": 140.2,
+    "end": 140.56,
+    "text": "home,"
+  },
+  {
+    "start": 141.1,
+    "end": 141.16,
+    "text": "the"
+  },
+  {
+    "start": 141.16,
+    "end": 141.48,
+    "text": "rigid"
+  },
+  {
+    "start": 141.48,
+    "end": 142.36,
+    "text": "9-to-5"
+  },
+  {
+    "start": 142.72,
+    "end": 143.08,
+    "text": "doesn’t"
+  },
+  {
+    "start": 143.08,
+    "end": 143.5,
+    "text": "accommodate"
+  },
+  {
+    "start": 143.5,
+    "end": 144.0,
+    "text": "modern"
+  },
+  {
+    "start": 144.0,
+    "end": 144.56,
+    "text": "life."
+  },
+  {
+    "start": 145.36,
+    "end": 145.66,
+    "text": "Parents"
+  },
+  {
+    "start": 145.66,
+    "end": 145.94,
+    "text": "have"
+  },
+  {
+    "start": 145.94,
+    "end": 146.16,
+    "text": "long"
+  },
+  {
+    "start": 146.16,
+    "end": 146.82,
+    "text": "practiced"
+  },
+  {
+    "start": 146.82,
+    "end": 147.18,
+    "text": "what’s"
+  },
+  {
+    "start": 147.18,
+    "end": 147.36,
+    "text": "known"
+  },
+  {
+    "start": 147.36,
+    "end": 147.74,
+    "text": "as"
+  },
+  {
+    "start": 147.74,
+    "end": 147.86,
+    "text": "the"
+  },
+  {
+    "start": 147.86,
+    "end": 148.18,
+    "text": "“second"
+  },
+  {
+    "start": 148.18,
+    "end": 148.72,
+    "text": "shift,”"
+  },
+  {
+    "start": 149.32,
+    "end": 149.56,
+    "text": "stepping"
+  },
+  {
+    "start": 149.56,
+    "end": 149.92,
+    "text": "away"
+  },
+  {
+    "start": 149.92,
+    "end": 150.16,
+    "text": "for"
+  },
+  {
+    "start": 150.16,
+    "end": 150.4,
+    "text": "school"
+  },
+  {
+    "start": 150.4,
+    "end": 150.84,
+    "text": "pickup,"
+  },
+  {
+    "start": 151.12,
+    "end": 151.24,
+    "text": "dinner"
+  },
+  {
+    "start": 151.24,
+    "end": 151.66,
+    "text": "and"
+  },
+  {
+    "start": 151.66,
+    "end": 152.0,
+    "text": "bedtime"
+  },
+  {
+    "start": 152.0,
+    "end": 152.72,
+    "text": "routines,"
+  },
+  {
+    "start": 153.4,
+    "end": 153.56,
+    "text": "then"
+  },
+  {
+    "start": 153.56,
+    "end": 153.88,
+    "text": "logging"
+  },
+  {
+    "start": 153.88,
+    "end": 154.14,
+    "text": "back"
+  },
+  {
+    "start": 154.14,
+    "end": 154.36,
+    "text": "on"
+  },
+  {
+    "start": 154.36,
+    "end": 154.8,
+    "text": "after"
+  },
+  {
+    "start": 154.8,
+    "end": 154.94,
+    "text": "the"
+  },
+  {
+    "start": 154.94,
+    "end": 155.16,
+    "text": "kids"
+  },
+  {
+    "start": 155.16,
+    "end": 155.28,
+    "text": "are"
+  },
+  {
+    "start": 155.28,
+    "end": 155.62,
+    "text": "asleep."
+  },
+  {
+    "start": 156.44,
+    "end": 156.64,
+    "text": "But"
+  },
+  {
+    "start": 156.64,
+    "end": 156.94,
+    "text": "now,"
+  },
+  {
+    "start": 157.36,
+    "end": 157.76,
+    "text": "68"
+  },
+  {
+    "start": 157.76,
+    "end": 157.93,
+    "text": "per"
+  },
+  {
+    "start": 157.93,
+    "end": 158.1,
+    "text": "cent"
+  },
+  {
+    "start": 158.1,
+    "end": 158.32,
+    "text": "of"
+  },
+  {
+    "start": 158.32,
+    "end": 158.66,
+    "text": "parents"
+  },
+  {
+    "start": 158.66,
+    "end": 159.12,
+    "text": "worry"
+  },
+  {
+    "start": 159.12,
+    "end": 159.68,
+    "text": "that"
+  },
+  {
+    "start": 159.68,
+    "end": 160.2,
+    "text": "caregiving"
+  },
+  {
+    "start": 160.2,
+    "end": 160.92,
+    "text": "responsibilities"
+  },
+  {
+    "start": 160.92,
+    "end": 161.48,
+    "text": "might"
+  },
+  {
+    "start": 161.48,
+    "end": 161.86,
+    "text": "hurt"
+  },
+  {
+    "start": 161.86,
+    "end": 162.1,
+    "text": "their"
+  },
+  {
+    "start": 162.1,
+    "end": 162.32,
+    "text": "job"
+  },
+  {
+    "start": 162.32,
+    "end": 162.94,
+    "text": "performance."
+  },
+  {
+    "start": 164.16,
+    "end": 164.8,
+    "text": "That"
+  },
+  {
+    "start": 164.8,
+    "end": 165.48,
+    "text": "anxiety"
+  },
+  {
+    "start": 165.48,
+    "end": 165.88,
+    "text": "is"
+  },
+  {
+    "start": 165.88,
+    "end": 166.18,
+    "text": "even"
+  },
+  {
+    "start": 166.18,
+    "end": 166.58,
+    "text": "higher"
+  },
+  {
+    "start": 166.58,
+    "end": 167.1,
+    "text": "among"
+  },
+  {
+    "start": 167.1,
+    "end": 167.57,
+    "text": "full-time"
+  },
+  {
+    "start": 167.57,
+    "end": 168.04,
+    "text": "in-office"
+  },
+  {
+    "start": 168.04,
+    "end": 168.51,
+    "text": "employees"
+  },
+  {
+    "start": 168.51,
+    "end": 168.98,
+    "text": "[…]"
+  },
+  {
+    "start": 168.98,
+    "end": 169.76,
+    "text": "compared"
+  },
+  {
+    "start": 169.76,
+    "end": 170.02,
+    "text": "to"
+  },
+  {
+    "start": 170.02,
+    "end": 170.3,
+    "text": "remote"
+  },
+  {
+    "start": 170.3,
+    "end": 170.84,
+    "text": "workers"
+  },
+  {
+    "start": 171.66,
+    "end": 172.07,
+    "text": "[…]."
+  },
+  {
+    "start": 172.07,
+    "end": 172.48,
+    "text": "Microshifting"
+  },
+  {
+    "start": 172.48,
+    "end": 173.1,
+    "text": "offers"
+  },
+  {
+    "start": 173.1,
+    "end": 173.28,
+    "text": "a"
+  },
+  {
+    "start": 173.28,
+    "end": 173.48,
+    "text": "way"
+  },
+  {
+    "start": 173.48,
+    "end": 173.72,
+    "text": "to"
+  },
+  {
+    "start": 173.72,
+    "end": 173.96,
+    "text": "manage"
+  },
+  {
+    "start": 173.96,
+    "end": 174.36,
+    "text": "both"
+  },
+  {
+    "start": 174.36,
+    "end": 175.02,
+    "text": "without"
+  },
+  {
+    "start": 175.02,
+    "end": 175.3,
+    "text": "the"
+  },
+  {
+    "start": 175.3,
+    "end": 175.54,
+    "text": "guilt"
+  },
+  {
+    "start": 175.54,
+    "end": 175.76,
+    "text": "or"
+  },
+  {
+    "start": 175.76,
+    "end": 175.82,
+    "text": "the"
+  },
+  {
+    "start": 175.82,
+    "end": 176.28,
+    "text": "performance"
+  },
+  {
+    "start": 176.28,
+    "end": 176.7,
+    "text": "hit."
+  },
+  {
+    "start": 176.7,
+    "end": 177.76,
+    "text": "[…]"
+  },
+  {
+    "start": 177.76,
+    "end": 178.08,
+    "text": "And"
+  },
+  {
+    "start": 178.08,
+    "end": 178.26,
+    "text": "it’s"
+  },
+  {
+    "start": 178.26,
+    "end": 178.36,
+    "text": "not"
+  },
+  {
+    "start": 178.36,
+    "end": 178.58,
+    "text": "just"
+  },
+  {
+    "start": 178.58,
+    "end": 179.0,
+    "text": "parents"
+  },
+  {
+    "start": 179.0,
+    "end": 179.46,
+    "text": "pushing"
+  },
+  {
+    "start": 179.46,
+    "end": 179.64,
+    "text": "for"
+  },
+  {
+    "start": 179.64,
+    "end": 180.02,
+    "text": "change."
+  },
+  {
+    "start": 180.6,
+    "end": 180.82,
+    "text": "One"
+  },
+  {
+    "start": 180.82,
+    "end": 180.96,
+    "text": "in"
+  },
+  {
+    "start": 180.96,
+    "end": 181.32,
+    "text": "five"
+  },
+  {
+    "start": 181.32,
+    "end": 181.92,
+    "text": "employees"
+  },
+  {
+    "start": 181.92,
+    "end": 182.26,
+    "text": "is"
+  },
+  {
+    "start": 182.26,
+    "end": 183.42,
+    "text": "poly-employed,"
+  },
+  {
+    "start": 183.94,
+    "end": 184.16,
+    "text": "juggling"
+  },
+  {
+    "start": 184.16,
+    "end": 184.6,
+    "text": "side"
+  },
+  {
+    "start": 184.6,
+    "end": 185.0,
+    "text": "hustles"
+  },
+  {
+    "start": 185.0,
+    "end": 185.56,
+    "text": "alongside"
+  },
+  {
+    "start": 185.56,
+    "end": 186.02,
+    "text": "their"
+  },
+  {
+    "start": 186.02,
+    "end": 186.28,
+    "text": "main"
+  },
+  {
+    "start": 186.28,
+    "end": 186.58,
+    "text": "job."
+  },
+  {
+    "start": 187.36,
+    "end": 187.58,
+    "text": "With"
+  },
+  {
+    "start": 187.58,
+    "end": 187.92,
+    "text": "50"
+  },
+  {
+    "start": 187.92,
+    "end": 188.05,
+    "text": "per"
+  },
+  {
+    "start": 188.05,
+    "end": 188.18,
+    "text": "cent"
+  },
+  {
+    "start": 188.18,
+    "end": 188.42,
+    "text": "of"
+  },
+  {
+    "start": 188.42,
+    "end": 188.86,
+    "text": "employees"
+  },
+  {
+    "start": 188.86,
+    "end": 189.36,
+    "text": "scheduling"
+  },
+  {
+    "start": 189.36,
+    "end": 189.96,
+    "text": "personal"
+  },
+  {
+    "start": 189.96,
+    "end": 190.4,
+    "text": "appointments"
+  },
+  {
+    "start": 190.4,
+    "end": 190.86,
+    "text": "during"
+  },
+  {
+    "start": 190.86,
+    "end": 191.36,
+    "text": "traditional"
+  },
+  {
+    "start": 191.36,
+    "end": 191.76,
+    "text": "working"
+  },
+  {
+    "start": 191.76,
+    "end": 192.28,
+    "text": "hours,"
+  },
+  {
+    "start": 192.96,
+    "end": 193.04,
+    "text": "the"
+  },
+  {
+    "start": 193.04,
+    "end": 193.4,
+    "text": "boundaries"
+  },
+  {
+    "start": 193.4,
+    "end": 193.6,
+    "text": "of"
+  },
+  {
+    "start": 193.6,
+    "end": 193.72,
+    "text": "the"
+  },
+  {
+    "start": 193.72,
+    "end": 194.2,
+    "text": "workday"
+  },
+  {
+    "start": 194.2,
+    "end": 194.7,
+    "text": "have"
+  },
+  {
+    "start": 194.7,
+    "end": 195.16,
+    "text": "already"
+  },
+  {
+    "start": 195.16,
+    "end": 195.6,
+    "text": "blurred."
+  },
+  {
+    "start": 196.22,
+    "end": 196.8,
+    "text": "Shorter,"
+  },
+  {
+    "start": 197.08,
+    "end": 197.28,
+    "text": "more"
+  },
+  {
+    "start": 197.28,
+    "end": 197.72,
+    "text": "flexible"
+  },
+  {
+    "start": 197.72,
+    "end": 198.26,
+    "text": "shifts"
+  },
+  {
+    "start": 198.26,
+    "end": 198.74,
+    "text": "aren’t"
+  },
+  {
+    "start": 198.74,
+    "end": 198.98,
+    "text": "just"
+  },
+  {
+    "start": 198.98,
+    "end": 199.62,
+    "text": "convenient."
+  },
+  {
+    "start": 200.2,
+    "end": 200.4,
+    "text": "They’re"
+  },
+  {
+    "start": 200.4,
+    "end": 200.86,
+    "text": "essential."
+  },
+  {
+    "start": 203.46,
+    "end": 204.16,
+    "text": "October"
+  },
+  {
+    "start": 204.16,
+    "end": 205.34,
+    "text": "2025"
+  },
+  {
+    "start": 205.34,
+    "end": 205.34,
+    "text": "111/140"
+  }
+]

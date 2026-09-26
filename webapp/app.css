@@ -1,0 +1,434 @@
+:root {
+    --nord0: #2E3440;
+    --nord1: #3B4252;
+    --nord2: #434C5E;
+    --nord3: #4C566A;
+    --nord4: #D8DEE9;
+    --nord5: #E5E9F0;
+    --nord6: #ECEFF4;
+    --nord7: #8FBCBB;
+    --nord8: #88C0D0;
+    --nord9: #81A1C1;
+    --nord10: #5E81AC;
+    --nord11: #BF616A;
+    --nord12: #D08770;
+    --nord13: #EBCB8B;
+    --nord14: #A3BE8C;
+    --nord15: #B48EAD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--nord0);
+    color: var(--nord4);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--nord6);
+}
+
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--nord3);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.back-link {
+    color: var(--nord5);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: var(--nord8);
+}
+
+/* Mode Toggle */
+.mode-toggle {
+    display: flex;
+    background-color: var(--nord1);
+    border-radius: 99px;
+    padding: 4px;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    color: var(--nord4);
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.mode-btn.active {
+    background-color: var(--nord2);
+    color: var(--nord6);
+}
+
+/* Panels */
+.panel {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.panel.active {
+    display: flex;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Drop Zone */
+.drop-zone {
+    border: 2px dashed var(--nord3);
+    border-radius: 8px;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: var(--nord1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: border-color 0.2s;
+}
+
+.drop-zone.dragover {
+    border-color: var(--nord8);
+}
+
+.file-name {
+    color: var(--nord8);
+    font-size: 0.9rem;
+}
+
+/* Form Elements */
+.parameters-row, .upload-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.param-group, .upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 150px;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--nord5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+input[type="number"], 
+input[type="range"],
+select,
+input[type="file"] {
+    background-color: var(--nord2);
+    border: 1px solid var(--nord3);
+    color: var(--nord5);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--nord8);
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+/* Buttons */
+button {
+    font-family: 'JetBrains Mono', monospace;
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.2s, transform 0.1s;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--nord8);
+    color: var(--nord0);
+}
+
+.btn-primary:hover {
+    background-color: var(--nord7);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--nord2);
+    color: var(--nord5);
+}
+
+.btn-secondary:hover {
+    background-color: var(--nord3);
+}
+
+.btn-success {
+    background-color: var(--nord14);
+    color: var(--nord0);
+}
+
+.btn-success:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.align-bottom {
+    margin-top: auto;
+}
+
+/* Results & Status */
+.status-area {
+    text-align: center;
+    color: var(--nord8);
+    font-size: 0.9rem;
+    min-height: 1.5rem;
+}
+
+.waveform-card {
+    background-color: var(--nord1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.result-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Shadowing Specifics */
+.shadowing-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--nord1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.segment-control {
+    display: flex;
+    background-color: var(--nord2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.seg-btn {
+    background: transparent;
+    color: var(--nord4);
+    padding: 6px 12px;
+    border-radius: 0;
+    font-size: 0.8rem;
+}
+
+.seg-btn.active {
+    background-color: var(--nord3);
+    color: var(--nord6);
+}
+
+.pause-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Toggle Switch */
+.toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--nord2);
+    transition: .2s;
+    border-radius: 22px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--nord4);
+    transition: .2s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--nord8);
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+    background-color: var(--nord0);
+}
+
+/* Shadowing Status Indicator */
+.shadowing-status {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--nord2);
+    transition: background-color 0.3s;
+}
+
+.shadowing-status.state-listening {
+    background-color: rgba(94, 129, 172, 0.2); /* nord10 */
+    color: var(--nord8);
+}
+
+.shadowing-status.state-speaking {
+    background-color: rgba(163, 190, 140, 0.15); /* nord14 */
+    color: var(--nord14);
+}
+
+.shadowing-status.state-success {
+    background-color: rgba(235, 203, 139, 0.15); /* nord13 */
+    color: var(--nord13);
+}
+
+.progress-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: currentColor;
+    transition: width 0.1s linear;
+}
+
+/* Text Display */
+.text-display {
+    background-color: var(--nord1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.segment-span {
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.segment-span:hover {
+    background-color: var(--nord2);
+}
+
+.segment-span.active {
+    background-color: rgba(235, 203, 139, 0.15); /* nord13 */
+    color: var(--nord13);
+}
+
+@media (max-width: 600px) {
+    .parameters-row, .upload-row {
+        flex-direction: column;
+    }
+    
+    .shadowing-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .toggle-group {
+        margin-left: 0;
+        justify-content: space-between;
+    }
+}
