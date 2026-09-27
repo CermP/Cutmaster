@@ -3,28 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadowing Master</title>
+    <title>Shadowing Master - Entraînement Oral</title>
     <link rel="stylesheet" href="shadowing.css">
 </head>
 <body>
     <div class="container">
-        <h1>🗣️ Shadowing Master</h1>
-        <p class="subtitle">Entraînez-vous à prononcer l'anglais avec un alignement parfait !</p>
+        <header class="header">
+            <a href="index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>🗣️ Shadowing Master</h1>
+            <p class="subtitle">Entraînez-vous à prononcer l'anglais avec un alignement audio parfait !</p>
+        </header>
         
         <div class="card setup-card" id="setupCard">
-            <h3>1. Chargez votre leçon</h3>
-            <div class="form-group">
-                <label>Fichier Audio (.mp3)</label>
-                <input type="file" id="audioInput" accept="audio/*">
+            <!-- Tabs: Library vs Custom -->
+            <div class="source-tabs">
+                <button class="tab-btn active" id="tabLibrary" data-source="library">📚 Bibliothèque CC-INP (134 textes)</button>
+                <button class="tab-btn" id="tabCustom" data-source="custom">📁 Importer mes fichiers</button>
             </div>
-            <div class="form-group">
-                <label>Fichier de Synchronisation (.json)</label>
-                <input type="file" id="jsonInput" accept="application/json">
+
+            <!-- Library View -->
+            <div id="librarySection" class="section-pane">
+                <div class="search-row">
+                    <input type="text" id="librarySearch" placeholder="🔍 Rechercher par titre ou numéro (ex: AI, climate, 42)..." class="search-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="librarySelect">Sélectionnez votre leçon :</label>
+                    <select id="librarySelect" class="styled-select">
+                        <option value="">Chargement des leçons...</option>
+                    </select>
+                </div>
+
+                <div class="preview-box" id="previewBox">
+                    <div class="preview-header">
+                        <span class="badge" id="previewNum">Texte 1</span>
+                        <h4 id="previewTitle">10 CANCER-FIGHTING FOODS</h4>
+                    </div>
+                    <div class="preview-meta">
+                        <span>⏱️ Durée : <strong id="previewDuration">3m 29s</strong></span>
+                        <span>📝 <strong id="previewWords">459</strong> mots</span>
+                        <span>🎓 Annales Anglais</span>
+                    </div>
+                </div>
+
+                <button id="startLibraryBtn" class="primary-btn">🚀 Charger et Commencer l'entraînement</button>
             </div>
-            <button id="loadBtn" class="primary-btn">Commencer l'entraînement</button>
+
+            <!-- Custom File Upload View -->
+            <div id="customSection" class="section-pane hidden">
+                <div class="form-group">
+                    <label for="audioInput">Fichier Audio (.mp3)</label>
+                    <input type="file" id="audioInput" accept="audio/*">
+                </div>
+                <div class="form-group">
+                    <label for="jsonInput">Fichier de Synchronisation (.json)</label>
+                    <input type="file" id="jsonInput" accept="application/json">
+                </div>
+                <button id="loadBtn" class="primary-btn">Commencer l'entraînement</button>
+            </div>
         </div>
 
         <div class="card player-card hidden" id="playerCard">
+            <div class="active-banner" id="activeBanner">
+                <div class="active-info">
+                    <span class="active-badge" id="activeNum">Texte 1</span>
+                    <span class="active-title" id="activeTitle">10 CANCER-FIGHTING FOODS</span>
+                </div>
+                <div class="active-actions">
+                    <button class="nav-btn" id="prevLessonBtn" title="Texte précédent">⬅️ Précédent</button>
+                    <button class="nav-btn" id="nextLessonBtn" title="Texte suivant">Suivant ➡️</button>
+                    <button class="nav-btn btn-change" id="changeLessonBtn" title="Changer de leçon">📋 Liste</button>
+                </div>
+            </div>
+
             <div class="controls-bar">
                 <button id="playPauseBtn" class="play-btn">▶️ Lancer</button>
                 

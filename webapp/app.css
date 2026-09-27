@@ -257,11 +257,275 @@ button {
 }
 
 /* Shadowing Specifics */
-.shadowing-controls {
+.shadowing-source-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--nord1);
+    padding: 6px;
+    border-radius: 12px;
+}
+
+.source-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--nord4);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.source-tab:hover {
+    color: var(--nord6);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.source-tab.active {
+    background-color: var(--nord2);
+    color: var(--nord8);
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.source-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Search Box */
+.library-search-row {
+    width: 100%;
+}
+
+.search-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 0.9rem;
+    color: var(--nord4);
+    pointer-events: none;
+}
+
+.search-input-wrap input {
+    width: 100%;
+    padding: 10px 36px 10px 36px;
+    background-color: var(--nord1);
+    border: 1px solid var(--nord3);
+    border-radius: 8px;
+    color: var(--nord6);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    transition: border-color 0.2s;
+}
+
+.search-input-wrap input:focus {
+    outline: none;
+    border-color: var(--nord8);
+}
+
+.clear-search {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--nord4);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.clear-search:hover {
+    color: var(--nord6);
+}
+
+/* Select Group */
+.library-select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.library-select {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--nord1);
+    border: 1px solid var(--nord3);
+    border-radius: 8px;
+    color: var(--nord6);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.library-select:focus {
+    outline: none;
+    border-color: var(--nord8);
+}
+
+.library-select option {
+    background-color: var(--nord1);
+    color: var(--nord6);
+    padding: 8px;
+}
+
+/* Lesson Preview Card */
+.lesson-preview-card {
+    background-color: var(--nord1);
+    border: 1px solid var(--nord3);
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+}
+
+.preview-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.preview-badge {
+    background-color: var(--nord10);
+    color: var(--nord6);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+.preview-title {
+    font-size: 1.05rem;
+    color: var(--nord6);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.preview-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.meta-tag {
+    background-color: var(--nord2);
+    color: var(--nord4);
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Active Lesson Banner */
+.active-lesson-banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nord2);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--nord8);
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.active-lesson-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.active-badge {
+    background-color: var(--nord8);
+    color: var(--nord0);
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.active-title {
+    color: var(--nord6);
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.active-lesson-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.btn-nav {
+    background-color: var(--nord3);
+    color: var(--nord6);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-nav:hover:not(:disabled) {
+    background-color: var(--nord9);
+    color: var(--nord0);
+}
+
+.btn-nav:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-nav.btn-outline {
+    background: transparent;
+    border: 1px solid var(--nord3);
+}
+
+.btn-nav.btn-outline:hover {
+    background-color: var(--nord3);
+    color: var(--nord6);
+}
+
+.controls-action-row {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 1.5rem;
+}
+
+.shadowing-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     background-color: var(--nord1);
     padding: 1rem;
     border-radius: 8px;

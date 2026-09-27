@@ -6,14 +6,201 @@ let isTraining = false;
 let autoPauseMode = true;
 let syncInterval = null;
 let progressRAF = null;
+let waitTimeout = null;
 let currentGranularity = 'sentence';
 let pauseMultiplier = 1.5;
 
+let libraryLessons = [];
+let currentLessonIndex = -1;
+
+// DOM Elements
+const tabLibrary = document.getElementById('tabLibrary');
+const tabCustom = document.getElementById('tabCustom');
+const librarySection = document.getElementById('librarySection');
+const customSection = document.getElementById('customSection');
+const librarySearch = document.getElementById('librarySearch');
+const librarySelect = document.getElementById('librarySelect');
+const startLibraryBtn = document.getElementById('startLibraryBtn');
+const previewNum = document.getElementById('previewNum');
+const previewTitle = document.getElementById('previewTitle');
+const previewDuration = document.getElementById('previewDuration');
+const previewWords = document.getElementById('previewWords');
+
+const activeNum = document.getElementById('activeNum');
+const activeTitle = document.getElementById('activeTitle');
+const prevLessonBtn = document.getElementById('prevLessonBtn');
+const nextLessonBtn = document.getElementById('nextLessonBtn');
+const changeLessonBtn = document.getElementById('changeLessonBtn');
+
+// Tab Switching
+if (tabLibrary && tabCustom) {
+    tabLibrary.addEventListener('click', () => {
+        tabLibrary.classList.add('active');
+        tabCustom.classList.remove('active');
+        librarySection.classList.remove('hidden');
+        customSection.classList.add('hidden');
+    });
+
+    tabCustom.addEventListener('click', () => {
+        tabCustom.classList.add('active');
+        tabLibrary.classList.remove('active');
+        customSection.classList.remove('hidden');
+        librarySection.classList.add('hidden');
+    });
+}
+
+// Load Library from audio/lessons.json
+async function initLibrary() {
+    try {
+        const resp = await fetch('audio/lessons.json');
+        if (!resp.ok) throw new Error("Status " + resp.status);
+        libraryLessons = await resp.json();
+        populateLibrarySelect(libraryLessons);
+        if (libraryLessons.length > 0) {
+            updatePreview(libraryLessons[0]);
+        }
+    } catch (e) {
+        console.warn("Bibliothèque distante non accessible :", e);
+        if (librarySelect) {
+            librarySelect.innerHTML = '<option value="">⚠️ Bibliothèque indisponible (lancez un serveur local ou ouvrez via GitHub)</option>';
+        }
+    }
+}
+
+function populateLibrarySelect(lessons) {
+    if (!librarySelect) return;
+    librarySelect.innerHTML = '';
+    lessons.forEach((l, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = `Texte ${l.id} : ${l.title} (${l.duration})`;
+        librarySelect.appendChild(opt);
+    });
+}
+
+function updatePreview(lesson) {
+    if (!lesson) return;
+    if (previewNum) previewNum.textContent = `Texte ${lesson.id}`;
+    if (previewTitle) previewTitle.textContent = lesson.title;
+    if (previewDuration) previewDuration.textContent = lesson.duration;
+    if (previewWords) previewWords.textContent = lesson.wordsCount;
+}
+
+if (librarySelect) {
+    librarySelect.addEventListener('change', () => {
+        const idx = parseInt(librarySelect.value, 10);
+        if (!isNaN(idx) && libraryLessons[idx]) {
+            updatePreview(libraryLessons[idx]);
+        }
+    });
+}
+
+// Search / Filter
+if (librarySearch) {
+    librarySearch.addEventListener('input', (e) => {
+        const q = e.target.value.toLowerCase().trim();
+        if (!q) {
+            populateLibrarySelect(libraryLessons);
+            if (libraryLessons.length > 0) updatePreview(libraryLessons[0]);
+            return;
+        }
+
+        const filtered = libraryLessons.filter(l => 
+            l.title.toLowerCase().includes(q) || 
+            String(l.id).includes(q)
+        );
+        populateLibrarySelect(filtered);
+        if (filtered.length > 0) {
+            updatePreview(filtered[0]);
+        }
+    });
+}
+
+// Load Library Lesson
+async function loadLibraryLesson(index) {
+    if (index < 0 || index >= libraryLessons.length) return;
+    stopTraining();
+
+    const lesson = libraryLessons[index];
+    currentLessonIndex = index;
+
+    startLibraryBtn.disabled = true;
+    startLibraryBtn.textContent = "⏳ Chargement...";
+
+    try {
+        const res = await fetch(lesson.jsonUrl);
+        if (!res.ok) throw new Error("Impossible de charger le JSON.");
+        allWords = await res.json();
+        audioPlayer.src = lesson.audioUrl;
+
+        groupWords();
+        buildTextUI();
+
+        if (activeNum) activeNum.textContent = `Texte ${lesson.id}`;
+        if (activeTitle) activeTitle.textContent = lesson.title;
+        if (prevLessonBtn) prevLessonBtn.disabled = (index === 0);
+        if (nextLessonBtn) nextLessonBtn.disabled = (index === libraryLessons.length - 1);
+        if (prevLessonBtn) prevLessonBtn.classList.remove('hidden');
+        if (nextLessonBtn) nextLessonBtn.classList.remove('hidden');
+
+        document.getElementById('setupCard').classList.add('hidden');
+        document.getElementById('playerCard').classList.remove('hidden');
+
+        currentSentenceIndex = 0;
+        highlightSentence(0);
+        updateStatus("Prêt ! Cliquez sur Lancer pour démarrer.", "neutral");
+
+    } catch (err) {
+        alert("Erreur lors du chargement : " + err.message);
+    } finally {
+        startLibraryBtn.disabled = false;
+        startLibraryBtn.textContent = "🚀 Charger et Commencer l'entraînement";
+    }
+}
+
+if (startLibraryBtn) {
+    startLibraryBtn.addEventListener('click', () => {
+        const idx = parseInt(librarySelect.value, 10);
+        if (!isNaN(idx)) {
+            loadLibraryLesson(idx);
+        }
+    });
+}
+
+// Navigation buttons
+if (prevLessonBtn) {
+    prevLessonBtn.addEventListener('click', () => {
+        if (currentLessonIndex > 0) {
+            loadLibraryLesson(currentLessonIndex - 1);
+        }
+    });
+}
+
+if (nextLessonBtn) {
+    nextLessonBtn.addEventListener('click', () => {
+        if (currentLessonIndex < libraryLessons.length - 1) {
+            loadLibraryLesson(currentLessonIndex + 1);
+        }
+    });
+}
+
+if (changeLessonBtn) {
+    changeLessonBtn.addEventListener('click', () => {
+        stopTraining();
+        document.getElementById('playerCard').classList.add('hidden');
+        document.getElementById('setupCard').classList.remove('hidden');
+    });
+}
+
+// Manual File Load
 document.getElementById('loadBtn').addEventListener('click', async () => {
     const audioFile = document.getElementById('audioInput').files[0];
     const jsonFile = document.getElementById('jsonInput').files[0];
 
-    if (!audioFile || !jsonFile) return;
+    if (!audioFile || !jsonFile) {
+        alert("Veuillez sélectionner les deux fichiers.");
+        return;
+    }
 
     audioPlayer.src = URL.createObjectURL(audioFile);
     allWords = JSON.parse(await jsonFile.text());
@@ -21,8 +208,18 @@ document.getElementById('loadBtn').addEventListener('click', async () => {
     groupWords();
     buildTextUI();
 
+    currentLessonIndex = -1;
+    if (activeNum) activeNum.textContent = "Fichier local";
+    if (activeTitle) activeTitle.textContent = audioFile.name;
+    if (prevLessonBtn) prevLessonBtn.classList.add('hidden');
+    if (nextLessonBtn) nextLessonBtn.classList.add('hidden');
+
     document.getElementById('setupCard').classList.add('hidden');
     document.getElementById('playerCard').classList.remove('hidden');
+
+    currentSentenceIndex = 0;
+    highlightSentence(0);
+    updateStatus("Prêt ! Cliquez sur Lancer.", "neutral");
 });
 
 // Boutons de granularité
@@ -151,6 +348,7 @@ function stopTraining() {
     audioPlayer.pause();
     document.getElementById('playPauseBtn').innerText = '▶️ Reprendre';
     clearInterval(syncInterval);
+    clearTimeout(waitTimeout);
     cancelAnimationFrame(progressRAF);
     document.getElementById('progressBarContainer').classList.add('hidden');
     updateStatus('En pause', 'neutral');
@@ -160,6 +358,7 @@ function jumpToSentence(index) {
     currentSentenceIndex = index;
     if (isTraining) {
         clearInterval(syncInterval);
+        clearTimeout(waitTimeout);
         cancelAnimationFrame(progressRAF);
         playSentence(index);
     } else {
@@ -251,8 +450,6 @@ function playSentence(index) {
                     }, 1000); 
                     
                 } else {
-                    // Mode Lecture Continue (sans auto-pause)
-                    // On ne met PAS en pause. On attend juste que l'audio naturel atteigne le début de la phrase suivante.
                     if (currentSentenceIndex + 1 < sentences.length) {
                         const nextStart = sentences[currentSentenceIndex + 1].start;
                         if (audioPlayer.currentTime >= nextStart) {
@@ -260,7 +457,6 @@ function playSentence(index) {
                             highlightSentence(currentSentenceIndex);
                         }
                     } else {
-                        // Fin du dernier texte
                         if (audioPlayer.ended || audioPlayer.currentTime >= audioPlayer.duration - 0.5) {
                             stopTraining();
                             updateStatus("Entraînement terminé ! 🎉", "success");
@@ -283,3 +479,6 @@ function updateStatus(text, state) {
         cancelAnimationFrame(progressRAF);
     }
 }
+
+// Initialiser la bibliothèque au chargement
+initLibrary();

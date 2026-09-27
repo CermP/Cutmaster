@@ -348,6 +348,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const shadAutoPauseToggle = document.getElementById('auto-pause-toggle');
     const shadSegBtns = document.querySelectorAll('.seg-btn');
 
+    // Library Elements
+    const sourceTabs = document.querySelectorAll('.source-tab');
+    const sourceTabsContainer = document.getElementById('shadowing-source-tabs');
+    const sourceLibrary = document.getElementById('source-library');
+    const sourceCustom = document.getElementById('source-custom');
+    const librarySearch = document.getElementById('library-search');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const librarySelect = document.getElementById('library-select');
+    const libraryStartBtn = document.getElementById('library-start-btn');
+    const previewNum = document.getElementById('preview-lesson-num');
+    const previewTitle = document.getElementById('preview-lesson-title');
+    const previewDuration = document.getElementById('preview-lesson-duration');
+    const previewWords = document.getElementById('preview-lesson-words');
+
+    // In-Player Navigation Elements
+    const activeLessonNum = document.getElementById('active-lesson-num');
+    const activeLessonTitle = document.getElementById('active-lesson-title');
+    const prevLessonBtn = document.getElementById('prev-lesson-btn');
+    const nextLessonBtn = document.getElementById('next-lesson-btn');
+    const changeLessonBtn = document.getElementById('change-lesson-btn');
+
     let shadAudioElement = document.getElementById('shadowing-audio-player');
     let shadWords = [];
     let shadSegments = [];
@@ -359,10 +380,204 @@ document.addEventListener('DOMContentLoaded', () => {
     let shadPauseDuration = 0;
     let shadAnimFrame = null;
 
+    let libraryLessons = [];
+    let currentLessonIndex = -1;
+
+    // Source Tabs (Library vs Custom Upload)
+    sourceTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            sourceTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const target = tab.dataset.source;
+            if (target === 'library') {
+                sourceLibrary.classList.remove('hidden');
+                sourceCustom.classList.add('hidden');
+            } else {
+                sourceLibrary.classList.add('hidden');
+                sourceCustom.classList.remove('hidden');
+            }
+        });
+    });
+
+    // Load library lessons index from audio/lessons.json
+    async function initLibrary() {
+        try {
+            const resp = await fetch('audio/lessons.json');
+            if (!resp.ok) throw new Error("Status " + resp.status);
+            libraryLessons = await resp.json();
+            populateLibrarySelect(libraryLessons);
+            if (libraryLessons.length > 0) {
+                updatePreviewCard(libraryLessons[0]);
+            }
+        } catch (e) {
+            console.warn("Impossible de charger la bibliothèque distante :", e);
+            if (librarySelect) {
+                librarySelect.innerHTML = '<option value="">⚠️ Bibliothèque indisponible (lancez un serveur local ou ouvrez via GitHub)</option>';
+            }
+        }
+    }
+
+    function populateLibrarySelect(lessons) {
+        if (!librarySelect) return;
+        librarySelect.innerHTML = '';
+        lessons.forEach((l, idx) => {
+            const opt = document.createElement('option');
+            opt.value = idx;
+            opt.textContent = `Texte ${l.id} : ${l.title} (${l.duration})`;
+            librarySelect.appendChild(opt);
+        });
+    }
+
+    function updatePreviewCard(lesson) {
+        if (!lesson) return;
+        if (previewNum) previewNum.textContent = `Texte ${lesson.id}`;
+        if (previewTitle) previewTitle.textContent = lesson.title;
+        if (previewDuration) previewDuration.textContent = lesson.duration;
+        if (previewWords) previewWords.textContent = `${lesson.wordsCount} mots`;
+    }
+
+    if (librarySelect) {
+        librarySelect.addEventListener('change', () => {
+            const idx = parseInt(librarySelect.value, 10);
+            if (!isNaN(idx) && libraryLessons[idx]) {
+                updatePreviewCard(libraryLessons[idx]);
+            }
+        });
+    }
+
+    // Search / filter in library
+    if (librarySearch) {
+        librarySearch.addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase().trim();
+            if (clearSearchBtn) {
+                if (q) clearSearchBtn.classList.remove('hidden');
+                else clearSearchBtn.classList.add('hidden');
+            }
+
+            if (!q) {
+                populateLibrarySelect(libraryLessons);
+                if (libraryLessons.length > 0) updatePreviewCard(libraryLessons[0]);
+                return;
+            }
+
+            const filtered = libraryLessons.filter(l => 
+                l.title.toLowerCase().includes(q) || 
+                String(l.id).includes(q)
+            );
+            populateLibrarySelect(filtered);
+            if (filtered.length > 0) {
+                updatePreviewCard(filtered[0]);
+            }
+        });
+    }
+
+    if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+            librarySearch.value = '';
+            clearSearchBtn.classList.add('hidden');
+            populateLibrarySelect(libraryLessons);
+            if (libraryLessons.length > 0) updatePreviewCard(libraryLessons[0]);
+        });
+    }
+
+    // Load selected library lesson
+    async function loadLibraryLesson(index) {
+        if (index < 0 || index >= libraryLessons.length) return;
+        stopShadowing();
+
+        const lesson = libraryLessons[index];
+        currentLessonIndex = index;
+
+        libraryStartBtn.disabled = true;
+        libraryStartBtn.textContent = "⏳ Chargement...";
+
+        try {
+            const res = await fetch(lesson.jsonUrl);
+            if (!res.ok) throw new Error("Échec du chargement du fichier JSON de synchronisation.");
+            shadWords = await res.json();
+            shadAudioElement.src = lesson.audioUrl;
+
+            buildSegments();
+            renderText();
+
+            // Update active lesson banner
+            if (activeLessonNum) activeLessonNum.textContent = `Texte ${lesson.id}`;
+            if (activeLessonTitle) activeLessonTitle.textContent = lesson.title;
+            if (prevLessonBtn) prevLessonBtn.disabled = (index === 0);
+            if (nextLessonBtn) nextLessonBtn.disabled = (index === libraryLessons.length - 1);
+            if (prevLessonBtn) prevLessonBtn.classList.remove('hidden');
+            if (nextLessonBtn) nextLessonBtn.classList.remove('hidden');
+
+            // Switch view
+            sourceTabsContainer.classList.add('hidden');
+            sourceLibrary.classList.add('hidden');
+            sourceCustom.classList.add('hidden');
+
+            shadControlsBar.classList.remove('hidden');
+            shadStatus.classList.remove('hidden');
+            shadStatusText.textContent = "Prêt à démarrer";
+            shadStatus.className = "shadowing-status";
+
+            shadCurrentSegmentIndex = 0;
+            highlightSegment(0);
+
+        } catch (err) {
+            alert("Erreur lors du chargement de la leçon : " + err.message);
+        } finally {
+            libraryStartBtn.disabled = false;
+            libraryStartBtn.textContent = "🚀 Charger et Commencer l'entraînement";
+        }
+    }
+
+    if (libraryStartBtn) {
+        libraryStartBtn.addEventListener('click', () => {
+            const selectedIdx = parseInt(librarySelect.value, 10);
+            if (!isNaN(selectedIdx)) {
+                loadLibraryLesson(selectedIdx);
+            }
+        });
+    }
+
+    // In-Player Navigation
+    if (prevLessonBtn) {
+        prevLessonBtn.addEventListener('click', () => {
+            if (currentLessonIndex > 0) {
+                loadLibraryLesson(currentLessonIndex - 1);
+            }
+        });
+    }
+
+    if (nextLessonBtn) {
+        nextLessonBtn.addEventListener('click', () => {
+            if (currentLessonIndex < libraryLessons.length - 1) {
+                loadLibraryLesson(currentLessonIndex + 1);
+            }
+        });
+    }
+
+    if (changeLessonBtn) {
+        changeLessonBtn.addEventListener('click', () => {
+            stopShadowing();
+            shadControlsBar.classList.add('hidden');
+            sourceTabsContainer.classList.remove('hidden');
+            const activeTab = document.querySelector('.source-tab.active');
+            const target = activeTab ? activeTab.dataset.source : 'library';
+            if (target === 'library') {
+                sourceLibrary.classList.remove('hidden');
+                sourceCustom.classList.add('hidden');
+            } else {
+                sourceLibrary.classList.add('hidden');
+                sourceCustom.classList.remove('hidden');
+            }
+        });
+    }
+
+    // Pause Multiplier
     shadPauseMultInput.addEventListener('input', (e) => {
         shadPauseValDisplay.textContent = parseFloat(e.target.value).toFixed(1);
     });
 
+    // Granularity
     shadSegBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             shadSegBtns.forEach(b => b.classList.remove('active'));
@@ -375,6 +590,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Manual Upload Loading
     shadLoadBtn.addEventListener('click', async () => {
         if (!shadAudioInput.files.length || !shadJsonInput.files.length) {
             alert("Veuillez sélectionner les deux fichiers.");
@@ -393,15 +609,31 @@ document.addEventListener('DOMContentLoaded', () => {
             buildSegments();
             renderText();
             
+            currentLessonIndex = -1;
+            if (activeLessonNum) activeLessonNum.textContent = "Fichier local";
+            if (activeLessonTitle) activeLessonTitle.textContent = audioFile.name;
+            if (prevLessonBtn) prevLessonBtn.classList.add('hidden');
+            if (nextLessonBtn) nextLessonBtn.classList.add('hidden');
+
+            sourceTabsContainer.classList.add('hidden');
+            sourceLibrary.classList.add('hidden');
+            sourceCustom.classList.add('hidden');
+
             shadControlsBar.classList.remove('hidden');
             shadStatus.classList.remove('hidden');
             shadStatusText.textContent = "Prêt à démarrer";
             shadStatus.className = "shadowing-status";
 
+            shadCurrentSegmentIndex = 0;
+            highlightSegment(0);
+
         } catch (e) {
             alert("Erreur de lecture du JSON.");
         }
     });
+
+    // Initialize library on load
+    initLibrary();
 
     function buildSegments() {
         shadSegments = [];

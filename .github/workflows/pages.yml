@@ -27,10 +27,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
+      - name: Prepare audio library for deployment
+        run: |
+          rm -rf webapp/audio/cc-inp
+          mkdir -p webapp/audio/cc-inp
+          cp -r "Fichiers audio/cc-inp 2026 annales anglais/"* webapp/audio/cc-inp/
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only the webapp directory
+          # Upload the webapp directory containing app and audio files
           path: './webapp'
           
       - name: Deploy to GitHub Pages

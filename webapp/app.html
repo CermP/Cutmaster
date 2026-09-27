@@ -71,39 +71,99 @@
 
             <!-- PANEL: SHADOWING -->
             <section id="panel-shadowing" class="panel">
-                <div class="upload-row">
-                    <div class="upload-group">
-                        <label for="shadowing-audio">Fichier Audio (.mp3)</label>
-                        <input type="file" id="shadowing-audio" accept="audio/*">
+                <!-- SOURCE SELECTION TABS -->
+                <div class="shadowing-source-tabs" id="shadowing-source-tabs">
+                    <button class="source-tab active" id="tab-library" data-source="library">
+                        <span>📚</span> Bibliothèque CC-INP (134 textes)
+                    </button>
+                    <button class="source-tab" id="tab-custom" data-source="custom">
+                        <span>📁</span> Importer mes fichiers
+                    </button>
+                </div>
+
+                <!-- SOURCE: BIBLIOTHÈQUE OFFICIELLE -->
+                <div class="source-container" id="source-library">
+                    <div class="library-search-row">
+                        <div class="search-input-wrap">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="library-search" placeholder="Rechercher par titre ou numéro (ex: AI, climate, 42)..." autocomplete="off">
+                            <button id="clear-search" class="clear-search hidden" title="Effacer la recherche">&times;</button>
+                        </div>
                     </div>
-                    <div class="upload-group">
-                        <label for="shadowing-json">Fichier de Synchro (.json)</label>
-                        <input type="file" id="shadowing-json" accept=".json,application/json">
+
+                    <div class="library-select-group">
+                        <label for="library-select">Choisir une leçon :</label>
+                        <select id="library-select" class="library-select">
+                            <option value="">Chargement des textes...</option>
+                        </select>
                     </div>
-                    <button class="btn-secondary align-bottom" id="shadowing-load">Charger</button>
+
+                    <div class="lesson-preview-card" id="lesson-preview-card">
+                        <div class="preview-header">
+                            <span class="preview-badge" id="preview-lesson-num">Texte 1</span>
+                            <h3 class="preview-title" id="preview-lesson-title">10 CANCER-FIGHTING FOODS</h3>
+                        </div>
+                        <div class="preview-meta">
+                            <span class="meta-tag">⏱️ <span id="preview-lesson-duration">3m 29s</span></span>
+                            <span class="meta-tag">📝 <span id="preview-lesson-words">459 mots</span></span>
+                            <span class="meta-tag">🎓 Annales Anglais</span>
+                        </div>
+                        <button class="btn-primary full-width" id="library-start-btn">
+                            🚀 Charger et Commencer l'entraînement
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SOURCE: IMPORT MANUEL -->
+                <div class="source-container hidden" id="source-custom">
+                    <div class="upload-row">
+                        <div class="upload-group">
+                            <label for="shadowing-audio">Fichier Audio (.mp3)</label>
+                            <input type="file" id="shadowing-audio" accept="audio/*">
+                        </div>
+                        <div class="upload-group">
+                            <label for="shadowing-json">Fichier de Synchro (.json)</label>
+                            <input type="file" id="shadowing-json" accept=".json,application/json">
+                        </div>
+                        <button class="btn-secondary align-bottom" id="shadowing-load">Charger</button>
+                    </div>
                 </div>
 
                 <div class="shadowing-controls hidden" id="shadowing-controls-bar">
-                    <button class="btn-primary" id="shadowing-play">Play</button>
-                    
-                    <div class="segment-control">
-                        <button class="seg-btn active" data-granularity="sentence">Phrases</button>
-                        <button class="seg-btn" data-granularity="comma">Virgules</button>
-                        <button class="seg-btn" data-granularity="word">Mots</button>
-                    </div>
-                    
-                    <div class="pause-control">
-                        <label for="shadowing-pause-mult">Pause (x)</label>
-                        <input type="range" id="shadowing-pause-mult" min="1" max="4" step="0.1" value="2">
-                        <span id="shadowing-pause-val">2.0</span>
+                    <div class="active-lesson-banner" id="active-lesson-banner">
+                        <div class="active-lesson-info">
+                            <span class="active-badge" id="active-lesson-num">Texte 1</span>
+                            <span class="active-title" id="active-lesson-title">10 CANCER-FIGHTING FOODS</span>
+                        </div>
+                        <div class="active-lesson-actions">
+                            <button class="btn-nav" id="prev-lesson-btn" title="Texte précédent">⬅️ Précédent</button>
+                            <button class="btn-nav" id="next-lesson-btn" title="Texte suivant">Suivant ➡️</button>
+                            <button class="btn-nav btn-outline" id="change-lesson-btn" title="Changer de texte">📋 Liste</button>
+                        </div>
                     </div>
 
-                    <div class="toggle-group">
-                        <label for="auto-pause-toggle">Auto-pause</label>
-                        <label class="switch">
-                            <input type="checkbox" id="auto-pause-toggle" checked>
-                            <span class="slider"></span>
-                        </label>
+                    <div class="controls-action-row">
+                        <button class="btn-primary" id="shadowing-play">Play</button>
+                        
+                        <div class="segment-control">
+                            <button class="seg-btn active" data-granularity="sentence">Phrases</button>
+                            <button class="seg-btn" data-granularity="comma">Virgules</button>
+                            <button class="seg-btn" data-granularity="word">Mots</button>
+                        </div>
+                        
+                        <div class="pause-control">
+                            <label for="shadowing-pause-mult">Pause (x)</label>
+                            <input type="range" id="shadowing-pause-mult" min="1" max="4" step="0.1" value="2">
+                            <span id="shadowing-pause-val">2.0</span>
+                        </div>
+
+                        <div class="toggle-group">
+                            <label for="auto-pause-toggle">Auto-pause</label>
+                            <label class="switch">
+                                <input type="checkbox" id="auto-pause-toggle" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
 

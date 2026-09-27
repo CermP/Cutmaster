@@ -56,7 +56,8 @@ Accessible sans installation depuis n'importe quel navigateur moderne :
   - Visualisation en direct de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
   - Export direct en `.wav` ou en `.mp3` (encodé à la volée via `lamejs`).
 - 🗣️ **Shadowing Pro** :
-  - Import de l'audio et du fichier de sous-titres/timestamps `.json`.
+  - 📚 **Bibliothèque intégrée (Annales CC-INP)** : Accès direct en un clic aux 134 textes officiels synchronisés mot à mot, avec moteur de recherche instantané, aperçu (durée, nombre de mots) et navigation fluide entre les textes (*Précédent* / *Suivant*).
+  - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` et de synchronisation `.json` tiers.
   - Découpage dynamique selon 3 niveaux de granularité : **Phrases**, **Virgules** (clauses), ou **Mots**.
   - Mode **Auto-pause** paramétrable (multiplicateur de durée de pause de 1× à 4×).
   - Surlignage karaoké en temps réel du texte prononcé.
