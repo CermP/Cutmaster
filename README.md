@@ -1,7 +1,7 @@
 # CutMaster 🎙️
 
-> **L'outil audio qui donne du souffle à vos mots.**  
-> Découpez, espacez et synchronisez vos fichiers audio pour l'apprentissage des langues, le shadowing et la maîtrise de l'élocution.
+> **L'outil ultime d'entraînement oral et de prononciation.**  
+> Maîtrisez l'élocution anglaise grâce à la méthode du Shadowing avec alignement parfait texte-audio, et préparez vos propres fichiers grâce à un outil de découpage intelligent intégré.
 
 [![GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://cermp.github.io/Cutmaster/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
@@ -21,8 +21,8 @@
   - [Utiliser la WebApp](#utiliser-lapplication-web)
   - [Utiliser les outils Python](#utiliser-les-outils-python)
 - [Guide d'utilisation](#-guide-dutilisation)
-  - [Découpage audio (Web & CLI)](#mode-découpage-audio)
-  - [Entraînement au Shadowing](#mode-shadowing-pro)
+  - [Entraînement au Shadowing (Outil principal)](#mode-shadowing)
+  - [Découpage audio (Option Web & CLI)](#mode-découpage-audio)
   - [Génération de synchronisation avec Whisper & PDF](#génération-de-synchronisation-ia)
 - [Structure du projet](#-structure-du-projet)
 - [Technologies utilisées](#-technologies-utilisées)
@@ -50,17 +50,18 @@ CutMaster offre une double réponse :
 
 Accessible sans installation depuis n'importe quel navigateur moderne :
 
-- ✂️ **Découpage & Espacement Intelligent** :
-  - Détection automatique des pauses et des silences.
-  - Insertion de silences proportionnels après chaque phrase pour laisser le temps de répéter.
-  - Visualisation en direct de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
-  - Export direct en `.wav` ou en `.mp3` (encodé à la volée via `lamejs`).
-- 🗣️ **Shadowing Pro** :
+- 🗣️ **CutMaster (Entraînement au Shadowing)** :
   - 📚 **Bibliothèque intégrée (Annales CC-INP)** : Accès direct en un clic aux 134 textes officiels synchronisés mot à mot, avec moteur de recherche instantané, aperçu (durée, nombre de mots) et navigation fluide entre les textes (*Précédent* / *Suivant*).
   - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` et de synchronisation `.json` tiers.
   - Découpage dynamique selon 3 niveaux de granularité : **Phrases**, **Virgules** (clauses), ou **Mots**.
   - Mode **Auto-pause** paramétrable (multiplicateur de durée de pause de 1× à 4×).
   - Surlignage karaoké en temps réel du texte prononcé.
+
+- ✂️ **Option de Découpage Intelligent** :
+  - Détection automatique des pauses et des silences pour préparer vos propres fichiers.
+  - Insertion de silences proportionnels après chaque phrase pour laisser le temps de répéter.
+  - Visualisation en direct de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
+  - Export direct en `.wav` ou en `.mp3` (encodé à la volée via `lamejs`).
 
 ### 2. Suite CLI & IA Python
 
@@ -141,13 +142,23 @@ pip install openai-whisper pymupdf
 
 ## 📖 Guide d'utilisation
 
-### Mode Découpage Audio
+### Mode Shadowing (Outil principal)
+
+1. Ouvrez la WebApp, le mode **Entraînement** s'affiche par défaut.
+2. Utilisez la bibliothèque intégrée (📚) pour choisir une leçon pré-synchronisée.
+3. Ou générez/récupérez un fichier de synchronisation `.json` correspondant à votre propre audio et utilisez l'import personnalisé (📁).
+4. Sélectionnez votre niveau de segmentation (**Phrases**, **Virgules**, **Mots**).
+5. Lancez la lecture avec l'**Auto-pause** activée pour vous entraîner à répéter après chaque phrase.
+
+---
+
+### Mode Découpage Audio (Optionnel)
 
 #### Via l'application Web
-1. Ouvrez `webapp/app.html`.
+1. Ouvrez la WebApp et sélectionnez l'onglet **Outil de découpage**.
 2. Glissez votre fichier audio (`.mp3`, `.wav`, `.m4a`, etc.).
 3. Ajustez le seuil de silence (dB) et la durée minimale de silence (ms).
-4. Cliquez sur **Lancer le traitement**, écoutez le résultat puis téléchargez l'audio exporté.
+4. Cliquez sur **Lancer le traitement**, écoutez le résultat puis téléchargez l'audio exporté pour préparer vos propres fichiers d'entraînement.
 
 #### Via le script CLI `advanced_audio.py`
 ```bash
@@ -166,16 +177,6 @@ python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pa
 - `--beep` : Ajoute un signal sonore à la fin de chaque segment.
 - `--normalize` : Égalise les niveaux sonores.
 - `--crossfade <ms>` : Fondu croisé entre les segments (défaut : 50 ms).
-
----
-
-### Mode Shadowing Pro
-
-1. Générez ou récupérez le fichier de synchronisation `.json` correspondant à votre audio.
-2. Dans la WebApp, sélectionnez l'onglet **Shadowing**.
-3. Chargez le fichier audio (`.mp3`) et le fichier `.json`.
-4. Sélectionnez votre niveau de segmentation (**Phrases**, **Virgules**, **Mots**).
-5. Lancez la lecture avec l'**Auto-pause** activée pour vous entraîner à répéter après chaque phrase.
 
 ---
 

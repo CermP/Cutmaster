@@ -278,9 +278,6 @@ function groupWords() {
     allWords.forEach((wordObj, i) => {
         if (currentStart === null) {
             currentStart = wordObj.start;
-            if (currentGranularity === 'word' && currentStart > 0.05) {
-                currentStart += 0.04;
-            }
         }
         
         currentChunk.push(wordObj.text);
@@ -465,7 +462,7 @@ function playSentence(index) {
                 }
             }
         }
-    }, 50);
+    }, 10); // Vérification toutes les 10ms pour une coupe plus précise
 }
 
 function updateStatus(text, state) {

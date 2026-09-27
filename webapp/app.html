@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CutMaster - Éditeur Audio</title>
+    <title>CutMaster - Entraînement Oral</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
             <div class="logo">CutMaster</div>
             
             <div class="mode-toggle">
-                <button class="mode-btn active" data-target="panel-decoupage">Découpage</button>
-                <button class="mode-btn" data-target="panel-shadowing">Shadowing</button>
+                <button class="mode-btn active" data-target="panel-shadowing">Entraînement</button>
+                <button class="mode-btn" data-target="panel-decoupage">Outil de découpage</button>
             </div>
             
             <a href="index.html" class="back-link">← Accueil</a>
@@ -24,7 +24,7 @@
 
         <main>
             <!-- PANEL: DECOUPAGE -->
-            <section id="panel-decoupage" class="panel active">
+            <section id="panel-decoupage" class="panel">
                 <div class="drop-zone" id="decoupage-drop-zone">
                     <input type="file" id="decoupage-file" accept="audio/*,video/mp4" hidden>
                     <p>Glissez un fichier audio ici</p>
@@ -70,7 +70,7 @@
             </section>
 
             <!-- PANEL: SHADOWING -->
-            <section id="panel-shadowing" class="panel">
+            <section id="panel-shadowing" class="panel active">
                 <!-- SOURCE SELECTION TABS -->
                 <div class="shadowing-source-tabs" id="shadowing-source-tabs">
                     <button class="source-tab active" id="tab-library" data-source="library">
