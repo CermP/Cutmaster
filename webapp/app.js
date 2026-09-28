@@ -530,8 +530,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sourceCustom = document.getElementById('source-custom');
     const librarySearch = document.getElementById('library-search');
     const clearSearchBtn = document.getElementById('clear-search');
+    const searchCountBadge = document.getElementById('search-count');
+    const libraryEmptyState = document.getElementById('library-empty-state');
+    const librarySelectGroup = document.getElementById('library-select-group');
+    const btnRandomLesson = document.getElementById('btn-random-lesson');
+    const btnResetSearch = document.getElementById('btn-reset-search');
     const librarySelect = document.getElementById('library-select');
     const libraryStartBtn = document.getElementById('library-start-btn');
+    const lessonPreviewCard = document.getElementById('lesson-preview-card');
     const previewNum = document.getElementById('preview-lesson-num');
     const previewTitle = document.getElementById('preview-lesson-title');
     const previewDuration = document.getElementById('preview-lesson-duration');
@@ -589,9 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const statusIcon = document.getElementById('status-icon');
     const shadStatusText = document.getElementById('shadowing-status-text');
     const countdownTimer = document.getElementById('countdown-timer');
-    const comparisonBar = document.getElementById('comparison-bar');
+    const comparisonCard = document.getElementById('comparison-card');
+    const compSegmentLabel = document.getElementById('comp-segment-label');
     const compPlayOriginalBtn = document.getElementById('comp-play-original');
     const compPlayUserBtn = document.getElementById('comp-play-user');
+    const compRetrySegBtn = document.getElementById('comp-retry-seg');
     const shadProgress = document.getElementById('shadowing-progress');
 
     // Text Display & Toolbar
@@ -624,6 +632,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let loopMode = userSettings.loopMode; // 0, 2, 3, -1
     let segmentLoopCounter = 0; // count of plays for current segment
     let filterOnlyStarred = false;
+    let lastRecordedSegmentIndex = -1;
+    let lastActiveWordIdx = -1;
 
     // Microphone & MediaRecorder
     let mediaRecorder = null;
@@ -653,23 +663,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // MediaRecorder functions
-    async function startRecording() {
+    async function startRecording(segmentIndex) {
         if (!micRecordToggle.checked) return;
         try {
             if (!audioStream) {
                 audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
             }
             recordedChunks = [];
-            mediaRecorder = new MediaRecorder(audioStream);
+            const mimeType = (typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported('audio/webm;codecs=opus'))
+                ? 'audio/webm;codecs=opus'
+                : ((typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported('audio/webm'))
+                    ? 'audio/webm'
+                    : ((typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported('audio/mp4'))
+                        ? 'audio/mp4'
+                        : ''));
+
+            mediaRecorder = mimeType ? new MediaRecorder(audioStream, { mimeType }) : new MediaRecorder(audioStream);
             mediaRecorder.ondataavailable = (e) => {
                 if (e.data.size > 0) recordedChunks.push(e.data);
             };
             mediaRecorder.onstop = () => {
-                const blob = new Blob(recordedChunks, { type: 'audio/webm' });
+                const recordedType = mimeType || 'audio/webm';
+                const blob = new Blob(recordedChunks, { type: recordedType });
                 if (lastUserAudioBlobUrl) URL.revokeObjectURL(lastUserAudioBlobUrl);
                 lastUserAudioBlobUrl = URL.createObjectURL(blob);
                 if (userAudio) userAudio.src = lastUserAudioBlobUrl;
-                if (comparisonBar) comparisonBar.classList.remove('hidden');
+
+                if (comparisonCard && compSegmentLabel) {
+                    lastRecordedSegmentIndex = segmentIndex;
+                    compSegmentLabel.textContent = `Segment ${segmentIndex + 1}`;
+                    comparisonCard.classList.remove('hidden');
+                }
+                showToast("Enregistrement vocal terminé ! Utilisez la carte ci-dessous pour comparer.", "🎙️");
             };
             mediaRecorder.start();
         } catch (err) {
@@ -710,6 +735,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (userAudio && lastUserAudioBlobUrl) {
                 userAudio.currentTime = 0;
                 userAudio.play();
+            }
+        });
+    }
+
+    if (compRetrySegBtn) {
+        compRetrySegBtn.addEventListener('click', () => {
+            if (lastRecordedSegmentIndex >= 0) {
+                jumpToSegment(lastRecordedSegmentIndex);
+                startShadowing();
             }
         });
     }
@@ -911,6 +945,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!resp.ok) throw new Error("HTTP " + resp.status);
             libraryLessons = await resp.json();
             populateLibrarySelect(libraryLessons);
+            if (searchCountBadge) {
+                searchCountBadge.textContent = `${libraryLessons.length} textes`;
+            }
             
             const initialIdx = userSettings.lastLessonIndex && userSettings.lastLessonIndex < libraryLessons.length ? userSettings.lastLessonIndex : 0;
             if (libraryLessons.length > 0) {
@@ -960,7 +997,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearSearchBtn.classList.toggle('hidden', !q);
             }
             if (!q) {
+                if (libraryEmptyState) libraryEmptyState.classList.add('hidden');
+                if (librarySelectGroup) librarySelectGroup.classList.remove('hidden');
+                if (lessonPreviewCard) lessonPreviewCard.classList.remove('hidden');
                 populateLibrarySelect(libraryLessons);
+                if (searchCountBadge) searchCountBadge.textContent = `${libraryLessons.length} textes`;
                 if (libraryLessons.length > 0) updatePreviewCard(libraryLessons[0]);
                 return;
             }
@@ -968,10 +1009,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 l.title.toLowerCase().includes(q) || 
                 String(l.id).includes(q)
             );
-            populateLibrarySelect(filtered);
-            if (filtered.length > 0) {
+            if (searchCountBadge) {
+                searchCountBadge.textContent = `${filtered.length} texte${filtered.length > 1 ? 's' : ''}`;
+            }
+            if (filtered.length === 0) {
+                if (libraryEmptyState) libraryEmptyState.classList.remove('hidden');
+                if (librarySelectGroup) librarySelectGroup.classList.add('hidden');
+                if (lessonPreviewCard) lessonPreviewCard.classList.add('hidden');
+            } else {
+                if (libraryEmptyState) libraryEmptyState.classList.add('hidden');
+                if (librarySelectGroup) librarySelectGroup.classList.remove('hidden');
+                if (lessonPreviewCard) lessonPreviewCard.classList.remove('hidden');
+                populateLibrarySelect(filtered);
                 updatePreviewCard(filtered[0]);
             }
+        });
+    }
+
+    if (btnResetSearch) {
+        btnResetSearch.addEventListener('click', () => {
+            if (librarySearch) librarySearch.value = '';
+            if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+            if (libraryEmptyState) libraryEmptyState.classList.add('hidden');
+            if (librarySelectGroup) librarySelectGroup.classList.remove('hidden');
+            if (lessonPreviewCard) lessonPreviewCard.classList.remove('hidden');
+            populateLibrarySelect(libraryLessons);
+            if (searchCountBadge) searchCountBadge.textContent = `${libraryLessons.length} textes`;
+            if (libraryLessons.length > 0) updatePreviewCard(libraryLessons[0]);
+        });
+    }
+
+    if (btnRandomLesson) {
+        btnRandomLesson.addEventListener('click', () => {
+            if (!libraryLessons.length) return;
+            const randIdx = Math.floor(Math.random() * libraryLessons.length);
+            if (librarySearch && librarySearch.value) {
+                librarySearch.value = '';
+                if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+                if (libraryEmptyState) libraryEmptyState.classList.add('hidden');
+                if (librarySelectGroup) librarySelectGroup.classList.remove('hidden');
+                if (lessonPreviewCard) lessonPreviewCard.classList.remove('hidden');
+                populateLibrarySelect(libraryLessons);
+            }
+            if (librarySelect) librarySelect.value = randIdx;
+            updatePreviewCard(libraryLessons[randIdx]);
+            showToast(`Sujet tiré au sort : Texte ${libraryLessons[randIdx].id}`, "🎲");
         });
     }
 
@@ -979,7 +1061,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clearSearchBtn.addEventListener('click', () => {
             librarySearch.value = '';
             clearSearchBtn.classList.add('hidden');
+            if (libraryEmptyState) libraryEmptyState.classList.add('hidden');
+            if (librarySelectGroup) librarySelectGroup.classList.remove('hidden');
+            if (lessonPreviewCard) lessonPreviewCard.classList.remove('hidden');
             populateLibrarySelect(libraryLessons);
+            if (searchCountBadge) searchCountBadge.textContent = `${libraryLessons.length} textes`;
             if (libraryLessons.length > 0) updatePreviewCard(libraryLessons[0]);
         });
     }
@@ -1183,20 +1269,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const span = document.createElement('span');
             span.className = 'segment-span future';
+            span.setAttribute('role', 'button');
+            span.setAttribute('tabindex', '0');
+            span.setAttribute('aria-label', `Segment ${i + 1}`);
             if (isStarred) span.classList.add('is-starred');
             span.dataset.index = i;
 
             // Render words inside segment
-            seg.words.forEach(w => {
+            seg.words.forEach((w, wIdx) => {
                 const wSpan = document.createElement('span');
                 wSpan.className = 'word-span';
                 wSpan.textContent = w.text + ' ';
                 wSpan.dataset.start = w.start;
                 wSpan.dataset.end = w.end;
+                wSpan.dataset.wordIndex = wIdx;
                 wSpan.title = `Écouter "${w.text}" (${w.start.toFixed(1)}s - ${w.end.toFixed(1)}s)`;
                 wSpan.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    playWordSnippet(w.start, w.end);
+                    playWordSnippet(w.start, w.end, wSpan);
                 });
                 span.appendChild(wSpan);
             });
@@ -1204,30 +1294,62 @@ document.addEventListener('DOMContentLoaded', () => {
             span.addEventListener('click', () => {
                 jumpToSegment(i);
             });
+            span.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    jumpToSegment(i);
+                }
+            });
 
             shadTextDisplay.appendChild(span);
         });
     }
 
-    function playWordSnippet(start, end) {
+    let wordSnippetTimeout = null;
+    function playWordSnippet(start, end, wSpan) {
         if (!shadAudio) return;
+        if (wSpan) {
+            wSpan.classList.add('is-playing-snippet');
+            setTimeout(() => wSpan.classList.remove('is-playing-snippet'), 450);
+        }
         const wasPlaying = shadIsPlaying;
-        if (wasPlaying) shadAudio.pause();
+        if (wasPlaying) stopShadowing();
 
-        shadAudio.currentTime = start;
-        shadAudio.play();
+        shadAudio.currentTime = Math.max(0, start - 0.04);
+        shadAudio.play().catch(() => {});
 
-        const checkWordEnd = () => {
-            if (shadAudio.currentTime >= end) {
-                shadAudio.pause();
-                if (wasPlaying && shadCurrentSegmentIndex >= 0) {
-                    playSegment(shadCurrentSegmentIndex);
-                }
+        const durationMs = Math.max(220, (end - start + 0.12) * 1000);
+        if (wordSnippetTimeout) clearTimeout(wordSnippetTimeout);
+        wordSnippetTimeout = setTimeout(() => {
+            shadAudio.pause();
+        }, durationMs);
+    }
+
+    function updateActiveWordHighlight(segmentIndex, currentTime) {
+        const seg = shadSegments[segmentIndex];
+        if (!seg || !seg.words) return;
+        const activeWordIdx = seg.words.findIndex(w => currentTime >= w.start && currentTime <= w.end);
+        if (activeWordIdx === lastActiveWordIdx) return;
+        lastActiveWordIdx = activeWordIdx;
+
+        const currentSegEl = document.querySelector(`.segment-span[data-index="${segmentIndex}"]`);
+        if (!currentSegEl) return;
+
+        const allWordSpans = currentSegEl.querySelectorAll('.word-span');
+        allWordSpans.forEach((wEl, idx) => {
+            if (idx === activeWordIdx) {
+                wEl.classList.add('is-active-word');
             } else {
-                requestAnimationFrame(checkWordEnd);
+                wEl.classList.remove('is-active-word');
             }
-        };
-        requestAnimationFrame(checkWordEnd);
+        });
+    }
+
+    function clearActiveWordHighlight() {
+        document.querySelectorAll('.word-span.is-active-word').forEach(el => {
+            el.classList.remove('is-active-word');
+        });
+        lastActiveWordIdx = -1;
     }
 
     function updateStarredCounter() {
@@ -1266,6 +1388,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function highlightSegment(index) {
+        clearActiveWordHighlight();
+        let targetElement = null;
         document.querySelectorAll('.segment-span').forEach(el => {
             const elIdx = parseInt(el.dataset.index, 10);
             el.classList.remove('active', 'past', 'future');
@@ -1273,11 +1397,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 el.classList.add('past');
             } else if (elIdx === index) {
                 el.classList.add('active');
-                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                targetElement = el;
             } else {
                 el.classList.add('future');
             }
         });
+
+        // Smooth scroll INSIDE the text area container without jerking the browser window
+        if (targetElement && shadTextDisplay) {
+            const containerRect = shadTextDisplay.getBoundingClientRect();
+            const elRect = targetElement.getBoundingClientRect();
+            const relativeTop = elRect.top - containerRect.top + shadTextDisplay.scrollTop;
+            const targetScrollTop = Math.max(0, relativeTop - (containerRect.height / 2) + (elRect.height / 2));
+            shadTextDisplay.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+        }
 
         segmentCurrentDisplay.textContent = index + 1;
         updateStarredCounter();
@@ -1289,7 +1422,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================================
     function updateTimelineUI() {
         const cur = shadAudio.currentTime;
-        const dur = shadAudio.duration;
+        let dur = shadAudio.duration;
+        if ((!dur || isNaN(dur) || !isFinite(dur)) && currentLessonIndex >= 0 && libraryLessons[currentLessonIndex]) {
+            dur = libraryLessons[currentLessonIndex].durationSec || 0;
+        }
         timeCurrentDisplay.textContent = formatTime(cur);
         timeTotalDisplay.textContent = formatTime(dur);
 
@@ -1297,7 +1433,28 @@ document.addEventListener('DOMContentLoaded', () => {
             const percent = Math.min(100, Math.max(0, (cur / dur) * 100));
             timelineProgress.style.width = percent + '%';
             timelineThumb.style.left = percent + '%';
+            if (timelineTrack) {
+                timelineTrack.setAttribute('aria-valuenow', Math.round(percent));
+            }
         }
+    }
+
+    if (timelineTrack) {
+        timelineTrack.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                if (shadAudio.duration > 0) {
+                    shadAudio.currentTime = Math.max(0, shadAudio.currentTime - 5);
+                    updateTimelineUI();
+                }
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                if (shadAudio.duration > 0) {
+                    shadAudio.currentTime = Math.min(shadAudio.duration, shadAudio.currentTime + 5);
+                    updateTimelineUI();
+                }
+            }
+        });
     }
 
     if (timelineContainer) {
@@ -1400,6 +1557,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cancelAnimationFrame(shadAnimFrame);
         stopTimeUpdater();
         stopRecording();
+        clearActiveWordHighlight();
 
         shadStatus.className = "shadowing-status";
         shadStatusText.textContent = "En pause";
@@ -1448,7 +1606,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (statusIcon) statusIcon.textContent = "🎧";
         shadProgress.style.width = '0%';
         countdownTimer.classList.add('hidden');
-        if (comparisonBar) comparisonBar.classList.add('hidden');
 
         shadAudio.currentTime = seg.start;
         shadAudio.play();
@@ -1456,8 +1613,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const checkEnd = () => {
             if (!shadIsPlaying) return;
             updateTimelineUI();
+            updateActiveWordHighlight(index, shadAudio.currentTime);
 
             if (shadAudio.currentTime >= seg.end) {
+                clearActiveWordHighlight();
                 shadAudio.pause();
                 if (autoPauseToggle.checked) {
                     doPausePhase(seg, index);
@@ -1505,7 +1664,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const isRecording = micRecordToggle.checked;
         if (isRecording) {
-            startRecording();
+            startRecording(index);
             shadStatus.className = "shadowing-status state-recording";
             shadStatusText.textContent = "À vous ! (Enregistrement micro)";
             if (statusIcon) statusIcon.textContent = "🎙️";

@@ -431,6 +431,15 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     opacity: 0.7;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 /* Scroll indicator (absolute inside hero-sticky to prevent Safari fixed bar artifacts) */
 .scroll-indicator {
     position: absolute;
@@ -946,5 +955,15 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     
     .hero-revealed {
         gap: 1.2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
     }
 }

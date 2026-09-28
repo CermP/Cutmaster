@@ -125,15 +125,29 @@
                 <div class="source-container" id="source-library">
                     <div class="library-search-row">
                         <div class="search-input-wrap">
-                            <span class="search-icon">🔍</span>
-                            <input type="text" id="library-search" placeholder="Rechercher par titre ou numéro (ex: AI, climate, 42, health)..." autocomplete="off">
-                            <button id="clear-search" class="clear-search hidden" title="Effacer la recherche">&times;</button>
+                            <span class="search-icon" aria-hidden="true">🔍</span>
+                            <input type="text" id="library-search" placeholder="Rechercher par titre ou numéro (ex: AI, climate, 42, health)..." autocomplete="off" aria-label="Rechercher un texte">
+                            <button id="clear-search" class="clear-search hidden" title="Effacer la recherche" aria-label="Effacer la recherche">&times;</button>
                         </div>
+                        <span class="search-count-badge" id="search-count">134 textes</span>
                     </div>
 
-                    <div class="library-select-group">
-                        <label for="library-select">Sélectionner un texte :</label>
-                        <select id="library-select" class="library-select">
+                    <!-- EMPTY SEARCH STATE -->
+                    <div class="library-empty-state hidden" id="library-empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <p class="empty-state-title">Aucun texte ne correspond à votre recherche.</p>
+                        <p class="empty-state-desc">Vérifiez l'orthographe, essayez un numéro ou réinitialisez la recherche.</p>
+                        <button type="button" class="btn-secondary btn-small" id="btn-reset-search">Réinitialiser la recherche</button>
+                    </div>
+
+                    <div class="library-select-group" id="library-select-group">
+                        <div class="select-label-row">
+                            <label for="library-select">Sélectionner un texte :</label>
+                            <button type="button" class="btn-random-pick" id="btn-random-lesson" title="Tirer un sujet au hasard pour s'entraîner en conditions réelles">
+                                🎲 Sujet aléatoire
+                            </button>
+                        </div>
+                        <select id="library-select" class="library-select" aria-label="Liste des textes disponibles">
                             <option value="">Chargement des textes disponibles...</option>
                         </select>
                     </div>
@@ -192,8 +206,8 @@
                     </div>
 
                     <!-- LESSON TIMELINE / SCRUBBER -->
-                    <div class="timeline-container" id="timeline-container" title="Cliquer pour naviguer dans l'audio">
-                        <div class="timeline-track" id="timeline-track">
+                    <div class="timeline-container" id="timeline-container" title="Cliquer ou glisser pour naviguer dans l'audio">
+                        <div class="timeline-track" id="timeline-track" role="slider" tabindex="0" aria-label="Progression audio de la leçon" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                             <div class="timeline-progress" id="timeline-progress"></div>
                             <div class="timeline-thumb" id="timeline-thumb"></div>
                         </div>
@@ -206,14 +220,14 @@
 
                     <!-- MAIN PLAY ROW -->
                     <div class="controls-main-row">
-                        <button class="btn-secondary btn-icon-only" id="prev-seg-btn" title="Segment précédent (←)">
+                        <button class="btn-secondary btn-icon-only" id="prev-seg-btn" title="Segment précédent (←)" aria-label="Segment précédent">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="19,20 9,12 19,4"/>
                                 <line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </button>
 
-                        <button class="btn-play" id="shadowing-play" title="Play / Pause (Espace)">
+                        <button class="btn-play" id="shadowing-play" title="Démarrer ou mettre en pause (Espace)" aria-label="Démarrer ou mettre en pause">
                             <svg class="play-icon" id="play-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="5,3 19,12 5,21"/>
                             </svg>
@@ -224,21 +238,21 @@
                             <span id="play-btn-label">Démarrer</span>
                         </button>
 
-                        <button class="btn-secondary btn-icon-only" id="replay-seg-btn" title="Rejouer le segment actuel (R)">
+                        <button class="btn-secondary btn-icon-only" id="replay-seg-btn" title="Rejouer le segment actuel (R)" aria-label="Rejouer le segment actuel">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="1 4 1 10 7 10"></polyline>
                                 <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
                             </svg>
                         </button>
 
-                        <button class="btn-secondary btn-icon-only" id="next-seg-btn" title="Segment suivant (→)">
+                        <button class="btn-secondary btn-icon-only" id="next-seg-btn" title="Segment suivant (→)" aria-label="Segment suivant">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <polygon points="5,4 15,12 5,20"/>
                                 <line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </button>
 
-                        <button class="btn-star-current" id="star-current-btn" title="Ajouter ce segment aux favoris (S)">
+                        <button class="btn-star-current" id="star-current-btn" title="Ajouter ce segment aux favoris (S)" aria-label="Marquer le segment en favori">
                             <span class="star-icon">☆</span>
                         </button>
                     </div>
@@ -262,7 +276,7 @@
                                 <span class="control-value-pill" id="shadowing-speed-val">1.0x</span>
                             </div>
                             <div class="speed-slider-wrap">
-                                <input type="range" id="shadowing-speed" min="0.5" max="2.0" step="0.05" value="1.0">
+                                <input type="range" id="shadowing-speed" min="0.5" max="2.0" step="0.05" value="1.0" aria-label="Vitesse de lecture">
                             </div>
                             <div class="speed-pills">
                                 <button type="button" class="speed-pill" data-speed="0.75">0.75x</button>
@@ -278,7 +292,7 @@
                                 <span class="control-label">Pause</span>
                                 <span class="control-value-pill" id="shadowing-pause-val">2.0x</span>
                             </div>
-                            <input type="range" id="shadowing-pause-mult" min="0.5" max="4.0" step="0.1" value="2.0">
+                            <input type="range" id="shadowing-pause-mult" min="0.5" max="4.0" step="0.1" value="2.0" aria-label="Multiplicateur de durée de pause">
                         </div>
 
                         <!-- Prep Time -->
@@ -287,7 +301,7 @@
                                 <span class="control-label">Prépa</span>
                                 <span class="control-value-pill" id="shadowing-prep-val">1.0s</span>
                             </div>
-                            <input type="range" id="shadowing-prep-time" min="0" max="3.0" step="0.5" value="1.0">
+                            <input type="range" id="shadowing-prep-time" min="0" max="3.0" step="0.5" value="1.0" aria-label="Temps de préparation avant répétition">
                         </div>
                     </div>
 
@@ -352,19 +366,30 @@
                         <span class="countdown-timer hidden" id="countdown-timer">0.0s</span>
                     </div>
 
-                    <!-- Comparison audio players when user has recorded their voice -->
-                    <div class="comparison-bar hidden" id="comparison-bar">
-                        <span class="comp-label">Comparer :</span>
-                        <button type="button" class="btn-comp" id="comp-play-original">
-                            <span>🔊</span> Original
-                        </button>
-                        <button type="button" class="btn-comp btn-comp-user" id="comp-play-user">
-                            <span>🎙️</span> Ma voix
-                        </button>
-                    </div>
-
                     <div class="progress-bar-container">
                         <div class="progress-bar" id="shadowing-progress"></div>
+                    </div>
+                </div>
+
+                <!-- PERSISTENT VOICE COMPARISON CARD -->
+                <div class="comparison-card hidden" id="comparison-card">
+                    <div class="comp-card-header">
+                        <div class="comp-badge">
+                            <span class="comp-mic-icon">🎙️</span>
+                            <span class="comp-title">Dernier enregistrement (<span id="comp-segment-label">Segment 1</span>)</span>
+                        </div>
+                        <span class="comp-hint">Comparez directement votre prononciation avec le modèle natif :</span>
+                    </div>
+                    <div class="comp-card-actions">
+                        <button type="button" class="btn-comp" id="comp-play-original" title="Écouter le modèle natif pour ce segment">
+                            <span>🔊</span> Modèle natif
+                        </button>
+                        <button type="button" class="btn-comp btn-comp-user" id="comp-play-user" title="Écouter mon enregistrement vocal">
+                            <span>🎙️</span> Ma voix
+                        </button>
+                        <button type="button" class="btn-comp btn-comp-retry" id="comp-retry-seg" title="Rejouer et réenregistrer ce segment">
+                            <span>🔄</span> Réessayer ce segment
+                        </button>
                     </div>
                 </div>
 
@@ -405,11 +430,11 @@
     </div>
 
     <!-- SETTINGS MODAL -->
-    <div class="modal-overlay hidden" id="settings-modal">
+    <div class="modal-overlay hidden" id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settings-modal-title">
         <div class="modal-card">
             <div class="modal-header">
-                <h3>⚙️ Préférences d'affichage</h3>
-                <button class="modal-close" id="settings-modal-close">&times;</button>
+                <h3 id="settings-modal-title">⚙️ Préférences d'affichage</h3>
+                <button class="modal-close" id="settings-modal-close" aria-label="Fermer la fenêtre des préférences">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="settings-group">
@@ -455,11 +480,11 @@
     </div>
 
     <!-- KEYBOARD SHORTCUTS MODAL -->
-    <div class="modal-overlay hidden" id="shortcuts-modal">
+    <div class="modal-overlay hidden" id="shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title">
         <div class="modal-card">
             <div class="modal-header">
-                <h3>⌨️ Guide des raccourcis clavier</h3>
-                <button class="modal-close" id="shortcuts-modal-close">&times;</button>
+                <h3 id="shortcuts-modal-title">⌨️ Guide des raccourcis clavier</h3>
+                <button class="modal-close" id="shortcuts-modal-close" aria-label="Fermer la fenêtre des raccourcis">&times;</button>
             </div>
             <div class="modal-body">
                 <table class="shortcuts-table">

@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     kineticText.addEventListener('click', smoothScrollToReveal);
+    kineticText.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            smoothScrollToReveal();
+        }
+    });
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', smoothScrollToReveal);
         scrollIndicator.addEventListener('keydown', (e) => {
