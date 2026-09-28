@@ -14,103 +14,166 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollIndicator = document.getElementById('scroll-indicator');
     const word = 'CutMaster';
 
-    // Inject individual letter spans
+    // Inject individual letter spans with radial spread from word center
+    const centerIdx = (word.length - 1) / 2; // 4
     kineticText.innerHTML = word.split('').map((letter, i) => {
-        // Small random X/Y drift per letter for organic spread
-        const driftX = (Math.random() - 0.5) * 200;
-        const driftY = (Math.random() - 0.5) * 120;
-        return `<span class="letter" data-dx="${driftX}" data-dy="${driftY}" style="--i:${i}">${letter}</span>`;
+        const rel = (i - centerIdx) / centerIdx; // -1 to +1
+        // Letters on left fly left, right fly right, with organic spread
+        const driftX = rel * 160 + (Math.random() - 0.5) * 40;
+        const driftY = (i % 2 === 0 ? -1 : 1) * (35 + Math.random() * 40);
+        return `<span class="letter" data-dx="${driftX.toFixed(1)}" data-dy="${driftY.toFixed(1)}" style="--i:${i}">${letter}</span>`;
     }).join('');
 
     const letters = kineticText.querySelectorAll('.letter');
 
-    if (!prefersReducedMotion) {
-        function updateHeroOnScroll() {
-            const heroRect = heroSection.getBoundingClientRect();
-            const heroHeight = heroSection.offsetHeight;
-            const viewportH = window.innerHeight;
+    // Tap / Click to smoothly reveal hero content on mobile or desktop
+    function smoothScrollToReveal() {
+        const heroHeight = heroSection.offsetHeight;
+        const viewportH = window.innerHeight;
+        const maxScroll = heroHeight - viewportH;
+        const targetScroll = heroSection.offsetTop + Math.max(80, maxScroll * 0.72);
+        window.scrollTo({
+            top: targetScroll,
+            behavior: 'smooth'
+        });
+    }
 
-            // progress: 0 at top, 1 when hero fully scrolled
-            const scrolled = -heroRect.top;
-            const maxScroll = heroHeight - viewportH;
-            const progress = Math.max(0, Math.min(1, scrolled / maxScroll));
-
-            // --- Scroll indicator ---
-            if (scrollIndicator) {
-                scrollIndicator.style.opacity = progress < 0.03 ? '0.4' : '0';
+    kineticText.addEventListener('click', smoothScrollToReveal);
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', smoothScrollToReveal);
+        scrollIndicator.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                smoothScrollToReveal();
             }
+        });
+    }
 
-            // --- Hide aurora/particles after hero ---
-            const heroAurora = document.querySelector('.hero-aurora');
-            const particleCanvas = document.getElementById('particle-canvas');
-            const fadeProg = Math.max(0, Math.min(1, (progress - 0.8) / 0.2));
-            if (heroAurora) heroAurora.style.opacity = 0.1 * (1 - fadeProg);
-            if (particleCanvas) particleCanvas.style.opacity = 1 - fadeProg;
+    // Scroll-driven calculation
+    let resizeHeroWaveFn = null;
 
-            // ============================
-            // Phase 1 (0–0.1): Text at rest
-            // Phase 2 (0.1–0.55): Letters fly toward camera using translateZ
-            // Phase 3 (0.55–0.8): Fully gone, reveal fades in
-            // ============================
+    function updateHeroOnScroll() {
+        const heroRect = heroSection.getBoundingClientRect();
+        const heroHeight = heroSection.offsetHeight;
+        const viewportH = window.innerHeight;
 
-            if (progress <= 0.1) {
-                // Text at rest, visible
-                kineticText.style.visibility = 'visible';
-                kineticText.style.opacity = '1';
-                letters.forEach(letter => {
-                    letter.style.transform = 'translateX(0) translateY(0) translateZ(0)';
-                    letter.style.opacity = '1';
-                    letter.style.filter = '';
-                });
-                heroRevealed.classList.remove('active');
+        // progress: 0 at top, 1 when hero fully scrolled
+        const scrolled = -heroRect.top;
+        const maxScroll = heroHeight - viewportH;
+        const progress = maxScroll > 0 ? Math.max(0, Math.min(1, scrolled / maxScroll)) : 0;
 
-            } else if (progress <= 0.55) {
-                // Fly-through phase
-                kineticText.style.visibility = 'visible';
-                const flyProg = (progress - 0.1) / 0.45; // 0→1
-
-                letters.forEach((letter, i) => {
-                    // Each letter starts slightly later for cascade
-                    const stagger = i * 0.05;
-                    const local = Math.max(0, Math.min(1, (flyProg - stagger) / (1 - stagger * 0.5)));
-
-                    // Ease-in (accelerating) for "rushing toward you" feel
-                    const eased = local * local * local;
-
-                    // translateZ moves text toward camera (perspective on parent)
-                    const z = eased * 1800;
-                    // Spread out on X/Y
-                    const dx = parseFloat(letter.dataset.dx) * eased;
-                    const dy = parseFloat(letter.dataset.dy) * eased;
-                    // Opacity: fully visible until 40% through, then fade
-                    const opacity = local < 0.4 ? 1 : Math.max(0, 1 - (local - 0.4) / 0.6);
-                    // Blur only in the last 30%
-                    const blur = local > 0.7 ? (local - 0.7) / 0.3 * 6 : 0;
-
-                    letter.style.transform = `translateX(${dx}px) translateY(${dy}px) translateZ(${z}px)`;
-                    letter.style.opacity = opacity;
-                    letter.style.filter = blur > 0 ? `blur(${blur}px)` : '';
-                });
-
-                heroRevealed.classList.remove('active');
-
+        // --- Scroll indicator visibility ---
+        if (scrollIndicator) {
+            if (progress < 0.04) {
+                scrollIndicator.style.opacity = '0.7';
+                scrollIndicator.style.pointerEvents = 'auto';
+            } else if (progress < 0.2) {
+                scrollIndicator.style.opacity = String(0.7 * (1 - (progress - 0.04) / 0.16));
+                scrollIndicator.style.pointerEvents = 'none';
             } else {
-                // Reveal phase
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            }
+        }
+
+        // --- Hide aurora/particles after hero ---
+        const heroAurora = document.querySelector('.hero-aurora');
+        const particleCanvas = document.getElementById('particle-canvas');
+        const fadeProg = Math.max(0, Math.min(1, (progress - 0.8) / 0.2));
+        if (heroAurora) heroAurora.style.opacity = String(0.1 * (1 - fadeProg));
+        if (particleCanvas) particleCanvas.style.opacity = String(1 - fadeProg);
+
+        // ============================
+        // Phase 1 (0–0.06): Text at rest
+        // Phase 2 (0.06–0.58): Letters fly outward toward viewer
+        // Phase 3 (0.58–1.0): Hero reveal active
+        // ============================
+        if (prefersReducedMotion) {
+            // Gentle cross-fade for reduced motion users
+            if (progress < 0.3) {
+                kineticText.style.visibility = 'visible';
+                kineticText.style.opacity = String(1 - progress / 0.3);
+                heroRevealed.classList.remove('active');
+            } else {
                 kineticText.style.visibility = 'hidden';
                 kineticText.style.opacity = '0';
                 heroRevealed.classList.add('active');
             }
+            return;
         }
 
-        window.addEventListener('scroll', updateHeroOnScroll, { passive: true });
-        // Run once on load
-        updateHeroOnScroll();
+        if (progress <= 0.06) {
+            // Text at rest, visible
+            kineticText.style.visibility = 'visible';
+            kineticText.style.opacity = '1';
+            letters.forEach(letter => {
+                letter.style.transform = 'translate3d(0, 0, 0) scale(1)';
+                letter.style.webkitTransform = 'translate3d(0, 0, 0) scale(1)';
+                letter.style.opacity = '1';
+            });
+            heroRevealed.classList.remove('active');
 
-    } else {
-        kineticText.style.display = 'none';
-        heroRevealed.classList.add('active');
-        if (scrollIndicator) scrollIndicator.style.display = 'none';
+        } else if (progress <= 0.58) {
+            // Fly-through phase
+            kineticText.style.visibility = 'visible';
+            const flyProg = (progress - 0.06) / 0.52; // 0→1
+            const isMobile = window.innerWidth <= 768;
+
+            letters.forEach((letter, i) => {
+                const stagger = i * 0.035;
+                const local = Math.max(0, Math.min(1, (flyProg - stagger) / (1 - stagger * 0.4)));
+
+                // Smooth cubic acceleration
+                const eased = local * local * (3 - 2 * local);
+
+                // Safe z translation (well below 800px perspective)
+                const z = eased * 460;
+                // Scale delivers the dramatic "rushing past the viewer" effect across all mobile GPUs
+                const scale = 1 + eased * (isMobile ? 3.6 : 5.4);
+                const dx = parseFloat(letter.dataset.dx) * (1 + eased * 1.5);
+                const dy = parseFloat(letter.dataset.dy) * (1 + eased * 1.5);
+
+                // Opacity: crystal clear for first 35%, then smooth fade-out
+                const opacity = local < 0.35 ? 1 : Math.max(0, 1 - (local - 0.35) / 0.65);
+
+                const transformStr = `translate3d(${dx.toFixed(1)}px, ${dy.toFixed(1)}px, ${z.toFixed(1)}px) scale(${scale.toFixed(2)})`;
+                letter.style.transform = transformStr;
+                letter.style.webkitTransform = transformStr;
+                letter.style.opacity = opacity.toFixed(2);
+            });
+
+            heroRevealed.classList.remove('active');
+
+        } else {
+            // Reveal phase
+            kineticText.style.visibility = 'hidden';
+            kineticText.style.opacity = '0';
+            const wasActive = heroRevealed.classList.contains('active');
+            heroRevealed.classList.add('active');
+            if (!wasActive && typeof resizeHeroWaveFn === 'function') {
+                resizeHeroWaveFn();
+            }
+        }
     }
+
+    // High performance RAF scroll listener
+    let ticking = false;
+    function requestHeroUpdate() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                updateHeroOnScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestHeroUpdate, { passive: true });
+    window.addEventListener('resize', requestHeroUpdate, { passive: true });
+    window.addEventListener('orientationchange', requestHeroUpdate, { passive: true });
+
+    // Initial trigger on load
+    updateHeroOnScroll();
 
     // ========================================
     // 2. NAVIGATION — Scroll-aware
@@ -118,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('nav');
 
     function updateNav() {
-        nav.classList.toggle('scrolled', window.scrollY > 60);
+        if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
     }
 
     window.addEventListener('scroll', updateNav, { passive: true });
@@ -128,17 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
             const href = anchor.getAttribute('href');
-            if (href === '#') return;
+            if (href === '#' || !href) return;
             e.preventDefault();
             const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
 
     // ========================================
     // 3. SCROLL REVEAL — Intersection Observer
     // ========================================
-    if (!prefersReducedMotion) {
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -146,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+        }, { rootMargin: '0px 0px -20px 0px', threshold: 0.05 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     } else {
@@ -160,7 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (particleCanvas && !prefersReducedMotion) {
         const ctx = particleCanvas.getContext('2d');
         const particles = [];
-        const COUNT = 40;
+        const isMobile = window.innerWidth <= 768;
+        const COUNT = isMobile ? 18 : 36;
 
         function resizeCanvas() {
             particleCanvas.width = window.innerWidth;
@@ -198,16 +264,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Faint connections
+            const maxDistSq = isMobile ? 6400 : 10000;
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distSq = dx * dx + dy * dy;
-                    if (distSq < 10000) { // 100px
+                    if (distSq < maxDistSq) {
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(136, 192, 208, ${0.03 * (1 - distSq / 10000)})`;
+                        ctx.strokeStyle = `rgba(136, 192, 208, ${0.03 * (1 - distSq / maxDistSq)})`;
                         ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
@@ -227,25 +294,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const hCtx = heroWaveCanvas.getContext('2d');
         let time = 0;
 
-        function resizeHeroWave() {
+        resizeHeroWaveFn = function() {
             const dpr = window.devicePixelRatio || 1;
             const rect = heroWaveCanvas.getBoundingClientRect();
-            heroWaveCanvas.width = rect.width * dpr;
-            heroWaveCanvas.height = rect.height * dpr;
+            const w = rect.width || heroWaveCanvas.clientWidth || 300;
+            const h = rect.height || heroWaveCanvas.clientHeight || 70;
+            heroWaveCanvas.width = Math.round(w * dpr);
+            heroWaveCanvas.height = Math.round(h * dpr);
+            hCtx.setTransform(1, 0, 0, 1, 0, 0);
             hCtx.scale(dpr, dpr);
-        }
-        window.addEventListener('resize', resizeHeroWave);
-        resizeHeroWave();
+        };
+        window.addEventListener('resize', resizeHeroWaveFn);
+        resizeHeroWaveFn();
 
         function drawWave() {
-            const w = heroWaveCanvas.getBoundingClientRect().width;
-            const h = heroWaveCanvas.getBoundingClientRect().height;
+            const rect = heroWaveCanvas.getBoundingClientRect();
+            const w = rect.width || heroWaveCanvas.clientWidth || 300;
+            const h = rect.height || heroWaveCanvas.clientHeight || 70;
             hCtx.clearRect(0, 0, w, h);
 
             const center = h / 2;
             const waves = [
-                { amp: h * 0.22, freq: 0.012, speed: 2, color: 'rgba(136, 192, 208, 0.35)', lw: 1.5 },
-                { amp: h * 0.15, freq: 0.02, speed: 3.2, color: 'rgba(129, 161, 193, 0.2)', lw: 1 },
+                { amp: h * 0.22, freq: 0.012, speed: 2, color: 'rgba(136, 192, 208, 0.4)', lw: 1.5 },
+                { amp: h * 0.15, freq: 0.02, speed: 3.2, color: 'rgba(129, 161, 193, 0.25)', lw: 1 },
             ];
 
             waves.forEach(wave => {
@@ -281,13 +352,17 @@ document.addEventListener('DOMContentLoaded', () => {
             [beforeCanvas, afterCanvas].forEach(c => {
                 const dpr = window.devicePixelRatio || 1;
                 const rect = c.getBoundingClientRect();
-                c.width = rect.width * dpr;
-                c.height = rect.height * dpr;
-                c.getContext('2d').scale(dpr, dpr);
+                const w = rect.width || c.clientWidth || 300;
+                const h = rect.height || c.clientHeight || 80;
+                c.width = Math.round(w * dpr);
+                c.height = Math.round(h * dpr);
+                const ctx = c.getContext('2d');
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.scale(dpr, dpr);
             });
         }
 
-        const len = 120;
+        const len = 100;
         const data = [];
         for (let i = 0; i < len; i++) {
             const cluster = Math.sin(i * 0.08) * 0.3 + 0.5;
@@ -295,8 +370,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function draw(ctx, canvas, after) {
-            const w = canvas.getBoundingClientRect().width;
-            const h = canvas.getBoundingClientRect().height;
+            const rect = canvas.getBoundingClientRect();
+            const w = rect.width || canvas.clientWidth || 300;
+            const h = rect.height || canvas.clientHeight || 80;
             ctx.clearRect(0, 0, w, h);
 
             const barW = w / len;
@@ -308,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let color;
 
                 if (after) {
-                    const silent = (i > 22 && i < 30) || (i > 50 && i < 62) || (i > 82 && i < 95);
+                    const silent = (i > 18 && i < 26) || (i > 42 && i < 54) || (i > 70 && i < 82);
                     if (silent) {
                         amp = 1;
                         color = 'rgba(76, 86, 106, 0.2)';

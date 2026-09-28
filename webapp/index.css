@@ -52,11 +52,18 @@ html {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
     line-height: 1.7;
+}
+
+@supports not (overflow-x: clip) {
+    html, body {
+        overflow-x: hidden;
+    }
 }
 
 /* --- Scrollbar --- */
@@ -246,9 +253,16 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
    ====================== */
 .hero-section {
     position: relative;
-    /* Tall section: 250vh gives scroll room for the animation */
-    height: 250vh;
-    overflow: hidden;
+    /* Desktop: 230vh gives smooth scroll travel */
+    height: 230vh;
+    /* Do NOT set overflow: hidden on .hero-section as it breaks position: sticky on iOS Safari and mobile */
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        /* Mobile: 160vh gives exactly 1-2 natural thumb swipes */
+        height: 160vh;
+    }
 }
 
 /* Aurora */
@@ -271,6 +285,7 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     opacity: 0.1;
     z-index: 0;
     pointer-events: none;
+    will-change: transform;
 }
 
 @keyframes aurora {
@@ -285,39 +300,82 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     left: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     z-index: 1;
     pointer-events: none;
 }
 
 /* Sticky container holds the kinetic text centered on screen */
 .hero-sticky {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
     perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective-origin: center center;
+    -webkit-perspective-origin: center center;
+    overflow: hidden; /* Clips letters safely inside viewport so no horizontal scrollbars occur */
+    contain: layout paint;
 }
 
 /* Kinetic text */
 .kinetic-text {
-    font-size: clamp(3rem, 11vw, 9rem);
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 11vw, 8.5rem);
+    font-weight: 700;
     color: var(--nord6);
     display: flex;
     justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     line-height: 1;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
     will-change: transform, opacity;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 5;
+    transition: opacity 0.3s ease;
 }
 
 .kinetic-text .letter {
     display: inline-block;
     will-change: transform, opacity;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    animation: letterIntro 0.7s var(--ease-out-expo) backwards;
+    animation-delay: calc(var(--i, 0) * 0.05s + 0.08s);
+}
+
+@keyframes letterIntro {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 24px, -80px) scale(0.92);
+        -webkit-transform: translate3d(0, 24px, -80px) scale(0.92);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
 }
 
 /* Revealed content */
@@ -325,36 +383,44 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.95);
+    -webkit-transform: translate(-50%, -50%) scale(0.95);
     opacity: 0;
     pointer-events: none;
     width: 100%;
+    max-width: 580px;
+    padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    -webkit-transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), -webkit-transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 6;
 }
 
 .hero-revealed.active {
     opacity: 1;
     pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
 }
 
 .hero-tagline {
     font-family: var(--font-display);
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     font-weight: 400;
     color: var(--nord5);
     max-width: 550px;
     text-align: center;
     padding: 0 1rem;
+    line-height: 1.4;
 }
 
 .hero-waveform {
-    width: min(350px, 80vw);
+    width: min(340px, 80vw);
     height: 70px;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 /* Scroll indicator */
@@ -363,14 +429,24 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
-    opacity: 0.4;
-    transition: opacity 0.4s;
+    -webkit-transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0.6;
+    transition: opacity 0.35s ease, transform 0.25s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.scroll-indicator.hidden {
-    opacity: 0;
-    pointer-events: none;
+.scroll-indicator:hover, .scroll-indicator:focus-visible {
+    opacity: 0.95;
+    transform: translateX(-50%) translateY(2px);
+    -webkit-transform: translateX(-50%) translateY(2px);
 }
 
 .scroll-mouse {
@@ -389,6 +465,19 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     background: var(--nord8);
     border-radius: 2px;
     animation: scrollPulse 2s infinite;
+}
+
+.scroll-touch {
+    display: none;
+    color: var(--nord8);
+}
+
+.scroll-hint {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--nord4);
+    font-family: var(--font-body);
 }
 
 @keyframes scrollPulse {
@@ -769,24 +858,80 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     html { scroll-behavior: auto; }
     .hero-aurora { animation: none !important; }
     .hero-section { height: auto; min-height: 100vh; }
-    .hero-revealed { opacity: 1 !important; pointer-events: auto !important; }
-    .kinetic-text { display: none; }
-    .scroll-indicator { display: none; }
+    .hero-revealed { opacity: 1 !important; pointer-events: auto !important; position: static !important; transform: none !important; margin: 3rem 0; }
+    .kinetic-text { position: static !important; transform: none !important; margin: 2rem 0; display: block !important; }
+    .kinetic-text .letter { animation: none !important; transform: none !important; opacity: 1 !important; }
+    .scroll-indicator { display: none !important; }
     .reveal { opacity: 1 !important; transform: none !important; }
-    .particle-canvas { display: none; }
+    .particle-canvas { display: none !important; }
 }
 
 /* ======================
-   MOBILE
+   MOBILE OPTIMIZATIONS
    ====================== */
 @media (max-width: 768px) {
     .nav-links a:not(.nav-cta) { display: none; }
+    
+    .hero-section {
+        height: 160vh;
+    }
+    
+    .kinetic-text {
+        font-size: clamp(2.6rem, 13vw, 4.8rem);
+        letter-spacing: -0.02em;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+        padding: 0 0.5rem;
+    }
+
+    .hero-waveform {
+        width: min(290px, 85vw);
+        height: 55px;
+    }
+
+    .scroll-indicator {
+        bottom: 1.2rem;
+    }
+
+    .scroll-mouse {
+        display: none;
+    }
+
+    .scroll-touch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: touchBounce 1.8s ease-in-out infinite;
+    }
+
     .features-section, .steps-section, .demo-section {
         padding: 4rem 1.2rem;
     }
+
     .feature-card { padding: 2rem 1.5rem; }
+}
+
+@keyframes touchBounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(6px);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 480px) {
     html { font-size: 14px; }
+    
+    .kinetic-text {
+        font-size: clamp(2.3rem, 13.5vw, 3.8rem);
+    }
+    
+    .hero-revealed {
+        gap: 1.2rem;
+    }
 }
