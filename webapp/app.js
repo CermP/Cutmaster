@@ -645,10 +645,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Beep audio context
     let beepCtx = null;
 
-    function playBeep() {
+    function initBeepContext() {
         if (!beepToggle.checked) return;
         try {
             if (!beepCtx) beepCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (beepCtx.state === 'suspended') beepCtx.resume();
+        } catch (e) {}
+    }
+
+    function playBeep() {
+        if (!beepToggle.checked) return;
+        try {
+            if (!beepCtx) initBeepContext();
+            if (beepCtx.state === 'suspended') beepCtx.resume();
+            
             const osc = beepCtx.createOscillator();
             const gain = beepCtx.createGain();
             osc.connect(gain);
@@ -662,13 +672,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (e) {}
     }
 
+    let isRecordingIntended = false;
+
     // MediaRecorder functions
     async function startRecording(segmentIndex) {
         if (!micRecordToggle.checked) return;
+        isRecordingIntended = true;
         try {
             if (!audioStream) {
                 audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
             }
+            if (!isRecordingIntended || !shadIsPlaying) return;
+
             recordedChunks = [];
             const mimeType = (typeof MediaRecorder.isTypeSupported === 'function' && MediaRecorder.isTypeSupported('audio/webm;codecs=opus'))
                 ? 'audio/webm;codecs=opus'
@@ -705,6 +720,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function stopRecording() {
+        isRecordingIntended = false;
         if (mediaRecorder && mediaRecorder.state === 'recording') {
             try {
                 mediaRecorder.stop();
@@ -1513,6 +1529,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stopShadowing();
         } else {
             if (shadCurrentSegmentIndex === -1) shadCurrentSegmentIndex = 0;
+            initBeepContext();
             startShadowing();
         }
     });

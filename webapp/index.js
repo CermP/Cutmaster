@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     kineticText.innerHTML = word.split('').map((letter, i) => {
         const rel = (i - centerIdx) / centerIdx; // -1 to +1
         // Letters on left fly left, right fly right, with organic spread
-        const driftX = rel * 160 + (Math.random() - 0.5) * 40;
-        const driftY = (i % 2 === 0 ? -1 : 1) * (35 + Math.random() * 40);
+        const isMobile = window.innerWidth <= 768;
+        const driftX = rel * (isMobile ? 70 : 160) + (Math.random() - 0.5) * (isMobile ? 20 : 40);
+        const driftY = (i % 2 === 0 ? -1 : 1) * (isMobile ? 20 + Math.random() * 20 : 35 + Math.random() * 40);
         return `<span class="letter" data-dx="${driftX.toFixed(1)}" data-dy="${driftY.toFixed(1)}" style="--i:${i}">${letter}</span>`;
     }).join('');
 
@@ -139,9 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const eased = local * local * (3 - 2 * local);
 
                 // Safe z translation (well below 800px perspective)
-                const z = eased * 460;
+                const z = eased * (isMobile ? 180 : 460);
                 // Scale delivers the dramatic "rushing past the viewer" effect across all mobile GPUs
-                const scale = 1 + eased * (isMobile ? 3.6 : 5.4);
+                const scale = 1 + eased * (isMobile ? 2.2 : 5.4);
                 const dx = parseFloat(letter.dataset.dx) * (1 + eased * 1.5);
                 const dy = parseFloat(letter.dataset.dy) * (1 + eased * 1.5);
 
