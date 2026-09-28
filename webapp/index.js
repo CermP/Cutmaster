@@ -80,8 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroAurora = document.querySelector('.hero-aurora');
         const particleCanvas = document.getElementById('particle-canvas');
         const fadeProg = Math.max(0, Math.min(1, (progress - 0.8) / 0.2));
-        if (heroAurora) heroAurora.style.opacity = String(0.1 * (1 - fadeProg));
-        if (particleCanvas) particleCanvas.style.opacity = String(1 - fadeProg);
+        if (heroAurora) {
+            heroAurora.style.opacity = String(0.1 * (1 - fadeProg));
+            heroAurora.style.display = fadeProg >= 1 ? 'none' : 'block';
+        }
+        if (particleCanvas) {
+            particleCanvas.style.opacity = String(1 - fadeProg);
+            particleCanvas.style.display = fadeProg >= 1 ? 'none' : 'block';
+        }
 
         // ============================
         // Phase 1 (0–0.06): Text at rest

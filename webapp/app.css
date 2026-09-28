@@ -86,15 +86,12 @@ h1, h2, h3, h4, h5, h6, .logo {
     font-size: 1.35rem;
     font-weight: 700;
     text-decoration: none;
-    background: linear-gradient(135deg, var(--nord8), var(--nord9) 50%, var(--nord15));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: opacity 0.2s;
+    color: var(--nord6);
+    transition: color 0.2s;
 }
 
 .logo:hover {
-    opacity: 0.9;
+    color: var(--nord8);
 }
 
 .version-tag {
@@ -1725,7 +1722,7 @@ kbd {
 ======================================================== */
 @media (max-width: 820px) {
     .app-container {
-        padding: 1rem 1rem 3rem 1rem;
+        padding: 1rem 1rem calc(3rem + env(safe-area-inset-bottom, 0px)) 1rem;
     }
 
     .app-header {
@@ -1779,6 +1776,6 @@ kbd {
     .toast-container {
         right: 1rem;
         left: 1rem;
-        bottom: 1rem;
+        bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
     }
 }

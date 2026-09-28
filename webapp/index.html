@@ -2,10 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>CutMaster — L'outil ultime d'entraînement oral</title>
     <meta name="description" content="Entraînez votre prononciation avec CutMaster. Alignement texte-audio parfait et outil de découpage intelligent en option.">
-    <meta name="theme-color" content="#2E3440">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,19 +44,19 @@
                     <canvas id="hero-waveform" class="hero-waveform"></canvas>
                     <a href="#features" class="btn btn-primary">Découvrir</a>
                 </div>
-            </div>
 
-            <!-- Scroll indicator (desktop mouse & mobile touch) -->
-            <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Faire défiler pour explorer" tabindex="0">
-                <div class="scroll-mouse" aria-hidden="true">
-                    <div class="scroll-wheel"></div>
+                <!-- Scroll indicator (desktop mouse & mobile touch) inside sticky container -->
+                <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Faire défiler pour explorer" tabindex="0">
+                    <div class="scroll-mouse" aria-hidden="true">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <div class="scroll-touch" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                        </svg>
+                    </div>
+                    <span class="scroll-hint">Défiler</span>
                 </div>
-                <div class="scroll-touch" aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                    </svg>
-                </div>
-                <span class="scroll-hint">Défiler</span>
             </div>
         </section>
 

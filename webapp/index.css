@@ -56,6 +56,9 @@ html {
 }
 
 body {
+    background-color: var(--nord0);
+    min-height: 100vh;
+    min-height: 100dvh;
     overflow-x: clip;
     line-height: 1.7;
 }
@@ -155,6 +158,11 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     font-size: 1.1rem;
     color: var(--nord6);
     text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-logo:hover {
+    color: var(--nord8);
 }
 
 .nav-links {
@@ -423,10 +431,10 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     opacity: 0.7;
 }
 
-/* Scroll indicator */
+/* Scroll indicator (absolute inside hero-sticky to prevent Safari fixed bar artifacts) */
 .scroll-indicator {
-    position: fixed;
-    bottom: 2rem;
+    position: absolute;
+    bottom: max(2rem, calc(env(safe-area-inset-bottom, 0px) + 1.5rem));
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -775,7 +783,7 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
    ====================== */
 .site-footer {
     position: relative;
-    padding: 3rem 2rem;
+    padding: 3rem 2rem calc(3rem + env(safe-area-inset-bottom, 0px)) 2rem;
     background: var(--nord0);
 }
 
@@ -823,6 +831,11 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     color: var(--nord6);
     display: block;
     margin-bottom: 0.2rem;
+    transition: color 0.2s;
+}
+
+.footer-logo:hover {
+    color: var(--nord8);
 }
 
 .footer-tagline {
@@ -892,7 +905,7 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
     }
 
     .scroll-indicator {
-        bottom: 1.2rem;
+        bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1rem));
     }
 
     .scroll-mouse {
