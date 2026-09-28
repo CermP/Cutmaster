@@ -3,58 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CutMaster - Entraînement Oral</title>
+    <title>CutMaster — Entraînement Oral & Découpage Audio</title>
+    <meta name="description" content="Entraînez votre prononciation anglaise avec CutMaster. Alignement texte-audio synchronisé mot à mot, auto-pause adaptative, enregistrement vocal comparatif, gestion des favoris et personnalisation poussée.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
     <div class="app-container">
+        <!-- HEADER -->
         <header class="app-header">
-            <div class="logo">CutMaster</div>
-            
-            <div class="mode-toggle">
-                <button class="mode-btn active" data-target="panel-shadowing">Entraînement</button>
-                <button class="mode-btn" data-target="panel-decoupage">Outil de découpage</button>
+            <div class="header-left">
+                <a href="index.html" class="logo">CutMaster</a>
+                <span class="version-tag">v2.1</span>
             </div>
             
-            <a href="index.html" class="back-link">← Accueil</a>
+            <div class="mode-toggle">
+                <button class="mode-btn active" data-target="panel-shadowing">
+                    <span>🎙️</span> Entraînement
+                </button>
+                <button class="mode-btn" data-target="panel-decoupage">
+                    <span>✂️</span> Outil de découpage
+                </button>
+            </div>
+            
+            <div class="header-right">
+                <button class="icon-btn" id="btn-open-settings" title="Personnaliser l'affichage" aria-label="Paramètres d'affichage">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="btn-open-shortcuts" title="Raccourcis clavier (?)" aria-label="Raccourcis clavier">
+                    <kbd>?</kbd>
+                </button>
+                <a href="index.html" class="back-link" title="Retour à l'accueil">← Accueil</a>
+            </div>
         </header>
 
         <main>
             <!-- PANEL: DECOUPAGE -->
             <section id="panel-decoupage" class="panel">
+                <div class="panel-intro">
+                    <h2>Outil de découpage & espacement intelligent</h2>
+                    <p>Détecte automatiquement les silences et insère des pauses calibrées pour créer vos propres audios d'entraînement au shadowing.</p>
+                </div>
+
                 <div class="drop-zone" id="decoupage-drop-zone">
                     <input type="file" id="decoupage-file" accept="audio/*,video/mp4" hidden>
-                    <p>Glissez un fichier audio ici</p>
-                    <button type="button" class="btn-secondary btn-small" id="decoupage-browse">Parcourir</button>
+                    <div class="drop-zone-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <p class="drop-zone-text">Glissez-déposez un fichier audio ici ou cliquez pour parcourir</p>
+                    <button type="button" class="btn-secondary btn-small" id="decoupage-browse">Parcourir les fichiers</button>
                     <p class="file-name" id="decoupage-file-name"></p>
+                </div>
+
+                <!-- PRESETS DECOUPAGE -->
+                <div class="decoupage-presets-bar">
+                    <span class="preset-label">Préréglages :</span>
+                    <button type="button" class="preset-pill active" data-preset="standard">Standard (700ms / 1.0x)</button>
+                    <button type="button" class="preset-pill" data-preset="slow">Apprenant lent (500ms / 1.5x)</button>
+                    <button type="button" class="preset-pill" data-preset="fast">Rapide (900ms / 0.8x)</button>
                 </div>
 
                 <div class="parameters-row">
                     <div class="param-group">
                         <label for="min-silence">Silence minimum (ms)</label>
-                        <input type="number" id="min-silence" value="700">
+                        <input type="number" id="min-silence" value="700" min="200" max="3000" step="50">
                     </div>
                     <div class="param-group">
                         <label for="thresh-db">Seuil relatif (dB)</label>
-                        <input type="number" id="thresh-db" value="-16">
+                        <input type="number" id="thresh-db" value="-16" min="-60" max="-3" step="1">
                     </div>
                     <div class="param-group">
                         <label for="pause-mult">Multiplicateur de pause</label>
-                        <input type="number" id="pause-mult" value="1.0" step="0.1">
+                        <input type="number" id="pause-mult" value="1.0" min="0.2" max="4.0" step="0.1">
                     </div>
                     <div class="param-group">
                         <label for="export-format">Format d'export</label>
                         <select id="export-format">
-                            <option value="wav">.WAV</option>
-                            <option value="mp3">.MP3</option>
+                            <option value="wav">.WAV (Sans perte)</option>
+                            <option value="mp3">.MP3 (Compressé)</option>
                         </select>
                     </div>
                 </div>
 
-                <button class="btn-primary full-width" id="decoupage-process">Lancer le traitement</button>
+                <button class="btn-primary full-width" id="decoupage-process">⚡ Lancer le traitement du fichier</button>
                 
                 <div class="status-area" id="decoupage-status"></div>
 
@@ -63,8 +103,8 @@
                         <div id="waveform"></div>
                     </div>
                     <div class="result-controls">
-                        <button class="btn-secondary" id="decoupage-play">Play / Pause</button>
-                        <button class="btn-success full-width" id="decoupage-download">Télécharger</button>
+                        <button class="btn-secondary" id="decoupage-play">⏯️ Play / Pause</button>
+                        <button class="btn-success full-width" id="decoupage-download">💾 Télécharger le fichier découpé</button>
                     </div>
                 </div>
             </section>
@@ -74,10 +114,10 @@
                 <!-- SOURCE SELECTION TABS -->
                 <div class="shadowing-source-tabs" id="shadowing-source-tabs">
                     <button class="source-tab active" id="tab-library" data-source="library">
-                        <span>📚</span> Bibliothèque CC-INP (134 textes)
+                        <span>📚</span> Bibliothèque CC-INP (134 textes officiels)
                     </button>
                     <button class="source-tab" id="tab-custom" data-source="custom">
-                        <span>📁</span> Importer mes fichiers
+                        <span>📁</span> Importer mes fichiers (.mp3 + .json)
                     </button>
                 </div>
 
@@ -86,27 +126,28 @@
                     <div class="library-search-row">
                         <div class="search-input-wrap">
                             <span class="search-icon">🔍</span>
-                            <input type="text" id="library-search" placeholder="Rechercher par titre ou numéro (ex: AI, climate, 42)..." autocomplete="off">
+                            <input type="text" id="library-search" placeholder="Rechercher par titre ou numéro (ex: AI, climate, 42, health)..." autocomplete="off">
                             <button id="clear-search" class="clear-search hidden" title="Effacer la recherche">&times;</button>
                         </div>
                     </div>
 
                     <div class="library-select-group">
-                        <label for="library-select">Choisir une leçon :</label>
+                        <label for="library-select">Sélectionner un texte :</label>
                         <select id="library-select" class="library-select">
-                            <option value="">Chargement des textes...</option>
+                            <option value="">Chargement des textes disponibles...</option>
                         </select>
                     </div>
 
                     <div class="lesson-preview-card" id="lesson-preview-card">
                         <div class="preview-header">
                             <span class="preview-badge" id="preview-lesson-num">Texte 1</span>
-                            <h3 class="preview-title" id="preview-lesson-title">10 CANCER-FIGHTING FOODS</h3>
+                            <h3 class="preview-title" id="preview-lesson-title">Chargement...</h3>
                         </div>
                         <div class="preview-meta">
-                            <span class="meta-tag">⏱️ <span id="preview-lesson-duration">3m 29s</span></span>
-                            <span class="meta-tag">📝 <span id="preview-lesson-words">459 mots</span></span>
-                            <span class="meta-tag">🎓 Annales Anglais</span>
+                            <span class="meta-tag">⏱️ <span id="preview-lesson-duration">--:--</span></span>
+                            <span class="meta-tag">📝 <span id="preview-lesson-words">-- mots</span></span>
+                            <span class="meta-tag">🎓 Annales CC-INP Anglais</span>
+                            <span class="meta-tag">🎯 Alignement mot à mot</span>
                         </div>
                         <button class="btn-primary full-width" id="library-start-btn">
                             🚀 Charger et Commencer l'entraînement
@@ -116,70 +157,336 @@
 
                 <!-- SOURCE: IMPORT MANUEL -->
                 <div class="source-container hidden" id="source-custom">
+                    <div class="upload-instructions">
+                        <p>Importez un fichier audio (.mp3 ou .wav) et son fichier JSON de synchronisation généré par WhisperX ou CutMaster Sync.</p>
+                    </div>
                     <div class="upload-row">
                         <div class="upload-group">
-                            <label for="shadowing-audio">Fichier Audio (.mp3)</label>
+                            <label for="shadowing-audio">Fichier Audio (.mp3, .wav)</label>
                             <input type="file" id="shadowing-audio" accept="audio/*">
                         </div>
                         <div class="upload-group">
-                            <label for="shadowing-json">Fichier de Synchro (.json)</label>
+                            <label for="shadowing-json">Fichier de Synchronisation (.json)</label>
                             <input type="file" id="shadowing-json" accept=".json,application/json">
                         </div>
-                        <button class="btn-secondary align-bottom" id="shadowing-load">Charger</button>
+                        <button class="btn-secondary align-bottom" id="shadowing-load">Charger le projet</button>
                     </div>
                 </div>
 
+                <!-- PLAYER CONTROLS (shown after loading) -->
                 <div class="shadowing-controls hidden" id="shadowing-controls-bar">
+                    <!-- ACTIVE LESSON BANNER -->
                     <div class="active-lesson-banner" id="active-lesson-banner">
                         <div class="active-lesson-info">
                             <span class="active-badge" id="active-lesson-num">Texte 1</span>
-                            <span class="active-title" id="active-lesson-title">10 CANCER-FIGHTING FOODS</span>
+                            <span class="active-title" id="active-lesson-title">Titre</span>
                         </div>
                         <div class="active-lesson-actions">
-                            <button class="btn-nav" id="prev-lesson-btn" title="Texte précédent">⬅️ Précédent</button>
-                            <button class="btn-nav" id="next-lesson-btn" title="Texte suivant">Suivant ➡️</button>
-                            <button class="btn-nav btn-outline" id="change-lesson-btn" title="Changer de texte">📋 Liste</button>
+                            <button class="btn-nav" id="prev-lesson-btn" title="Texte précédent (Flèche Haut)">⏮️ Précédent</button>
+                            <button class="btn-nav" id="next-lesson-btn" title="Texte suivant (Flèche Bas)">Suivant ⏭️</button>
+                            <button class="btn-nav btn-star-filter" id="filter-starred-btn" title="Afficher uniquement les segments favoris">
+                                <span class="star-icon">⭐</span> <span id="filter-starred-count">0</span>
+                            </button>
+                            <button class="btn-nav btn-outline" id="change-lesson-btn" title="Revenir au choix des textes">📋 Liste</button>
                         </div>
                     </div>
 
-                    <div class="controls-action-row">
-                        <button class="btn-primary" id="shadowing-play">Play</button>
-                        
-                        <div class="segment-control">
-                            <button class="seg-btn active" data-granularity="sentence">Phrases</button>
-                            <button class="seg-btn" data-granularity="comma">Virgules</button>
-                            <button class="seg-btn" data-granularity="word">Mots</button>
+                    <!-- LESSON TIMELINE / SCRUBBER -->
+                    <div class="timeline-container" id="timeline-container" title="Cliquer pour naviguer dans l'audio">
+                        <div class="timeline-track" id="timeline-track">
+                            <div class="timeline-progress" id="timeline-progress"></div>
+                            <div class="timeline-thumb" id="timeline-thumb"></div>
                         </div>
-                        
-                        <div class="pause-control">
-                            <label for="shadowing-pause-mult">Pause (x)</label>
-                            <input type="range" id="shadowing-pause-mult" min="1" max="4" step="0.1" value="2">
-                            <span id="shadowing-pause-val">2.0</span>
+                        <div class="timeline-meta">
+                            <span class="timeline-time" id="time-current">0:00</span>
+                            <span class="timeline-segment-info">Segment <strong id="segment-current">0</strong> / <span id="segment-total">0</span></span>
+                            <span class="timeline-time" id="time-total">0:00</span>
+                        </div>
+                    </div>
+
+                    <!-- MAIN PLAY ROW -->
+                    <div class="controls-main-row">
+                        <button class="btn-secondary btn-icon-only" id="prev-seg-btn" title="Segment précédent (←)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="19,20 9,12 19,4"/>
+                                <line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+
+                        <button class="btn-play" id="shadowing-play" title="Play / Pause (Espace)">
+                            <svg class="play-icon" id="play-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,3 19,12 5,21"/>
+                            </svg>
+                            <svg class="pause-icon hidden" id="pause-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="6" y="4" width="4" height="16"/>
+                                <rect x="14" y="4" width="4" height="16"/>
+                            </svg>
+                            <span id="play-btn-label">Démarrer</span>
+                        </button>
+
+                        <button class="btn-secondary btn-icon-only" id="replay-seg-btn" title="Rejouer le segment actuel (R)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="1 4 1 10 7 10"></polyline>
+                                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                            </svg>
+                        </button>
+
+                        <button class="btn-secondary btn-icon-only" id="next-seg-btn" title="Segment suivant (→)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,4 15,12 5,20"/>
+                                <line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </button>
+
+                        <button class="btn-star-current" id="star-current-btn" title="Ajouter ce segment aux favoris (S)">
+                            <span class="star-icon">☆</span>
+                        </button>
+                    </div>
+
+                    <!-- CONTROLS ROW 1: RYTHME ET VITESSE -->
+                    <div class="controls-action-row">
+                        <!-- Granularity -->
+                        <div class="control-card">
+                            <span class="control-label">Découpage</span>
+                            <div class="segment-control">
+                                <button class="seg-btn active" data-granularity="sentence">Phrases</button>
+                                <button class="seg-btn" data-granularity="comma">Virgules</button>
+                                <button class="seg-btn" data-granularity="word">Mots</button>
+                            </div>
                         </div>
 
-                        <div class="toggle-group">
-                            <label for="auto-pause-toggle">Auto-pause</label>
-                            <label class="switch">
+                        <!-- Speed Slider + Quick Pills -->
+                        <div class="control-card speed-card">
+                            <div class="control-label-row">
+                                <span class="control-label">Vitesse</span>
+                                <span class="control-value-pill" id="shadowing-speed-val">1.0x</span>
+                            </div>
+                            <div class="speed-slider-wrap">
+                                <input type="range" id="shadowing-speed" min="0.5" max="2.0" step="0.05" value="1.0">
+                            </div>
+                            <div class="speed-pills">
+                                <button type="button" class="speed-pill" data-speed="0.75">0.75x</button>
+                                <button type="button" class="speed-pill active" data-speed="1.0">1.0x</button>
+                                <button type="button" class="speed-pill" data-speed="1.25">1.25x</button>
+                                <button type="button" class="speed-pill" data-speed="1.5">1.5x</button>
+                            </div>
+                        </div>
+
+                        <!-- Pause Multiplier -->
+                        <div class="control-card">
+                            <div class="control-label-row">
+                                <span class="control-label">Pause</span>
+                                <span class="control-value-pill" id="shadowing-pause-val">2.0x</span>
+                            </div>
+                            <input type="range" id="shadowing-pause-mult" min="0.5" max="4.0" step="0.1" value="2.0">
+                        </div>
+
+                        <!-- Prep Time -->
+                        <div class="control-card">
+                            <div class="control-label-row">
+                                <span class="control-label">Prépa</span>
+                                <span class="control-value-pill" id="shadowing-prep-val">1.0s</span>
+                            </div>
+                            <input type="range" id="shadowing-prep-time" min="0" max="3.0" step="0.5" value="1.0">
+                        </div>
+                    </div>
+
+                    <!-- CONTROLS ROW 2: MODES & OPTIONS -->
+                    <div class="controls-toggle-row">
+                        <!-- Auto-Pause Toggle -->
+                        <div class="toggle-pill-group">
+                            <label class="switch-toggle" for="auto-pause-toggle">
                                 <input type="checkbox" id="auto-pause-toggle" checked>
-                                <span class="slider"></span>
+                                <span class="switch-slider"></span>
+                                <span class="toggle-text">Auto-pause</span>
+                            </label>
+                        </div>
+
+                        <!-- Loop Mode Pills (Off / x2 / x3 / Infini) -->
+                        <div class="loop-mode-group">
+                            <span class="group-label">Boucle :</span>
+                            <div class="loop-pills" id="loop-pills">
+                                <button type="button" class="loop-pill active" data-loop="0" title="Pas de boucle">Off</button>
+                                <button type="button" class="loop-pill" data-loop="2" title="Répéter 2 fois chaque segment">x2</button>
+                                <button type="button" class="loop-pill" data-loop="3" title="Répéter 3 fois chaque segment">x3</button>
+                                <button type="button" class="loop-pill" data-loop="-1" title="Boucle infinie sur le segment">∞</button>
+                            </div>
+                        </div>
+
+                        <!-- Hide Text Toggle -->
+                        <div class="toggle-pill-group">
+                            <label class="switch-toggle" for="hide-text-toggle">
+                                <input type="checkbox" id="hide-text-toggle">
+                                <span class="switch-slider"></span>
+                                <span class="toggle-text" title="Entraînement à l'aveugle (raccourci H)">Masquer texte</span>
+                            </label>
+                        </div>
+
+                        <!-- Beep Notification Toggle -->
+                        <div class="toggle-pill-group">
+                            <label class="switch-toggle" for="beep-toggle">
+                                <input type="checkbox" id="beep-toggle">
+                                <span class="switch-slider"></span>
+                                <span class="toggle-text" title="Signal sonore avant la phase d'élocution">Bip</span>
+                            </label>
+                        </div>
+
+                        <!-- Mic Recording Toggle -->
+                        <div class="toggle-pill-group">
+                            <label class="switch-toggle mic-toggle" for="mic-record-toggle">
+                                <input type="checkbox" id="mic-record-toggle">
+                                <span class="switch-slider"></span>
+                                <span class="toggle-text" title="Enregistrer ma voix pendant la pause pour me comparer">🎙️ S'enregistrer</span>
                             </label>
                         </div>
                     </div>
                 </div>
 
+                <!-- DYNAMIC STATUS & FEEDBACK BAR -->
                 <div class="shadowing-status hidden" id="shadowing-status">
-                    <span class="status-text" id="shadowing-status-text">Prêt</span>
+                    <div class="status-inner">
+                        <div class="status-icon-wrap" id="status-icon-wrap">
+                            <span class="status-icon" id="status-icon">🎧</span>
+                        </div>
+                        <span class="status-text" id="shadowing-status-text">Prêt à démarrer</span>
+                        <span class="countdown-timer hidden" id="countdown-timer">0.0s</span>
+                    </div>
+
+                    <!-- Comparison audio players when user has recorded their voice -->
+                    <div class="comparison-bar hidden" id="comparison-bar">
+                        <span class="comp-label">Comparer :</span>
+                        <button type="button" class="btn-comp" id="comp-play-original">
+                            <span>🔊</span> Original
+                        </button>
+                        <button type="button" class="btn-comp btn-comp-user" id="comp-play-user">
+                            <span>🎙️</span> Ma voix
+                        </button>
+                    </div>
+
                     <div class="progress-bar-container">
                         <div class="progress-bar" id="shadowing-progress"></div>
                     </div>
                 </div>
 
-                <div class="text-display" id="shadowing-text"></div>
+                <!-- TEXT DISPLAY CONTROLS & TRANSCRIPT -->
+                <div class="text-area-card" id="text-area-card">
+                    <div class="text-toolbar">
+                        <div class="toolbar-left">
+                            <span class="toolbar-title">Transcription & Synchronisation</span>
+                            <span class="toolbar-hint">Cliquez sur un segment ou un mot pour l'écouter</span>
+                        </div>
+                        <div class="toolbar-right">
+                            <button type="button" class="toolbar-btn" id="btn-font-decrease" title="Diminuer la taille du texte">A-</button>
+                            <button type="button" class="toolbar-btn" id="btn-font-increase" title="Agrandir la taille du texte">A+</button>
+                            <button type="button" class="toolbar-btn" id="btn-toggle-focus" title="Mode Focus : estompe le reste du texte">🎯 Focus</button>
+                            <button type="button" class="toolbar-btn" id="btn-copy-text" title="Copier tout le texte de la leçon">📋 Copier</button>
+                        </div>
+                    </div>
+
+                    <div class="text-display" id="shadowing-text" tabindex="0" role="region" aria-label="Transcription synchronisée"></div>
+                </div>
+
+                <!-- FOOTER SHORTCUTS QUICK BAR -->
+                <div class="shortcuts-bar" id="shortcuts-bar">
+                    <span class="shortcut-item"><kbd>Espace</kbd> Play/Pause</span>
+                    <span class="shortcut-item"><kbd>←</kbd> / <kbd>→</kbd> Segments</span>
+                    <span class="shortcut-item"><kbd>R</kbd> Rejouer</span>
+                    <span class="shortcut-item"><kbd>S</kbd> Favori ⭐</span>
+                    <span class="shortcut-item"><kbd>H</kbd> Masquer texte</span>
+                    <span class="shortcut-item"><kbd>L</kbd> Boucle</span>
+                    <span class="shortcut-item"><kbd>+/-</kbd> Vitesse</span>
+                    <span class="shortcut-item"><kbd>?</kbd> Aide</span>
+                </div>
 
                 <audio id="shadowing-audio-player" preload="auto" style="display:none;"></audio>
+                <audio id="user-audio-player" preload="auto" style="display:none;"></audio>
             </section>
         </main>
     </div>
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal-overlay hidden" id="settings-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>⚙️ Préférences d'affichage</h3>
+                <button class="modal-close" id="settings-modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-group">
+                    <label>Police de caractère du texte :</label>
+                    <div class="settings-options" id="font-family-options">
+                        <button type="button" class="option-pill active" data-font="font-sans">Moderne (Space Grotesk)</button>
+                        <button type="button" class="option-pill" data-font="font-mono">Code (JetBrains Mono)</button>
+                        <button type="button" class="option-pill" data-font="font-serif">Livre (Newsreader Serif)</button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <label>Taille de police :</label>
+                    <div class="settings-options" id="font-size-options">
+                        <button type="button" class="option-pill" data-size="size-sm">Compact (15px)</button>
+                        <button type="button" class="option-pill active" data-size="size-md">Standard (18px)</button>
+                        <button type="button" class="option-pill" data-size="size-lg">Grand (22px)</button>
+                        <button type="button" class="option-pill" data-size="size-xl">Très grand (26px)</button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <label>Alignement du texte :</label>
+                    <div class="settings-options" id="text-align-options">
+                        <button type="button" class="option-pill active" data-align="align-left">À gauche</button>
+                        <button type="button" class="option-pill" data-align="align-center">Centré</button>
+                        <button type="button" class="option-pill" data-align="align-justify">Justifié</button>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <label class="switch-toggle" for="focus-mode-pref">
+                        <input type="checkbox" id="focus-mode-pref">
+                        <span class="switch-slider"></span>
+                        <span class="toggle-text">Mode Focus automatique (estomper les phrases non actives)</span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="btn-save-settings">Enregistrer les préférences</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- KEYBOARD SHORTCUTS MODAL -->
+    <div class="modal-overlay hidden" id="shortcuts-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>⌨️ Guide des raccourcis clavier</h3>
+                <button class="modal-close" id="shortcuts-modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="shortcuts-table">
+                    <tbody>
+                        <tr><td><kbd>Espace</kbd></td><td>Démarrer / Mettre en pause le shadowing</td></tr>
+                        <tr><td><kbd>→</kbd></td><td>Passer au segment suivant</td></tr>
+                        <tr><td><kbd>←</kbd></td><td>Revenir au segment précédent</td></tr>
+                        <tr><td><kbd>R</kbd></td><td>Rejouer le segment actuel</td></tr>
+                        <tr><td><kbd>S</kbd></td><td>Ajouter / Retirer le segment des favoris (⭐)</td></tr>
+                        <tr><td><kbd>H</kbd></td><td>Masquer / Afficher le texte (entraînement aveugle)</td></tr>
+                        <tr><td><kbd>L</kbd></td><td>Changer le mode de boucle (Off → x2 → x3 → ∞)</td></tr>
+                        <tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>Augmenter / Réduire la vitesse de lecture (±0.1x)</td></tr>
+                        <tr><td><kbd>M</kbd></td><td>Activer / Désactiver l'enregistrement micro</td></tr>
+                        <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Texte précédent / Texte suivant dans la bibliothèque</td></tr>
+                        <tr><td><kbd>?</kbd></td><td>Afficher / Masquer cette fenêtre de raccourcis</td></tr>
+                        <tr><td><kbd>Échap</kbd></td><td>Arrêter la lecture / Fermer les fenêtres</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="btn-close-shortcuts-footer">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
 
     <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>

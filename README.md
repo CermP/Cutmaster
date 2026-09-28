@@ -50,14 +50,21 @@ CutMaster offre une double réponse :
 
 Accessible sans installation depuis n'importe quel navigateur moderne :
 
-- 🗣️ **CutMaster (Entraînement au Shadowing)** :
+- 🗣️ **CutMaster (Entraînement au Shadowing v2.1)** :
   - 📚 **Bibliothèque intégrée (Annales CC-INP)** : Accès direct en un clic aux 134 textes officiels synchronisés mot à mot, avec moteur de recherche instantané, aperçu (durée, nombre de mots) et navigation fluide entre les textes (*Précédent* / *Suivant*).
-  - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` et de synchronisation `.json` tiers.
-  - Découpage dynamique selon 3 niveaux de granularité : **Phrases**, **Virgules** (clauses), ou **Mots**.
-  - Mode **Auto-pause** paramétrable (multiplicateur de durée de pause de 1× à 4×).
-  - Surlignage karaoké en temps réel du texte prononcé.
+  - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` / `.wav` et de synchronisation `.json` tiers.
+  - 🎚️ **Scrubber Audio & Timeline Interactive** : Barre de progression complète avec navigation instantanée au clic sur la timeline ou sur n'importe quel segment.
+  - ⚡ **Contrôle de vitesse dynamique** : Ajustement fluide de 0.5x à 2.0x avec accès rapide par boutons (0.75x, 1.0x, 1.25x, 1.5x) et raccourcis `+` / `-`.
+  - 🔁 **Modes de boucle personnalisés** : Répétez chaque segment 2 fois, 3 fois, ou en boucle infinie (∞) avant d'avancer automatiquement.
+  - 🎙️ **Enregistrement vocal comparatif** : Enregistrez automatiquement votre voix via le microphone pendant la phase "À vous !" et comparez-la directement avec le locuteur natif.
+  - ⭐ **Gestion des Favoris** : Marquez les segments complexes (raccourci `S`) et filtrez votre entraînement uniquement sur vos phrases clés.
+  - 🔍 **Prononciation mot à mot au clic** : Cliquez sur n'importe quel mot du texte pour écouter son extrait audio exact.
+  - 🎨 **Personnalisation typographique & confort de lecture** : Polices au choix (Moderne, Monospace, Livre avec empattement), réglage de taille (A- / A+), alignements et Mode Focus pour estomper les phrases non actives.
+  - ⌨️ **Raccourcis clavier complets** : Contrôlez tout sans la souris (Espace, flèches, R, S, H, L, +/-, M, ?).
+  - 💾 **Sauvegarde automatique locale** : Vos préférences et votre dernière leçon sont conservées dans votre navigateur.
 
 - ✂️ **Option de Découpage Intelligent** :
+  - Préréglages en un clic (Standard, Apprenant lent, Rapide) ou configuration personnalisée.
   - Détection automatique des pauses et des silences pour préparer vos propres fichiers.
   - Insertion de silences proportionnels après chaque phrase pour laisser le temps de répéter.
   - Visualisation en direct de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
@@ -239,12 +246,11 @@ python generate_sync_pdf.py ./audio/ cours.pdf --model medium
 ```
 CutMaster/
 ├── webapp/                   # Application Web statique (GitHub Pages)
-│   ├── index.html            # Landing page interactive avec animations
-│   ├── index.css / index.js  # Styles & moteur de particules/aurora
-│   ├── app.html              # Interface utilisateur (Découpage & Shadowing)
-│   ├── app.css / app.js      # Logique Web Audio API, WaveSurfer & lamejs
-│   ├── shadowing.html        # Vue dédiée au shadowing
-│   └── style.css             # Styles partagés
+│   ├── index.html            # Landing page interactive avec animations aurora & particules
+│   ├── index.css / index.js  # Moteur visuel et animations du landing
+│   ├── app.html              # Interface utilisateur unifiée (Entraînement & Découpage)
+│   ├── app.css / app.js      # Moteur Web Audio API, timeline, MediaRecorder, WaveSurfer & lamejs
+│   └── audio/                # Bibliothèque audio CC-INP (134 textes) et lessons.json
 │
 ├── .github/workflows/        # CI/CD
 │   └── pages.yml             # Déploiement automatique sur GitHub Pages
