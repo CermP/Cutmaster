@@ -69,15 +69,23 @@ Pour les traitements par lot et les fonctionnalités d'analyse avancées :
 
 - ⚡ `advanced_audio.py` :
   - Traitement d'un fichier unique ou d'un dossier complet (mode batch).
+  - **Détection de silence adaptative** : analyse le profil de volume local au lieu d'un seuil global fixe, idéal pour les audios avec bruit de fond.
+  - Fusion automatique des micro-segments (bruits de bouche, clics) pour éviter les faux positifs.
   - Ajustement de la vitesse vocale sans modifier la tonalité/hauteur (filtre `atempo` via FFmpeg).
   - Bips sonores optionnels de fin de phrase pour rythmer l'exercice.
   - Normalisation sonore automatique et fondus croisés (*crossfade*).
+  - Bornes min/max configurables sur la durée des pauses.
 - 🤖 `generate_sync.py` :
   - Transcription automatique avec horodatage mot à mot via **OpenAI Whisper**.
-  - Génération du fichier `.json` directement utilisable dans le module Shadowing.
+  - **Modèle configurable** (`tiny` à `large`, défaut : `medium` pour le meilleur rapport précision/vitesse).
+  - **Langue explicite** et **prompt de contexte** pour guider Whisper sur le domaine/vocabulaire.
+  - **Rapport de qualité automatique** : détecte les mots trop courts/longs, gaps, chevauchements.
+  - Correction automatique des chevauchements temporels entre mots.
 - 📄 `generate_sync_pdf.py` :
   - Extraction de texte officiel depuis un fichier de cours au format PDF (via PyMuPDF).
-  - Alignement exact texte officiel ↔ audio par programmation dynamique et Whisper.
+  - **Alignement amélioré** avec scoring de similarité phonétique (gère les variantes orthographiques).
+  - **Répartition proportionnelle** du temps basée sur l'estimation syllabique (au lieu d'une distribution uniforme).
+  - **Rapport de qualité** : taux d'alignement exact, matches flous, interpolations, confiance moyenne.
 
 ---
 
@@ -165,14 +173,26 @@ pip install openai-whisper pymupdf
 # Exemple simple : fichier unique avec pause x1.5 et bips
 python advanced_audio.py input.mp3 output.mp3 --pause-mult 1.5 --beep --normalize
 
-# Exemple en mode batch sur tout un dossier
-python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pause-mult 2.0
+# Mode adaptatif pour audio avec bruit de fond
+python advanced_audio.py input.mp3 output.mp3 --adaptive --min-chunk 500 --pause-mult 2.0
+
+# Mode batch sur tout un dossier avec bornes de pause
+python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pause-mult 2.0 --min-pause 1000 --max-pause 8000
 ```
 
-**Options disponibles :**
+**Options de détection de silence :**
 - `--min-silence <ms>` : Durée minimale pour considérer un silence (défaut : 700 ms).
 - `--thresh <dB>` : Seuil de détection du silence relatif au volume moyen (défaut : -16 dB).
+- `--keep-silence <ms>` : Silence naturel conservé au début/fin de chaque segment (défaut : 250 ms).
+- `--adaptive` : Active le seuil adaptatif basé sur le profil de volume local (recommandé pour les audios bruités).
+- `--min-chunk <ms>` : Durée minimale d'un segment valide — les micro-segments sont fusionnés (défaut : 300 ms).
+
+**Options de pause :**
 - `--pause-mult <ratio>` : Multiplicateur du temps de silence inséré (ex: 2.0 pour doubler la pause).
+- `--min-pause <ms>` : Durée minimale de la pause insérée (défaut : 0).
+- `--max-pause <ms>` : Durée maximale de la pause insérée (défaut : 0 = pas de max).
+
+**Options audio :**
 - `--speed <vitesse>` : Vitesse de lecture audio sans changer la hauteur de voix (ex: 0.9).
 - `--beep` : Ajoute un signal sonore à la fin de chaque segment.
 - `--normalize` : Égalise les niveaux sonores.
@@ -184,14 +204,32 @@ python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pa
 
 #### À partir de l'audio seul (Whisper)
 ```bash
+# Utilisation simple (modèle medium par défaut)
 python generate_sync.py mon_audio.mp3
-# Génère automatiquement 'mon_audio.json' avec les timestamps mot à mot
+
+# Avec modèle plus précis et prompt de contexte personnalisé
+python generate_sync.py mon_audio.mp3 --model large --prompt "Medical terminology lecture"
+
+# Mode batch sur un dossier
+python generate_sync.py ./dossier/ --model medium --language en
 ```
+
+**Options disponibles :**
+- `--model <nom>` : Modèle Whisper (`tiny`, `base`, `small`, `medium`, `large`, `turbo` — défaut : `medium`).
+- `--language <code>` : Code langue ISO (défaut : `en`). Forcer la langue améliore la précision.
+- `--prompt <texte>` : Prompt de contexte pour guider Whisper (vocabulaire, domaine).
+- `--temperature <float>` : Température de décodage (défaut : 0.0 = déterministe).
 
 #### À partir de l'audio et d'un texte de cours PDF
 ```bash
+# Usage simple
 python generate_sync_pdf.py 1.mp3 cours.pdf
-# Extrait 'Texte 1' du PDF et l'aligne mot à mot sur le fichier 1.mp3
+
+# Avec modèle plus précis
+python generate_sync_pdf.py 42.mp3 annales.pdf --model large --language en
+
+# Mode batch
+python generate_sync_pdf.py ./audio/ cours.pdf --model medium
 ```
 
 ---
