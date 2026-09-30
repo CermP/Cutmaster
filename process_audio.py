@@ -4,7 +4,7 @@ import sys
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
-def process_audio(input_file, output_file, min_silence_len=500, silence_thresh=-16, keep_silence=250, pause_mult=1.0):
+def process_audio(input_file, output_file, min_silence_len=500, silence_thresh=-16, keep_silence=250, pause_mult=1.2):
     print(f"Chargement du fichier '{input_file}'...")
 
     if not os.path.isfile(input_file):
@@ -102,8 +102,8 @@ Exemples :
                         help="Seuil de silence relatif au volume moyen en dB (défaut: -16)")
     parser.add_argument("--keep-silence", type=int, default=250,
                         help="Silence naturel conservé au début/fin de chaque segment en ms (défaut: 250)")
-    parser.add_argument("--pause-mult", type=float, default=1.0,
-                        help="Multiplicateur du temps de pause (défaut: 1.0 = même durée que la phrase)")
+    parser.add_argument("--pause-mult", type=float, default=1.2,
+                        help="Multiplicateur du temps de pause (défaut: 1.2 = 1.2x la durée de la phrase)")
 
     args = parser.parse_args()
 

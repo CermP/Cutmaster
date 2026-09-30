@@ -248,8 +248,8 @@ Exemples :
 
     # ── Pauses
     pause_group = parser.add_argument_group("Pauses")
-    pause_group.add_argument("--pause-mult", type=float, default=1.0,
-                             help="Multiplicateur du temps de pause (ex: 1.5)")
+    pause_group.add_argument("--pause-mult", type=float, default=1.2,
+                             help="Multiplicateur du temps de pause (défaut: 1.2)")
     pause_group.add_argument("--min-pause", type=int, default=0,
                              help="Durée minimale de pause en ms (défaut: 0 = pas de minimum)")
     pause_group.add_argument("--max-pause", type=int, default=0,

@@ -1,64 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>CutMaster — L'outil ultime d'entraînement oral</title>
-    <meta name="description" content="Entraînez votre prononciation avec CutMaster. Alignement texte-audio parfait et outil de découpage intelligent en option.">
+    <meta name="description"
+        content="Entraînez votre prononciation avec CutMaster. Alignement texte-audio parfait et outil de découpage intelligent en option.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 
     <!-- Floating Nav -->
     <nav class="nav" id="nav">
         <a href="#hero" class="nav-logo">CutMaster</a>
         <div class="nav-links">
-            <a href="#features">Outils</a>
-            <a href="#how-it-works">Process</a>
-            <a href="#demo">Démo</a>
             <a href="app.html" class="nav-cta">Lancer →</a>
         </div>
     </nav>
 
     <main>
-        <!-- ========== HERO (tall for scroll-driven animation) ========== -->
+        <!-- ========== HERO ========== -->
         <section id="hero" class="hero-section">
             <!-- Aurora bg -->
             <div class="hero-aurora"></div>
 
-            <!-- Particles -->
-            <canvas id="particle-canvas" class="particle-canvas"></canvas>
-
-            <!-- Sticky inner container for scroll-driven anim -->
-            <div class="hero-sticky">
-                <h1 id="kinetic-text" class="kinetic-text" aria-label="CutMaster" title="Cliquer ou faire défiler pour découvrir" tabindex="0" role="button"></h1>
-
-                <div class="hero-revealed" id="hero-revealed">
-                    <p class="hero-tagline">L'outil d'entraînement oral par excellence : maîtrisez la prononciation et le débit en anglais grâce au Shadowing synchronisé mot à mot.</p>
-                    <canvas id="hero-waveform" class="hero-waveform"></canvas>
-                    <div class="hero-actions">
-                        <a href="app.html" class="btn btn-primary btn-lg">Démarrer l'entraînement →</a>
-                        <a href="#features" class="btn btn-flat">Explorer les fonctionnalités</a>
-                    </div>
-                </div>
-
-                <!-- Scroll indicator (desktop mouse & mobile touch) inside sticky container -->
-                <div class="scroll-indicator" id="scroll-indicator" role="button" aria-label="Faire défiler pour explorer" tabindex="0">
-                    <div class="scroll-mouse" aria-hidden="true">
-                        <div class="scroll-wheel"></div>
-                    </div>
-                    <div class="scroll-touch" aria-hidden="true">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-                        </svg>
-                    </div>
-                    <span class="scroll-hint">Défiler</span>
+            <div class="hero-content">
+                <h1 class="hero-title">CutMaster</h1>
+                <p class="hero-tagline">L'outil d'entraînement oral par excellence : maîtrisez la prononciation et le
+                    débit en anglais grâce à l'écoute et la répétition.</p>
+                <canvas id="hero-waveform" class="hero-waveform"></canvas>
+                <div class="hero-actions">
+                    <a href="app.html" class="btn btn-primary btn-lg">Démarrer →</a>
                 </div>
             </div>
         </section>
@@ -66,45 +48,51 @@
         <!-- ========== FEATURES ========== -->
         <section id="features" class="features-section">
             <div class="section-header reveal">
-                <span class="section-label">Méthode & Outils</span>
                 <h2 class="section-title">L'entraînement ciblé.<br>Zéro distraction.</h2>
-                <p class="section-subtitle">Conçu spécifiquement pour les candidats aux oraux de concours (CC-INP) et les apprenants exigeants.</p>
+                <p class="section-subtitle">Conçu spécifiquement pour les candidats s'entraînant aux oraux de concours
+                    (CC-INP) et
+                    les apprenants exigeants.</p>
             </div>
 
             <div class="cards-container">
                 <article class="feature-card reveal">
                     <div class="icon-ring icon-ring--purple">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            <path d="M8 10h.01M12 10h.01M16 10h.01" />
                         </svg>
                     </div>
-                    <h3>Entraînement au Shadowing</h3>
-                    <p>Répétez à voix haute immédiatement après le locuteur natif. Synchronisation mot à mot en direct, pauses proportionnelles automatiques, boucle réglable et enregistrement au micro pour vous réécouter.</p>
+                    <h3>Entraînement à la prononciation</h3>
+                    <p>Répétez à voix haute immédiatement après l'audio. Les mots sont synchronisés avec l'audio. Les
+                        silences sont calculés automatiquement. Enregistrez-vous et comparez votre prononciation à celle
+                        de l'audio.</p>
                     <div class="tags">
                         <span>134 Textes CC-INP</span>
-                        <span>Karaoké mot à mot</span>
-                        <span>Micro comparatif</span>
                         <span>Boucle infinie ou ciblée</span>
                     </div>
-                    <a href="app.html" class="btn btn-primary">Lancer l'entraînement →</a>
+                    <a href="app.html" class="btn btn-primary">Démarrer l'entraînement →</a>
                 </article>
 
                 <article class="feature-card reveal" style="transition-delay: 0.12s;">
                     <div class="icon-ring">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
-                            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
-                            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
-                            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="6" cy="6" r="3" />
+                            <circle cx="6" cy="18" r="3" />
+                            <line x1="20" y1="4" x2="8.12" y2="15.88" />
+                            <line x1="14.47" y1="14.48" x2="20" y2="20" />
+                            <line x1="8.12" y1="8.12" x2="12" y2="12" />
                         </svg>
                     </div>
                     <h3>Découpage & Espacement Audio</h3>
-                    <p>Préparez vos propres supports de travail en quelques secondes. Détectez automatiquement les pauses de n'importe quel fichier audio et insérez des silences calculés pour la répétition orale.</p>
+                    <p>Prépares tes propres supports de travail en quelques secondes. Détecte les pauses de
+                        n'importe quel fichier audio et insère des silences calculés pour la répétition
+                        orale.</p>
                     <div class="tags">
                         <span>100% dans le navigateur</span>
                         <span>Export WAV & MP3</span>
-                        <span>Presets débutant / avancé</span>
+                        <span>Réglages selon ton niveau</span>
                     </div>
                     <a href="app.html#decoupage" class="btn btn-flat">Découper un fichier</a>
                 </article>
@@ -114,7 +102,6 @@
         <!-- ========== HOW IT WORKS ========== -->
         <section id="how-it-works" class="steps-section">
             <div class="section-header reveal">
-                <span class="section-label">Parcours</span>
                 <h2 class="section-title">Trois étapes.<br>Une progression mesurable.</h2>
             </div>
 
@@ -122,13 +109,14 @@
                 <div class="step reveal">
                     <div class="step-number">01</div>
                     <div class="step-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
                         </svg>
                     </div>
-                    <h3>Choisissez un sujet</h3>
-                    <p>Naviguez parmi les 134 annales officielles ou importez vos fichiers personnalisés.</p>
+                    <h3>Choisi un sujet</h3>
+                    <p>Navigue parmi les 134 audio (+texte) CC-INP ou importe tes propres fichiers.</p>
                 </div>
 
                 <div class="step-line reveal" style="transition-delay: 0.05s;"></div>
@@ -136,13 +124,14 @@
                 <div class="step reveal" style="transition-delay: 0.1s;">
                     <div class="step-number">02</div>
                     <div class="step-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
                         </svg>
                     </div>
-                    <h3>Écoutez & Répétez</h3>
-                    <p>Suivez le mot à mot karaoké, répétez pendant la pause et ajustez la vitesse à volonté.</p>
+                    <h3>Écoute & Répète</h3>
+                    <p>Écoute la manière de prononcer et répète pendant la pause.</p>
                 </div>
 
                 <div class="step-line reveal" style="transition-delay: 0.15s;"></div>
@@ -150,14 +139,16 @@
                 <div class="step reveal" style="transition-delay: 0.2s;">
                     <div class="step-number">03</div>
                     <div class="step-icon-box">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                            <line x1="12" y1="19" x2="12" y2="22"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                            <line x1="12" y1="19" x2="12" y2="22" />
                         </svg>
                     </div>
-                    <h3>Comparez votre voix</h3>
-                    <p>Écoutez votre enregistrement face au natif, marquez les phrases dures en favoris.</p>
+                    <h3>Compare ta voix</h3>
+                    <p>Écoute ton enregistrement face à l'audio et met en favoris les phrases difficiles pour revenir
+                        dessus.</p>
                 </div>
             </div>
         </section>
@@ -165,9 +156,9 @@
         <!-- ========== DEMO ========== -->
         <section id="demo" class="demo-section">
             <div class="section-header reveal">
-                <span class="section-label">Aperçu</span>
                 <h2 class="section-title">L'impact de l'espacement calibré.</h2>
-                <p class="section-subtitle">Détection des phrases et insertion de pauses proportionnelles pour la répétition vocale.</p>
+                <p class="section-subtitle">Détection des phrases et insertion de pauses proportionnelles pour la
+                    répétition.</p>
             </div>
 
             <div class="demo-container reveal">
@@ -177,8 +168,9 @@
                 </div>
 
                 <div class="demo-arrow-container">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </div>
 
@@ -189,7 +181,28 @@
             </div>
 
             <div class="demo-cta reveal" style="transition-delay: 0.1s;">
-                <a href="app.html" class="btn btn-primary btn-lg">Accéder directement à l'application →</a>
+                <a href="app.html" class="btn btn-primary btn-lg">Démarrer l'entraînement →</a>
+            </div>
+        </section>
+
+        <!-- ========== AUTHOR ========== -->
+        <section id="author" class="author-section">
+            <div class="author-container reveal">
+                <h2 class="author-title">Open Source & Gratuit</h2>
+                <p class="author-desc">CutMaster est un projet développé par Merlin Claret. Retrouvez le code source sur
+                    GitHub.</p>
+                <div class="author-actions">
+                    <a href="https://github.com/CermP/Cutmaster" target="_blank" rel="noopener"
+                        class="btn btn-flat btn-sm">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        Voir sur GitHub
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -200,7 +213,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <span class="footer-logo">CutMaster</span>
-                <p class="footer-tagline">Entraînement oral & Shadowing — 2026</p>
+                <p class="footer-tagline">Entraînement oral — 2026</p>
             </div>
             <nav class="footer-nav">
                 <a href="app.html">Entraînement Oral</a>
@@ -212,4 +225,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
