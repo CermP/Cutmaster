@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modeBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.target === targetPanelId));
         panels.forEach(panel => panel.classList.toggle('active', panel.id === targetPanelId));
         
-        if (targetPanelId === 'panel-shadowing' && !viewPlayer.classList.contains('hidden')) {
+        const playerEl = document.getElementById('view-player');
+        if (targetPanelId === 'panel-shadowing' && playerEl && !playerEl.classList.contains('hidden')) {
             document.body.classList.add('training-active');
         } else {
             document.body.classList.remove('training-active');

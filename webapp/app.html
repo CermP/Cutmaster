@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>CutMaster — Entraînement Oral & Découpage Audio</title>
-    <meta name="description" content="Entraînez votre prononciation anglaise avec CutMaster. Alignement texte-audio synchronisé mot à mot, auto-pause adaptative, enregistrement vocal comparatif.">
+    <meta name="description"
+        content="Entraînez votre prononciation anglaise avec CutMaster. Alignement texte-audio synchronisé mot à mot, auto-pause adaptative, enregistrement vocal comparatif.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
 
     <!-- ============================================
@@ -20,13 +25,18 @@
             <a href="index.html" class="topbar-logo" title="Retour à l'accueil">CutMaster</a>
         </div>
         <div class="topbar-tabs">
-            <button class="topbar-tab active" data-target="panel-shadowing" id="tab-mode-shadowing">Entraînement</button>
+            <button class="topbar-tab active" data-target="panel-shadowing"
+                id="tab-mode-shadowing">Entraînement</button>
             <button class="topbar-tab" data-target="panel-decoupage" id="tab-mode-decoupage">Découpage</button>
         </div>
         <div class="topbar-right">
-            <button class="topbar-icon" id="btn-open-shortcuts" title="Raccourcis clavier (?)" aria-label="Raccourcis clavier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            <button class="topbar-icon" id="btn-open-shortcuts" title="Raccourcis clavier (?)"
+                aria-label="Raccourcis clavier">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
                 </svg>
             </button>
         </div>
@@ -46,10 +56,11 @@
                 <div class="drop-zone" id="decoupage-drop-zone">
                     <input type="file" id="decoupage-file" accept="audio/*,video/mp4" hidden>
                     <div class="drop-zone-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                            <polyline points="17 8 12 3 7 8"/>
-                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
                         </svg>
                     </div>
                     <p class="drop-zone-text">Glissez un fichier audio ici</p>
@@ -128,22 +139,38 @@
                 <!-- SOURCE: Library -->
                 <div class="source-container" id="source-library">
                     <div class="search-wrap">
-                        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                        <input type="text" id="library-search" placeholder="Rechercher un texte…" autocomplete="off" aria-label="Rechercher un texte">
-                        <button id="clear-search" class="clear-search hidden" title="Effacer" aria-label="Effacer">&times;</button>
+                        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input type="text" id="library-search" placeholder="Rechercher un texte…" autocomplete="off"
+                            aria-label="Rechercher un texte">
+                        <button id="clear-search" class="clear-search hidden" title="Effacer"
+                            aria-label="Effacer">&times;</button>
                     </div>
 
                     <!-- Empty state -->
                     <div class="empty-state hidden" id="library-empty-state">
                         <p class="empty-state-title">Aucun résultat</p>
                         <p class="empty-state-desc">Essayez un autre mot-clé ou numéro.</p>
-                        <button type="button" class="btn btn--ghost btn--sm" id="btn-reset-search">Réinitialiser</button>
+                        <button type="button" class="btn btn--ghost btn--sm"
+                            id="btn-reset-search">Réinitialiser</button>
                     </div>
 
                     <div id="library-select-group">
                         <div class="select-header">
                             <label for="library-select">Sélectionner un texte</label>
-                            <button type="button" class="btn-inline" id="btn-random-lesson" title="Sujet aléatoire"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:text-bottom; margin-right:4px;"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>Aléatoire</button>
+                            <button type="button" class="btn-inline" id="btn-random-lesson" title="Sujet aléatoire"><svg
+                                    width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    style="vertical-align:text-bottom; margin-right:4px;">
+                                    <polyline points="16 3 21 3 21 8" />
+                                    <line x1="4" y1="20" x2="21" y2="3" />
+                                    <polyline points="21 16 21 21 16 21" />
+                                    <line x1="15" y1="15" x2="21" y2="21" />
+                                    <line x1="4" y1="4" x2="9" y2="9" />
+                                </svg>Aléatoire</button>
                         </div>
                         <select id="library-select" class="select-input" aria-label="Liste des textes">
                             <option value="">Chargement…</option>
@@ -169,7 +196,8 @@
 
                 <!-- SOURCE: Custom import -->
                 <div class="source-container hidden" id="source-custom">
-                    <p class="import-hint">Importez un fichier audio et son JSON de synchronisation (WhisperX / CutMaster Sync).</p>
+                    <p class="import-hint">Importez un fichier audio et son JSON de synchronisation (WhisperX /
+                        CutMaster Sync).</p>
                     <div class="import-row">
                         <div class="import-field">
                             <label for="shadowing-audio">Audio (.mp3, .wav)</label>
@@ -190,8 +218,12 @@
                 <!-- Player top bar with lesson info -->
                 <div class="player-header">
                     <div class="player-lesson-info">
-                        <button class="player-back" id="change-lesson-btn" title="Retour à la bibliothèque" aria-label="Retour à la bibliothèque">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                        <button class="player-back" id="change-lesson-btn" title="Retour à la bibliothèque"
+                            aria-label="Retour à la bibliothèque">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
                         </button>
                         <div class="player-lesson-text">
                             <span class="player-badge" id="active-lesson-num">Texte 1</span>
@@ -200,14 +232,29 @@
                     </div>
                     <div class="player-header-actions">
                         <button class="topbar-icon" id="prev-lesson-btn" title="Texte précédent">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
                         </button>
                         <button class="topbar-icon" id="next-lesson-btn" title="Texte suivant">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <polyline points="9 6 15 12 9 18" />
+                            </svg>
                         </button>
                         <button class="topbar-icon" id="btn-open-settings" title="Réglages" aria-label="Réglages">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="21" x2="4" y2="14" />
+                                <line x1="4" y1="10" x2="4" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="12" />
+                                <line x1="12" y1="8" x2="12" y2="3" />
+                                <line x1="20" y1="21" x2="20" y2="16" />
+                                <line x1="20" y1="12" x2="20" y2="3" />
+                                <line x1="1" y1="14" x2="7" y2="14" />
+                                <line x1="9" y1="8" x2="15" y2="8" />
+                                <line x1="17" y1="16" x2="23" y2="16" />
                             </svg>
                         </button>
                     </div>
@@ -216,7 +263,13 @@
                 <!-- STATUS BAR -->
                 <div class="status-bar" id="shadowing-status">
                     <div class="status-inner">
-                        <span class="status-icon" id="status-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></span>
+                        <span class="status-icon" id="status-icon"><svg width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="inline-icon">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                                <path
+                                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                            </svg></span>
                         <span class="status-text" id="shadowing-status-text">Prêt</span>
                         <span class="countdown hidden" id="countdown-timer">0.0s</span>
                     </div>
@@ -230,37 +283,51 @@
                     <div class="transcript-toolbar">
                         <div class="toolbar-left">
                             <button type="button" class="toolbar-btn" id="btn-font-decrease" title="Réduire">A−</button>
-                            <button type="button" class="toolbar-btn" id="btn-font-increase" title="Agrandir">A+</button>
+                            <button type="button" class="toolbar-btn" id="btn-font-increase"
+                                title="Agrandir">A+</button>
                         </div>
                         <div class="toolbar-right">
-                            <button type="button" class="toolbar-btn" id="btn-toggle-focus" title="Mode focus">Focus</button>
-                            <button type="button" class="toolbar-btn" id="btn-copy-text" title="Copier le texte">Copier</button>
+                            <button type="button" class="toolbar-btn" id="btn-toggle-focus"
+                                title="Mode focus">Focus</button>
+                            <button type="button" class="toolbar-btn" id="btn-copy-text"
+                                title="Copier le texte">Copier</button>
                         </div>
                     </div>
-                    <div class="text-display" id="shadowing-text" tabindex="0" role="region" aria-label="Transcription"></div>
+                    <div class="text-display" id="shadowing-text" tabindex="0" role="region" aria-label="Transcription">
+                    </div>
                 </div>
 
                 <!-- VOICE COMPARISON CARD -->
                 <div class="comparison-card hidden" id="comparison-card">
                     <div class="comp-header">
-                        <span class="comp-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>Enregistrement — <span id="comp-segment-label">Segment 1</span></span>
+                        <span class="comp-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="inline-icon">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" x2="12" y1="19" y2="22" />
+                            </svg>Enregistrement — <span id="comp-segment-label">Segment 1</span></span>
                     </div>
                     <div class="comp-actions">
-                        <button type="button" class="btn btn--ghost btn--sm" id="comp-play-original">Modèle natif</button>
-                        <button type="button" class="btn btn--ghost btn--sm comp-user-btn" id="comp-play-user">Ma voix</button>
+                        <button type="button" class="btn btn--ghost btn--sm" id="comp-play-original">Modèle
+                            natif</button>
+                        <button type="button" class="btn btn--ghost btn--sm comp-user-btn" id="comp-play-user">Ma
+                            voix</button>
                         <button type="button" class="btn btn--ghost btn--sm" id="comp-retry-seg">Réessayer</button>
                     </div>
                 </div>
 
                 <!-- TIMELINE -->
                 <div class="timeline" id="timeline-container" title="Naviguer dans l'audio">
-                    <div class="timeline-track" id="timeline-track" role="slider" tabindex="0" aria-label="Progression" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="timeline-track" id="timeline-track" role="slider" tabindex="0" aria-label="Progression"
+                        aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                         <div class="timeline-progress" id="timeline-progress"></div>
                         <div class="timeline-thumb" id="timeline-thumb"></div>
                     </div>
                     <div class="timeline-meta">
                         <span id="time-current">0:00</span>
-                        <span class="timeline-seg">Segment <strong id="segment-current">0</strong> / <span id="segment-total">0</span></span>
+                        <span class="timeline-seg">Segment <strong id="segment-current">0</strong> / <span
+                                id="segment-total">0</span></span>
                         <span id="time-total">0:00</span>
                     </div>
                 </div>
@@ -268,30 +335,60 @@
                 <!-- ========== DESKTOP CONTROLS (inline, hidden on mobile) ========== -->
                 <div class="desktop-controls" id="desktop-controls">
                     <div class="dc-transport">
-                        <button class="dc-btn" id="prev-seg-btn" title="Segment précédent (←)" aria-label="Segment précédent">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="19,20 9,12 19,4"/><line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
+                        <button class="dc-btn" id="prev-seg-btn" title="Segment précédent (←)"
+                            aria-label="Segment précédent">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="19,20 9,12 19,4" />
+                                <line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2.5" />
+                            </svg>
                         </button>
 
-                        <button class="dc-play" id="shadowing-play" title="Démarrer / Pause (Espace)" aria-label="Démarrer / Pause">
-                            <svg class="play-icon" id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
-                            <svg class="pause-icon hidden" id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        <button class="dc-play" id="shadowing-play" title="Démarrer / Pause (Espace)"
+                            aria-label="Démarrer / Pause">
+                            <svg class="play-icon" id="play-icon" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <polygon points="6,3 20,12 6,21" />
+                            </svg>
+                            <svg class="pause-icon hidden" id="pause-icon" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <rect x="6" y="4" width="4" height="16" />
+                                <rect x="14" y="4" width="4" height="16" />
+                            </svg>
                             <span id="play-btn-label">Démarrer</span>
                         </button>
 
                         <button class="dc-btn" id="replay-seg-btn" title="Rejouer (R)" aria-label="Rejouer">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="1 4 1 10 7 10" />
+                                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                            </svg>
                         </button>
 
-                        <button class="dc-btn" id="next-seg-btn" title="Segment suivant (→)" aria-label="Segment suivant">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,4 15,12 5,20"/><line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
+                        <button class="dc-btn" id="next-seg-btn" title="Segment suivant (→)"
+                            aria-label="Segment suivant">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,4 15,12 5,20" />
+                                <line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2.5" />
+                            </svg>
                         </button>
 
                         <button class="dc-btn dc-star" id="star-current-btn" title="Favori (S)" aria-label="Favori">
-                            <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="inline-icon">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg></span>
                         </button>
 
                         <button class="dc-btn" id="filter-starred-btn" title="Filtrer favoris">
-                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span id="filter-starred-count">0</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="inline-icon">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg></span> <span id="filter-starred-count">0</span>
                         </button>
                     </div>
 
@@ -308,7 +405,8 @@
 
                         <div class="dc-option">
                             <span class="dc-option-label">Vitesse <strong id="shadowing-speed-val">1.00x</strong></span>
-                            <input type="range" id="shadowing-speed" min="0.5" max="2.0" step="0.05" value="1.0" aria-label="Vitesse">
+                            <input type="range" id="shadowing-speed" min="0.5" max="2.0" step="0.05" value="1.0"
+                                aria-label="Vitesse">
                             <div class="speed-pills">
                                 <button type="button" class="speed-pill" data-speed="0.75">0.75</button>
                                 <button type="button" class="speed-pill active" data-speed="1.0">1.0</button>
@@ -319,12 +417,14 @@
 
                         <div class="dc-option">
                             <span class="dc-option-label">Pause <strong id="shadowing-pause-val">1.2x</strong></span>
-                            <input type="range" id="shadowing-pause-mult" min="0.5" max="4.0" step="0.1" value="1.2" aria-label="Pause">
+                            <input type="range" id="shadowing-pause-mult" min="0.5" max="4.0" step="0.1" value="1.2"
+                                aria-label="Pause">
                         </div>
 
                         <div class="dc-option">
                             <span class="dc-option-label">Prépa <strong id="shadowing-prep-val">1.0s</strong></span>
-                            <input type="range" id="shadowing-prep-time" min="0" max="3.0" step="0.5" value="1.0" aria-label="Préparation">
+                            <input type="range" id="shadowing-prep-time" min="0" max="3.0" step="0.5" value="1.0"
+                                aria-label="Préparation">
                         </div>
                     </div>
 
@@ -372,7 +472,12 @@
                         <label class="toggle mic-toggle" for="mic-record-toggle">
                             <input type="checkbox" id="mic-record-toggle">
                             <span class="toggle-track"><span class="toggle-knob"></span></span>
-                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg> Micro</span>
+                            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                    <line x1="12" x2="12" y1="19" y2="22" />
+                                </svg> Micro</span>
                         </label>
                     </div>
 
@@ -393,27 +498,65 @@
                 <div class="mobile-controls" id="mobile-controls">
                     <!-- Floating play button -->
                     <button class="mobile-play" id="mobile-play-btn" aria-label="Démarrer / Pause">
-                        <svg class="mobile-play-icon" id="mobile-play-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
-                        <svg class="mobile-pause-icon hidden" id="mobile-pause-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        <svg class="mobile-play-icon" id="mobile-play-icon" width="28" height="28" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <polygon points="6,3 20,12 6,21" />
+                        </svg>
+                        <svg class="mobile-pause-icon hidden" id="mobile-pause-icon" width="28" height="28"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="6" y="4" width="4" height="16" />
+                            <rect x="14" y="4" width="4" height="16" />
+                        </svg>
                     </button>
 
                     <div class="mobile-bar">
                         <button class="mobile-bar-btn" id="mobile-prev-seg" aria-label="Précédent">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="19,20 9,12 19,4"/><line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="19,20 9,12 19,4" />
+                                <line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2.5" />
+                            </svg>
                         </button>
                         <button class="mobile-bar-btn" id="mobile-replay-seg" aria-label="Rejouer">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="1 4 1 10 7 10" />
+                                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                            </svg>
                         </button>
                         <button class="mobile-bar-btn" id="mobile-next-seg" aria-label="Suivant">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,4 15,12 5,20"/><line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2.5"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="5,4 15,12 5,20" />
+                                <line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2.5" />
+                            </svg>
                         </button>
                         <button class="mobile-bar-btn" id="mobile-star-btn" aria-label="Favori">
-                            <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                            <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="inline-icon">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg></span>
                         </button>
-                        <button class="mobile-bar-btn" id="mobile-mic-btn" aria-label="Micro"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon" style="margin-right: 0;"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></button>
+                        <button class="mobile-bar-btn" id="mobile-mic-btn" aria-label="Micro"><svg width="18"
+                                height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="inline-icon"
+                                style="margin-right: 0;">
+                                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                <line x1="12" x2="12" y1="19" y2="22" />
+                            </svg></button>
                         <button class="mobile-bar-btn" id="mobile-settings-btn" aria-label="Réglages">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="21" x2="4" y2="14" />
+                                <line x1="4" y1="10" x2="4" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="12" />
+                                <line x1="12" y1="8" x2="12" y2="3" />
+                                <line x1="20" y1="21" x2="20" y2="16" />
+                                <line x1="20" y1="12" x2="20" y2="3" />
+                                <line x1="1" y1="14" x2="7" y2="14" />
+                                <line x1="9" y1="8" x2="15" y2="8" />
+                                <line x1="17" y1="16" x2="23" y2="16" />
                             </svg>
                         </button>
                     </div>
@@ -569,7 +712,8 @@
     <!-- ============================================
          SHORTCUTS MODAL
     ============================================ -->
-    <div class="modal-overlay hidden" id="shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcuts-modal-title">
+    <div class="modal-overlay hidden" id="shortcuts-modal" role="dialog" aria-modal="true"
+        aria-labelledby="shortcuts-modal-title">
         <div class="modal-card">
             <div class="modal-header">
                 <h3 id="shortcuts-modal-title">Raccourcis clavier</h3>
@@ -578,18 +722,60 @@
             <div class="modal-body">
                 <table class="shortcuts-table">
                     <tbody>
-                        <tr><td><kbd>Espace</kbd></td><td>Démarrer / Pause</td></tr>
-                        <tr><td><kbd>→</kbd></td><td>Segment suivant</td></tr>
-                        <tr><td><kbd>←</kbd></td><td>Segment précédent</td></tr>
-                        <tr><td><kbd>R</kbd></td><td>Rejouer le segment</td></tr>
-                        <tr><td><kbd>S</kbd></td><td>Favori <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon" style="margin-left:4px; margin-right: 0;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></td></tr>
-                        <tr><td><kbd>H</kbd></td><td>Masquer / Afficher le texte</td></tr>
-                        <tr><td><kbd>L</kbd></td><td>Changer le mode boucle</td></tr>
-                        <tr><td><kbd>+</kbd> / <kbd>-</kbd></td><td>Vitesse ±0.1x</td></tr>
-                        <tr><td><kbd>M</kbd></td><td>Micro on/off</td></tr>
-                        <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>Texte précédent / suivant</td></tr>
-                        <tr><td><kbd>?</kbd></td><td>Cette fenêtre</td></tr>
-                        <tr><td><kbd>Échap</kbd></td><td>Arrêter / Fermer</td></tr>
+                        <tr>
+                            <td><kbd>Espace</kbd></td>
+                            <td>Démarrer / Pause</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>→</kbd></td>
+                            <td>Segment suivant</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>←</kbd></td>
+                            <td>Segment précédent</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>R</kbd></td>
+                            <td>Rejouer le segment</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>S</kbd></td>
+                            <td>Favori <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="inline-icon"
+                                    style="margin-left:4px; margin-right: 0;">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                                </svg></td>
+                        </tr>
+                        <tr>
+                            <td><kbd>H</kbd></td>
+                            <td>Masquer / Afficher le texte</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>L</kbd></td>
+                            <td>Changer le mode boucle</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>+</kbd> / <kbd>-</kbd></td>
+                            <td>Vitesse ±0.1x</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>M</kbd></td>
+                            <td>Micro on/off</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+                            <td>Texte précédent / suivant</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>?</kbd></td>
+                            <td>Cette fenêtre</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Échap</kbd></td>
+                            <td>Arrêter / Fermer</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -615,4 +801,5 @@
     <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
