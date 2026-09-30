@@ -1846,6 +1846,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Prevent double-click / double-tap zoom on buttons and interactive controls
+    document.addEventListener('dblclick', (e) => {
+        if (e.target.closest('button, .mobile-bar-btn, .dc-btn, .btn, [role="button"], a, input, select')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
     // ========================================================
     // INIT
     // ========================================================

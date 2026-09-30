@@ -50,6 +50,11 @@
 /* ============================================================
    RESET & BASE
 ============================================================ */
+html, body {
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -63,6 +68,29 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     overflow-x: hidden;
+}
+
+button,
+[role="button"],
+.btn,
+.dc-btn,
+.mobile-bar,
+.mobile-bar-btn,
+.option-pill,
+.preset-pill,
+.topbar-tab,
+.topbar-icon {
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-bar-btn svg,
+.dc-btn svg,
+.btn svg {
+    pointer-events: none;
 }
 
 ::selection {
