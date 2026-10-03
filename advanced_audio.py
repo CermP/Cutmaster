@@ -274,7 +274,7 @@ Exemples :
         sys.exit(1)
 
     print("╔══════════════════════════════════════════════════╗")
-    print("║     CutMaster — Traitement Audio Avancé (v2)    ║")
+    print("║        Diclo — Traitement Audio Avancé (v2)     ║")
     print("╚══════════════════════════════════════════════════╝")
 
     if os.path.isdir(args.input):

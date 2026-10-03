@@ -211,7 +211,7 @@ Exemples :
     args = parser.parse_args()
 
     print("╔══════════════════════════════════════════════════╗")
-    print("║       CutMaster — Synchronisation Whisper       ║")
+    print("║          Diclo — Synchronisation Whisper        ║")
     print("╚══════════════════════════════════════════════════╝")
     print(f"  Modèle   : {args.model}")
     print(f"  Langue   : {args.language}")

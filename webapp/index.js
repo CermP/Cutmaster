@@ -1,5 +1,5 @@
 /* ==========================================
-   CutMaster Landing
+   Diclo Landing
    ========================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,9 +1,9 @@
-# CutMaster 🎙️
+# Diclo 🎙️
 
 > **L'outil ultime d'entraînement oral et de prononciation.**  
-> Maîtrisez l'élocution anglaise grâce à la méthode du Shadowing avec alignement parfait texte-audio, et préparez vos propres fichiers grâce à un outil de découpage intelligent intégré.
+> Maîtrisez l'élocution anglaise grâce à la répétition orale avec alignement parfait texte-audio, et préparez vos propres fichiers grâce à un outil de découpage intelligent intégré.
 
-[![GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://cermp.github.io/Cutmaster/)
+[![GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://cermp.github.io/Diclo/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Web Audio API](https://img.shields.io/badge/Web_Audio_API-In--Browser-orange?style=for-the-badge)](https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API)
 [![OpenAI Whisper](https://img.shields.io/badge/AI-Whisper_Speech--to--Text-violet?style=for-the-badge)](https://github.com/openai/whisper)
@@ -21,7 +21,7 @@
   - [Utiliser la WebApp](#utiliser-lapplication-web)
   - [Utiliser les outils Python](#utiliser-les-outils-python)
 - [Guide d'utilisation](#-guide-dutilisation)
-  - [Entraînement au Shadowing (Outil principal)](#mode-shadowing)
+  - [Mode Entraînement Oral (Outil principal)](#mode-entraînement-oral)
   - [Découpage audio (Option Web & CLI)](#mode-découpage-audio)
   - [Génération de synchronisation avec Whisper & PDF](#génération-de-synchronisation-ia)
 - [Structure du projet](#-structure-du-projet)
@@ -32,13 +32,13 @@
 
 ## 🌟 Aperçu
 
-**CutMaster** est conçu pour les apprenants de langues étrangères, professeurs, créateurs de contenu et podcasteurs.
+**Diclo** est conçu pour les apprenants de langues étrangères, professeurs, créateurs de contenu et podcasteurs.
 
-Il répond à une problématique majeure de la méthode d'apprentissage par **Shadowing** (répétition à voix haute) :
+Il répond à une problématique majeure de l'entraînement par répétition orale à voix haute :
 - Les enregistrements natifs s'enchaînent souvent trop rapidement sans laisser le temps de répéter.
 - Il est fastidieux d'aligner manuellement un texte avec un fichier audio.
 
-CutMaster offre une double réponse :
+Diclo offre une double réponse :
 1. **Une application Web autonome** exécutée directement dans le navigateur (aucune donnée n'est envoyée à un serveur).
 2. **Une boîte à outils Python avancée** s'appuyant sur OpenAI Whisper pour chronométrer et aligner précisément textes, PDFs et flux audio.
 
@@ -50,7 +50,7 @@ CutMaster offre une double réponse :
 
 Accessible sans installation depuis n'importe quel navigateur moderne :
 
-- 🗣️ **CutMaster (Entraînement au Shadowing v2.1)** :
+- 🗣️ **Diclo (Entraînement Oral v2.1)** :
   - 📚 **Bibliothèque intégrée (Annales CC-INP)** : Accès direct en un clic aux 134 textes officiels synchronisés mot à mot, avec moteur de recherche instantané, aperçu (durée, nombre de mots) et navigation fluide entre les textes (*Précédent* / *Suivant*).
   - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` / `.wav` et de synchronisation `.json` tiers.
   - 🎚️ **Scrubber Audio & Timeline Interactive** : Barre de progression complète avec navigation instantanée au clic sur la timeline ou sur n'importe quel segment.
@@ -100,7 +100,7 @@ Pour les traitements par lot et les fonctionnalités d'analyse avancées :
 
 L'interface web est automatiquement déployée sur **GitHub Pages** :
 
-👉 **[Accéder à CutMaster en ligne](https://cermp.github.io/Cutmaster/)**
+👉 **[Accéder à Diclo en ligne](https://cermp.github.io/Diclo/)**
 
 ---
 
@@ -109,7 +109,7 @@ L'interface web est automatiquement déployée sur **GitHub Pages** :
 ### Utiliser l'application Web
 
 #### En ligne
-Rendez-vous simplement sur [https://cermp.github.io/Cutmaster/](https://cermp.github.io/Cutmaster/).
+Rendez-vous simplement sur [https://cermp.github.io/Diclo/](https://cermp.github.io/Diclo/).
 
 #### En local
 Ouvrez simplement le fichier `webapp/index.html` dans votre navigateur ou lancez un serveur HTTP local :
@@ -134,8 +134,8 @@ Puis accédez à `http://localhost:8080`.
 #### 2. Cloner le dépôt et configurer l'environnement
 
 ```bash
-git clone https://github.com/CermP/Cutmaster.git
-cd Cutmaster
+git clone https://github.com/CermP/Diclo.git
+cd Diclo
 
 # Création de l'environnement virtuel
 python3 -m venv venv
@@ -157,7 +157,7 @@ pip install openai-whisper pymupdf
 
 ## 📖 Guide d'utilisation
 
-### Mode Shadowing (Outil principal)
+### Mode Entraînement Oral (Outil principal)
 
 1. Ouvrez la WebApp, le mode **Entraînement** s'affiche par défaut.
 2. Utilisez la bibliothèque intégrée (📚) pour choisir une leçon pré-synchronisée.
@@ -244,7 +244,7 @@ python generate_sync_pdf.py ./audio/ cours.pdf --model medium
 ## 📁 Structure du projet
 
 ```
-CutMaster/
+Diclo/
 ├── webapp/                   # Application Web statique (GitHub Pages)
 │   ├── index.html            # Landing page interactive avec animations aurora & particules
 │   ├── index.css / index.js  # Moteur visuel et animations du landing

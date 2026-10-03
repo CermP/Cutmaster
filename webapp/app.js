@@ -1,5 +1,5 @@
 // ========================================================
-// CutMaster — Web Application Logic (v3)
+// Diclo — Web Application Logic (v3)
 // ========================================================
 // Redesigned for clarity: library → player flow,
 // desktop/mobile dual interface, settings drawer.
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================================
     // LOCAL STORAGE SETTINGS
     // ========================================================
-    const SETTINGS_KEY = 'cutmaster_settings_v2';
+    const SETTINGS_KEY = 'diclo_settings_v2';
     const defaultSettings = {
         speed: 1.0,
         pauseMult: 1.2,
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================================
     // STARRED / FAVORITES
     // ========================================================
-    function getStarredKey(lessonId) { return `cutmaster_starred_lesson_${lessonId}`; }
+    function getStarredKey(lessonId) { return `diclo_starred_lesson_${lessonId}`; }
     function getStarredSegments(lessonId) {
         try {
             const data = localStorage.getItem(getStarredKey(lessonId));
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let decoupageOriginalBuffer = null;
     let decoupageResultBlob = null;
     let decoupageWs = null;
-    let decoupageOutputFilename = "cutmaster_audio";
+    let decoupageOutputFilename = "diclo_audio";
 
     const presetsConfig = {
         standard: { silence: 700, thresh: -16, mult: 1.2 },
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resultArea.classList.add('hidden');
             statusDisplay.textContent = "Prêt pour le traitement.";
             const parts = file.name.split('.'); parts.pop();
-            decoupageOutputFilename = parts.join('.') + "_cutmaster";
+            decoupageOutputFilename = parts.join('.') + "_diclo";
         }
     }
 

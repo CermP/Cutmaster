@@ -433,7 +433,7 @@ Exemples :
         sys.exit(1)
 
     print("╔══════════════════════════════════════════════════╗")
-    print("║    CutMaster — Alignement PDF ↔ Audio (v2)     ║")
+    print("║       Diclo — Alignement PDF ↔ Audio (v2)      ║")
     print("╚══════════════════════════════════════════════════╝")
     print(f"  Modèle   : {args.model}")
     print(f"  Langue   : {args.language}")
