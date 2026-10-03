@@ -9,12 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. NAVIGATION — Scroll-aware
     // ========================================
     const nav = document.getElementById('nav');
+    let ticking = false;
 
     function updateNav() {
         if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+        ticking = false;
     }
 
-    window.addEventListener('scroll', updateNav, { passive: true });
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateNav);
+            ticking = true;
+        }
+    }, { passive: true });
     updateNav();
 
     // Smooth scroll for anchors
@@ -55,14 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroWaveCanvas) {
         const hCtx = heroWaveCanvas.getContext('2d');
         let time = 0;
+        let heroW = 300, heroH = 70;
 
         function resizeHeroWave() {
             const dpr = window.devicePixelRatio || 1;
             const rect = heroWaveCanvas.getBoundingClientRect();
-            const w = rect.width || heroWaveCanvas.clientWidth || 300;
-            const h = rect.height || heroWaveCanvas.clientHeight || 70;
-            heroWaveCanvas.width = Math.round(w * dpr);
-            heroWaveCanvas.height = Math.round(h * dpr);
+            heroW = rect.width || heroWaveCanvas.clientWidth || 300;
+            heroH = rect.height || heroWaveCanvas.clientHeight || 70;
+            heroWaveCanvas.width = Math.round(heroW * dpr);
+            heroWaveCanvas.height = Math.round(heroH * dpr);
             hCtx.setTransform(1, 0, 0, 1, 0, 0);
             hCtx.scale(dpr, dpr);
         }
@@ -70,20 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeHeroWave();
 
         function drawWave() {
-            const rect = heroWaveCanvas.getBoundingClientRect();
-            const w = rect.width || heroWaveCanvas.clientWidth || 300;
-            const h = rect.height || heroWaveCanvas.clientHeight || 70;
-            hCtx.clearRect(0, 0, w, h);
+            hCtx.clearRect(0, 0, heroW, heroH);
 
-            const center = h / 2;
+            const center = heroH / 2;
             const waves = [
-                { amp: h * 0.22, freq: 0.012, speed: 2, color: 'rgba(94, 173, 182, 0.55)', lw: 1.5 },
-                { amp: h * 0.15, freq: 0.02, speed: 3.2, color: 'rgba(168, 130, 196, 0.35)', lw: 1 },
+                { amp: heroH * 0.22, freq: 0.012, speed: 2, color: 'rgba(94, 173, 182, 0.55)', lw: 1.5 },
+                { amp: heroH * 0.15, freq: 0.02, speed: 3.2, color: 'rgba(168, 130, 196, 0.35)', lw: 1 },
             ];
 
             waves.forEach(wave => {
                 hCtx.beginPath();
-                for (let x = 0; x <= w; x++) {
+                for (let x = 0; x <= heroW; x++) {
                     const y = center + Math.sin(x * wave.freq + time * wave.speed) * wave.amp * Math.sin(time * 0.6 + 0.3);
                     if (x === 0) hCtx.moveTo(x, y); else hCtx.lineTo(x, y);
                 }
@@ -109,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (beforeCanvas && afterCanvas) {
         const bCtx = beforeCanvas.getContext('2d');
         const aCtx = afterCanvas.getContext('2d');
+        let demoW = 300, demoH = 80;
 
         function resizeDemo() {
             [beforeCanvas, afterCanvas].forEach(c => {
@@ -116,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const rect = c.getBoundingClientRect();
                 const w = rect.width || c.clientWidth || 300;
                 const h = rect.height || c.clientHeight || 80;
+                demoW = w;
+                demoH = h;
                 c.width = Math.round(w * dpr);
                 c.height = Math.round(h * dpr);
                 const ctx = c.getContext('2d');
@@ -132,14 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function draw(ctx, canvas, after) {
-            const rect = canvas.getBoundingClientRect();
-            const w = rect.width || canvas.clientWidth || 300;
-            const h = rect.height || canvas.clientHeight || 80;
-            ctx.clearRect(0, 0, w, h);
+            ctx.clearRect(0, 0, demoW, demoH);
 
-            const barW = w / len;
-            const center = h / 2;
-            const maxAmp = h * 0.38;
+            const barW = demoW / len;
+            const center = demoH / 2;
+            const maxAmp = demoH * 0.38;
 
             for (let i = 0; i < len; i++) {
                 let amp = data[i] * maxAmp;
