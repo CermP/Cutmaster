@@ -63,20 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const hCtx = heroWaveCanvas.getContext('2d');
         let time = 0;
         let heroW = 300, heroH = 70;
+        let isHeroVisible = true;
+        let rafId = null;
 
-        const resizeHeroObserver = new ResizeObserver(entries => {
-            const dpr = window.devicePixelRatio || 1;
-            const rect = entries[0].contentRect;
-            heroW = rect.width || 300;
-            heroH = rect.height || 70;
-            heroWaveCanvas.width = Math.round(heroW * dpr);
-            heroWaveCanvas.height = Math.round(heroH * dpr);
-            hCtx.setTransform(1, 0, 0, 1, 0, 0);
-            hCtx.scale(dpr, dpr);
-        });
-        resizeHeroObserver.observe(heroWaveCanvas);
-
-        function drawWave() {
+        function drawWaveFrame() {
             hCtx.clearRect(0, 0, heroW, heroH);
 
             const center = heroH / 2;
@@ -95,95 +85,176 @@ document.addEventListener('DOMContentLoaded', () => {
                 hCtx.lineWidth = wave.lw;
                 hCtx.stroke();
             });
+        }
 
-            if (!prefersReducedMotion) {
-                time += 1 / 60;
-                requestAnimationFrame(drawWave);
+        const resizeHeroObserver = new ResizeObserver(entries => {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const rect = entries[0].contentRect;
+            const w = rect.width || 300;
+            const h = rect.height || 70;
+            heroW = w;
+            heroH = h;
+            const targetW = Math.round(w * dpr);
+            const targetH = Math.round(h * dpr);
+            if (heroWaveCanvas.width !== targetW || heroWaveCanvas.height !== targetH) {
+                heroWaveCanvas.width = targetW;
+                heroWaveCanvas.height = targetH;
+                hCtx.setTransform(1, 0, 0, 1, 0, 0);
+                hCtx.scale(dpr, dpr);
+                drawWaveFrame();
+            }
+        });
+        resizeHeroObserver.observe(heroWaveCanvas);
+
+        function loop() {
+            if (!isHeroVisible || document.hidden || prefersReducedMotion) {
+                rafId = null;
+                return;
+            }
+            time += 1 / 60;
+            drawWaveFrame();
+            rafId = requestAnimationFrame(loop);
+        }
+
+        function startLoop() {
+            if (!rafId && !prefersReducedMotion && isHeroVisible && !document.hidden) {
+                rafId = requestAnimationFrame(loop);
             }
         }
-        drawWave();
+
+        function stopLoop() {
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+                rafId = null;
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            const heroVisObserver = new IntersectionObserver(entries => {
+                isHeroVisible = entries[0].isIntersecting;
+                if (isHeroVisible) {
+                    startLoop();
+                } else {
+                    stopLoop();
+                }
+            }, { threshold: 0.05 });
+            heroVisObserver.observe(heroWaveCanvas);
+        }
+
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopLoop();
+            } else if (isHeroVisible) {
+                startLoop();
+            }
+        });
+
+        drawWaveFrame();
+        startLoop();
     }
 
     // ========================================
-    // 6. DEMO WAVEFORMS — Before / After
+    // 4. DEMO WAVEFORMS — Before / After (Lazy)
     // ========================================
     const beforeCanvas = document.getElementById('demo-canvas-before');
     const afterCanvas = document.getElementById('demo-canvas-after');
 
     if (beforeCanvas && afterCanvas) {
-        const bCtx = beforeCanvas.getContext('2d');
-        const aCtx = afterCanvas.getContext('2d');
-        let demoW = 300, demoH = 80;
+        let initialized = false;
 
-        const resizeDemoObserver = new ResizeObserver(entries => {
-            const dpr = window.devicePixelRatio || 1;
-            let needsRender = false;
-            for (let entry of entries) {
-                const c = entry.target;
-                const rect = entry.contentRect;
-                const w = rect.width || 300;
-                const h = rect.height || 80;
-                demoW = w;
-                demoH = h;
-                c.width = Math.round(w * dpr);
-                c.height = Math.round(h * dpr);
-                const ctx = c.getContext('2d');
-                ctx.setTransform(1, 0, 0, 1, 0, 0);
-                ctx.scale(dpr, dpr);
-                needsRender = true;
-            }
-            if (needsRender) {
-                renderDemos();
-            }
-        });
-        resizeDemoObserver.observe(beforeCanvas);
-        resizeDemoObserver.observe(afterCanvas);
+        function initDemos() {
+            if (initialized) return;
+            initialized = true;
 
-        const len = 100;
-        const data = [];
-        for (let i = 0; i < len; i++) {
-            const cluster = Math.sin(i * 0.08) * 0.3 + 0.5;
-            data.push(Math.max(0.04, cluster * Math.random() * 0.6));
-        }
+            const bCtx = beforeCanvas.getContext('2d');
+            const aCtx = afterCanvas.getContext('2d');
+            let demoW = 300, demoH = 80;
 
-        function draw(ctx, canvas, after) {
-            ctx.clearRect(0, 0, demoW, demoH);
-
-            const barW = demoW / len;
-            const center = demoH / 2;
-            const maxAmp = demoH * 0.38;
-
+            const len = 100;
+            const data = [];
             for (let i = 0; i < len; i++) {
-                let amp = data[i] * maxAmp;
-                let color;
-
-                if (after) {
-                    const silent = (i > 18 && i < 26) || (i > 42 && i < 54) || (i > 70 && i < 82);
-                    if (silent) {
-                        amp = 1;
-                        color = 'rgba(255, 255, 255, 0.08)';
-                    } else {
-                        color = `rgba(125, 184, 126, ${0.45 + data[i] * 0.55})`;
-                    }
-                } else {
-                    color = `rgba(94, 173, 182, ${0.35 + data[i] * 0.5})`;
-                }
-
-                const x = i * barW;
-                const bw = Math.max(1, barW - 1);
-                const bh = amp * 2;
-                const y = center - amp;
-
-                ctx.fillStyle = color;
-                ctx.fillRect(x, y, bw, bh);
+                const cluster = Math.sin(i * 0.08) * 0.3 + 0.5;
+                data.push(Math.max(0.04, cluster * Math.random() * 0.6));
             }
+
+            function draw(ctx, after) {
+                ctx.clearRect(0, 0, demoW, demoH);
+
+                const barW = demoW / len;
+                const center = demoH / 2;
+                const maxAmp = demoH * 0.38;
+
+                for (let i = 0; i < len; i++) {
+                    let amp = data[i] * maxAmp;
+                    let color;
+
+                    if (after) {
+                        const silent = (i > 18 && i < 26) || (i > 42 && i < 54) || (i > 70 && i < 82);
+                        if (silent) {
+                            amp = 1;
+                            color = 'rgba(255, 255, 255, 0.08)';
+                        } else {
+                            color = `rgba(125, 184, 126, ${0.45 + data[i] * 0.55})`;
+                        }
+                    } else {
+                        color = `rgba(94, 173, 182, ${0.35 + data[i] * 0.5})`;
+                    }
+
+                    const x = i * barW;
+                    const bw = Math.max(1, barW - 1);
+                    const bh = amp * 2;
+                    const y = center - amp;
+
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, bw, bh);
+                }
+            }
+
+            function renderDemos() {
+                draw(bCtx, false);
+                draw(aCtx, true);
+            }
+
+            const resizeDemoObserver = new ResizeObserver(entries => {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                let needsRender = false;
+                for (let entry of entries) {
+                    const c = entry.target;
+                    const rect = entry.contentRect;
+                    const w = rect.width || 300;
+                    const h = rect.height || 80;
+                    demoW = w;
+                    demoH = h;
+                    const targetW = Math.round(w * dpr);
+                    const targetH = Math.round(h * dpr);
+                    if (c.width !== targetW || c.height !== targetH) {
+                        c.width = targetW;
+                        c.height = targetH;
+                        const ctx = c.getContext('2d');
+                        ctx.setTransform(1, 0, 0, 1, 0, 0);
+                        ctx.scale(dpr, dpr);
+                        needsRender = true;
+                    }
+                }
+                if (needsRender) {
+                    renderDemos();
+                }
+            });
+
+            resizeDemoObserver.observe(beforeCanvas);
+            resizeDemoObserver.observe(afterCanvas);
         }
 
-        function renderDemos() {
-            draw(bCtx, beforeCanvas, false);
-            draw(aCtx, afterCanvas, true);
+        if ('IntersectionObserver' in window) {
+            const demoObserver = new IntersectionObserver(entries => {
+                if (entries.some(e => e.isIntersecting)) {
+                    initDemos();
+                    demoObserver.disconnect();
+                }
+            }, { rootMargin: '200px 0px' });
+            demoObserver.observe(beforeCanvas);
+        } else {
+            initDemos();
         }
-
-        renderDemos();
     }
 });
