@@ -749,7 +749,7 @@ h1, h2, h3, .footer-logo, .step-number, .nav-logo {
 
 .footer-tagline {
     font-size: 0.75rem;
-    color: var(--text-tertiary);
+    color: var(--text-secondary);
 }
 
 .footer-nav {
