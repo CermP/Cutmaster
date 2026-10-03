@@ -64,18 +64,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let time = 0;
         let heroW = 300, heroH = 70;
 
-        function resizeHeroWave() {
+        const resizeHeroObserver = new ResizeObserver(entries => {
             const dpr = window.devicePixelRatio || 1;
-            const rect = heroWaveCanvas.getBoundingClientRect();
-            heroW = rect.width || heroWaveCanvas.clientWidth || 300;
-            heroH = rect.height || heroWaveCanvas.clientHeight || 70;
+            const rect = entries[0].contentRect;
+            heroW = rect.width || 300;
+            heroH = rect.height || 70;
             heroWaveCanvas.width = Math.round(heroW * dpr);
             heroWaveCanvas.height = Math.round(heroH * dpr);
             hCtx.setTransform(1, 0, 0, 1, 0, 0);
             hCtx.scale(dpr, dpr);
-        }
-        window.addEventListener('resize', resizeHeroWave);
-        resizeHeroWave();
+        });
+        resizeHeroObserver.observe(heroWaveCanvas);
 
         function drawWave() {
             hCtx.clearRect(0, 0, heroW, heroH);
@@ -116,12 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const aCtx = afterCanvas.getContext('2d');
         let demoW = 300, demoH = 80;
 
-        function resizeDemo() {
-            [beforeCanvas, afterCanvas].forEach(c => {
-                const dpr = window.devicePixelRatio || 1;
-                const rect = c.getBoundingClientRect();
-                const w = rect.width || c.clientWidth || 300;
-                const h = rect.height || c.clientHeight || 80;
+        const resizeDemoObserver = new ResizeObserver(entries => {
+            const dpr = window.devicePixelRatio || 1;
+            let needsRender = false;
+            for (let entry of entries) {
+                const c = entry.target;
+                const rect = entry.contentRect;
+                const w = rect.width || 300;
+                const h = rect.height || 80;
                 demoW = w;
                 demoH = h;
                 c.width = Math.round(w * dpr);
@@ -129,8 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const ctx = c.getContext('2d');
                 ctx.setTransform(1, 0, 0, 1, 0, 0);
                 ctx.scale(dpr, dpr);
-            });
-        }
+                needsRender = true;
+            }
+            if (needsRender) {
+                renderDemos();
+            }
+        });
+        resizeDemoObserver.observe(beforeCanvas);
+        resizeDemoObserver.observe(afterCanvas);
 
         const len = 100;
         const data = [];
@@ -177,8 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
             draw(aCtx, afterCanvas, true);
         }
 
-        window.addEventListener('resize', () => { resizeDemo(); renderDemos(); });
-        resizeDemo();
         renderDemos();
     }
 });
