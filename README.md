@@ -1,106 +1,136 @@
 # Diclo 🎙️
 
 > **L'outil ultime d'entraînement oral et de prononciation.**  
-> Maîtrisez l'élocution anglaise grâce à la répétition orale avec alignement parfait texte-audio, et préparez vos propres fichiers grâce à un outil de découpage intelligent intégré.
+> Maîtrisez l'élocution et le débit en anglais grâce à la répétition orale active avec alignement texte-audio synchronisé mot à mot, et préparez vos propres supports grâce à un outil de découpage intelligent intégré.
 
-[![GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://cermp.github.io/Diclo/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![Demo GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-2ea44f?style=for-the-badge&logo=github)](https://cermp.github.io/Diclo/)
+[![Lighthouse 100%](https://img.shields.io/badge/Lighthouse-100%2F100-success?style=for-the-badge&logo=lighthouse)](https://cermp.github.io/Diclo/)
+[![Privacy 100% Local](https://img.shields.io/badge/Privacy-100%25%20Client--Side-blue?style=for-the-badge&logo=shield)](https://cermp.github.io/Diclo/)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Web Audio API](https://img.shields.io/badge/Web_Audio_API-In--Browser-orange?style=for-the-badge)](https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API)
 [![OpenAI Whisper](https://img.shields.io/badge/AI-Whisper_Speech--to--Text-violet?style=for-the-badge)](https://github.com/openai/whisper)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 ---
 
 ## 📋 Table des matières
 
 - [Aperçu](#-aperçu)
+- [Points forts & Philosophie](#-points-forts--philosophie)
 - [Fonctionnalités principales](#-fonctionnalités-principales)
-  - [1. Application Web (100% Client-Side)](#1-application-web-client-side)
+  - [1. Application Web (100% Client-Side)](#1-application-web-100-client-side)
   - [2. Suite CLI & IA Python](#2-suite-cli--ia-python)
+- [Raccourcis Clavier](#-raccourcis-clavier)
 - [Démonstration en direct](#-démonstration-en-direct)
 - [Installation & Démarrage](#-installation--démarrage)
   - [Utiliser la WebApp](#utiliser-lapplication-web)
   - [Utiliser les outils Python](#utiliser-les-outils-python)
 - [Guide d'utilisation](#-guide-dutilisation)
-  - [Mode Entraînement Oral (Outil principal)](#mode-entraînement-oral)
-  - [Découpage audio (Option Web & CLI)](#mode-découpage-audio)
-  - [Génération de synchronisation avec Whisper & PDF](#génération-de-synchronisation-ia)
+  - [Mode Entraînement Oral](#mode-entraînement-oral-outil-principal)
+  - [Mode Découpage Audio](#mode-découpage-audio-optionnel)
+  - [Génération de synchronisation IA](#génération-de-synchronisation-ia)
 - [Structure du projet](#-structure-du-projet)
-- [Technologies utilisées](#-technologies-utilisées)
-- [Licence](#-licence)
+- [Technologies & Performance](#-technologies--performance)
+- [Licence & Contributions](#-licence--contributions)
 
 ---
 
 ## 🌟 Aperçu
 
-**Diclo** est conçu pour les apprenants de langues étrangères, professeurs, créateurs de contenu et podcasteurs.
+**Diclo** est conçu pour les candidats aux concours exigeants (notamment les **oraux CC-INP**), les étudiants, les professeurs et tous les apprenants souhaitant perfectionner leur accent et fluidité orale.
 
-Il répond à une problématique majeure de l'entraînement par répétition orale à voix haute :
+Il résout une difficulté majeure de la répétition orale à voix haute (*shadowing* et écoute active) :
 - Les enregistrements natifs s'enchaînent souvent trop rapidement sans laisser le temps de répéter.
-- Il est fastidieux d'aligner manuellement un texte avec un fichier audio.
+- Aligner manuellement un texte avec un fichier audio est un travail fastidieux.
 
-Diclo offre une double réponse :
-1. **Une application Web autonome** exécutée directement dans le navigateur (aucune donnée n'est envoyée à un serveur).
-2. **Une boîte à outils Python avancée** s'appuyant sur OpenAI Whisper pour chronométrer et aligner précisément textes, PDFs et flux audio.
+Diclo offre une réponse complète en deux volets :
+1. **Une application Web autonome** exécutée à 100 % dans le navigateur : zéro latence, aucune donnée envoyée à un serveur, respect total de la vie privée.
+2. **Une boîte à outils Python avancée** s'appuyant sur OpenAI Whisper pour chronométrer et synchroniser automatiquement textes, PDFs et flux audio.
+
+---
+
+## ⚡ Points forts & Philosophie
+
+- 🔒 **100 % Client-Side & Confidentialité Totale** : Vos enregistrements vocaux et vos fichiers audio sont traités exclusivement dans votre mémoire navigateur (Web Audio API & MediaRecorder). Aucune donnée n'est envoyée à un serveur externe.
+- 🚀 **Performance & Éco-conception (Lighthouse 100/100)** : Zéro dépendance CDN bloquante, polices WOFF2 variables auto-hébergées, animations composées sur GPU, démarrage instantané même en 4G lente.
+- 📚 **Bibliothèque CC-INP Intégrée** : 134 textes et audios officiels de concours synchronisés mot à mot, prêts à l'entraînement sans configuration.
+- ✂️ **Découpage Intelligent & Calibré** : Détection automatique des silences et insertion de pauses proportionnelles pour répéter à son propre rythme.
 
 ---
 
 ## ✨ Fonctionnalités principales
 
-### 1. Application Web (Client-Side)
+### 1. Application Web (100% Client-Side)
 
-Accessible sans installation depuis n'importe quel navigateur moderne :
+Accessible immédiatement sans aucune installation :
 
-- 🗣️ **Diclo (Entraînement Oral v2.1)** :
-  - 📚 **Bibliothèque intégrée (Annales CC-INP)** : Accès direct en un clic aux 134 textes officiels synchronisés mot à mot, avec moteur de recherche instantané, aperçu (durée, nombre de mots) et navigation fluide entre les textes (*Précédent* / *Suivant*).
-  - 📁 **Import Personnalisé** : Support complet pour importer n'importe quel fichier audio `.mp3` / `.wav` et de synchronisation `.json` tiers.
-  - 🎚️ **Scrubber Audio & Timeline Interactive** : Barre de progression complète avec navigation instantanée au clic sur la timeline ou sur n'importe quel segment.
-  - ⚡ **Contrôle de vitesse dynamique** : Ajustement fluide de 0.5x à 2.0x avec accès rapide par boutons (0.75x, 1.0x, 1.25x, 1.5x) et raccourcis `+` / `-`.
-  - 🔁 **Modes de boucle personnalisés** : Répétez chaque segment 2 fois, 3 fois, ou en boucle infinie (∞) avant d'avancer automatiquement.
-  - 🎙️ **Enregistrement vocal comparatif** : Enregistrez automatiquement votre voix via le microphone pendant la phase "À vous !" et comparez-la directement avec le locuteur natif.
-  - ⭐ **Gestion des Favoris** : Marquez les segments complexes (raccourci `S`) et filtrez votre entraînement uniquement sur vos phrases clés.
-  - 🔍 **Prononciation mot à mot au clic** : Cliquez sur n'importe quel mot du texte pour écouter son extrait audio exact.
-  - 🎨 **Personnalisation typographique & confort de lecture** : Polices au choix (Moderne, Monospace, Livre avec empattement), réglage de taille (A- / A+), alignements et Mode Focus pour estomper les phrases non actives.
-  - ⌨️ **Raccourcis clavier complets** : Contrôlez tout sans la souris (Espace, flèches, R, S, H, L, +/-, M, ?).
-  - 💾 **Sauvegarde automatique locale** : Vos préférences et votre dernière leçon sont conservées dans votre navigateur.
+#### 🗣️ Entraînement Oral (Diclo v2.1)
+- 📚 **Bibliothèque intégrée (134 textes CC-INP)** : Accès direct avec recherche instantanée, aperçu de la durée et du nombre de mots, navigation fluide (*Précédent* / *Suivant*).
+- 📁 **Import Personnalisé** : Glissez n'importe quel fichier audio (`.mp3`, `.wav`) et son fichier de synchronisation `.json` généré par Whisper.
+- 🎚️ **Scrubber Audio & Timeline Interactive** : Barre de progression cliquable avec synchronisation en temps réel de chaque segment.
+- ⚡ **Contrôle de vitesse dynamique** : Ajustement continu de **0.5x à 2.0x** avec préservation de la hauteur de voix (*pitch-preserving*) et boutons d'accès rapide (0.75x, 1.0x, 1.25x, 1.5x).
+- 🔁 **Modes de boucle personnalisés** : Répétez chaque segment 2 fois, 3 fois, ou en boucle infinie (∞) avant d'avancer automatiquement.
+- 🎙️ **Enregistrement vocal comparatif** : Enregistrez votre propre voix pendant la phase de pause "À vous !" et comparez-la instantanément au locuteur natif.
+- ⭐ **Système de Favoris** : Marquez les phrases difficiles (touche `S`) pour filtrer et concentrer vos révisions sur vos points faibles.
+- 🔍 **Prononciation mot à mot au clic** : Cliquez sur n'importe quel mot du texte pour écouter son extrait audio exact à la milliseconde près.
+- 🎨 **Confort de lecture & Typographie** : Choix de polices (Moderne, Monospace, Livre), réglage de la taille de texte (A- / A+), alignements et **Mode Focus** estompant les phrases secondaires.
+- 💾 **Sauvegarde automatique locale** : Vos favoris, réglages et dernière leçon consultée sont conservés dans votre navigateur (`localStorage`).
 
-- ✂️ **Option de Découpage Intelligent** :
-  - Préréglages en un clic (Standard, Apprenant lent, Rapide) ou configuration personnalisée.
-  - Détection automatique des pauses et des silences pour préparer vos propres fichiers.
-  - Insertion de silences proportionnels après chaque phrase pour laisser le temps de répéter.
-  - Visualisation en direct de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
-  - Export direct en `.wav` ou en `.mp3` (encodé à la volée via `lamejs`).
+#### ✂️ Découpage & Espacement Audio Intelligent
+- **Préréglages en un clic** : Profils adaptés selon votre niveau (*Standard*, *Apprenant*, *Rapide*) ou réglages personnalisés (seuil dB, durée min. de silence).
+- **Pauses calculées** : Insertion automatique d'un silence proportionnel après chaque phrase pour laisser le temps de répéter à voix haute.
+- **Visualiseur Waveform** : Visualisation interactive de l'onde sonore via [WaveSurfer.js](https://wavesurfer.xyz/).
+- **Export direct** : Téléchargement instantané en `.wav` haute fidélité ou en `.mp3` léger encodé à la volée dans le navigateur via `lamejs`.
+
+---
 
 ### 2. Suite CLI & IA Python
 
-Pour les traitements par lot et les fonctionnalités d'analyse avancées :
+Pour la préparation par lot, l'alignement IA automatique et les cours universitaires :
 
-- ⚡ `advanced_audio.py` :
-  - Traitement d'un fichier unique ou d'un dossier complet (mode batch).
-  - **Détection de silence adaptative** : analyse le profil de volume local au lieu d'un seuil global fixe, idéal pour les audios avec bruit de fond.
-  - Fusion automatique des micro-segments (bruits de bouche, clics) pour éviter les faux positifs.
-  - Ajustement de la vitesse vocale sans modifier la tonalité/hauteur (filtre `atempo` via FFmpeg).
-  - Bips sonores optionnels de fin de phrase pour rythmer l'exercice.
+- ⚡ [`advanced_audio.py`](file:///Users/merlinclaret/Desktop/Diclo/advanced_audio.py) :
+  - **Détection de silence adaptative** : analyse le profil de volume local au lieu d'un seuil global fixe (idéal pour les audios avec bruit de fond).
+  - Fusion automatique des micro-segments parasites (bruits de bouche, clics).
+  - Vitesse modulable avec préservation du timbre vocal (filtre `atempo` via FFmpeg).
+  - Bips sonores optionnels en fin de phrase pour rythmer l'exercice.
   - Normalisation sonore automatique et fondus croisés (*crossfade*).
-  - Bornes min/max configurables sur la durée des pauses.
-- 🤖 `generate_sync.py` :
+- 🤖 [`generate_sync.py`](file:///Users/merlinclaret/Desktop/Diclo/generate_sync.py) :
   - Transcription automatique avec horodatage mot à mot via **OpenAI Whisper**.
-  - **Modèle configurable** (`tiny` à `large`, défaut : `medium` pour le meilleur rapport précision/vitesse).
-  - **Langue explicite** et **prompt de contexte** pour guider Whisper sur le domaine/vocabulaire.
-  - **Rapport de qualité automatique** : détecte les mots trop courts/longs, gaps, chevauchements.
-  - Correction automatique des chevauchements temporels entre mots.
-- 📄 `generate_sync_pdf.py` :
-  - Extraction de texte officiel depuis un fichier de cours au format PDF (via PyMuPDF).
-  - **Alignement amélioré** avec scoring de similarité phonétique (gère les variantes orthographiques).
-  - **Répartition proportionnelle** du temps basée sur l'estimation syllabique (au lieu d'une distribution uniforme).
-  - **Rapport de qualité** : taux d'alignement exact, matches flous, interpolations, confiance moyenne.
+  - **Modèle configurable** (`tiny`, `base`, `small`, `medium`, `large-v3`, `turbo` — défaut : `medium`).
+  - **Langue explicite** et **prompt de contexte** pour guider Whisper sur le vocabulaire technique ou spécialisé.
+  - Correction automatique des chevauchements temporels entre mots et rapport qualité.
+- 📄 [`generate_sync_pdf.py`](file:///Users/merlinclaret/Desktop/Diclo/generate_sync_pdf.py) :
+  - Extraction de texte officiel depuis un cours au format PDF (via PyMuPDF).
+  - **Alignement amélioré** avec score de similarité phonétique et tolérance aux variantes orthographiques.
+  - **Répartition proportionnelle** du temps basée sur l'estimation syllabique.
+  - Rapport de qualité : taux d'alignement exact, matches flous, confiance moyenne.
+
+---
+
+## ⌨️ Raccourcis Clavier
+
+Contrôlez l'ensemble de votre séance d'entraînement sans toucher à la souris :
+
+| Touche | Action |
+| :---: | :--- |
+| <kbd>Espace</kbd> | Lecture / Pause |
+| <kbd>→</kbd> | Segment suivant |
+| <kbd>←</kbd> | Segment précédent |
+| <kbd>R</kbd> | Rejouer le segment actuel |
+| <kbd>S</kbd> | Ajouter / Retirer le segment des favoris (★) |
+| <kbd>H</kbd> | Masquer / Afficher le texte (entraînement à l'aveugle) |
+| <kbd>L</kbd> | Activer / Désactiver la boucle infinie sur la phrase |
+| <kbd>+</kbd> / <kbd>-</kbd> | Augmenter / Diminuer la vitesse de lecture (par pas de 0.05x) |
+| <kbd>M</kbd> | Activer / Couper le microphone |
+| <kbd>?</kbd> | Afficher l'aide des raccourcis clavier |
 
 ---
 
 ## 🚀 Démonstration en direct
 
-L'interface web est automatiquement déployée sur **GitHub Pages** :
+L'application est disponible en continu sur **GitHub Pages** :
 
-👉 **[Accéder à Diclo en ligne](https://cermp.github.io/Diclo/)**
+👉 **[Ouvrir Diclo en ligne (cermp.github.io/Diclo)](https://cermp.github.io/Diclo/)**
 
 ---
 
@@ -108,17 +138,17 @@ L'interface web est automatiquement déployée sur **GitHub Pages** :
 
 ### Utiliser l'application Web
 
-#### En ligne
+#### En ligne (immédiat)
 Rendez-vous simplement sur [https://cermp.github.io/Diclo/](https://cermp.github.io/Diclo/).
 
 #### En local
-Ouvrez simplement le fichier `webapp/index.html` dans votre navigateur ou lancez un serveur HTTP local :
+Clonez le dépôt et lancez un simple serveur HTTP local :
 
 ```bash
 cd webapp
 python3 -m http.server 8080
 ```
-Puis accédez à `http://localhost:8080`.
+Puis ouvrez [`http://localhost:8080`](http://localhost:8080) dans votre navigateur.
 
 ---
 
@@ -126,28 +156,28 @@ Puis accédez à `http://localhost:8080`.
 
 #### 1. Prérequis système
 - **Python 3.10+**
-- **FFmpeg** (indispensable pour le décodage et l'encodage audio) :
+- **FFmpeg** (indispensable pour le traitement et l'alignement audio) :
   - **macOS** : `brew install ffmpeg`
   - **Ubuntu / Debian** : `sudo apt update && sudo apt install ffmpeg`
-  - **Windows** : via [ffmpeg.org](https://ffmpeg.org/download.html) ou `winget install Gyan.FFmpeg`
+  - **Windows** : `winget install Gyan.FFmpeg` ou via [ffmpeg.org](https://ffmpeg.org/download.html)
 
-#### 2. Cloner le dépôt et configurer l'environnement
+#### 2. Installation de l'environnement virtuel
 
 ```bash
 git clone https://github.com/CermP/Diclo.git
 cd Diclo
 
-# Création de l'environnement virtuel
+# Création et activation de l'environnement virtuel
 python3 -m venv venv
 source venv/bin/activate  # Sur Windows : venv\Scripts\activate
 
-# Installation des dépendances de base
+# Installation des dépendances audio de base
 pip install -r requirements.txt
 ```
 
-#### 3. Dépendances optionnelles pour l'IA (Whisper & PDF)
+#### 3. Dépendances optionnelles IA (Whisper & PDF)
 
-Si vous souhaitez utiliser les scripts de synchronisation intelligente :
+Pour générer des synchronisations mot à mot automatiques avec Whisper :
 
 ```bash
 pip install openai-whisper pymupdf
@@ -159,51 +189,33 @@ pip install openai-whisper pymupdf
 
 ### Mode Entraînement Oral (Outil principal)
 
-1. Ouvrez la WebApp, le mode **Entraînement** s'affiche par défaut.
-2. Utilisez la bibliothèque intégrée (📚) pour choisir une leçon pré-synchronisée.
-3. Ou générez/récupérez un fichier de synchronisation `.json` correspondant à votre propre audio et utilisez l'import personnalisé (📁).
-4. Sélectionnez votre niveau de segmentation (**Phrases**, **Virgules**, **Mots**).
-5. Lancez la lecture avec l'**Auto-pause** activée pour vous entraîner à répéter après chaque phrase.
+1. Ouvrez l'application web ([`app.html`](file:///Users/merlinclaret/Desktop/Diclo/webapp/app.html)).
+2. Cliquez sur l'icône de bibliothèque (**📚**) pour choisir l'un des **134 textes officiels CC-INP**.
+3. Ou glissez votre propre audio et fichier `.json` via l'icône d'import (**📁**).
+4. Choisissez le mode de segmentation souhaité (**Phrases**, **Virgules** ou **Mots**).
+5. Lancez la lecture : écoutez le locuteur natif, répétez à voix haute pendant la pause, et réécoutez votre voix enregistrée !
 
 ---
 
 ### Mode Découpage Audio (Optionnel)
 
-#### Via l'application Web
-1. Ouvrez la WebApp et sélectionnez l'onglet **Outil de découpage**.
-2. Glissez votre fichier audio (`.mp3`, `.wav`, `.m4a`, etc.).
-3. Ajustez le seuil de silence (dB) et la durée minimale de silence (ms).
-4. Cliquez sur **Lancer le traitement**, écoutez le résultat puis téléchargez l'audio exporté pour préparer vos propres fichiers d'entraînement.
+#### Via la WebApp
+1. Ouvrez l'onglet **Découpage** dans l'application web.
+2. Déposez votre fichier audio (`.mp3`, `.wav`, `.m4a`).
+3. Choisissez un préréglage ou ajustez le seuil de silence et la durée minimale.
+4. Téléchargez le fichier avec pauses insérées en `.wav` ou `.mp3`.
 
-#### Via le script CLI `advanced_audio.py`
+#### Via le terminal (`advanced_audio.py`)
 ```bash
-# Exemple simple : fichier unique avec pause x1.5 et bips
+# Exemple simple : fichier unique avec pause x1.5, bips sonores et normalisation
 python advanced_audio.py input.mp3 output.mp3 --pause-mult 1.5 --beep --normalize
 
 # Mode adaptatif pour audio avec bruit de fond
 python advanced_audio.py input.mp3 output.mp3 --adaptive --min-chunk 500 --pause-mult 2.0
 
-# Mode batch sur tout un dossier avec bornes de pause
+# Traitement par lot sur tout un dossier avec bornes min/max
 python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pause-mult 2.0 --min-pause 1000 --max-pause 8000
 ```
-
-**Options de détection de silence :**
-- `--min-silence <ms>` : Durée minimale pour considérer un silence (défaut : 700 ms).
-- `--thresh <dB>` : Seuil de détection du silence relatif au volume moyen (défaut : -16 dB).
-- `--keep-silence <ms>` : Silence naturel conservé au début/fin de chaque segment (défaut : 250 ms).
-- `--adaptive` : Active le seuil adaptatif basé sur le profil de volume local (recommandé pour les audios bruités).
-- `--min-chunk <ms>` : Durée minimale d'un segment valide — les micro-segments sont fusionnés (défaut : 300 ms).
-
-**Options de pause :**
-- `--pause-mult <ratio>` : Multiplicateur du temps de silence inséré (ex: 2.0 pour doubler la pause).
-- `--min-pause <ms>` : Durée minimale de la pause insérée (défaut : 0).
-- `--max-pause <ms>` : Durée maximale de la pause insérée (défaut : 0 = pas de max).
-
-**Options audio :**
-- `--speed <vitesse>` : Vitesse de lecture audio sans changer la hauteur de voix (ex: 0.9).
-- `--beep` : Ajoute un signal sonore à la fin de chaque segment.
-- `--normalize` : Égalise les niveaux sonores.
-- `--crossfade <ms>` : Fondu croisé entre les segments (défaut : 50 ms).
 
 ---
 
@@ -211,32 +223,23 @@ python advanced_audio.py "./dossier_source" "./dossier_sortie" --speed 0.95 --pa
 
 #### À partir de l'audio seul (Whisper)
 ```bash
-# Utilisation simple (modèle medium par défaut)
+# Utilisation standard (modèle medium recommandé)
 python generate_sync.py mon_audio.mp3
 
-# Avec modèle plus précis et prompt de contexte personnalisé
-python generate_sync.py mon_audio.mp3 --model large --prompt "Medical terminology lecture"
+# Avec modèle large et prompt de domaine spécialisé
+python generate_sync.py cours_eco.mp3 --model large --language en --prompt "Macroeconomics and inflation lecture"
 
-# Mode batch sur un dossier
-python generate_sync.py ./dossier/ --model medium --language en
+# Mode dossier complet
+python generate_sync.py ./audios/ --model medium --language en
 ```
 
-**Options disponibles :**
-- `--model <nom>` : Modèle Whisper (`tiny`, `base`, `small`, `medium`, `large`, `turbo` — défaut : `medium`).
-- `--language <code>` : Code langue ISO (défaut : `en`). Forcer la langue améliore la précision.
-- `--prompt <texte>` : Prompt de contexte pour guider Whisper (vocabulaire, domaine).
-- `--temperature <float>` : Température de décodage (défaut : 0.0 = déterministe).
-
-#### À partir de l'audio et d'un texte de cours PDF
+#### À partir d'un audio et d'un document de cours PDF
 ```bash
-# Usage simple
+# Alignement automatique texte PDF ↔ audio
 python generate_sync_pdf.py 1.mp3 cours.pdf
 
-# Avec modèle plus précis
-python generate_sync_pdf.py 42.mp3 annales.pdf --model large --language en
-
-# Mode batch
-python generate_sync_pdf.py ./audio/ cours.pdf --model medium
+# Traitement par lot sur toute une série
+python generate_sync_pdf.py ./audio/ annales_2026.pdf --model medium
 ```
 
 ---
@@ -245,38 +248,45 @@ python generate_sync_pdf.py ./audio/ cours.pdf --model medium
 
 ```
 Diclo/
-├── webapp/                   # Application Web statique (GitHub Pages)
-│   ├── index.html            # Landing page interactive avec animations aurora & particules
-│   ├── index.css / index.js  # Moteur visuel et animations du landing
-│   ├── app.html              # Interface utilisateur unifiée (Entraînement & Découpage)
-│   ├── app.css / app.js      # Moteur Web Audio API, timeline, MediaRecorder, WaveSurfer & lamejs
-│   └── audio/                # Bibliothèque audio CC-INP (134 textes) et lessons.json
+├── webapp/                         # Application Web autonome (GitHub Pages)
+│   ├── index.html                  # Landing page ultra-rapide (Score Lighthouse 100)
+│   ├── index.css / index.js        # Design system sombre, animations GPU et canvas sinusoïde
+│   ├── app.html                    # Interface principale (Entraînement Oral & Découpage)
+│   ├── app.css / app.js            # Moteur Web Audio API, scrubber, MediaRecorder, WaveSurfer & lamejs
+│   ├── fonts/                      # Polices WOFF2 sous-ensembles auto-hébergées (Space Grotesk & JetBrains Mono)
+│   ├── audio/                      # 134 textes/audios officiels CC-INP et index lessons.json
+│   ├── robots.txt / sitemap.xml    # Référencement naturel & SEO
+│   └── google*.html                # Validation Google Search Console
 │
-├── .github/workflows/        # CI/CD
-│   └── pages.yml             # Déploiement automatique sur GitHub Pages
+├── .github/workflows/              # Automatisation CI/CD
+│   └── pages.yml                   # Déploiement automatisé sur GitHub Pages
 │
-├── advanced_audio.py         # Script CLI avancé (batch, pitch-preserved speed, bips)
-├── process_audio.py          # Script de base pour le découpage pydub
-├── generate_sync.py          # Générateur de timestamps mot à mot via Whisper
-├── generate_sync_pdf.py      # Extracteur et aligneur PDF ↔ Audio via Whisper
-├── test_whisper.py           # Script de test de transcription Whisper
-├── test_whisper_words.py     # Script de test d'extraction mot à mot
-├── requirements.txt          # Dépendances Python de base
-└── README.md                 # Documentation du projet
+├── advanced_audio.py               # Découpage CLI adaptatif avancé (pitch-preserving, bips, batch)
+├── process_audio.py                # Découpage simple via pydub
+├── generate_sync.py                # Générateur de synchronisation mot à mot avec Whisper
+├── generate_sync_pdf.py            # Extracteur PDF et alignement phonétique/syllabique
+├── requirements.txt                # Dépendances Python
+└── README.md                       # Documentation officielle
 ```
 
 ---
 
-## 💻 Technologies utilisées
+## 💻 Technologies & Performance
 
-- **Frontend** : HTML5, CSS3 (Vanilla moderne, Glassmorphism, animations fluides), JavaScript ES6+
-- **Audio Web** : [Web Audio API](https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API), [WaveSurfer.js](https://wavesurfer.xyz/), [lamejs](https://github.com/zhuker/lamejs)
-- **Traitement Audio Python** : [PyDub](https://github.com/jiaaro/pydub), [FFmpeg](https://ffmpeg.org/)
-- **Intelligence Artificielle & NLP** : [OpenAI Whisper](https://github.com/openai/whisper), [PyMuPDF (fitz)](https://pymupdf.readthedocs.io/), `difflib`
-- **Hébergement & CI/CD** : GitHub Actions & GitHub Pages
+- **Frontend & Web App** : HTML5 sémantique, CSS3 Vanilla moderne (Glassmorphism, CSS Variables, `clamp()`), JavaScript ES6+ modulaire.
+- **Audio & Médias** : [Web Audio API](https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API), [MediaStream Recording API](https://developer.mozilla.org/fr/docs/Web/API/MediaStream_Recording_API), [WaveSurfer.js](https://wavesurfer.xyz/), [lamejs](https://github.com/zhuker/lamejs).
+- **Core Web Vitals & Optimisation Mobile** :
+  - ⚡ **Score Performance Mobile** : 100 / 100
+  - 🎯 **FCP** : ~1,2 s | **LCP** : ~1,3 s | **Speed Index** : ~1,2 s
+  - 🛡️ **TBT & CLS** : 0 ms / 0.000
+  - 🎨 **Typographie locale** : Polices WOFF2 variables (Space Grotesk & JetBrains Mono) sous licence OFL, zéro dépendance tierce.
+- **Python & IA Speech-to-Text** : [OpenAI Whisper](https://github.com/openai/whisper), [PyMuPDF](https://pymupdf.readthedocs.io/), [PyDub](https://github.com/jiaaro/pydub), [FFmpeg](https://ffmpeg.org/).
 
 ---
 
-## 📄 Licence
+## 📄 Licence & Contributions
 
-Ce projet est sous licence MIT. N'hésitez pas à l'utiliser, le modifier et y contribuer !
+Ce projet est distribué sous **licence MIT**.  
+Les contributions, suggestions d'améliorations et signalements de bugs sont les bienvenus via les [Issues GitHub](https://github.com/CermP/Diclo/issues) !
+
+*Développé avec passion pour l'apprentissage linguistique et l'excellence orale.*

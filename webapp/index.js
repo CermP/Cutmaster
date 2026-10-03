@@ -150,7 +150,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         drawWaveFrame();
-        startLoop();
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => startLoop(), { timeout: 800 });
+        } else {
+            setTimeout(startLoop, 300);
+        }
     }
 
     // ========================================
